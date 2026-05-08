@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>Local AI & Agentic Ecosystem Feeds</title>
+        <dateCreated>2026-05-08T00:00:00Z</dateCreated>
+    </head>
+    <body>
+        <outline text="AI Community & Discussion">
+            <outline text="r/LocalLLaMA (Reddit)" title="r/LocalLLaMA" type="rss" xmlUrl="https://www.reddit.com/r/LocalLLaMA/.rss" htmlUrl="https://www.reddit.com/r/LocalLLaMA/"/>
+            <outline text="Hacker News (AI Tags)" title="HN AI" type="rss" xmlUrl="https://hnrss.org/newest?q=AI+OR+LLM+OR+llama" htmlUrl="https://news.ycombinator.com/"/>
+        </outline>
+        <outline text="Engines & Infrastructure">
+            <outline text="Ollama Releases" title="Ollama GitHub Releases" type="rss" xmlUrl="https://github.com/ollama/ollama/releases.atom" htmlUrl="https://github.com/ollama/ollama/releases"/>
+            <outline text="llama.cpp Releases" title="llama.cpp GitHub Releases" type="rss" xmlUrl="https://github.com/ggerganov/llama.cpp/releases.atom" htmlUrl="https://github.com/ggerganov/llama.cpp/releases"/>
+            <outline text="vLLM Releases" title="vLLM GitHub Releases" type="rss" xmlUrl="https://github.com/vllm-project/vllm/releases.atom" htmlUrl="https://github.com/vllm-project/vllm/releases"/>
+        </outline>
+        <outline text="Models & Quantization">
+            <outline text="Bartowski HuggingFace Models" title="Bartowski GGUF Quants" type="rss" xmlUrl="https://huggingface.co/bartowski.rss" htmlUrl="https://huggingface.co/bartowski"/>
+            <outline text="MaziyarPanahi HuggingFace Models" title="MaziyarPanahi GGUF Quants" type="rss" xmlUrl="https://huggingface.co/MaziyarPanahi.rss" htmlUrl="https://huggingface.co/MaziyarPanahi"/>
+            <outline text="Qwen Official Blog" title="Qwen LM" type="rss" xmlUrl="https://qwenlm.github.io/blog/index.xml" htmlUrl="https://qwenlm.github.io/blog/"/>
+        </outline>
+        <outline text="Agentic Coding Tools">
+            <outline text="Aider Developer Blog" title="Aider LLM Leaderboard & News" type="rss" xmlUrl="https://aider.chat/feed.xml" htmlUrl="https://aider.chat/"/>
+            <outline text="Cline (Claude Dev) Releases" title="Cline GitHub Releases" type="rss" xmlUrl="https://github.com/cline/cline/releases.atom" htmlUrl="https://github.com/cline/cline/releases"/>
+            <outline text="OpenAI Developer Blog" title="OpenAI Engineering" type="rss" xmlUrl="https://openai.com/blog/rss.xml" htmlUrl="https://openai.com/blog/"/>
+        </outline>
+    </body>
+</opml>

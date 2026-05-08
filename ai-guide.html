@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Workstation Software Setup Guide</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --card: #ffffff;
+            --border: #e2e8f0;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1rem;
+        }
+        h1 { margin: 0; color: var(--primary); }
+        h2 { margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+        h3 { color: #334155; }
+        .nav-links { margin-top: 0.5rem; font-weight: 600; display: flex; gap: 1.5rem; }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        .card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+        }
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+        p code, li code {
+            background-color: #e2e8f0;
+            color: #0f172a;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+
+        .toc {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+        .toc ul { list-style-type: none; padding-left: 0; }
+        .toc li { margin-bottom: 0.5rem; }
+        .toc a { color: #334155; font-weight: 500; }
+        
+        .warning {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1rem 0;
+            color: #991b1b;
+        }
+        .pro-tip {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1rem 0;
+            color: #166534;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Workstation Software Setup</h1>
+            <p>The definitive guide to configuring your Dual RX 7800 XT rig for local agentic coding, navigating model families, and establishing a robust local API endpoint.</p>
+            <div class="nav-links">
+                &larr; <a href="index.html">Back to Main Build Quote</a>
+            </div>
+        </header>
+
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#os-rocm">1. Local OS & AMD ROCm Driver Setup</a></li>
+                <li><a href="#inference-stack">2. The Inference Stack (Ollama)</a></li>
+                <li><a href="#model-families">3. Model Families & Quantization</a></li>
+                <li><a href="#benchmarks">4. Benchmarks & Local Evaluation</a></li>
+                <li><a href="#agentic">5. Hooking up Agentic Workloads</a></li>
+                <li><a href="#monitoring">6. Staying Updated (RSS OPML)</a></li>
+            </ul>
+        </div>
+
+        <div class="card" id="os-rocm">
+            <h2>1. Local OS & AMD ROCm Driver Setup</h2>
+            <p>While Windows has improved, <strong>Ubuntu 22.04 LTS or 24.04 LTS</strong> is mandatory for a stable, multi-GPU AMD setup. Linux memory allocation and tensor splitting algorithms are vastly superior here.</p>
+            
+            <h3>Installation Steps</h3>
+            <p>After installing Ubuntu, you must install the proprietary AMD drivers and the ROCm (Radeon Open Compute) stack. Your 7800 XTs use the RDNA3 architecture (gfx1101), which is officially supported by modern ROCm.</p>
+            
+<pre><code># 1. Download the AMD installer
+wget https://repo.radeon.com/amdgpu-install/6.1.2/ubuntu/jammy/amdgpu-install_6.1.20102-1_all.deb
+sudo apt-get install ./amdgpu-install_6.1.20102-1_all.deb
+
+# 2. Install the usecase for ROCm
+sudo amdgpu-install --usecase=rocm</code></pre>
+
+            <div class="warning">
+                <strong>CRITICAL: Permissions</strong><br>
+                If you do not add your user to the <code>video</code> and <code>render</code> groups, Ollama will quietly fail to find your GPUs and will fallback to your CPU, running incredibly slowly.
+            </div>
+<pre><code>sudo usermod -a -G video $USER
+sudo usermod -a -G render $USER
+# You MUST reboot after this command</code></pre>
+
+            <h3>Verification</h3>
+            <p>After rebooting, run the ROCm System Management Interface to verify both 7800 XTs are recognized:</p>
+<pre><code>rocm-smi</code></pre>
+        </div>
+
+        <div class="card" id="inference-stack">
+            <h2>2. The Inference Stack (Ollama)</h2>
+            <p>The "Engine" loads the massive matrix of numbers into your VRAM and calculates the next token. <strong>Ollama</strong> (backed by <code>llama.cpp</code>) is the easiest and most robust tool for this.</p>
+            
+            <h3>Why Ollama? (Tensor Splitting)</h3>
+            <p>When you load a 24GB model, it will not fit on a single 16GB 7800 XT. Ollama automatically handles <strong>Tensor Splitting</strong>, slicing the model in half across the PCIe bus, utilizing both GPUs seamlessly.</p>
+
+            <h3>Installation</h3>
+<pre><code>curl -fsSL https://ollama.com/install.sh | sh</code></pre>
+
+            <p>Once installed, Ollama runs as a background systemd service. It automatically exposes an OpenAI-compatible REST API on <code>http://localhost:11434/v1</code>.</p>
+        </div>
+
+        <div class="card" id="model-families">
+            <h2>3. Model Families & Quantization</h2>
+            <p>A standard uncompressed (FP16) 32 Billion parameter model requires ~64GB of VRAM. To fit it into your 32GB budget, we use <strong>Quantization</strong> (compressing the model to 4-bit, 5-bit, or 6-bit precision, typically using the GGUF format).</p>
+            
+            <div class="pro-tip">
+                A 32B model quantized to 6-bit (Q6_K) shrinks from 64GB down to <strong>~24GB</strong>. This fits beautifully across your dual 7800 XTs, leaving 8GB of VRAM left over for your "Context Window" (the code files you send the agent).
+            </div>
+
+            <h3>The Heavyweights</h3>
+            <ul>
+                <li><strong>Qwen 2.5 Coder 32B:</strong> The undisputed king of open-weight coding models. Exceptionally strong in typed languages like Golang and Rust. This is your primary daily driver for agentic coding. Run via: <code>ollama run qwen2.5-coder:32b</code></li>
+                <li><strong>Llama 3.1 8B:</strong> Blazing fast. Excellent for quick bash scripting, formatting text, or "router" agents. Uses < 6GB of VRAM.</li>
+                <li><strong>Gemma 2 27B:</strong> Google's dense powerhouse. Incredible general reasoning and logic skills, fits comfortably in your VRAM limit.</li>
+            </ul>
+
+            <div class="warning">
+                <strong>The 70B Trap:</strong> Even heavily quantized, a 70B model requires ~40GB of VRAM. Your system will "spill" the remaining 8GB into your slow DDR4 system RAM, causing generation speed to drop off a cliff (e.g., from 25 tokens/sec to 3 tokens/sec). Stick to ~32B models.
+            </div>
+        </div>
+
+        <div class="card" id="benchmarks">
+            <h2>4. Benchmarks & Local Evaluation</h2>
+            <p>Do not rely on Twitter hype. Use specific, empirical benchmarks to evaluate new models.</p>
+            
+            <ul>
+                <li><strong>The Aider LLM Leaderboard:</strong> Tests how well a model can read an existing, complex codebase, understand it, and surgically edit specific lines without breaking the file. The most important metric for agentic coding.</li>
+                <li><strong>SWE-bench:</strong> Tests a model's ability to autonomously navigate a massive repository, find a bug based on a GitHub issue, and generate a patch.</li>
+                <li><strong>LMSYS Chatbot Arena:</strong> A blind A/B testing leaderboard based on Elo ratings. Good for assessing "vibes" and instruction-following.</li>
+            </ul>
+
+            <h3>Local Verification</h3>
+            <p>When you download a new model, test its <strong>Context Degradation</strong> (the "Needle in a Haystack" test). Dump 10 massive Golang files into the prompt and ask a specific question about a buried variable. If it hallucinates, the model's context window cannot handle agentic workloads.</p>
+        </div>
+
+        <div class="card" id="agentic">
+            <h2>5. Hooking up Agentic Workloads</h2>
+            <p>Agentic tools (like CLAW, Aider, and Cline) are typically hardcoded to look for the OpenAI API. You "trick" them into talking to your local GPUs by overriding two environment variables:</p>
+
+<pre><code>export OPENAI_API_BASE="http://localhost:11434/v1"
+export OPENAI_API_KEY="dummy-key-ollama"</code></pre>
+
+            <h3>The Tools</h3>
+            <ul>
+                <li><strong>CLAW / Gemini CLI:</strong> Terminal-based, multi-step execution. Excellent for massive refactoring loops and running integration tests autonomously.</li>
+                <li><strong>Aider:</strong> A terminal pair programmer that tracks your git repository and surgically edits your files.</li>
+                <li><strong>Cline / Claude Dev:</strong> A VSCode extension that lives in your sidebar, reads open files, and proposes diffs visually.</li>
+            </ul>
+
+            <div class="warning">
+                <strong>Context Window Blowout:</strong> Every 8,000 tokens of context requires roughly 1GB of VRAM to hold in memory. If your agent tries to send 100,000 tokens of context alongside a 24GB model, your 32GB VRAM will overflow. <strong>Solution:</strong> Use <code>.aiderignore</code> or <code>.clineignore</code> files to hide massive directories (like <code>node_modules</code>) from the agents.
+            </div>
+        </div>
+
+        <div class="card" id="monitoring">
+            <h2>6. Staying Updated (RSS OPML)</h2>
+            <p>The open-weight AI space moves incredibly fast. To maintain your edge, you need to monitor the pulse of the community for new model drops, quantization formats, and AMD ROCm optimizations.</p>
+
+            <p>I have prepared a curated <strong>OPML file</strong> for your RSS reader containing feeds for:</p>
+            <ul>
+                <li><strong>r/LocalLLaMA:</strong> The epicenter of the offline AI community.</li>
+                <li><strong>HuggingFace Creators:</strong> Track <em>bartowski</em> and <em>MaziyarPanahi</em>. When a new 30B model drops, wait for them to publish the GGUF quant versions so you can actually run them on your GPUs.</li>
+                <li><strong>Engine Releases:</strong> Track Ollama and llama.cpp GitHub releases for performance patches.</li>
+                <li><strong>Agent Tooling:</strong> Track updates from the Aider and Cline developer blogs.</li>
+            </ul>
+
+            <div style="margin-top: 1.5rem;">
+                <a href="ai-feeds.opml" download class="tag am4" style="padding: 0.75rem 1.5rem; font-size: 1rem;">&#10515; Download AI Ecosystem RSS Feeds (OPML)</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
