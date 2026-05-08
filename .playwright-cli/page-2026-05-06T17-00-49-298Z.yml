@@ -1,0 +1,1011 @@
+- generic [active] [ref=e1]:
+  - img
+  - img
+  - generic [ref=e3]:
+    - banner [ref=e7]:
+      - link "Skip to main content" [ref=e9] [cursor=pointer]:
+        - /url: "#mainContent"
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - button "Hi Tiarnán!" [ref=e14] [cursor=pointer]:
+            - generic [ref=e15]: Hi Tiarnán!
+            - img
+          - link "Help & Contact" [ref=e17] [cursor=pointer]:
+            - /url: https://www.ebay.ie/help/home
+        - generic [ref=e18]:
+          - link "Sell" [ref=e20] [cursor=pointer]:
+            - /url: https://www.ebay.ie/sl/sell
+          - generic [ref=e21]:
+            - link "Watchlist" [ref=e22] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mye/myebay/watchlist
+              - generic [ref=e23]: Watchlist
+              - img
+            - button "Expand Watchlist" [ref=e24]
+          - generic [ref=e25]:
+            - link "My eBay" [ref=e26] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mys/home?source=GBH
+              - generic [ref=e27]: My eBay
+              - img
+            - button "Expand My eBay" [ref=e28]
+          - button "Notifications" [ref=e31] [cursor=pointer]:
+            - img
+            - generic [ref=e32]: Notifications
+          - generic [ref=e34]:
+            - link "Your shopping basket contains 0 items" [ref=e35] [cursor=pointer]:
+              - /url: https://cart.ebay.ie
+              - generic "Your shopping basket contains 0 items" [ref=e36]:
+                - img
+            - button "Expand Basket" [ref=e37]
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - link "eBay Home" [ref=e40] [cursor=pointer]:
+            - /url: https://www.ebay.ie
+            - img "eBay Home" [ref=e41]
+          - button "Shop by category" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: Shop by category
+            - img
+        - generic [ref=e51]:
+          - status [ref=e52]
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - combobox "Search for anything" [ref=e56]
+              - img
+            - combobox "Select a category for search" [ref=e57]:
+              - option "All Categories" [selected]
+              - option "Antiques"
+              - option "Art"
+              - option "Baby"
+              - option "Books, Comics & Magazines"
+              - option "Business, Office & Industrial"
+              - option "Cameras & Photography"
+              - option "Cars, Motorcycles & Vehicles"
+              - option "Clothes, Shoes & Accessories"
+              - option "Coins"
+              - option "Collectables"
+              - option "Computers/Tablets & Networking"
+              - option "Crafts"
+              - option "Dolls & Bears"
+              - option "DVDs, Films & TV"
+              - option "Events Tickets"
+              - option "Garden & Patio"
+              - option "Health & Beauty"
+              - option "Holidays & Travel"
+              - option "Home, Furniture & DIY"
+              - option "Jewellery & Watches"
+              - option "Mobile Phones & Communication"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Pet Supplies"
+              - option "Pottery, Porcelain & Glass"
+              - option "Property"
+              - option "Sound & Vision"
+              - option "Sporting Goods"
+              - option "Sports Memorabilia"
+              - option "Stamps"
+              - option "Toys & Games"
+              - option "Vehicle Parts & Accessories"
+              - option "Video Games & Consoles"
+              - option "Wholesale & Job Lots"
+              - option "Everything Else"
+          - generic [ref=e58]:
+            - button "Search" [ref=e59] [cursor=pointer]:
+              - generic [ref=e60]: Search
+            - link "Advanced" [ref=e61] [cursor=pointer]:
+              - /url: https://www.ebay.ie/sch/ebayadvsearch
+    - main [ref=e62]:
+      - generic [ref=e64]:
+        - generic [ref=e68]:
+          - generic [ref=e71]:
+            - generic [ref=e73]:
+              - generic [ref=e74]:
+                - button "Previous image - Item images thumbnails" [disabled] [ref=e75] [cursor=pointer]:
+                  - img
+                - generic [ref=e76]:
+                  - button "Picture 1 of 5" [ref=e77] [cursor=pointer]:
+                    - img "Picture 1 of 5" [ref=e78]
+                  - button "Picture 2 of 5" [ref=e79] [cursor=pointer]:
+                    - img "Picture 2 of 5" [ref=e80]
+                  - button "Picture 3 of 5" [ref=e81] [cursor=pointer]:
+                    - img "Picture 3 of 5" [ref=e82]
+                  - button "Picture 4 of 5" [ref=e83] [cursor=pointer]:
+                    - img "Picture 4 of 5" [ref=e84]
+                  - button "Picture 5 of 5" [ref=e85] [cursor=pointer]:
+                    - img "Picture 5 of 5" [ref=e86]
+                - button "Next image - Item images thumbnails" [ref=e87] [cursor=pointer]:
+                  - img
+              - generic [ref=e88]:
+                - heading "Picture 1 of 5" [level=2] [ref=e89]
+                - button "Previous image - Item images thumbnails" [ref=e91] [cursor=pointer]:
+                  - img
+                - 'region "Opens image gallery dialogue ASRock X670E Steel Legend AMD X670E Motherboard ATX Socket AM5 #328392 - Picture 1 of 5" [ref=e92]':
+                  - group "1 of 5" [ref=e93]:
+                    - 'img "ASRock X670E Steel Legend AMD X670E Motherboard ATX Socket AM5 #328392 - Picture 1 of 5" [ref=e94]'
+                  - group "2 of 5" [ref=e95]:
+                    - 'img "ASRock X670E Steel Legend AMD X670E Motherboard ATX Socket AM5 #328392 - Picture 2 of 5" [ref=e96]'
+                  - group "3 of 5" [ref=e97]:
+                    - 'img "ASRock X670E Steel Legend AMD X670E Motherboard ATX Socket AM5 #328392 - Picture 3 of 5" [ref=e98]'
+                  - group "4 of 5" [ref=e99]:
+                    - 'img "ASRock X670E Steel Legend AMD X670E Motherboard ATX Socket AM5 #328392 - Picture 4 of 5" [ref=e100]'
+                  - group "5 of 5" [ref=e101]:
+                    - 'img "ASRock X670E Steel Legend AMD X670E Motherboard ATX Socket AM5 #328392 - Picture 5 of 5" [ref=e102]'
+                - generic [ref=e103]:
+                  - button "Opens image gallery" [ref=e104] [cursor=pointer]:
+                    - img
+                  - button "Add to Watchlist" [ref=e106] [cursor=pointer]:
+                    - img
+                - button "Next image - Item images thumbnails" [ref=e108] [cursor=pointer]:
+                  - img
+            - generic [ref=e113]:
+              - generic [ref=e114]: Have one to sell?
+              - link "Sell it yourself" [ref=e116] [cursor=pointer]:
+                - /url: https://www.ebay.ie/sl/list?mode=SellLikeItem&itemId=127833912745&rt=nc&_trksid=p4429486.m117039.l2567
+                - generic [ref=e117]: Sell it yourself
+            - button "Share" [ref=e123] [cursor=pointer]:
+              - img
+              - generic [ref=e124]: Share
+          - generic [ref=e127]:
+            - generic [ref=e128]:
+              - 'heading "ASRock X670E Steel Legend AMD X670E Motherboard ATX Socket AM5 #328392-" [level=1] [ref=e129]'
+              - button "show original title" [ref=e135] [cursor=pointer]
+            - generic [ref=e137] [cursor=pointer]:
+              - generic [ref=e139]:
+                - link [ref=e141]:
+                  - /url: https://www.ebay.ie/str/computerstoreberlin?_trksid=p4429486.m3561.l161210
+                  - img [ref=e143]
+                - generic [ref=e144]:
+                  - generic [ref=e145]:
+                    - link "Computer Store Berlin" [ref=e146]:
+                      - /url: https://www.ebay.ie/str/computerstoreberlin?_trksid=p4429486.m3561.l161211
+                    - generic [ref=e147]:
+                      - generic [ref=e148]: (145366)
+                      - generic [ref=e149]:
+                        - text: Business
+                        - button "Registered as business seller" [ref=e154]:
+                          - img
+                  - generic [ref=e155]:
+                    - button "99.8% positive Feedback" [ref=e157]
+                    - link "Seller's other items" [ref=e159]:
+                      - /url: https://www.ebay.ie/str/computerstoreberlin?_trksid=p4429486.m3561.l170197
+                      - generic [ref=e160]: Seller's other items
+                      - generic [ref=e161]: Seller's other items
+                    - button "Message seller" [ref=e163]:
+                      - generic [ref=e164]: Message seller
+                      - generic [ref=e165]: Message seller
+              - button "See more about this seller" [ref=e167]:
+                - img
+            - generic [ref=e171]:
+              - text: EUR 332.90
+              - generic [ref=e172]: or Best Offer
+            - generic [ref=e173]:
+              - generic [ref=e174]: "Condition:"
+              - generic [ref=e176]:
+                - generic [ref=e177]:
+                  - generic [ref=e178]: Used
+                  - generic [ref=e179]: Used
+                - button "More information - About this item condition" [ref=e180] [cursor=pointer]:
+                  - generic [ref=e181]:
+                    - img "More information - About this item condition"
+            - list [ref=e183]:
+              - listitem [ref=e184]:
+                - link "Buy It Now" [ref=e186] [cursor=pointer]:
+                  - /url: https://www.ebay.ie/bin/ctb?item=127833912745&quantity=1&fromPage=4429486&rev=1&fb=1
+                  - generic [ref=e187]: Buy It Now
+              - listitem [ref=e188]:
+                - button "Add to basket" [ref=e190] [cursor=pointer]:
+                  - generic [ref=e191]: Add to basket
+              - listitem [ref=e192]:
+                - button "Make offer" [ref=e194] [cursor=pointer]:
+                  - generic [ref=e195]: Make offer
+              - listitem [ref=e196]:
+                - generic [ref=e198]:
+                  - status [ref=e199]: Add to Watchlist
+                  - button "Add to Watchlist" [ref=e204] [cursor=pointer]:
+                    - generic [ref=e205]:
+                      - img
+                      - text: Add to Watchlist
+            - generic [ref=e209]:
+              - generic [ref=e210]:
+                - img
+              - generic [ref=e212]: Breathe easy. Returns accepted.
+            - generic [ref=e215]:
+              - heading "Postage, returns and payments" [level=2] [ref=e218]:
+                - generic [ref=e219]: Postage, returns and payments
+              - generic [ref=e221]:
+                - generic [ref=e224]:
+                  - generic [ref=e227]: "Postage:"
+                  - generic [ref=e229]:
+                    - generic [ref=e230]:
+                      - text: EUR 18.95 Economy Int'l Versand.
+                      - button "See details for postage" [ref=e231] [cursor=pointer]:
+                        - generic [ref=e232]:
+                          - text: See details
+                          - generic [ref=e233]: for postage
+                    - generic [ref=e234]: "Located in: Berlin, Germany"
+                - generic [ref=e238]:
+                  - generic [ref=e241]: "Delivery:"
+                  - generic [ref=e243]:
+                    - generic [ref=e244]:
+                      - text: Estimated between Mon, 11 May and Thu, 14 May to D08F97P
+                      - button "Information - Estimated delivery date - opens a layer" [ref=e250]:
+                        - img
+                    - generic [ref=e251]:
+                      - text: Seller dispatches within 1 day after
+                      - link "receiving cleared payment" [ref=e252] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/pages/help/buy/contextual/domestic-handling-time.html
+                      - text: .
+            - generic [ref=e259]:
+              - generic [ref=e262]: "Returns:"
+              - generic [ref=e265]:
+                - text: 14 days return. Buyer pays for return postage. If you use an eBay delivery label, it will be deducted from your refund amount.
+                - button "See details - for more information about returns" [ref=e266] [cursor=pointer]:
+                  - generic [ref=e267]:
+                    - text: See details
+                    - generic [ref=e268]: "- for more information about returns"
+            - generic [ref=e275]:
+              - generic [ref=e278]: "Payments:"
+              - generic [ref=e281]:
+                - img "PayPal" [ref=e282]
+                - img "Google Pay" [ref=e284]
+                - img "Visa" [ref=e286]
+                - img "Mastercard" [ref=e288]
+                - img "Diners Club" [ref=e291]
+            - generic [ref=e295]:
+              - heading "Shop with confidence" [level=2] [ref=e298]
+              - generic [ref=e299]:
+                - generic [ref=e301]:
+                  - img
+                - generic [ref=e302]:
+                  - generic [ref=e303]: eBay Money Back Guarantee
+                  - generic [ref=e304]:
+                    - text: Get the item you ordered or your money back.
+                    - link "Learn more eBay Money Back Guarantee - opens new window or tab" [ref=e305] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/ebay-money-back-guarantee/
+                      - generic [ref=e306]:
+                        - text: Learn more
+                        - generic [ref=e307]: eBay Money Back Guarantee - opens new window or tab
+        - generic [ref=e308]:
+          - generic [ref=e310]:
+            - generic [ref=e313]:
+              - tablist [ref=e314]:
+                - tab "About this item" [selected] [ref=e315] [cursor=pointer]:
+                  - generic [ref=e316]: About this item
+              - tabpanel "About this item" [ref=e318]:
+                - generic [ref=e321]:
+                  - generic [ref=e324]:
+                    - generic [ref=e328]: Seller assumes all responsibility for this listing.
+                    - generic [ref=e332]: eBay item number:127833912745
+                    - generic [ref=e336]:
+                      - text: Last updated on 02 May, 2026 15:41:22 BST
+                      - link "View all revisions View all revisions" [ref=e337] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/rvh/127833912745?rt=nc&_trksid=p4429486.m148105.l48144
+                        - generic [ref=e338]:
+                          - text: View all revisions
+                          - generic [ref=e339]: View all revisions
+                  - generic [ref=e342]:
+                    - heading "Item specifics" [level=2] [ref=e345]:
+                      - generic [ref=e346]: Item specifics
+                    - generic [ref=e348]:
+                      - generic [ref=e349]:
+                        - generic [ref=e351]:
+                          - term [ref=e352]:
+                            - generic [ref=e354]: Condition
+                          - definition [ref=e355]:
+                            - generic [ref=e358]:
+                              - generic [ref=e359]: "Used: An item that has been previously used. The item may have some signs of cosmetic wear, but is ..."
+                              - button "Read more about the condition" [ref=e361]:
+                                - generic [ref=e362]:
+                                  - text: Read more
+                                  - generic [ref=e363]: about the condition
+                        - generic [ref=e365]:
+                          - term [ref=e366]:
+                            - generic [ref=e368]: Anzahl der Speicher-Steckplätze
+                          - definition [ref=e369]:
+                            - generic [ref=e371]: "4"
+                      - generic [ref=e372]:
+                        - generic [ref=e374]:
+                          - term [ref=e375]:
+                            - generic [ref=e377]: Ein-/Ausgangsanschlüsse
+                          - definition [ref=e378]:
+                            - generic [ref=e380]: USB 2.0, USB 3.0, HDMI, SATA III, DisplayPort, HD Audio Jack, RJ45 LAN-Schnittstelle, WLAN-Antennenbuchse (optional), Thunderbolt
+                        - generic [ref=e382]:
+                          - term [ref=e383]:
+                            - generic [ref=e385]: Erweiterungssteckplätze
+                          - definition [ref=e386]:
+                            - generic [ref=e388]: SATA III, USB 3.0, M.2, PCI Express 3.0 x4, PCI Express x16, M.2/M-Key, PCI Express 5.0 x16
+                      - generic [ref=e389]:
+                        - generic [ref=e391]:
+                          - term [ref=e392]:
+                            - generic [ref=e394]: Interne Schnittstellen
+                          - definition [ref=e395]:
+                            - generic [ref=e397]: SATA III, 9/10-Pin Firewire, M.2, USB 2.0, USB 3.0
+                        - generic [ref=e399]:
+                          - term [ref=e400]:
+                            - generic [ref=e402]: Besonderheiten
+                          - definition [ref=e403]:
+                            - generic [ref=e405]: Dual LAN, On-Board-Audio
+                      - generic [ref=e406]:
+                        - generic [ref=e408]:
+                          - term [ref=e409]:
+                            - generic [ref=e411]: Netzwerkanschluss
+                          - definition [ref=e412]:
+                            - generic [ref=e414]: Kabelgebunden - Ethernet (RJ-45)
+                        - generic [ref=e416]:
+                          - term [ref=e417]:
+                            - generic [ref=e419]: Herstellergarantie
+                          - definition [ref=e420]:
+                            - generic [ref=e422]: Keine
+                      - generic [ref=e423]:
+                        - generic [ref=e425]:
+                          - term [ref=e426]:
+                            - generic [ref=e428]: Sockeltyp
+                          - definition [ref=e429]:
+                            - generic [ref=e431]: Sockel AM5 (LGA1718)
+                        - generic [ref=e433]:
+                          - term [ref=e434]:
+                            - generic [ref=e436]: Speichertyp
+                          - definition [ref=e437]:
+                            - generic [ref=e439]: DDR5 SDRAM
+                      - generic [ref=e440]:
+                        - generic [ref=e442]:
+                          - term [ref=e443]:
+                            - generic [ref=e445]: Kompatible CPU-Marke
+                          - definition [ref=e446]:
+                            - generic [ref=e448]: AMD
+                        - generic [ref=e450]:
+                          - term [ref=e451]:
+                            - generic [ref=e453]: Formfaktor
+                          - definition [ref=e454]:
+                            - generic [ref=e456]: ATX
+                      - generic [ref=e457]:
+                        - generic [ref=e459]:
+                          - term [ref=e460]:
+                            - generic [ref=e462]: Marke
+                          - definition [ref=e463]:
+                            - generic [ref=e465]: ASRock
+                        - generic [ref=e467]:
+                          - term [ref=e468]:
+                            - generic [ref=e470]: Herstellernummer
+                          - definition [ref=e471]:
+                            - generic [ref=e473]: 90-MXBJ40-A0UAYZ
+                      - generic [ref=e476]:
+                        - term [ref=e477]:
+                          - generic [ref=e479]: EAN
+                        - definition [ref=e480]:
+                          - generic [ref=e482]: Nicht zutreffend
+                  - generic [ref=e484]:
+                    - generic [ref=e485]: Category
+                    - navigation "breadcrumb" [ref=e488]:
+                      - heading "breadcrumb" [level=2] [ref=e489]
+                      - list [ref=e490]:
+                        - listitem [ref=e491]:
+                          - link "Electronics" [ref=e492] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/b/bn_7000259660
+                          - img
+                        - listitem [ref=e493]:
+                          - link "Computers/Tablets & Networking" [ref=e494] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/b/bn_1838792
+                          - img
+                        - listitem [ref=e495]:
+                          - link "Computer Components & Parts" [ref=e496] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/b/bn_1624167
+                          - img
+                        - listitem [ref=e497]:
+                          - link "Motherboards" [ref=e498] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/b/bn_661686
+                  - generic [ref=e499]:
+                    - heading "Item description from the seller" [level=2] [ref=e502]
+                    - iframe [ref=e503]:
+                      - generic [ref=f266e2]:
+                        - generic [ref=f266e3]:
+                          - generic [ref=f266e4]:
+                            - img [ref=f266e5]
+                            - list [ref=f266e7]:
+                              - listitem [ref=f266e8]:
+                                - link "Shop |" [ref=f266e9] [cursor=pointer]:
+                                  - /url: https://stores.ebay.de/computer-store-berlin?_rdc=1
+                                - link "Öffnungszeiten |" [ref=f266e10] [cursor=pointer]:
+                                  - /url: https://stores.ebay.de/computer-store-berlin/Oeffnungzeiten.html
+                                - link "Versandkosten |" [ref=f266e11] [cursor=pointer]:
+                                  - /url: https://stores.ebay.de/computer-store-berlin/Versand-und-Zahlung.html
+                                - link "Zahlungshinweise |" [ref=f266e12] [cursor=pointer]:
+                                  - /url: https://stores.ebay.de/computer-store-berlin/Zahlung-und-Versand.html
+                                - link "Batterieverordnung |" [ref=f266e13] [cursor=pointer]:
+                                  - /url: https://stores.ebay.de/computer-store-berlin/Batterieverordnung.html
+                                - link "Über uns" [ref=f266e14] [cursor=pointer]:
+                                  - /url: https://stores.ebay.de/computer-store-berlin/Ueber-uns.html
+                          - generic:
+                            - generic [ref=f266e15]:
+                              - generic [ref=f266e16]:
+                                - heading "Kategorien / Category" [level=2] [ref=f266e17]
+                                - list [ref=f266e21]:
+                                  - listitem [ref=f266e22]:
+                                    - link "Arbeitsspeicher (RAM)" [ref=f266e23] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=3461793819
+                                  - listitem [ref=f266e24]:
+                                    - link "Aufrüst-Bundles" [ref=f266e25] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=2410655119
+                                  - listitem [ref=f266e26]:
+                                    - link "Controller" [ref=f266e27] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=1644111919
+                                  - listitem [ref=f266e28]:
+                                    - link "CPU (Prozessoren)" [ref=f266e29] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=3461788119
+                                  - listitem [ref=f266e30]:
+                                    - link "Eingabegeräte" [ref=f266e31] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=1644103019
+                                  - listitem [ref=f266e32]:
+                                    - link "Festplatten" [ref=f266e33] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=3469359919
+                                  - listitem [ref=f266e34]:
+                                    - link "Gehäuse" [ref=f266e35] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=1644111719
+                                  - listitem [ref=f266e36]:
+                                    - link "Grafikkarten" [ref=f266e37] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=2696252519
+                                  - listitem [ref=f266e38]:
+                                    - link "Kabel & Adapter" [ref=f266e39] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=1644111819
+                                  - listitem [ref=f266e40]:
+                                    - link "Komponenten-Bundles" [ref=f266e41] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=1071746519
+                                  - listitem [ref=f266e42]:
+                                    - link "Kühler" [ref=f266e43] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=3461819919
+                                  - listitem [ref=f266e44]:
+                                    - link "Laufwerke" [ref=f266e45] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=692491919
+                                  - listitem [ref=f266e46]:
+                                    - link "Lüfter" [ref=f266e47] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=3461819819
+                                  - listitem [ref=f266e48]:
+                                    - link "Mainboards" [ref=f266e49] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=2697552919
+                                  - listitem [ref=f266e50]:
+                                    - link "Monitore" [ref=f266e51] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=1722358819
+                                  - listitem [ref=f266e52]:
+                                    - link "Netzteile" [ref=f266e53] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=831185719
+                                  - listitem [ref=f266e54]:
+                                    - link "PC (Komplettsysteme)" [ref=f266e55] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=692492419
+                                  - listitem [ref=f266e56]:
+                                    - link "Sonstige" [ref=f266e57] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=1
+                                  - listitem [ref=f266e58]:
+                                    - link "Sound (Audio)" [ref=f266e59] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=3461822019
+                                  - listitem [ref=f266e60]:
+                                    - link "Video / TV-Karten" [ref=f266e61] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=3461793719
+                                  - listitem [ref=f266e62]:
+                                    - link "Zubehör" [ref=f266e63] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=3461820019
+                                  - listitem [ref=f266e64]:
+                                    - link "Zur Verwertung - Defekte" [ref=f266e65] [cursor=pointer]:
+                                      - /url: https://www.ebay.de/str/computerstoreberlin/-/_i.html?_storecat=4242279719
+                              - generic [ref=f266e66]:
+                                - heading "Topangebot / Top offer" [level=2] [ref=f266e67]
+                                - link "Unser Topangebot Qualitätsware zum Top Preis . Klicken Sie hier! Aufrüst Bundle ab 33,50 Euro" [ref=f266e69] [cursor=pointer]:
+                                  - /url: https://www.ebay.de/str/computerstoreberlin/Aufrust-Bundles/_i.html?store_cat=2410655119&_sop=15
+                                  - img "Unser Topangebot Qualitätsware zum Top Preis . Klicken Sie hier!" [ref=f266e70]
+                                  - text: Aufrüst Bundle ab
+                                  - text: 33,50 Euro
+                              - generic [ref=f266e71]:
+                                - heading "Zahlung / Payment" [level=2] [ref=f266e72]
+                                - generic [ref=f266e73]:
+                                  - link "Hier finden Sie mehr zu unseren Zahlungsbedingungen. - Here you will find more about our terms of payment." [ref=f266e74] [cursor=pointer]:
+                                    - /url: https://stores.ebay.de/computer-store-berlin/Zahlung-und-Versand.html
+                                    - img [ref=f266e75]
+                                  - img [ref=f266e76]
+                                  - link "Mehr Information More Information" [ref=f266e77] [cursor=pointer]:
+                                    - /url: https://stores.ebay.de/computer-store-berlin/Zahlung-und-Versand.html
+                                    - text: Mehr Information
+                                    - generic [ref=f266e78]: More Information
+                              - generic [ref=f266e79]:
+                                - heading "Versand / Shipping" [level=2] [ref=f266e80]
+                                - generic [ref=f266e81]:
+                                  - img [ref=f266e82]
+                                  - link "Mehr Information More Information" [ref=f266e83] [cursor=pointer]:
+                                    - /url: https://stores.ebay.de/computer-store-berlin/Zahlung-und-Versand.html
+                                    - text: Mehr Information
+                                    - generic [ref=f266e84]: More Information
+                              - generic [ref=f266e85]:
+                                - heading "Partner / Companion" [level=2] [ref=f266e86]
+                                - img [ref=f266e88]
+                            - generic [ref=f266e89]:
+                              - generic [ref=f266e90]:
+                                - heading "ASRock X670E Steel Legend AMD X670E Mainboard ATX Sockel AM5" [level=1] [ref=f266e91]
+                                - heading "Beschreibung / Description" [level=6] [ref=f266e92]:
+                                  - img [ref=f266e93]
+                                  - text: Beschreibung / Description
+                                - paragraph [ref=f266e94]
+                                - table [ref=f266e95]:
+                                  - rowgroup [ref=f266e96]:
+                                    - row "Anzahl der Speicher-Steckplätze 4" [ref=f266e97]:
+                                      - cell "Anzahl der Speicher-Steckplätze" [ref=f266e98]
+                                      - cell "4" [ref=f266e99]
+                                    - row "Ein-/Ausgangsanschlüsse USB 2.0" [ref=f266e100]:
+                                      - cell "Ein-/Ausgangsanschlüsse" [ref=f266e101]
+                                      - cell "USB 2.0" [ref=f266e102]
+                                    - row "Ein-/Ausgangsanschlüsse USB 3.0" [ref=f266e103]:
+                                      - cell "Ein-/Ausgangsanschlüsse" [ref=f266e104]
+                                      - cell "USB 3.0" [ref=f266e105]
+                                    - row "Ein-/Ausgangsanschlüsse HDMI" [ref=f266e106]:
+                                      - cell "Ein-/Ausgangsanschlüsse" [ref=f266e107]
+                                      - cell "HDMI" [ref=f266e108]
+                                    - row "Ein-/Ausgangsanschlüsse SATA III" [ref=f266e109]:
+                                      - cell "Ein-/Ausgangsanschlüsse" [ref=f266e110]
+                                      - cell "SATA III" [ref=f266e111]
+                                    - row "Ein-/Ausgangsanschlüsse DisplayPort" [ref=f266e112]:
+                                      - cell "Ein-/Ausgangsanschlüsse" [ref=f266e113]
+                                      - cell "DisplayPort" [ref=f266e114]
+                                    - row "Erweiterungssteckplätze SATA III" [ref=f266e115]:
+                                      - cell "Erweiterungssteckplätze" [ref=f266e116]
+                                      - cell "SATA III" [ref=f266e117]
+                                    - row "Erweiterungssteckplätze USB 3.0" [ref=f266e118]:
+                                      - cell "Erweiterungssteckplätze" [ref=f266e119]
+                                      - cell "USB 3.0" [ref=f266e120]
+                                    - row "Erweiterungssteckplätze M.2" [ref=f266e121]:
+                                      - cell "Erweiterungssteckplätze" [ref=f266e122]
+                                      - cell "M.2" [ref=f266e123]
+                                    - row "Erweiterungssteckplätze PCI Express 3.0 x4" [ref=f266e124]:
+                                      - cell "Erweiterungssteckplätze" [ref=f266e125]
+                                      - cell "PCI Express 3.0 x4" [ref=f266e126]
+                                    - row "Erweiterungssteckplätze PCI Express x16" [ref=f266e127]:
+                                      - cell "Erweiterungssteckplätze" [ref=f266e128]
+                                      - cell "PCI Express x16" [ref=f266e129]
+                                    - row "Interne Schnittstellen SATA III" [ref=f266e130]:
+                                      - cell "Interne Schnittstellen" [ref=f266e131]
+                                      - cell "SATA III" [ref=f266e132]
+                                    - row "Besonderheiten Dual LAN" [ref=f266e133]:
+                                      - cell "Besonderheiten" [ref=f266e134]
+                                      - cell "Dual LAN" [ref=f266e135]
+                                    - row "Besonderheiten On-Board-Audio" [ref=f266e136]:
+                                      - cell "Besonderheiten" [ref=f266e137]
+                                      - cell "On-Board-Audio" [ref=f266e138]
+                                    - row "Ein-/Ausgangsanschlüsse HD Audio Jack" [ref=f266e139]:
+                                      - cell "Ein-/Ausgangsanschlüsse" [ref=f266e140]
+                                      - cell "HD Audio Jack" [ref=f266e141]
+                                    - row "Ein-/Ausgangsanschlüsse RJ45 LAN-Schnittstelle" [ref=f266e142]:
+                                      - cell "Ein-/Ausgangsanschlüsse" [ref=f266e143]
+                                      - cell "RJ45 LAN-Schnittstelle" [ref=f266e144]
+                                    - row "Ein-/Ausgangsanschlüsse WLAN-Antennenbuchse (optional)" [ref=f266e145]:
+                                      - cell "Ein-/Ausgangsanschlüsse" [ref=f266e146]
+                                      - cell "WLAN-Antennenbuchse (optional)" [ref=f266e147]
+                                    - row "Erweiterungssteckplätze M.2/M-Key" [ref=f266e148]:
+                                      - cell "Erweiterungssteckplätze" [ref=f266e149]
+                                      - cell "M.2/M-Key" [ref=f266e150]
+                                    - row "Erweiterungssteckplätze PCI Express 5.0 x16" [ref=f266e151]:
+                                      - cell "Erweiterungssteckplätze" [ref=f266e152]
+                                      - cell "PCI Express 5.0 x16" [ref=f266e153]
+                                    - row "Interne Schnittstellen 9/10-Pin Firewire" [ref=f266e154]:
+                                      - cell "Interne Schnittstellen" [ref=f266e155]
+                                      - cell "9/10-Pin Firewire" [ref=f266e156]
+                                    - row "Netzwerkanschluss Kabelgebunden - Ethernet (RJ-45)" [ref=f266e157]:
+                                      - cell "Netzwerkanschluss" [ref=f266e158]
+                                      - cell "Kabelgebunden - Ethernet (RJ-45)" [ref=f266e159]
+                                    - row "Interne Schnittstellen M.2" [ref=f266e160]:
+                                      - cell "Interne Schnittstellen" [ref=f266e161]
+                                      - cell "M.2" [ref=f266e162]
+                                    - row "Interne Schnittstellen USB 2.0" [ref=f266e163]:
+                                      - cell "Interne Schnittstellen" [ref=f266e164]
+                                      - cell "USB 2.0" [ref=f266e165]
+                                    - row "Ein-/Ausgangsanschlüsse Thunderbolt" [ref=f266e166]:
+                                      - cell "Ein-/Ausgangsanschlüsse" [ref=f266e167]
+                                      - cell "Thunderbolt" [ref=f266e168]
+                                    - row "Sockeltyp Sockel AM5 (LGA1718)" [ref=f266e169]:
+                                      - cell "Sockeltyp" [ref=f266e170]
+                                      - cell "Sockel AM5 (LGA1718)" [ref=f266e171]
+                                    - row "Interne Schnittstellen USB 3.0" [ref=f266e172]:
+                                      - cell "Interne Schnittstellen" [ref=f266e173]
+                                      - cell "USB 3.0" [ref=f266e174]
+                                    - row "Speichertyp DDR5 SDRAM" [ref=f266e175]:
+                                      - cell "Speichertyp" [ref=f266e176]
+                                      - cell "DDR5 SDRAM" [ref=f266e177]
+                                    - row "Kompatible CPU-Marke AMD" [ref=f266e178]:
+                                      - cell "Kompatible CPU-Marke" [ref=f266e179]
+                                      - cell "AMD" [ref=f266e180]
+                                    - row "Formfaktor ATX" [ref=f266e181]:
+                                      - cell "Formfaktor" [ref=f266e182]
+                                      - cell "ATX" [ref=f266e183]
+                                    - row "Marke ASRock" [ref=f266e184]:
+                                      - cell "Marke" [ref=f266e185]
+                                      - cell "ASRock" [ref=f266e186]
+                                    - row "Herstellernummer 90-MXBJ40-A0UAYZ" [ref=f266e187]:
+                                      - cell "Herstellernummer" [ref=f266e188]
+                                      - cell "90-MXBJ40-A0UAYZ" [ref=f266e189]
+                                - heading "Zustand / Condition" [level=6] [ref=f266e190]:
+                                  - img [ref=f266e191]
+                                  - text: Zustand / Condition
+                                - paragraph [ref=f266e192]: Artikel ist getestet und voll funktionstüchtig!
+                                - heading "Lieferumfang / Delivery" [level=6] [ref=f266e193]:
+                                  - img [ref=f266e194]
+                                  - text: Lieferumfang / Delivery
+                                - paragraph [ref=f266e195]: Artikel wird ohne Zubehör in neutraler Verpackung geliefert.
+                                - heading "Sonstiges - Extras / Other - Extras" [level=6] [ref=f266e196]:
+                                  - img [ref=f266e197]
+                                  - text: Sonstiges - Extras / Other - Extras
+                                - paragraph [ref=f266e198]:
+                                  - text: "Sie benötigen die neueste BIOS-Version? Auf Wunsch übernehmen wir das Aufspielen (flashen). Weiter Details finden Sie hier:"
+                                  - link "BIOS-Update-Service" [ref=f266e199] [cursor=pointer]:
+                                    - /url: https://www.ebay.de/itm/127563529440
+                              - separator [ref=f266e200]
+                              - generic [ref=f266e203]:
+                                - img "Klick hier für größeres Bild - Click here for larger picture" [ref=f266e205] [cursor=pointer]
+                                - img "Klick hier für größeres Bild - Click here for larger picture" [ref=f266e207]
+                                - img "Klick hier für größeres Bild - Click here for larger picture" [ref=f266e209] [cursor=pointer]
+                                - img "Klick hier für größeres Bild - Click here for larger picture" [ref=f266e211]
+                                - img "Klick hier für größeres Bild - Click here for larger picture" [ref=f266e213] [cursor=pointer]
+                                - img "Klick hier für größeres Bild - Click here for larger picture" [ref=f266e215]
+                                - img "Klick hier für größeres Bild - Click here for larger picture" [ref=f266e217] [cursor=pointer]
+                                - img "Klick hier für größeres Bild - Click here for larger picture" [ref=f266e219]
+                                - img "Klick hier für größeres Bild - Click here for larger picture" [ref=f266e221] [cursor=pointer]
+                                - img "Klick hier für größeres Bild - Click here for larger picture" [ref=f266e223]
+                                - img "Klick hier für größeres Bild - Click here for larger picture" [ref=f266e225] [cursor=pointer]
+                                - img "Klick hier für größeres Bild - Click here for larger picture" [ref=f266e227]
+                              - generic [ref=f266e228]:
+                                - text: Artikel ist getestet und voll funktionstüchtig!!
+                                - img [ref=f266e229]
+                                - text: The item is tested and works without any problems!
+                              - generic [ref=f266e230]:
+                                - heading "Bestseller & Favoriten / Bestsellers & Favorites" [level=2] [ref=f266e231]
+                                - link "Aufrüst Bundles" [ref=f266e233] [cursor=pointer]:
+                                  - /url: https://www.ebaystores.de/computer-store-berlin/Aufrust-Bundles-/_i.html?_fsub=2410655119&_sid=1057521449&_trksid=p4634.c0.m322$
+                                  - img [ref=f266e234]
+                                  - text: Aufrüst Bundles
+                                - link "Prozessoren" [ref=f266e236] [cursor=pointer]:
+                                  - /url: https://www.ebaystores.de/computer-store-berlin/CPU-Prozessoren-/_i.html?_fsub=3461788119&_sid=1057521449&_trksid=p4634.c0.m322$
+                                  - img [ref=f266e237]
+                                  - text: Prozessoren
+                                - link "Motherboards" [ref=f266e239] [cursor=pointer]:
+                                  - /url: https://www.ebaystores.de/computer-store-berlin/Mainboards-/_i.html?_fsub=2697552919&_sid=1057521449&_trksid=p4634.c0.m322$
+                                  - img [ref=f266e240]
+                                  - text: Motherboards
+                                - link "Grafikkarten" [ref=f266e242] [cursor=pointer]:
+                                  - /url: https://www.ebaystores.de/computer-store-berlin/Grafikkarten-/_i.html?_fsub=2696252519&_sid=1057521449&_trksid=p4634.c0.m322$
+                                  - img [ref=f266e243]
+                                  - text: Grafikkarten
+                                - link "Arbeitsspeicher" [ref=f266e245] [cursor=pointer]:
+                                  - /url: https://www.ebaystores.de/computer-store-berlin/Arbeitsspeicher-RAM-/_i.html?_fsub=3461793819&_sid=1057521449&_trksid=p4634.c0.m322$
+                                  - img [ref=f266e246]
+                                  - text: Arbeitsspeicher
+                                - link "Festplatten" [ref=f266e248] [cursor=pointer]:
+                                  - /url: https://www.ebaystores.de/computer-store-berlin/Festplatten-/_i.html?_fsub=3469359919&_sid=1057521449&_trksid=p4634.c0.m322$
+                                  - img [ref=f266e249]
+                                  - text: Festplatten
+                        - link "Powered by JTL-eazyAuction" [ref=f266e251] [cursor=pointer]:
+                          - /url: https://verkaeuferportal.ebay.de/jtl-eazyauction
+                          - img "Powered by JTL-eazyAuction" [ref=f266e252]
+                  - generic [ref=e506]:
+                    - heading "Seller business information" [level=2] [ref=e509]:
+                      - generic [ref=e510]: Seller business information
+                    - generic [ref=e511]: I certify that all my selling activities will comply with all EU laws and regulations.
+                    - generic [ref=e513]:
+                      - generic [ref=e514]: "VAT number: DE 358132525"
+                      - generic [ref=e515]: "Additional information:"
+                      - generic [ref=e521]: "Umsatz unterliegt der Differenzbesteuerung nach §25a UStG. Es kann keine Rechnung mit ausgewiesener Mehrwertsteuer erstellt werden. Gewährleistung: 24 Monate. Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor Verbraucherschlichtungsstellen teilzunehmen."
+                      - button "See all" [ref=e523] [cursor=pointer]
+                    - generic [ref=e525]:
+                      - button "Terms and conditions of the sale" [ref=e527] [cursor=pointer]
+                      - button "Seller contact information" [ref=e529] [cursor=pointer]
+            - generic [ref=e530]:
+              - heading "Safety and accessibility information" [level=2] [ref=e532]:
+                - generic [ref=e533]: Safety and accessibility information
+                - generic [ref=e534]: Safety and accessibility information
+              - generic [ref=e535]:
+                - generic [ref=e536]:
+                  - img "CE marking"
+                - generic [ref=e537]:
+                  - img "Not suitable for young children"
+              - generic [ref=e538]:
+                - generic [ref=e539]:
+                  - generic [ref=e541]: "Warning: Product contains a button or coin battery."
+                  - generic [ref=e542]: "Warning: Product contains a button or coin battery."
+                  - generic [ref=e544]: "Warning: Not suitable for children under 3 years old."
+                  - generic [ref=e545]: "Warning: Not suitable for children under 3 years old."
+                - button "Manufacturer / EU responsible person" [ref=e550] [cursor=pointer]:
+                  - generic [ref=e551]: Manufacturer / EU responsible person
+                  - generic [ref=e552]: Manufacturer / EU responsible person
+          - generic [ref=e555]:
+            - generic [ref=e556]:
+              - generic [ref=e557]:
+                - heading "About this seller" [level=2] [ref=e558]:
+                  - generic [ref=e560]: About this seller
+                - generic [ref=e561]:
+                  - link [ref=e563] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/computerstoreberlin?_trksid=p4429486.m145687.l149266
+                    - img [ref=e565]
+                  - generic [ref=e566]:
+                    - heading "Computer Store Berlin" [level=3] [ref=e567]:
+                      - link "Computer Store Berlin" [ref=e568] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/str/computerstoreberlin?_trksid=p4429486.m145687.l149267
+                    - paragraph [ref=e569]: 99.8% positive Feedback•373K items sold
+                - generic [ref=e572]:
+                  - generic [ref=e574]:
+                    - generic [ref=e575]:
+                      - img
+                    - generic [ref=e576]: Joined Apr 2011
+                  - generic [ref=e578]:
+                    - generic [ref=e579]:
+                      - img
+                    - generic [ref=e580]: Usually responds within 24 hours
+                - generic [ref=e581]: Registered as a business seller
+                - generic [ref=e583]:
+                  - generic [ref=e584]: Ihr Partner für gebrauchte ComputerhardwareSind Sie auf der Suche nach Computerhardware und möchten dabei umweltfreundlich sparen?Im Computer Store Berlin sind Sie an der richtigen Adresse. Sie ...
+                  - group [ref=e586]:
+                    - generic "See more" [ref=e587]:
+                      - generic [ref=e588]: See more
+                      - generic [ref=e589]:
+                        - img
+                - generic [ref=e590]:
+                  - link "Visit shop" [ref=e591] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/computerstoreberlin?_trksid=p4429486.m145687.l149086
+                    - generic [ref=e592]: Visit shop
+                  - button "Message seller - opens in a new dialog" [ref=e593] [cursor=pointer]:
+                    - generic [ref=e594]:
+                      - text: Message seller
+                      - generic [ref=e595]: "- opens in a new dialog"
+                  - button "Save seller - Save this seller computer-store-berlin" [ref=e597] [cursor=pointer]:
+                    - generic [ref=e598]:
+                      - img
+                    - generic [ref=e599]: Save seller
+              - generic [ref=e601]:
+                - heading "Detailed seller ratings" [level=3] [ref=e602]
+                - generic [ref=e603]:
+                  - generic [ref=e604]: Average for the last 12 months
+                  - generic [ref=e605]:
+                    - generic [ref=e606]:
+                      - generic [ref=e607]: Accurate description
+                      - progressbar [ref=e608]
+                      - generic [ref=e609]: "4.9"
+                    - generic [ref=e610]:
+                      - generic [ref=e611]: Reasonable postage cost
+                      - progressbar [ref=e612]
+                      - generic [ref=e613]: "4.7"
+                    - generic [ref=e614]:
+                      - generic [ref=e615]: Delivery time
+                      - progressbar [ref=e616]
+                      - generic [ref=e617]: "5.0"
+                    - generic [ref=e618]:
+                      - generic [ref=e619]: Communication
+                      - progressbar [ref=e620]
+                      - generic [ref=e621]: "5.0"
+              - generic [ref=e622]:
+                - generic [ref=e623]:
+                  - heading "Popular categories from this shop" [level=3] [ref=e624]
+                  - link "See all categories" [ref=e626] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/sch/i.html?_dkr=1&iconV2Request=true&_blrs=recall_filtering&_ssn=computer-store-berlin&store_cat=0&store_name=computerstoreberlin&_oac=1
+                    - generic [ref=e627]:
+                      - text: See all
+                      - generic [ref=e628]: categories
+                - generic [ref=e629]:
+                  - link "Arbeitsspeicher (RAM)" [ref=e631] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/computerstoreberlin/Arbeitsspeicher-RAM/_i.html?store_cat=3461793819
+                  - link "Aufrüst-Bundles" [ref=e633] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/computerstoreberlin/Aufrust-Bundles/_i.html?store_cat=2410655119
+                  - link "Controller" [ref=e635] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/computerstoreberlin/Controller/_i.html?store_cat=1644111919
+                  - link "CPU (Prozessoren)" [ref=e637] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/computerstoreberlin/CPU-Prozessoren/_i.html?store_cat=3461788119
+                  - link "Eingabegeräte" [ref=e639] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/computerstoreberlin/Eingabegerate/_i.html?store_cat=1644103019
+                  - link "Festplatten" [ref=e641] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/computerstoreberlin/Festplatten/_i.html?store_cat=3469359919
+                  - link "Gehäuse" [ref=e643] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/computerstoreberlin/Gehause/_i.html?store_cat=1644111719
+                  - link "Grafikkarten" [ref=e645] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/computerstoreberlin/Grafikkarten/_i.html?store_cat=2696252519
+                  - link "Kabel & Adapter" [ref=e647] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/computerstoreberlin/Kabel-Adapter/_i.html?store_cat=1644111819
+            - generic [ref=e650]:
+              - heading "Seller Feedback (154,545)" [level=2] [ref=e651]
+              - 'button "Filter: All ratings" [ref=e654] [cursor=pointer]':
+                - generic [ref=e655]:
+                  - generic [ref=e656]: "Filter:"
+                  - generic [ref=e657]: All ratings
+                  - img
+              - list [ref=e658]:
+                - listitem [ref=e659]:
+                  - generic [ref=e660]:
+                    - generic [ref=e662]:
+                      - generic [ref=e663]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e664]:
+                        - text: a***e (363)
+                        - generic [ref=e665]: "- Feedback left by buyer."
+                      - generic [ref=e668]: Past 6 months
+                      - generic [ref=e669]: Verified purchase
+                    - generic [ref=e671]: "Very pleasant experience again: the seller accepted the offer I made, the communication was easy and I got the item exactly as described. It was well packaged and came with extra 2 wi-fi antennas, that were not mentioned, even if I requested the I/O shield only, which was present as well. The motherboard is working as expected and came with the latest firmware already, although this time the coin cell battery was below nominal voltage. Like said previously, I recommended 100% this seller!"
+                    - 'link "MSI H97I AC MS-7851 Ver.1.1 Intel H97 Mainboard Mini-ITX Sockel 1150 #37806 (#127607590665)" [ref=e673] [cursor=pointer]':
+                      - /url: https://www.ebay.ie/itm/127607590665
+                      - generic [ref=e674]: "MSI H97I AC MS-7851 Ver.1.1 Intel H97 Mainboard Mini-ITX Sockel 1150 #37806 (#127607590665)"
+                - listitem [ref=e675]:
+                  - generic [ref=e676]:
+                    - generic [ref=e678]:
+                      - generic [ref=e679]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e680]:
+                        - text: o***y (230)
+                        - generic [ref=e681]: "- Feedback left by buyer."
+                      - generic [ref=e684]: Past 6 months
+                      - generic [ref=e685]: Verified purchase
+                    - generic [ref=e687]: Top-Verkäufer, gut verpackt! Perfect Seller! Highly Recommended! I am extremely satisfied with my purchase! The seller is serious, professional, and incredibly fast with both communication and shipping. The item arrived in perfect condition, exactly as described. Packaging was secure and well-done. If you’re looking for a reliable and trustworthy seller, this is the one. Absolutely, and I'm grateful for that! Tschüss
+                    - 'link "Samsung SSD 980 500 GB M.2 2280 NVMe MZ-V8V500 SSM #324305 (#126484988752)" [ref=e689] [cursor=pointer]':
+                      - /url: https://www.ebay.ie/itm/126484988752
+                      - generic [ref=e690]: "Samsung SSD 980 500 GB M.2 2280 NVMe MZ-V8V500 SSM #324305 (#126484988752)"
+                - listitem [ref=e691]:
+                  - generic [ref=e692]:
+                    - generic [ref=e694]:
+                      - generic [ref=e695]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e696]:
+                        - text: "-***e"
+                        - generic [ref=e697]: "- Feedback left by buyer."
+                      - generic [ref=e700]: Past month
+                      - generic [ref=e701]: Verified purchase
+                    - generic [ref=e703]: Top-notch seller! The electronic item arrived earlier than expected, well packaged, and in perfect working order. Everything matched the listing exactly. Great communication and a very smooth transaction from start to finish. I would definitely buy from this seller again. Highly recommended!
+                    - 'link "Fujitsu PCE012 S26113-E591-V20-01 Netzteil 250 Watt 80+ #324003 (#127359205406)" [ref=e705] [cursor=pointer]':
+                      - /url: https://www.ebay.ie/itm/127359205406
+                      - generic [ref=e706]: "Fujitsu PCE012 S26113-E591-V20-01 Netzteil 250 Watt 80+ #324003 (#127359205406)"
+                - listitem [ref=e707]:
+                  - generic [ref=e708]:
+                    - generic [ref=e710]:
+                      - generic [ref=e711]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e712]:
+                        - text: 8***m (237)
+                        - generic [ref=e713]: "- Feedback left by buyer."
+                      - generic [ref=e716]: Past 6 months
+                      - generic [ref=e717]: Verified purchase
+                    - generic [ref=e719]: Endlich mal ein Verkäufer der sich an das hält was er in dem Artikel beschrieben hat ( Sockel Top ohne fehler wie angegeben. Vor Stößen sicher verpackt und nicht wie andere Verkäufer die ohne jede Sicherung ein Board verschicken und dann sich wundern wenn es kaputt ankommt. Board funktioniert perfekt ohne Fehler. Versand war innerhalb 1 Tages bei mir Top, Kann diesen Verkäufer sehr empfehlen. Jederzeit wieder gerne
+                    - 'link "ASRock B760M Pro RS Intel B760 Mainboard MicroATX Sockel 1700 #336396 (#127768219680)" [ref=e721] [cursor=pointer]':
+                      - /url: https://www.ebay.ie/itm/127768219680
+                      - generic [ref=e722]: "ASRock B760M Pro RS Intel B760 Mainboard MicroATX Sockel 1700 #336396 (#127768219680)"
+                - listitem [ref=e723]:
+                  - generic [ref=e724]:
+                    - generic [ref=e726]:
+                      - generic [ref=e727]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e728]:
+                        - text: e***4 (11)
+                        - generic [ref=e729]: "- Feedback left by buyer."
+                      - generic [ref=e732]: Past 6 months
+                      - generic [ref=e733]: Verified purchase
+                    - generic [ref=e735]: Für das Preis-Leistungsverhältnis super verbaut und genau das was man sich dann auch vorstellt, wobei man kein zweites Mal solche Komponenten zu diesem Preis findet. Dazu noch super Kundenservice in schriftlicher Form in den Nachrichten, so dass man hier als Kunde definitiv nicht einfach so links liegen gelassen wird sondern es wird direkt Möglichkeiten vorgegeben die mehr wie zufriedenstellen sind. Ebenso der Versand super verpackt und trotz hohem Aufkommen eine entspannte Lieferzeit.
+                    - link "Komplett-PC 1366 Intel Core i7-950 DDR3 RAM und HDD / SSD Konfigurierbar (#115612506742)" [ref=e737] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/115612506742
+                      - generic [ref=e738]: Komplett-PC 1366 Intel Core i7-950 DDR3 RAM und HDD / SSD Konfigurierbar (#115612506742)
+                - listitem [ref=e739]:
+                  - generic [ref=e740]:
+                    - generic [ref=e742]:
+                      - generic [ref=e743]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e744]:
+                        - text: n***e (4130)
+                        - generic [ref=e745]: "- Feedback left by buyer."
+                      - generic [ref=e748]: Past month
+                      - generic [ref=e749]: Verified purchase
+                    - generic [ref=e751]: Top 1A++ alles bestens ! Das PC-Gehäuse ist in einem super Zustand und wie beschrieben. Schneller Versand und sicher verpackt. Sehr freundlicher Kontakt und den shop kann ich nur empfehlen. Immer wieder gerne. 5***** und herzlichen Dank !
+                    - 'link "Sharkoon BW9000-V ATX PC-Gehäuse MidiTower USB 3.0 schwarz #330343 (#127731275272)" [ref=e753] [cursor=pointer]':
+                      - /url: https://www.ebay.ie/itm/127731275272
+                      - generic [ref=e754]: "Sharkoon BW9000-V ATX PC-Gehäuse MidiTower USB 3.0 schwarz #330343 (#127731275272)"
+                - listitem [ref=e755]:
+                  - generic [ref=e756]:
+                    - generic [ref=e758]:
+                      - generic [ref=e759]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e760]:
+                        - text: r***r (47)
+                        - generic [ref=e761]: "- Feedback left by buyer."
+                      - generic [ref=e764]: Past 6 months
+                      - generic [ref=e765]: Verified purchase
+                    - generic [ref=e767]: Perfect Seller – Highly Recommended! I am extremely satisfied with my purchase! The seller is serious, professional, and incredibly fast with both communication and shipping. The item arrived in perfect condition, exactly as described. Packaging was secure and well-done. If you’re looking for a reliable and trustworthy seller, this is the one.
+                    - generic [ref=e768]: Bundle ASUS B150M-C + Intel Core i5 + 8GB - 32GB RAM (#125305408664)
+                - listitem [ref=e769]:
+                  - generic [ref=e770]:
+                    - generic [ref=e772]:
+                      - generic [ref=e773]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e774]:
+                        - text: 5***m (20)
+                        - generic [ref=e775]: "- Feedback left by buyer."
+                      - generic [ref=e778]: Past month
+                      - generic [ref=e779]: Verified purchase
+                    - generic [ref=e781]: The CPU was well packaged and it arrived very quickly, in just 3 days :) I love the CPU, everything as described, the CPU works perfectly. Also the best price here in ebay. Condition is used but as new :)
+                    - 'link "Intel Core i7-7700 (4x 3.60GHz) CPU Sockel 1151 #316106 (#127623378884)" [ref=e783] [cursor=pointer]':
+                      - /url: https://www.ebay.ie/itm/127623378884
+                      - generic [ref=e784]: "Intel Core i7-7700 (4x 3.60GHz) CPU Sockel 1151 #316106 (#127623378884)"
+              - link "See all feedback. Opens in a new tab" [ref=e786] [cursor=pointer]:
+                - /url: https://www.ebay.ie/fdbk/mweb_profile?fdbkType=FeedbackReceivedAsSeller&item_id=127833912745&username=computer-store-berlin&filter=feedback_page%3ARECEIVED_AS_SELLER&sort=RELEVANCEV2
+                - text: See all Feedback
+          - generic [ref=e788]:
+            - navigation "Quick links" [ref=e789]:
+              - link "Back to home page" [ref=e790] [cursor=pointer]:
+                - /url: https://www.ebay.ie
+              - button "Return to top" [ref=e791] [cursor=pointer]
+            - generic [ref=e793]:
+              - heading "More to explore:" [level=2] [ref=e796]
+              - list [ref=e798]:
+                - listitem [ref=e799]:
+                  - link "ASRock for AMD Computer Motherboards," [ref=e800] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7117088945
+                - listitem [ref=e801]:
+                  - link "ASRock Motherboards," [ref=e802] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_616043
+                - listitem [ref=e803]:
+                  - link "ATX Computer Motherboards for AMD," [ref=e804] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_99019845
+                - listitem [ref=e805]:
+                  - link "For AMD Socket AM3 Computer Motherboards," [ref=e806] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_607054
+                - listitem [ref=e807]:
+                  - link "For AMD Socket FM2 Computer Motherboards," [ref=e808] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_99025416
+                - listitem [ref=e809]:
+                  - link "ATX Computer Motherboards," [ref=e810] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_608192
+                - listitem [ref=e811]:
+                  - link "ASRock for Intel Computer Motherboards," [ref=e812] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7117083248
+                - listitem [ref=e813]:
+                  - link "AMD Motherboards," [ref=e814] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_619467
+                - listitem [ref=e815]:
+                  - link "ATX Computer Motherboards for Intel," [ref=e816] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_99021198
+                - listitem [ref=e817]:
+                  - link "Extended ATX Computer Motherboards" [ref=e818] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_608234
+  - contentinfo [ref=e827]:
+    - list [ref=e828]:
+      - listitem [ref=e829]:
+        - link "About eBay" [ref=e830] [cursor=pointer]:
+          - /url: https://www.ebayinc.com/
+      - listitem [ref=e831]:
+        - link "News" [ref=e832] [cursor=pointer]:
+          - /url: https://community.ebay.co.uk/t5/Announcements/bg-p/Announcements
+      - listitem [ref=e833]:
+        - link "Community" [ref=e834] [cursor=pointer]:
+          - /url: https://community.ebay.co.uk
+      - listitem [ref=e835]:
+        - link "Safety Centre" [ref=e836] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/safetycentre/index.html
+      - listitem [ref=e837]:
+        - link "Seller Centre" [ref=e838] [cursor=pointer]:
+          - /url: https://sellercentre.ebay.co.uk
+      - listitem [ref=e839]:
+        - 'link "VeRO: Protecting Intellectual Property" [ref=e840] [cursor=pointer]':
+          - /url: https://pages.ebay.ie/vero/
+      - listitem [ref=e841]:
+        - link "Policies" [ref=e842] [cursor=pointer]:
+          - /url: https://www.ebay.ie/pages/help/policies/index.html
+      - listitem [ref=e843]:
+        - link "Help & Contact" [ref=e844] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/home
+      - listitem [ref=e845]:
+        - link "Site Map" [ref=e846] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/sitemap.html
+    - generic [ref=e847]:
+      - text: Copyright © 1995-2026 eBay Inc. All Rights Reserved.
+      - link "Accessibility" [ref=e848] [cursor=pointer]:
+        - /url: https://pages.ebay.ie/accessibility
+      - text: ","
+      - link "User Agreement" [ref=e849] [cursor=pointer]:
+        - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-agreement?id=4259
+      - text: ","
+      - link "Privacy" [ref=e850] [cursor=pointer]:
+        - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260
+      - text: ","
+      - link "Payments Terms of Use" [ref=e851] [cursor=pointer]:
+        - /url: https://pages.ebay.ie/payment/2.0/terms.html
+      - text: ","
+      - link "Cookies" [ref=e852] [cursor=pointer]:
+        - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267
+      - text: and
+      - link "AdChoice" [ref=e853] [cursor=pointer]:
+        - /url: https://www.ebay.ie/adchoice
+        - text: AdChoice
+        - img
+  - img
+  - img [ref=e855]

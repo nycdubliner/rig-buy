@@ -1,0 +1,500 @@
+- generic [active] [ref=e1]:
+  - img
+  - img
+  - generic [ref=e3]:
+    - banner [ref=e7]:
+      - link "Skip to main content" [ref=e9] [cursor=pointer]:
+        - /url: "#mainContent"
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - button "Hi Tiarnán!" [ref=e14] [cursor=pointer]:
+            - generic [ref=e15]: Hi Tiarnán!
+            - img
+          - link "Help & Contact" [ref=e17] [cursor=pointer]:
+            - /url: https://www.ebay.ie/help/home
+        - generic [ref=e18]:
+          - link "Sell" [ref=e20] [cursor=pointer]:
+            - /url: https://www.ebay.ie/sl/sell
+          - generic [ref=e21]:
+            - link "Watchlist" [ref=e22] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mye/myebay/watchlist
+              - generic [ref=e23]: Watchlist
+              - img
+            - button "Expand Watchlist" [ref=e24]
+          - generic [ref=e25]:
+            - link "My eBay" [ref=e26] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mys/home?source=GBH
+              - generic [ref=e27]: My eBay
+              - img
+            - button "Expand My eBay" [ref=e28]
+          - button "Notifications" [ref=e31] [cursor=pointer]:
+            - img
+            - generic [ref=e32]: Notifications
+          - generic [ref=e34]:
+            - link "Your shopping basket contains 0 items" [ref=e35] [cursor=pointer]:
+              - /url: https://cart.ebay.ie
+              - generic "Your shopping basket contains 0 items" [ref=e36]:
+                - img
+            - button "Expand Basket" [ref=e37]
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - link "eBay Home" [ref=e40] [cursor=pointer]:
+            - /url: https://www.ebay.ie
+            - img "eBay Home" [ref=e41]
+          - button "Shop by category" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: Shop by category
+            - img
+        - generic [ref=e51]:
+          - status [ref=e52]
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - combobox "Search for anything" [ref=e56]
+              - img
+            - combobox "Select a category for search" [ref=e57]:
+              - option "All Categories" [selected]
+              - option "Antiques"
+              - option "Art"
+              - option "Baby"
+              - option "Books, Comics & Magazines"
+              - option "Business, Office & Industrial"
+              - option "Cameras & Photography"
+              - option "Cars, Motorcycles & Vehicles"
+              - option "Clothes, Shoes & Accessories"
+              - option "Coins"
+              - option "Collectables"
+              - option "Computers/Tablets & Networking"
+              - option "Crafts"
+              - option "Dolls & Bears"
+              - option "DVDs, Films & TV"
+              - option "Events Tickets"
+              - option "Garden & Patio"
+              - option "Health & Beauty"
+              - option "Holidays & Travel"
+              - option "Home, Furniture & DIY"
+              - option "Jewellery & Watches"
+              - option "Mobile Phones & Communication"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Pet Supplies"
+              - option "Pottery, Porcelain & Glass"
+              - option "Property"
+              - option "Sound & Vision"
+              - option "Sporting Goods"
+              - option "Sports Memorabilia"
+              - option "Stamps"
+              - option "Toys & Games"
+              - option "Vehicle Parts & Accessories"
+              - option "Video Games & Consoles"
+              - option "Wholesale & Job Lots"
+              - option "Everything Else"
+          - generic [ref=e58]:
+            - button "Search" [ref=e59] [cursor=pointer]:
+              - generic [ref=e60]: Search
+            - link "Advanced" [ref=e61] [cursor=pointer]:
+              - /url: https://www.ebay.ie/sch/ebayadvsearch
+    - main [ref=e62]:
+      - generic [ref=e64]:
+        - generic [ref=e68]:
+          - generic [ref=e71]:
+            - generic [ref=e73]:
+              - generic [ref=e74]:
+                - button "Previous image - Item images thumbnails" [disabled] [ref=e75] [cursor=pointer]:
+                  - img
+                - generic [ref=e76]:
+                  - button "Picture 1 of 7" [ref=e77] [cursor=pointer]:
+                    - img "Picture 1 of 7" [ref=e78]
+                  - button "Picture 2 of 7" [ref=e79] [cursor=pointer]:
+                    - img "Picture 2 of 7" [ref=e80]
+                  - button "Picture 3 of 7" [ref=e81] [cursor=pointer]:
+                    - img "Picture 3 of 7" [ref=e82]
+                  - button "Picture 4 of 7" [ref=e83] [cursor=pointer]:
+                    - img "Picture 4 of 7" [ref=e84]
+                  - button "Picture 5 of 7" [ref=e85] [cursor=pointer]:
+                    - img "Picture 5 of 7" [ref=e86]
+                  - button "Picture 6 of 7" [ref=e87] [cursor=pointer]:
+                    - img "Picture 6 of 7" [ref=e88]
+                  - button "Picture 7 of 7" [ref=e89] [cursor=pointer]
+                - button "Next image - Item images thumbnails" [ref=e90] [cursor=pointer]:
+                  - img
+              - generic [ref=e91]:
+                - heading "Picture 1 of 7" [level=2] [ref=e92]
+                - generic [ref=e96]: In 1 basket
+                - button "Previous image - Item images thumbnails" [ref=e98] [cursor=pointer]:
+                  - img
+                - region "Opens image gallery dialogue GPU RX 7800xt Sapphire Pulse - Picture 1 of 7" [ref=e99]:
+                  - group "1 of 7" [ref=e100]:
+                    - img "GPU RX 7800xt Sapphire Pulse - Picture 1 of 7" [ref=e101]
+                  - group "2 of 7" [ref=e102]:
+                    - img "GPU RX 7800xt Sapphire Pulse - Picture 2 of 7" [ref=e103]
+                  - group "3 of 7" [ref=e104]:
+                    - img "GPU RX 7800xt Sapphire Pulse - Picture 3 of 7" [ref=e105]
+                  - group "4 of 7" [ref=e106]:
+                    - img "GPU RX 7800xt Sapphire Pulse - Picture 4 of 7" [ref=e107]
+                  - group "5 of 7" [ref=e108]:
+                    - img "GPU RX 7800xt Sapphire Pulse - Picture 5 of 7" [ref=e109]
+                  - group "6 of 7" [ref=e110]:
+                    - img "GPU RX 7800xt Sapphire Pulse - Picture 6 of 7" [ref=e111]
+                  - group "7 of 7" [ref=e112]:
+                    - img "GPU RX 7800xt Sapphire Pulse - Picture 7 of 7" [ref=e113]
+                - generic [ref=e114]:
+                  - button "Opens image gallery" [ref=e115] [cursor=pointer]:
+                    - img
+                  - button "Add to Watchlist - 1 watchers" [ref=e117] [cursor=pointer]:
+                    - generic [ref=e118]: "1"
+                    - img
+                - button "Next image - Item images thumbnails" [ref=e120] [cursor=pointer]:
+                  - img
+            - generic [ref=e125]:
+              - generic [ref=e126]: Have one to sell?
+              - link "Sell it yourself" [ref=e128] [cursor=pointer]:
+                - /url: https://www.ebay.ie/sl/list?mode=SellLikeItem&itemId=137248787829&rt=nc&_trksid=p4429486.m117039.l2567
+                - generic [ref=e129]: Sell it yourself
+            - button "Share" [ref=e135] [cursor=pointer]:
+              - img
+              - generic [ref=e136]: Share
+          - generic [ref=e139]:
+            - heading "GPU RX 7800xt Sapphire Pulse" [level=1] [ref=e141]
+            - generic [ref=e143] [cursor=pointer]:
+              - generic [ref=e145]:
+                - link [ref=e147]:
+                  - /url: https://www.ebay.ie/sch/newyor_4726/m.html?item=137248787829&rt=nc&_trksid=p4429486.m3561.l161210
+                  - img [ref=e149]: "N"
+                - generic [ref=e150]:
+                  - generic [ref=e151]:
+                    - link "newyor_4726" [ref=e152]:
+                      - /url: https://www.ebay.ie/sch/newyor_4726/m.html?item=137248787829&rt=nc&_trksid=p4429486.m3561.l161211
+                    - generic [ref=e153]:
+                      - generic [ref=e154]: (0)
+                      - generic [ref=e155]:
+                        - text: Private
+                        - button "Registered as private seller, so consumer rights stemming from EU consumer protection law do not apply. eBay Money Back Guarantee still applies to most purchases." [ref=e160]:
+                          - img
+                  - generic [ref=e161]:
+                    - link "Seller's other items" [ref=e163]:
+                      - /url: https://www.ebay.ie/sch/newyor_4726/m.html?item=137248787829&rt=nc&_trksid=p4429486.m3561.l170197
+                      - generic [ref=e164]: Seller's other items
+                      - generic [ref=e165]: Seller's other items
+                    - button "Message seller" [ref=e167]:
+                      - generic [ref=e168]: Message seller
+                      - generic [ref=e169]: Message seller
+              - button "See more about this seller" [ref=e171]:
+                - img
+            - generic [ref=e175]: EUR 460.00
+            - generic [ref=e176]:
+              - generic [ref=e177]: "Condition:"
+              - generic [ref=e179]:
+                - generic [ref=e180]:
+                  - generic [ref=e181]: Used
+                  - generic [ref=e182]: Used
+                - button "More information - About this item condition" [ref=e183] [cursor=pointer]:
+                  - generic [ref=e184]:
+                    - img "More information - About this item condition"
+            - list [ref=e186]:
+              - listitem [ref=e187]:
+                - link "Buy It Now" [ref=e189] [cursor=pointer]:
+                  - /url: https://pay.ebay.ie/rxo?action=create&rypsvc=true&pagename=ryp&item=137248787829&quantity=1&TransactionId=-1
+                  - generic [ref=e190]: Buy It Now
+              - listitem [ref=e191]:
+                - button "Add to basket" [ref=e193] [cursor=pointer]:
+                  - generic [ref=e194]: Add to basket
+              - listitem [ref=e195]:
+                - generic [ref=e197]:
+                  - status [ref=e198]: Add to Watchlist
+                  - button "Add to Watchlist" [ref=e203] [cursor=pointer]:
+                    - generic [ref=e204]:
+                      - img
+                      - text: Add to Watchlist
+            - generic [ref=e207]:
+              - generic [ref=e208]:
+                - generic [ref=e209]:
+                  - img
+                - generic [ref=e211]: Hurry before it's gone. 1 person is watching this item.
+              - generic [ref=e212]:
+                - generic [ref=e213]:
+                  - img
+                - generic [ref=e215]: Breathe easy. Returns accepted.
+            - generic [ref=e218]:
+              - heading "Postage, returns and payments" [level=2] [ref=e221]:
+                - generic [ref=e222]: Postage, returns and payments
+              - generic [ref=e224]:
+                - generic [ref=e226]:
+                  - generic [ref=e229]: "Collection:"
+                  - generic [ref=e232]:
+                    - text: Free collection in person from Ramelton, Letterkenny , Ireland.
+                    - button "See details for collection" [ref=e233] [cursor=pointer]:
+                      - generic [ref=e234]:
+                        - text: See details
+                        - generic [ref=e235]: for collection
+                - generic [ref=e238]:
+                  - generic [ref=e241]: "Postage:"
+                  - generic [ref=e243]:
+                    - generic [ref=e244]:
+                      - text: Free Registered Post.
+                      - button "See details for postage" [ref=e245] [cursor=pointer]:
+                        - generic [ref=e246]:
+                          - text: See details
+                          - generic [ref=e247]: for postage
+                    - generic [ref=e248]: "Located in: Ramelton, Letterkenny , Ireland"
+                - generic [ref=e252]:
+                  - generic [ref=e255]: "Delivery:"
+                  - generic [ref=e258]:
+                    - text: Estimated between Mon, 11 May and Tue, 12 May to D08F97P
+                    - button "Information - Estimated delivery date - opens a layer" [ref=e264]:
+                      - img
+            - generic [ref=e271]:
+              - generic [ref=e274]: "Returns:"
+              - generic [ref=e277]:
+                - text: 30 days return. Buyer pays for return postage. If you use an eBay delivery label, it will be deducted from your refund amount.
+                - button "See details - for more information about returns" [ref=e278] [cursor=pointer]:
+                  - generic [ref=e279]:
+                    - text: See details
+                    - generic [ref=e280]: "- for more information about returns"
+            - generic [ref=e287]:
+              - generic [ref=e290]: "Payments:"
+              - generic [ref=e293]:
+                - img "PayPal" [ref=e294]
+                - img "Google Pay" [ref=e296]
+                - img "Visa" [ref=e298]
+                - img "Mastercard" [ref=e300]
+                - img "Diners Club" [ref=e303]
+            - generic [ref=e307]:
+              - heading "Shop with confidence" [level=2] [ref=e310]
+              - generic [ref=e311]:
+                - generic [ref=e313]:
+                  - img
+                - generic [ref=e314]:
+                  - generic [ref=e315]: eBay Money Back Guarantee
+                  - generic [ref=e316]:
+                    - text: Get the item you ordered or your money back.
+                    - link "Learn more eBay Money Back Guarantee - opens new window or tab" [ref=e317] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/ebay-money-back-guarantee/
+                      - generic [ref=e318]:
+                        - text: Learn more
+                        - generic [ref=e319]: eBay Money Back Guarantee - opens new window or tab
+        - generic [ref=e320]:
+          - generic [ref=e325]:
+            - tablist [ref=e326]:
+              - tab "About this item" [selected] [ref=e327] [cursor=pointer]:
+                - generic [ref=e328]: About this item
+            - tabpanel "About this item" [ref=e330]:
+              - generic [ref=e333]:
+                - generic [ref=e336]:
+                  - generic [ref=e340]: Seller assumes all responsibility for this listing.
+                  - generic [ref=e344]: eBay item number:137248787829
+                  - generic [ref=e348]:
+                    - text: Last updated on 23 Apr, 2026 02:49:22 BST
+                    - link "View all revisions View all revisions" [ref=e349] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/rvh/137248787829?rt=nc&_trksid=p4429486.m148105.l48144
+                      - generic [ref=e350]:
+                        - text: View all revisions
+                        - generic [ref=e351]: View all revisions
+                - generic [ref=e354]:
+                  - heading "Item specifics" [level=2] [ref=e357]:
+                    - generic [ref=e358]: Item specifics
+                  - generic [ref=e360]:
+                    - generic [ref=e361]:
+                      - generic [ref=e363]:
+                        - term [ref=e364]:
+                          - generic [ref=e366]: Condition
+                        - definition [ref=e367]:
+                          - generic [ref=e370]:
+                            - generic [ref=e371]: "Used: An item that has been previously used. The item may have some signs of cosmetic wear, but is ..."
+                            - button "Read more about the condition" [ref=e373]:
+                              - generic [ref=e374]:
+                                - text: Read more
+                                - generic [ref=e375]: about the condition
+                      - generic [ref=e377]:
+                        - term [ref=e378]:
+                          - generic [ref=e380]: Memory Size
+                        - definition [ref=e381]:
+                          - generic [ref=e383]: 16 GB
+                    - generic [ref=e384]:
+                      - generic [ref=e386]:
+                        - term [ref=e387]:
+                          - generic [ref=e389]: Brand
+                        - definition [ref=e390]:
+                          - generic [ref=e392]: SAPPHIRE
+                      - generic [ref=e394]:
+                        - term [ref=e395]:
+                          - generic [ref=e397]: Connectors
+                        - definition [ref=e398]:
+                          - generic [ref=e400]: DisplayPort, HDMI
+                    - generic [ref=e401]:
+                      - generic [ref=e403]:
+                        - term [ref=e404]:
+                          - generic [ref=e406]: Chipset Manufacturer
+                        - definition [ref=e407]:
+                          - generic [ref=e409]: AMD
+                      - generic [ref=e411]:
+                        - term [ref=e412]:
+                          - generic [ref=e414]: Features
+                        - definition [ref=e415]:
+                          - generic [ref=e417]: G-SYNC/FreeSync Compatible
+                    - generic [ref=e418]:
+                      - generic [ref=e420]:
+                        - term [ref=e421]:
+                          - generic [ref=e423]: Memory Type
+                        - definition [ref=e424]:
+                          - generic [ref=e426]: GDDR6
+                      - generic [ref=e428]:
+                        - term [ref=e429]:
+                          - generic [ref=e431]: Chipset/GPU Model
+                        - definition [ref=e432]:
+                          - generic [ref=e434]: Radeon RX 7800xt
+                - generic [ref=e435]:
+                  - generic [ref=e436]: Category
+                  - navigation "breadcrumb" [ref=e439]:
+                    - heading "breadcrumb" [level=2] [ref=e440]
+                    - list [ref=e441]:
+                      - listitem [ref=e442]:
+                        - link "Electronics" [ref=e443] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_7000259660
+                        - img
+                      - listitem [ref=e444]:
+                        - link "Computers/Tablets & Networking" [ref=e445] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_1838792
+                        - img
+                      - listitem [ref=e446]:
+                        - link "Computer Components & Parts" [ref=e447] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_1624167
+                        - img
+                      - listitem [ref=e448]:
+                        - link "Graphics/Video Cards" [ref=e449] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_661667
+                - generic [ref=e450]:
+                  - heading "Item description from the seller" [level=2] [ref=e453]
+                  - iframe [ref=e454]:
+                    - generic [ref=f84e2]:
+                      - text: Sapphire Pulse RX 7800 XT 16GB – excellent condition, ready to go
+                      - generic [ref=f84e3]: No mining, strictly gaming use only. Card is in perfect working condition, fully clean and well maintained. Runs cool and stable under load.
+                      - generic [ref=f84e4]: Original box included.
+                      - generic [ref=f84e5]: Can provide any stress tests, benchmarks, or live proof if needed.
+                      - generic [ref=f84e6]: Fast shipping available. Shipping is free for Ireland and UK!
+          - generic [ref=e457]:
+            - generic [ref=e459]:
+              - heading "About this seller" [level=2] [ref=e460]:
+                - generic [ref=e462]: About this seller
+              - generic [ref=e463]:
+                - link [ref=e465] [cursor=pointer]:
+                  - /url: https://www.ebay.ie/sch/newyor_4726/m.html?item=137248787829&rt=nc&_trksid=p4429486.m145687.l2562
+                  - img [ref=e467]: "N"
+                - heading "newyor_4726" [level=3] [ref=e469]:
+                  - link "newyor_4726" [ref=e470] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/sch/newyor_4726/m.html?item=137248787829&rt=nc&_trksid=p4429486.m145687.l2562
+              - generic [ref=e475]:
+                - generic [ref=e476]:
+                  - img
+                - generic [ref=e477]: Joined Apr 2026
+              - generic [ref=e478]:
+                - generic [ref=e479]: Registered as a private seller
+                - text: Thereby, consumer rights stemming from EU consumer protection law do not apply. eBay buyer protection still applies to most purchases.
+              - generic [ref=e480]:
+                - link "Seller's other items" [ref=e481] [cursor=pointer]:
+                  - /url: https://www.ebay.ie/sch/newyor_4726/m.html?item=137248787829&rt=nc&_trksid=p4429486.m145687.l2562
+                  - generic [ref=e482]: Seller's other items
+                - button "Message seller - opens in a new dialog" [ref=e483] [cursor=pointer]:
+                  - generic [ref=e484]:
+                    - text: Message seller
+                    - generic [ref=e485]: "- opens in a new dialog"
+                - button "Save seller - Save this seller newyor_4726" [ref=e487] [cursor=pointer]:
+                  - generic [ref=e488]:
+                    - img
+                  - generic [ref=e489]: Save seller
+            - generic [ref=e493]:
+              - heading "Seller Feedback" [level=2] [ref=e496]
+              - generic [ref=e499]: No Feedback yet
+          - generic [ref=e501]:
+            - navigation "Quick links" [ref=e502]:
+              - link "Back to home page" [ref=e503] [cursor=pointer]:
+                - /url: https://www.ebay.ie
+              - button "Return to top" [ref=e504] [cursor=pointer]
+            - generic [ref=e506]:
+              - heading "More to explore:" [level=2] [ref=e509]
+              - list [ref=e511]:
+                - listitem [ref=e512]:
+                  - link "Computer Video Cards and GPU Cooling for GPU Processor," [ref=e513] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_608345
+                - listitem [ref=e514]:
+                  - link "Computer GPU Water Blocks," [ref=e515] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_608790
+                - listitem [ref=e516]:
+                  - link "Heatsink Computer Video Card & GPU Cooling Equipment GPU Processor," [ref=e517] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_11077496
+                - listitem [ref=e518]:
+                  - link "Pulse Computer Speakers," [ref=e519] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116619130
+                - listitem [ref=e520]:
+                  - link "EKWB Computer Water Cooling GPU Blocks," [ref=e521] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_75493187
+                - listitem [ref=e522]:
+                  - link "Computer Video Card & GPU Cooling Equipment for ASUS," [ref=e523] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_40490455
+                - listitem [ref=e524]:
+                  - link "SAPPHIRE Computer Graphics & Video Cards," [ref=e525] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_2737518
+                - listitem [ref=e526]:
+                  - link "Pulse Audio Adapters/Converters," [ref=e527] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_89520817
+                - listitem [ref=e528]:
+                  - link "Computer Graphics and Video Cards CL-GD5434 Chipset/GPU Model," [ref=e529] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116646719
+                - listitem [ref=e530]:
+                  - link "AMD Radeon R9 295X2 Chipset/GPU Model Computer Graphics & Video Cards" [ref=e531] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116578695
+  - generic [ref=e539]:
+    - contentinfo [ref=e540]:
+      - list [ref=e541]:
+        - listitem [ref=e542]:
+          - link "About eBay" [ref=e543] [cursor=pointer]:
+            - /url: https://www.ebayinc.com/
+        - listitem [ref=e544]:
+          - link "News" [ref=e545] [cursor=pointer]:
+            - /url: https://community.ebay.co.uk/t5/Announcements/bg-p/Announcements
+        - listitem [ref=e546]:
+          - link "Community" [ref=e547] [cursor=pointer]:
+            - /url: https://community.ebay.co.uk
+        - listitem [ref=e548]:
+          - link "Safety Centre" [ref=e549] [cursor=pointer]:
+            - /url: https://pages.ebay.ie/safetycentre/index.html
+        - listitem [ref=e550]:
+          - link "Seller Centre" [ref=e551] [cursor=pointer]:
+            - /url: https://sellercentre.ebay.co.uk
+        - listitem [ref=e552]:
+          - 'link "VeRO: Protecting Intellectual Property" [ref=e553] [cursor=pointer]':
+            - /url: https://pages.ebay.ie/vero/
+        - listitem [ref=e554]:
+          - link "Policies" [ref=e555] [cursor=pointer]:
+            - /url: https://www.ebay.ie/pages/help/policies/index.html
+        - listitem [ref=e556]:
+          - link "Help & Contact" [ref=e557] [cursor=pointer]:
+            - /url: https://www.ebay.ie/help/home
+        - listitem [ref=e558]:
+          - link "Site Map" [ref=e559] [cursor=pointer]:
+            - /url: https://pages.ebay.ie/sitemap.html
+      - generic [ref=e560]:
+        - text: Copyright © 1995-2026 eBay Inc. All Rights Reserved.
+        - link "Accessibility" [ref=e561] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/accessibility
+        - text: ","
+        - link "User Agreement" [ref=e562] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-agreement?id=4259
+        - text: ","
+        - link "Privacy" [ref=e563] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260
+        - text: ","
+        - link "Payments Terms of Use" [ref=e564] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/payment/2.0/terms.html
+        - text: ","
+        - link "Cookies" [ref=e565] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267
+        - text: and
+        - link "AdChoice" [ref=e566] [cursor=pointer]:
+          - /url: https://www.ebay.ie/adchoice
+          - text: AdChoice
+          - img
+    - generic:
+      - generic "ADVERTISEMENT" [ref=e567]
+      - generic "ADVERTISEMENT" [ref=e568]
+      - generic "ADVERTISEMENT" [ref=e569]
+  - img
+  - img [ref=e571]

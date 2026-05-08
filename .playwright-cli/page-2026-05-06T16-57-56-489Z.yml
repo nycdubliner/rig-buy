@@ -1,0 +1,712 @@
+- generic [active] [ref=e1]:
+  - img
+  - img
+  - generic [ref=e3]:
+    - banner [ref=e7]:
+      - link "Skip to main content" [ref=e9] [cursor=pointer]:
+        - /url: "#mainContent"
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - button "Hi Tiarnán!" [ref=e14] [cursor=pointer]:
+            - generic [ref=e15]: Hi Tiarnán!
+            - img
+          - link "Help & Contact" [ref=e17] [cursor=pointer]:
+            - /url: https://www.ebay.ie/help/home
+        - generic [ref=e18]:
+          - link "Sell" [ref=e20] [cursor=pointer]:
+            - /url: https://www.ebay.ie/sl/sell
+          - generic [ref=e21]:
+            - link "Watchlist" [ref=e22] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mye/myebay/watchlist
+              - generic [ref=e23]: Watchlist
+              - img
+            - button "Expand Watchlist" [ref=e24]
+          - generic [ref=e25]:
+            - link "My eBay" [ref=e26] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mys/home?source=GBH
+              - generic [ref=e27]: My eBay
+              - img
+            - button "Expand My eBay" [ref=e28]
+          - button "Notifications" [ref=e31] [cursor=pointer]:
+            - img
+            - generic [ref=e32]: Notifications
+          - generic [ref=e34]:
+            - link "Your shopping basket contains 0 items" [ref=e35] [cursor=pointer]:
+              - /url: https://cart.ebay.ie
+              - generic "Your shopping basket contains 0 items" [ref=e36]:
+                - img
+            - button "Expand Basket" [ref=e37]
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - link "eBay Home" [ref=e40] [cursor=pointer]:
+            - /url: https://www.ebay.ie
+            - img "eBay Home" [ref=e41]
+          - button "Shop by category" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: Shop by category
+            - img
+        - generic [ref=e51]:
+          - status [ref=e52]
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - combobox "Search for anything" [ref=e56]
+              - img
+            - combobox "Select a category for search" [ref=e57]:
+              - option "All Categories" [selected]
+              - option "Antiques"
+              - option "Art"
+              - option "Baby"
+              - option "Books, Comics & Magazines"
+              - option "Business, Office & Industrial"
+              - option "Cameras & Photography"
+              - option "Cars, Motorcycles & Vehicles"
+              - option "Clothes, Shoes & Accessories"
+              - option "Coins"
+              - option "Collectables"
+              - option "Computers/Tablets & Networking"
+              - option "Crafts"
+              - option "Dolls & Bears"
+              - option "DVDs, Films & TV"
+              - option "Events Tickets"
+              - option "Garden & Patio"
+              - option "Health & Beauty"
+              - option "Holidays & Travel"
+              - option "Home, Furniture & DIY"
+              - option "Jewellery & Watches"
+              - option "Mobile Phones & Communication"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Pet Supplies"
+              - option "Pottery, Porcelain & Glass"
+              - option "Property"
+              - option "Sound & Vision"
+              - option "Sporting Goods"
+              - option "Sports Memorabilia"
+              - option "Stamps"
+              - option "Toys & Games"
+              - option "Vehicle Parts & Accessories"
+              - option "Video Games & Consoles"
+              - option "Wholesale & Job Lots"
+              - option "Everything Else"
+          - generic [ref=e58]:
+            - button "Search" [ref=e59] [cursor=pointer]:
+              - generic [ref=e60]: Search
+            - link "Advanced" [ref=e61] [cursor=pointer]:
+              - /url: https://www.ebay.ie/sch/ebayadvsearch
+    - main [ref=e62]:
+      - generic [ref=e64]:
+        - generic [ref=e68]:
+          - generic [ref=e71]:
+            - generic [ref=e73]:
+              - generic [ref=e75]:
+                - button "Picture 1 of 2" [ref=e76] [cursor=pointer]:
+                  - img "Picture 1 of 2" [ref=e77]
+                - button "Picture 2 of 2" [ref=e78] [cursor=pointer]:
+                  - img "Picture 2 of 2" [ref=e79]
+              - generic [ref=e80]:
+                - heading "Picture 1 of 2" [level=2] [ref=e81]
+                - generic [ref=e85]: In 1 basket
+                - button "Previous image - Item images thumbnails" [ref=e87] [cursor=pointer]:
+                  - img
+                - region "Opens image gallery dialogue 64GB Corsair Vengeance DDR5 6000 CL30 | CMH64GX5M2Z6000Z30 | 2x 32GB AMD EXPO - Picture 1 of 2" [ref=e88]:
+                  - group "1 of 2" [ref=e89]:
+                    - img "64GB Corsair Vengeance DDR5 6000 CL30 | CMH64GX5M2Z6000Z30 | 2x 32GB AMD EXPO - Picture 1 of 2" [ref=e90]
+                  - group "2 of 2" [ref=e91]:
+                    - img "64GB Corsair Vengeance DDR5 6000 CL30 | CMH64GX5M2Z6000Z30 | 2x 32GB AMD EXPO - Picture 2 of 2" [ref=e92]
+                - generic [ref=e93]:
+                  - button "Opens image gallery" [ref=e94] [cursor=pointer]:
+                    - img
+                  - button "Add to Watchlist - 2 watchers" [ref=e96] [cursor=pointer]:
+                    - generic [ref=e97]: "2"
+                    - img
+                - button "Next image - Item images thumbnails" [ref=e99] [cursor=pointer]:
+                  - img
+            - generic [ref=e104]:
+              - generic [ref=e105]: Have one to sell?
+              - link "Sell it yourself" [ref=e107] [cursor=pointer]:
+                - /url: https://www.ebay.ie/sl/list?mode=SellLikeItem&itemId=277936804911&rt=nc&_trksid=p4429486.m117039.l2567
+                - generic [ref=e108]: Sell it yourself
+            - button "Share" [ref=e114] [cursor=pointer]:
+              - img
+              - generic [ref=e115]: Share
+          - generic [ref=e118]:
+            - generic [ref=e119]:
+              - heading "64GB Corsair Vengeance DDR5 6000 CL30 | CMH64GX5M2Z6000Z30 | 2x 32GB AMD EXPO-" [level=1] [ref=e120]
+              - button "show original title" [ref=e126] [cursor=pointer]
+            - generic [ref=e128] [cursor=pointer]:
+              - generic [ref=e130]:
+                - link [ref=e132]:
+                  - /url: https://www.ebay.ie/str/ambotech?_trksid=p4429486.m3561.l161210
+                  - img [ref=e134]
+                - generic [ref=e135]:
+                  - generic [ref=e136]:
+                    - link "AmboTech" [ref=e137]:
+                      - /url: https://www.ebay.ie/str/ambotech?_trksid=p4429486.m3561.l161211
+                    - generic [ref=e138]:
+                      - generic [ref=e139]: (1037)
+                      - generic [ref=e140]:
+                        - text: Business
+                        - button "Registered as business seller" [ref=e145]:
+                          - img
+                  - generic [ref=e146]:
+                    - button "100% positive Feedback" [ref=e148]
+                    - link "Seller's other items" [ref=e150]:
+                      - /url: https://www.ebay.ie/str/ambotech?_trksid=p4429486.m3561.l170197
+                      - generic [ref=e151]: Seller's other items
+                      - generic [ref=e152]: Seller's other items
+                    - button "Message seller" [ref=e154]:
+                      - generic [ref=e155]: Message seller
+                      - generic [ref=e156]: Message seller
+              - button "See more about this seller" [ref=e158]:
+                - img
+            - generic [ref=e162]: EUR 799.00
+            - generic [ref=e163]:
+              - generic [ref=e164]: "Condition:"
+              - generic [ref=e166]:
+                - generic [ref=e167]:
+                  - generic [ref=e168]: New
+                  - generic [ref=e169]: New
+                - button "More information - About this item condition" [ref=e170] [cursor=pointer]:
+                  - generic [ref=e171]:
+                    - img "More information - About this item condition"
+            - list [ref=e173]:
+              - listitem [ref=e174]:
+                - link "Buy It Now" [ref=e176] [cursor=pointer]:
+                  - /url: https://pay.ebay.ie/rxo?action=create&rypsvc=true&pagename=ryp&item=277936804911&quantity=1&TransactionId=-1
+                  - generic [ref=e177]: Buy It Now
+              - listitem [ref=e178]:
+                - button "Add to basket" [ref=e180] [cursor=pointer]:
+                  - generic [ref=e181]: Add to basket
+              - listitem [ref=e182]:
+                - generic [ref=e184]:
+                  - status [ref=e185]: Add to Watchlist
+                  - button "Add to Watchlist" [ref=e190] [cursor=pointer]:
+                    - generic [ref=e191]:
+                      - img
+                      - text: Add to Watchlist
+            - generic [ref=e194]:
+              - generic [ref=e195]:
+                - generic [ref=e196]:
+                  - img
+                - generic [ref=e198]: People are checking this out. 2 have added this to their Watchlist.
+              - generic [ref=e199]:
+                - generic [ref=e200]:
+                  - img
+                - generic [ref=e202]: Breathe easy. Returns accepted.
+            - generic [ref=e205]:
+              - heading "Postage, returns and payments" [level=2] [ref=e208]:
+                - generic [ref=e209]: Postage, returns and payments
+              - generic [ref=e211]:
+                - generic [ref=e214]:
+                  - generic [ref=e217]: "Postage:"
+                  - generic [ref=e219]:
+                    - generic [ref=e220]:
+                      - text: Free DHL Paket International.
+                      - button "See details for postage" [ref=e221] [cursor=pointer]:
+                        - generic [ref=e222]:
+                          - text: See details
+                          - generic [ref=e223]: for postage
+                    - generic [ref=e224]: "Located in: Pirna, Germany"
+                - generic [ref=e228]:
+                  - generic [ref=e231]: "Delivery:"
+                  - generic [ref=e233]:
+                    - generic [ref=e234]:
+                      - text: Estimated between Tue, 12 May and Mon, 18 May to D08F97P
+                      - button "Information - Estimated delivery date - opens a layer" [ref=e240]:
+                        - img
+                    - generic [ref=e241]:
+                      - text: Seller dispatches within 2 days after
+                      - link "receiving cleared payment" [ref=e242] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/pages/help/buy/contextual/domestic-handling-time.html
+                      - text: .
+            - generic [ref=e249]:
+              - generic [ref=e252]: "Returns:"
+              - generic [ref=e255]:
+                - text: 30 days return. Buyer pays for return postage. If you use an eBay delivery label, it will be deducted from your refund amount.
+                - button "See details - for more information about returns" [ref=e256] [cursor=pointer]:
+                  - generic [ref=e257]:
+                    - text: See details
+                    - generic [ref=e258]: "- for more information about returns"
+            - generic [ref=e265]:
+              - generic [ref=e268]: "Payments:"
+              - generic [ref=e271]:
+                - img "PayPal" [ref=e272]
+                - img "Google Pay" [ref=e274]
+                - img "Visa" [ref=e276]
+                - img "Mastercard" [ref=e278]
+                - img "Diners Club" [ref=e281]
+            - generic [ref=e285]:
+              - heading "Shop with confidence" [level=2] [ref=e288]
+              - generic [ref=e289]:
+                - generic [ref=e291]:
+                  - img
+                - generic [ref=e292]:
+                  - generic [ref=e293]: eBay Money Back Guarantee
+                  - generic [ref=e294]:
+                    - text: Get the item you ordered or your money back.
+                    - link "Learn more eBay Money Back Guarantee - opens new window or tab" [ref=e295] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/ebay-money-back-guarantee/
+                      - generic [ref=e296]:
+                        - text: Learn more
+                        - generic [ref=e297]: eBay Money Back Guarantee - opens new window or tab
+        - generic [ref=e298]:
+          - generic [ref=e300]:
+            - generic [ref=e303]:
+              - tablist [ref=e304]:
+                - tab "About this item" [selected] [ref=e305] [cursor=pointer]:
+                  - generic [ref=e306]: About this item
+              - tabpanel "About this item" [ref=e308]:
+                - generic [ref=e311]:
+                  - generic [ref=e314]:
+                    - generic [ref=e318]: Seller assumes all responsibility for this listing.
+                    - generic [ref=e322]: eBay item number:277936804911
+                    - generic [ref=e326]:
+                      - text: Last updated on 28 Apr, 2026 12:13:27 BST
+                      - link "View all revisions View all revisions" [ref=e327] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/rvh/277936804911?rt=nc&_trksid=p4429486.m148105.l48144
+                        - generic [ref=e328]:
+                          - text: View all revisions
+                          - generic [ref=e329]: View all revisions
+                  - generic [ref=e332]:
+                    - heading "Item specifics" [level=2] [ref=e335]:
+                      - generic [ref=e336]: Item specifics
+                    - generic [ref=e338]:
+                      - generic [ref=e339]:
+                        - generic [ref=e341]:
+                          - term [ref=e342]:
+                            - generic [ref=e344]: Condition
+                          - definition [ref=e345]:
+                            - generic [ref=e348]:
+                              - generic [ref=e349]: "New: A brand-new, unused, unopened and undamaged item in original retail packaging (where packaging ..."
+                              - button "Read more about the condition" [ref=e351]:
+                                - generic [ref=e352]:
+                                  - text: Read more
+                                  - generic [ref=e353]: about the condition
+                        - generic [ref=e355]:
+                          - term [ref=e356]:
+                            - generic [ref=e358]: Produktart
+                          - definition [ref=e359]:
+                            - generic [ref=e361]: DDR5 RAM
+                      - generic [ref=e362]:
+                        - generic [ref=e364]:
+                          - term [ref=e365]:
+                            - generic [ref=e367]: Anzahl der Pins
+                          - definition [ref=e368]:
+                            - generic [ref=e370]: "288"
+                        - generic [ref=e372]:
+                          - term [ref=e373]:
+                            - generic [ref=e375]: Herstellergarantie
+                          - definition [ref=e376]:
+                            - generic [ref=e378]: 2 Jahre
+                      - generic [ref=e379]:
+                        - generic [ref=e381]:
+                          - term [ref=e382]:
+                            - generic [ref=e384]: Formfaktor
+                          - definition [ref=e385]:
+                            - generic [ref=e387]: DIMM
+                        - generic [ref=e389]:
+                          - term [ref=e390]:
+                            - generic [ref=e392]: Busgeschwindigkeit
+                          - definition [ref=e393]:
+                            - generic [ref=e395]: PC5-48000 (DDR5-6000)
+                      - generic [ref=e396]:
+                        - generic [ref=e398]:
+                          - term [ref=e399]:
+                            - generic [ref=e401]: Herstellernummer
+                          - definition [ref=e402]:
+                            - generic [ref=e404]: CMH64GX5M2Z6000Z30
+                        - generic [ref=e406]:
+                          - term [ref=e407]:
+                            - generic [ref=e409]: Marke
+                          - definition [ref=e410]:
+                            - generic [ref=e412]: Corsair
+                      - generic [ref=e413]:
+                        - generic [ref=e415]:
+                          - term [ref=e416]:
+                            - generic [ref=e418]: Modell
+                          - definition [ref=e419]:
+                            - generic [ref=e421]: Corsair VEGEANCE RGB
+                        - generic [ref=e423]:
+                          - term [ref=e424]:
+                            - generic [ref=e426]: Gesamtkapazität
+                          - definition [ref=e427]:
+                            - generic [ref=e429]: 64 GB
+                      - generic [ref=e430]:
+                        - generic [ref=e432]:
+                          - term [ref=e433]:
+                            - generic [ref=e435]: Anzahl der Module
+                          - definition [ref=e436]:
+                            - generic [ref=e438]: "2"
+                        - generic [ref=e440]:
+                          - term [ref=e441]:
+                            - generic [ref=e443]: Speicher-Eigenschaften
+                          - definition [ref=e444]:
+                            - generic [ref=e446]: Unbuffered, Unregistered
+                      - generic [ref=e447]:
+                        - generic [ref=e449]:
+                          - term [ref=e450]:
+                            - generic [ref=e452]: Ursprungsland
+                          - definition [ref=e453]:
+                            - generic [ref=e455]: Taiwan
+                        - generic [ref=e457]:
+                          - term [ref=e458]:
+                            - generic [ref=e460]: Kapazität pro Modul
+                          - definition [ref=e461]:
+                            - generic [ref=e463]: 32 GB
+                      - generic [ref=e466]:
+                        - term [ref=e467]:
+                          - generic [ref=e469]: EAN
+                        - definition [ref=e470]:
+                          - generic [ref=e472]: Nicht zutreffend
+                  - generic [ref=e474]:
+                    - generic [ref=e475]: Category
+                    - navigation "breadcrumb" [ref=e478]:
+                      - heading "breadcrumb" [level=2] [ref=e479]
+                      - list [ref=e480]:
+                        - listitem [ref=e481]:
+                          - link "Electronics" [ref=e482] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/b/bn_7000259660
+                          - img
+                        - listitem [ref=e483]:
+                          - link "Computers/Tablets & Networking" [ref=e484] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/b/bn_1838792
+                          - img
+                        - listitem [ref=e485]:
+                          - link "Computer Components & Parts" [ref=e486] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/b/bn_1624167
+                          - img
+                        - listitem [ref=e487]:
+                          - link "Memory (RAM)" [ref=e488] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/b/bn_661670
+                  - generic [ref=e489]:
+                    - heading "Item description from the seller" [level=2] [ref=e492]
+                    - iframe [ref=e493]:
+                      - generic [ref=f173e2]:
+                        - strong [ref=f173e3]: Geschäftskunden kontaktieren uns bitte vorab bezüglich der Mehrwertsteuerkonditionen des Artikels.
+                        - generic [ref=f173e4]:
+                          - strong
+                        - strong [ref=f173e6]: Corporate customers please contact us before purchasing for VAT conditions.
+                        - paragraph [ref=f173e9]: Zustand
+                        - paragraph [ref=f173e10]: Der Artikel ist neu.
+                        - paragraph [ref=f173e11]: Lieferumfang
+                        - paragraph [ref=f173e12]: Der Artikel kommt in der Originalverpackung ohne Zubehör.
+                        - list [ref=f173e13]:
+                          - listitem [ref=f173e14]: "Hinweis: Der Versand erfolgt zumeist in einer gebrauchten, sauberen Versandverpackung. Mit Kauf erklären Sie, dass Sie dies zur Kenntnis genommen haben. Hintergrund: Wo nicht als OVP ausgewiesen erfolgt der Versand zumeist in einer geeigneten, ggf. gebrauchten ESD-Verpackung. Die Versandverpackung dient lediglich dem Schutz des Produktes und dessen Verpackung beim Versand - hierfür Ressourcen über Gebühr zu belasten ist am Ende auch nur teurer für den Kunden."
+                        - paragraph [ref=f173e15]: Gewährleistung
+                        - paragraph [ref=f173e16]: Sie erhalten auf diesen Artikel die gesetzlich vorgeschriebene Gewährleistung von zwei Jahren (Verbraucher i.S.d. § 13 BGB).
+                        - paragraph [ref=f173e17]: Für gewerbliche Kunden (§ 14 BGB) wird die Gewährleistung auf 1 Jahr begrenzt. Die Rechte nach § 444 BGB bleiben hiervon unberührt.
+                        - paragraph [ref=f173e18]: Widerruf
+                        - paragraph [ref=f173e19]: Fur Verbraucher (§ 13 BGB) gilt das 30-tägige Widerrufsrecht. Näheres entnehmen Sie bitte der AGB.
+                        - paragraph [ref=f173e20]: Für gewerbliche Kunden (§ 14 BGB) wird der Widerruf auf Grundlage von § 312g Absatz 2 BGB ausgeschlossen.
+                        - paragraph [ref=f173e21]
+                        - link "Klicken Sie hier, um zum Shop zu gelangen und entdecken Sie leistungsstarke Hardware. Ob Gigabyte Aorus Xtreme, MSI Godlike oder CL14-B-Dies von Samsung - hier finden Sie garantiert etwas, was Sie vorher noch gar nicht suchten." [ref=f173e22] [cursor=pointer]:
+                          - /url: https://www.ebay.de/str/ambotech
+                          - strong [ref=f173e23]: Klicken Sie hier, um zum Shop zu gelangen und entdecken Sie leistungsstarke Hardware. Ob Gigabyte Aorus Xtreme, MSI Godlike oder CL14-B-Dies von Samsung - hier finden Sie garantiert etwas, was Sie vorher noch gar nicht suchten.
+                  - generic [ref=e496]:
+                    - heading "Seller business information" [level=2] [ref=e499]:
+                      - generic [ref=e500]: Seller business information
+                    - generic [ref=e501]: I certify that all my selling activities will comply with all EU laws and regulations.
+                    - generic [ref=e503]:
+                      - generic [ref=e504]: "VAT number: DE 370481769"
+                      - generic [ref=e505]: "Additional information:"
+                      - generic [ref=e511]: "Geschäftsführer: Imanuel Abt"
+                      - button "See all" [ref=e513] [cursor=pointer]
+                    - generic [ref=e515]:
+                      - button "Terms and conditions of the sale" [ref=e517] [cursor=pointer]
+                      - button "Additional disclosures" [ref=e519] [cursor=pointer]
+                      - button "Seller contact information" [ref=e521] [cursor=pointer]
+            - generic [ref=e522]:
+              - heading "Safety and accessibility information" [level=2] [ref=e524]:
+                - generic [ref=e525]: Safety and accessibility information
+                - generic [ref=e526]: Safety and accessibility information
+              - generic [ref=e528]:
+                - img "Not suitable for young children"
+              - generic [ref=e529]:
+                - generic [ref=e530]:
+                  - generic [ref=e532]: "Warning: Not suitable for children under 3 years old."
+                  - generic [ref=e533]: "Warning: Not suitable for children under 3 years old."
+                  - generic [ref=e535]: "Warning: Please keep out of reach of children."
+                  - generic [ref=e536]: "Warning: Please keep out of reach of children."
+                  - generic [ref=e538]: "Warning: Product contains a button or coin battery."
+                  - generic [ref=e539]: "Warning: Product contains a button or coin battery."
+                - button "Manufacturer / EU responsible person" [ref=e544] [cursor=pointer]:
+                  - generic [ref=e545]: Manufacturer / EU responsible person
+                  - generic [ref=e546]: Manufacturer / EU responsible person
+          - generic [ref=e549]:
+            - generic [ref=e550]:
+              - generic [ref=e551]:
+                - heading "About this seller" [level=2] [ref=e552]:
+                  - generic [ref=e554]: About this seller
+                - generic [ref=e555]:
+                  - link [ref=e557] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/ambotech?_trksid=p4429486.m145687.l149266
+                    - img [ref=e559]
+                  - generic [ref=e560]:
+                    - heading "AmboTech" [level=3] [ref=e561]:
+                      - link "AmboTech" [ref=e562] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/str/ambotech?_trksid=p4429486.m145687.l149267
+                    - paragraph [ref=e563]: 100% positive Feedback•1.8K items sold
+                - generic [ref=e566]:
+                  - generic [ref=e568]:
+                    - generic [ref=e569]:
+                      - img
+                    - generic [ref=e570]: Joined Dec 2012
+                  - generic [ref=e572]:
+                    - generic [ref=e573]:
+                      - img
+                    - generic [ref=e574]: Usually responds within 24 hours
+                - generic [ref=e575]: Registered as a business seller
+                - generic [ref=e577]:
+                  - generic [ref=e578]: Immer wieder gibt es hier seltene, teils einzigartige Hardware. Das Angebot ist jedoch für jeden interessant, egal ob Enthusiast, Gamer oder professionelle Anwender. Schauen Sie sich gern um. Bitte ...
+                  - group [ref=e580]:
+                    - generic "See more" [ref=e581]:
+                      - generic [ref=e582]: See more
+                      - generic [ref=e583]:
+                        - img
+                - generic [ref=e584]:
+                  - link "Visit shop" [ref=e585] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/ambotech?_trksid=p4429486.m145687.l149086
+                    - generic [ref=e586]: Visit shop
+                  - button "Message seller - opens in a new dialog" [ref=e587] [cursor=pointer]:
+                    - generic [ref=e588]:
+                      - text: Message seller
+                      - generic [ref=e589]: "- opens in a new dialog"
+                  - button "Save seller - Save this seller ambotech" [ref=e591] [cursor=pointer]:
+                    - generic [ref=e592]:
+                      - img
+                    - generic [ref=e593]: Save seller
+              - generic [ref=e595]:
+                - heading "Detailed seller ratings" [level=3] [ref=e596]
+                - generic [ref=e597]:
+                  - generic [ref=e598]: Average for the last 12 months
+                  - generic [ref=e599]:
+                    - generic [ref=e600]:
+                      - generic [ref=e601]: Accurate description
+                      - progressbar [ref=e602]
+                      - generic [ref=e603]: "4.9"
+                    - generic [ref=e604]:
+                      - generic [ref=e605]: Reasonable postage cost
+                      - progressbar [ref=e606]
+                      - generic [ref=e607]: "4.9"
+                    - generic [ref=e608]:
+                      - generic [ref=e609]: Delivery time
+                      - progressbar [ref=e610]
+                      - generic [ref=e611]: "5.0"
+                    - generic [ref=e612]:
+                      - generic [ref=e613]: Communication
+                      - progressbar [ref=e614]
+                      - generic [ref=e615]: "5.0"
+            - generic [ref=e618]:
+              - heading "Seller Feedback (828)" [level=2] [ref=e619]
+              - 'button "Filter: All ratings" [ref=e622] [cursor=pointer]':
+                - generic [ref=e623]:
+                  - generic [ref=e624]: "Filter:"
+                  - generic [ref=e625]: All ratings
+                  - img
+              - list [ref=e626]:
+                - listitem [ref=e627]:
+                  - generic [ref=e628]:
+                    - generic [ref=e630]:
+                      - generic [ref=e631]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e632]:
+                        - text: i***i (77)
+                        - generic [ref=e633]: "- Feedback left by buyer."
+                      - generic [ref=e636]: Past month
+                      - generic [ref=e637]: Verified purchase
+                    - generic [ref=e639]: "Verkäufer hat schnell versendet. Der Zustand wurde mit \"gut bis sehr gut\" beschrieben und ist in meinen Augen eher \"sehr gut\". Gut verpackt war der Artikel ebenso. Besonders gefallen haben mir die guten Produktfotos aus verschiedenen Perspektiven. Ein Verbesserungsvorschlag: ein Foto des CPU-Sockels ohne Abdeckung (Pins sichtbar) würde es potentiellen Käufern noch etwas einfacher machen, sich für den Artikel zu entscheiden. Gerne wieder, vielen Dank!"
+                    - link "ASUS TUF Gaming Z590-Plus WiFi | Intel Z590 | LGA 1200 | Supports 11900k (#277656096096)" [ref=e641] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/277656096096
+                      - generic [ref=e642]: ASUS TUF Gaming Z590-Plus WiFi | Intel Z590 | LGA 1200 | Supports 11900k (#277656096096)
+                - listitem [ref=e643]:
+                  - generic [ref=e644]:
+                    - generic [ref=e646]:
+                      - generic [ref=e647]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e648]:
+                        - text: o***1 (844)
+                        - generic [ref=e649]: "- Feedback left by buyer."
+                      - generic [ref=e652]: Past 6 months
+                      - generic [ref=e653]: Verified purchase
+                    - generic [ref=e655]: Transaction parfaite, envoi rapide et soigné, bonne communication, vendeur très correct il m'a rembourssé le trop perçu des frais de livraison sans que j'ai à le demander, un grand merci! / Vollkommene Transaktion, schneller und gepflegter Versand, gute Kommunikation, Der Verkäufer war sehr hilfsbereit; er hat mir die zu viel gezahlten Versandkosten erstattet, ohne dass ich darum bitten musste. Vielen Dank!
+                    - generic [ref=e656]: 16GB G.Skill Trident Z RGB DDR4 4600 MHz | CL18 | 2x8 GB (#277535340133)
+                - listitem [ref=e657]:
+                  - generic [ref=e658]:
+                    - generic [ref=e660]:
+                      - generic [ref=e661]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e662]:
+                        - text: p***e (362)
+                        - generic [ref=e663]: "- Feedback left by buyer."
+                      - generic [ref=e666]: Past month
+                      - generic [ref=e667]: Verified purchase
+                    - generic [ref=e669]: Perfekte Abwicklung, freundlicher Kontakt, reibungsloser Ablauf. Gut verpackt und schnelle Lieferung, seriöser und angenehmer Verkäufer den ich wirklich empfehle.
+                    - link "ASUS Prime X299-Deluxe II | LGA 2066 | DDR4 | Supports Intel Core X-Series (#277822423662)" [ref=e671] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/277822423662
+                      - generic [ref=e672]: ASUS Prime X299-Deluxe II | LGA 2066 | DDR4 | Supports Intel Core X-Series (#277822423662)
+                - listitem [ref=e673]:
+                  - generic [ref=e674]:
+                    - generic [ref=e676]:
+                      - generic [ref=e677]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e678]:
+                        - text: l***l (1)
+                        - generic [ref=e679]: "- Feedback left by buyer."
+                      - generic [ref=e682]: Past 6 months
+                      - generic [ref=e683]: Verified purchase
+                    - generic [ref=e685]: Excellent communication with seller. Items were safely packed and shipped. Seller also assisted with zero-VAT invoice in accordance with EU B2B intra-community trade. Will buy from this seller again!
+                    - link "LOT 8 Stk - 64GB SK hynix DDR4 2400MHz | ECC | HMAA8GL7MMR4N-UH | HPE 805358-B21 (#277702400646)" [ref=e687] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/277702400646
+                      - generic [ref=e688]: LOT 8 Stk - 64GB SK hynix DDR4 2400MHz | ECC | HMAA8GL7MMR4N-UH | HPE 805358-B21 (#277702400646)
+                - listitem [ref=e689]:
+                  - generic [ref=e690]:
+                    - generic [ref=e692]:
+                      - generic [ref=e693]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e694]:
+                        - text: s***8 (1)
+                        - generic [ref=e695]: "- Feedback left by buyer."
+                      - generic [ref=e698]: Past month
+                      - generic [ref=e699]: Verified purchase
+                    - generic [ref=e701]: Sehr gute Erfahrung! SSD war wie beschrieben. Bei der Lieferung kam zuerst ein falsches Paket an, der Verkäufer hat sich sehr schnell gemeldet und das richtige verschickt bevor die Retoure bei ihm war - Kann ich nur weiterempfehlen!
+                    - link "1,92TB Micron 5100 Pro | Server Grade SSD MTFDDAK1T9TCB-1AR1ZABYY | 80-85% Life (#277537588121)" [ref=e703] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/277537588121
+                      - generic [ref=e704]: 1,92TB Micron 5100 Pro | Server Grade SSD MTFDDAK1T9TCB-1AR1ZABYY | 80-85% Life (#277537588121)
+                - listitem [ref=e705]:
+                  - generic [ref=e706]:
+                    - generic [ref=e708]:
+                      - generic [ref=e709]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e710]:
+                        - text: 0***0 (941)
+                        - generic [ref=e711]: "- Feedback left by buyer."
+                      - generic [ref=e714]: Past 6 months
+                      - generic [ref=e715]: Verified purchase
+                    - generic [ref=e717]: Tolle Kommunikation. Reibungsloser Ablauf, zuverlässiger Versand und ein Produkt in exakt dem beschriebenen Zustand. Vorbildlicher Verkäufer – gerne wieder
+                    - link "32GB Corsair Vengeance LPX RAM | DDR4 3600 MHz CL18 (#277583418202)" [ref=e719] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/277583418202
+                      - generic [ref=e720]: 32GB Corsair Vengeance LPX RAM | DDR4 3600 MHz CL18 (#277583418202)
+                - listitem [ref=e721]:
+                  - generic [ref=e722]:
+                    - generic [ref=e724]:
+                      - generic [ref=e725]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e726]:
+                        - text: b***n (405)
+                        - generic [ref=e727]: "- Feedback left by buyer."
+                      - generic [ref=e730]: Past year
+                      - generic [ref=e731]: Verified purchase
+                    - generic [ref=e732]:
+                      - generic [ref=e733]: Alles perfekt! NVMe entspricht 100 % der Beschreibung. Versand erfolgte blitzschnell in antistatischer Verpackung im Umkarton. Nette, informative Kommunikation inkl. Rechnung. Vielen Dank und bei Bedarf gerne wieder.
+                      - button "Item photo(s) from verified buyer" [ref=e734] [cursor=pointer]:
+                        - img "Item photo(s) from verified buyer" [ref=e735]
+                    - generic [ref=e736]: 2TB Crucial T705 | Gen5 NVMe 2280 | M.2 PCIe Professional SSD | 232 Layer NAND (#277422115243)
+                - listitem [ref=e737]:
+                  - generic [ref=e738]:
+                    - generic [ref=e740]:
+                      - generic [ref=e741]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e742]:
+                        - text: w***o (1062)
+                        - generic [ref=e743]: "- Feedback left by buyer."
+                      - generic [ref=e746]: Past 6 months
+                      - generic [ref=e747]: Verified purchase
+                    - generic [ref=e749]: Artikel ist genau wie beschrieben. Gut verpackter Versand in Originalverpackung + Zubehör. Schnelle Versandaufgabe = schnelle Lieferung. Der Artikel ist technisch 100% in Ordnung. Wird als Ersatz für ein defektes, baugleiches Teil genutzt. Nach einer Woche des Testens ist alles einwandfrei und wie erwartet. Vielen Dank für diese super Transaktion.
+                    - generic [ref=e750]: MSI Z370I Gaming Pro Carbon AC | LGA 1151v2 | PCIe 3.0 | HDMI | USB-C (#277340324853)
+              - link "See all feedback. Opens in a new tab" [ref=e752] [cursor=pointer]:
+                - /url: https://www.ebay.ie/fdbk/mweb_profile?fdbkType=FeedbackReceivedAsSeller&item_id=277936804911&username=ambotech&filter=feedback_page%3ARECEIVED_AS_SELLER&sort=RELEVANCEV2
+                - text: See all Feedback
+          - generic [ref=e754]:
+            - navigation "Quick links" [ref=e755]:
+              - link "Back to home page" [ref=e756] [cursor=pointer]:
+                - /url: https://www.ebay.ie
+              - button "Return to top" [ref=e757] [cursor=pointer]
+            - generic [ref=e759]:
+              - heading "More to explore:" [level=2] [ref=e762]
+              - list [ref=e764]:
+                - listitem [ref=e765]:
+                  - link "AMD DDR5 AMD Computer Graphics & Video Cards," [ref=e766] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7030181457
+                - listitem [ref=e767]:
+                  - link "Corsair 64GB USB Flash Drives," [ref=e768] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_776283
+                - listitem [ref=e769]:
+                  - link "Corsair 32GB USB Flash Drives," [ref=e770] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_776300
+                - listitem [ref=e771]:
+                  - link "ASUS AMD DDR5 Computer Graphics & Video Cards," [ref=e772] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_25841521
+                - listitem [ref=e773]:
+                  - link "AMD DDR5 8 GB Memory Computer Graphics & Video Cards," [ref=e774] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_97140652
+                - listitem [ref=e775]:
+                  - link "Corsair Computer Components & Parts," [ref=e776] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_89235857
+                - listitem [ref=e777]:
+                  - link "Corsair Computer Power Supplies," [ref=e778] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_2766230
+                - listitem [ref=e779]:
+                  - link "MacBook Pro 32GB RAM," [ref=e780] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7117199213
+                - listitem [ref=e781]:
+                  - link "Corsair Computer Water Cooling," [ref=e782] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_613174
+                - listitem [ref=e783]:
+                  - link "64GB USB Flash Drives" [ref=e784] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_774774
+  - generic [ref=e792]:
+    - contentinfo [ref=e793]:
+      - list [ref=e794]:
+        - listitem [ref=e795]:
+          - link "About eBay" [ref=e796] [cursor=pointer]:
+            - /url: https://www.ebayinc.com/
+        - listitem [ref=e797]:
+          - link "News" [ref=e798] [cursor=pointer]:
+            - /url: https://community.ebay.co.uk/t5/Announcements/bg-p/Announcements
+        - listitem [ref=e799]:
+          - link "Community" [ref=e800] [cursor=pointer]:
+            - /url: https://community.ebay.co.uk
+        - listitem [ref=e801]:
+          - link "Safety Centre" [ref=e802] [cursor=pointer]:
+            - /url: https://pages.ebay.ie/safetycentre/index.html
+        - listitem [ref=e803]:
+          - link "Seller Centre" [ref=e804] [cursor=pointer]:
+            - /url: https://sellercentre.ebay.co.uk
+        - listitem [ref=e805]:
+          - 'link "VeRO: Protecting Intellectual Property" [ref=e806] [cursor=pointer]':
+            - /url: https://pages.ebay.ie/vero/
+        - listitem [ref=e807]:
+          - link "Policies" [ref=e808] [cursor=pointer]:
+            - /url: https://www.ebay.ie/pages/help/policies/index.html
+        - listitem [ref=e809]:
+          - link "Help & Contact" [ref=e810] [cursor=pointer]:
+            - /url: https://www.ebay.ie/help/home
+        - listitem [ref=e811]:
+          - link "Site Map" [ref=e812] [cursor=pointer]:
+            - /url: https://pages.ebay.ie/sitemap.html
+      - generic [ref=e813]:
+        - text: Copyright © 1995-2026 eBay Inc. All Rights Reserved.
+        - link "Accessibility" [ref=e814] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/accessibility
+        - text: ","
+        - link "User Agreement" [ref=e815] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-agreement?id=4259
+        - text: ","
+        - link "Privacy" [ref=e816] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260
+        - text: ","
+        - link "Payments Terms of Use" [ref=e817] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/payment/2.0/terms.html
+        - text: ","
+        - link "Cookies" [ref=e818] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267
+        - text: and
+        - link "AdChoice" [ref=e819] [cursor=pointer]:
+          - /url: https://www.ebay.ie/adchoice
+          - text: AdChoice
+          - img
+    - generic:
+      - generic "ADVERTISEMENT" [ref=e820]
+      - generic "ADVERTISEMENT" [ref=e821]
+      - generic "ADVERTISEMENT" [ref=e822]
+  - img
+  - img [ref=e824]

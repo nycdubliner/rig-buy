@@ -1,0 +1,5 @@
+[     583ms] [LOG] Meter provider shut down successfully @ https://ir.ebaystatic.com/cr/ebay-rum/cdn-assets/metrics.ebb041e86c5338dbe8f6.bundle.js:0
+[     592ms] [ERROR] The source list for the Content Security Policy directive 'connect-src' contains an invalid source: '.ucweb.com'. It will be ignored. @ https://cart.ebay.ie/:0
+[    1269ms] [WARNING] The PerformanceObserver does not support buffered flag with the entryTypes argument. @ https://ir.ebaystatic.com/rs/c/cartfe/vendor.desktop.dfa5b6899d73f1f1ae64.js:1
+[    2208ms] [ERROR] The source list for the Content Security Policy directive 'connect-src' contains an invalid source: '.ucweb.com'. It will be ignored. @ https://ir.ebaystatic.com/cr/v/c1/globalheader_widget_platform__v2-b70676194b.js:1
+[    2224ms] [ERROR] The source list for the Content Security Policy directive 'connect-src' contains an invalid source: '.ucweb.com'. It will be ignored. @ :102

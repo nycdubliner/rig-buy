@@ -1,0 +1,4 @@
+[    1210ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ about:blank:0
+[    2470ms] [WARNING] The PerformanceObserver does not support buffered flag with the entryTypes argument. @ https://ir.ebaystatic.com/rs/c/r1vinode/_DNHzd5MO.js:0
+[    2477ms] [LOG] {h: 3213, w: 1360} @ https://ir.ebaystatic.com/rs/c/r1vinode/item_evo-Di93CcFK.js:7
+[    5472ms] [WARNING] The resource https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-Regular-WebS.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://itm.ebaydesc.com/itmdesc/127833912745?t=0&category=1244&seller=computer-store-berlin&excSoj=1&ver=1&excTrk=1&lsite=77&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1:0

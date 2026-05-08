@@ -1,0 +1,32 @@
+{
+  "CPU": {
+    "title": "New listing",
+    "price": "EUR 164.62",
+    "source": "eBay Cart"
+  },
+  "GPU": {
+    "title": "ACER NITRO RADEON RX 7800 XT OC 16GB - GPU RDNA3",
+    "price": "EUR 420.00",
+    "source": "eBay Cart"
+  },
+  "Mobo": {
+    "title": "ASUS ROG Strix X570-E Gaming DDR4 Socket AM4 ATX Motherboard Support AMD Ryzen",
+    "price": "EUR 283.80",
+    "source": "eBay Cart"
+  },
+  "RAM": {
+    "title": "New 64gb Ddr4 3200Mhz",
+    "price": "EUR 400.00",
+    "source": "eBay Cart"
+  },
+  "PSU": {
+    "title": "Corsair RMe Series RM850e 80 PLUS Gold Power Supply, modular, ATX 3.1, PCIe 5.1 - 850 watts, black",
+    "price": "€123,93 €",
+    "source": "Caseking Cart"
+  },
+  "Case": {
+    "title": "Lian Li LANCOOL III E-ATX Case, Mid-Tower - black",
+    "price": "€134,27 €",
+    "source": "Caseking Cart"
+  }
+}

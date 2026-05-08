@@ -1,0 +1,780 @@
+- generic [active] [ref=e1]:
+  - img
+  - img
+  - generic [ref=e3]:
+    - banner [ref=e7]:
+      - link "Skip to main content" [ref=e9] [cursor=pointer]:
+        - /url: "#mainContent"
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - button "Hi Tiarnán!" [ref=e14] [cursor=pointer]:
+            - generic [ref=e15]: Hi Tiarnán!
+            - img
+          - link "Help & Contact" [ref=e17] [cursor=pointer]:
+            - /url: https://www.ebay.ie/help/home
+        - generic [ref=e18]:
+          - link "Sell" [ref=e20] [cursor=pointer]:
+            - /url: https://www.ebay.ie/sl/sell
+          - generic [ref=e21]:
+            - link "Watchlist" [ref=e22] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mye/myebay/watchlist
+              - generic [ref=e23]: Watchlist
+              - img
+            - button "Expand Watchlist" [ref=e24]
+          - generic [ref=e25]:
+            - link "My eBay" [ref=e26] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mys/home?source=GBH
+              - generic [ref=e27]: My eBay
+              - img
+            - button "Expand My eBay" [ref=e28]
+          - button "Notifications" [ref=e31] [cursor=pointer]:
+            - img
+            - generic [ref=e32]: Notifications
+          - generic [ref=e34]:
+            - link "Your shopping basket contains 0 items" [ref=e35] [cursor=pointer]:
+              - /url: https://cart.ebay.ie
+              - generic "Your shopping basket contains 0 items" [ref=e36]:
+                - img
+            - button "Expand Basket" [ref=e37]
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - link "eBay Home" [ref=e40] [cursor=pointer]:
+            - /url: https://www.ebay.ie
+            - img "eBay Home" [ref=e41]
+          - button "Shop by category" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: Shop by category
+            - img
+        - generic [ref=e51]:
+          - status [ref=e52]
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - combobox "Search for anything" [ref=e56]
+              - img
+            - combobox "Select a category for search" [ref=e57]:
+              - option "All Categories" [selected]
+              - option "Antiques"
+              - option "Art"
+              - option "Baby"
+              - option "Books, Comics & Magazines"
+              - option "Business, Office & Industrial"
+              - option "Cameras & Photography"
+              - option "Cars, Motorcycles & Vehicles"
+              - option "Clothes, Shoes & Accessories"
+              - option "Coins"
+              - option "Collectables"
+              - option "Computers/Tablets & Networking"
+              - option "Crafts"
+              - option "Dolls & Bears"
+              - option "DVDs, Films & TV"
+              - option "Events Tickets"
+              - option "Garden & Patio"
+              - option "Health & Beauty"
+              - option "Holidays & Travel"
+              - option "Home, Furniture & DIY"
+              - option "Jewellery & Watches"
+              - option "Mobile Phones & Communication"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Pet Supplies"
+              - option "Pottery, Porcelain & Glass"
+              - option "Property"
+              - option "Sound & Vision"
+              - option "Sporting Goods"
+              - option "Sports Memorabilia"
+              - option "Stamps"
+              - option "Toys & Games"
+              - option "Vehicle Parts & Accessories"
+              - option "Video Games & Consoles"
+              - option "Wholesale & Job Lots"
+              - option "Everything Else"
+          - generic [ref=e58]:
+            - button "Search" [ref=e59] [cursor=pointer]:
+              - generic [ref=e60]: Search
+            - link "Advanced" [ref=e61] [cursor=pointer]:
+              - /url: https://www.ebay.ie/sch/ebayadvsearch
+    - main [ref=e62]:
+      - generic [ref=e64]:
+        - generic [ref=e68]:
+          - generic [ref=e71]:
+            - generic [ref=e73]:
+              - generic [ref=e74]:
+                - button "Previous image - Item images thumbnails" [disabled] [ref=e75] [cursor=pointer]:
+                  - img
+                - generic [ref=e76]:
+                  - button "Picture 1 of 6" [ref=e77] [cursor=pointer]:
+                    - img "Picture 1 of 6" [ref=e78]
+                  - button "Picture 2 of 6" [ref=e79] [cursor=pointer]:
+                    - img "Picture 2 of 6" [ref=e80]
+                  - button "Picture 3 of 6" [ref=e81] [cursor=pointer]:
+                    - img "Picture 3 of 6" [ref=e82]
+                  - button "Picture 4 of 6" [ref=e83] [cursor=pointer]:
+                    - img "Picture 4 of 6" [ref=e84]
+                  - button "Picture 5 of 6" [ref=e85] [cursor=pointer]:
+                    - img "Picture 5 of 6" [ref=e86]
+                  - button "Picture 6 of 6" [ref=e87] [cursor=pointer]:
+                    - img "Picture 6 of 6" [ref=e88]
+                - button "Next image - Item images thumbnails" [ref=e89] [cursor=pointer]:
+                  - img
+              - generic [ref=e90]:
+                - heading "Picture 1 of 6" [level=2] [ref=e91]
+                - generic [ref=e95]: In 7 baskets
+                - button "Previous image - Item images thumbnails" [ref=e97] [cursor=pointer]:
+                  - img
+                - region "Opens image gallery dialogue Nvidia Tesla P40 24GB GPU Accelerator Graphics Card with 8-Pin CPU / EPS12V - Picture 1 of 6" [ref=e98]:
+                  - group "1 of 6" [ref=e99]:
+                    - img "Nvidia Tesla P40 24GB GPU Accelerator Graphics Card with 8-Pin CPU / EPS12V - Picture 1 of 6" [ref=e100]
+                  - group "2 of 6" [ref=e101]:
+                    - img "Nvidia Tesla P40 24GB GPU Accelerator Graphics Card with 8-Pin CPU / EPS12V - Picture 2 of 6" [ref=e102]
+                  - group "3 of 6" [ref=e103]:
+                    - img "Nvidia Tesla P40 24GB GPU Accelerator Graphics Card with 8-Pin CPU / EPS12V - Picture 3 of 6" [ref=e104]
+                  - group "4 of 6" [ref=e105]:
+                    - img "Nvidia Tesla P40 24GB GPU Accelerator Graphics Card with 8-Pin CPU / EPS12V - Picture 4 of 6" [ref=e106]
+                  - group "5 of 6" [ref=e107]:
+                    - img "Nvidia Tesla P40 24GB GPU Accelerator Graphics Card with 8-Pin CPU / EPS12V - Picture 5 of 6" [ref=e108]
+                  - group "6 of 6" [ref=e109]:
+                    - img "Nvidia Tesla P40 24GB GPU Accelerator Graphics Card with 8-Pin CPU / EPS12V - Picture 6 of 6" [ref=e110]
+                - generic [ref=e111]:
+                  - button "Opens image gallery" [ref=e112] [cursor=pointer]:
+                    - img
+                  - button "Add to Watchlist - 56 watchers" [ref=e114] [cursor=pointer]:
+                    - generic [ref=e115]: "56"
+                    - img
+                - button "Next image - Item images thumbnails" [ref=e117] [cursor=pointer]:
+                  - img
+            - generic [ref=e122]:
+              - generic [ref=e123]: Have one to sell?
+              - link "Sell it yourself" [ref=e125] [cursor=pointer]:
+                - /url: https://www.ebay.ie/sl/list?mode=SellLikeItem&itemId=397692355643&rt=nc&_trksid=p4429486.m117039.l2567
+                - generic [ref=e126]: Sell it yourself
+            - button "Share" [ref=e132] [cursor=pointer]:
+              - img
+              - generic [ref=e133]: Share
+          - generic [ref=e136]:
+            - generic [ref=e137]:
+              - heading "Nvidia Tesla P40 24GB GPU Accelerator Graphics Card with 8-Pin CPU / EPS12V-" [level=1] [ref=e138]
+              - button "show original title" [ref=e144] [cursor=pointer]
+            - generic [ref=e146] [cursor=pointer]:
+              - generic [ref=e148]:
+                - link [ref=e150]:
+                  - /url: https://www.ebay.ie/sch/konbrax-energy-cryptosolutions/m.html?item=397692355643&rt=nc&_trksid=p4429486.m3561.l161210
+                  - img [ref=e152]
+                - generic [ref=e153]:
+                  - generic [ref=e154]:
+                    - link "konbrax-energy-cryptosolutions" [ref=e155]:
+                      - /url: https://www.ebay.ie/sch/konbrax-energy-cryptosolutions/m.html?item=397692355643&rt=nc&_trksid=p4429486.m3561.l161211
+                    - generic [ref=e156]:
+                      - generic [ref=e157]: (369)
+                      - generic [ref=e158]:
+                        - text: Business
+                        - button "Registered as business seller" [ref=e163]:
+                          - img
+                  - generic [ref=e164]:
+                    - button "100% positive Feedback" [ref=e166]
+                    - link "Seller's other items" [ref=e168]:
+                      - /url: https://www.ebay.ie/sch/konbrax-energy-cryptosolutions/m.html?item=397692355643&rt=nc&_trksid=p4429486.m3561.l170197
+                      - generic [ref=e169]: Seller's other items
+                      - generic [ref=e170]: Seller's other items
+                    - button "Message seller" [ref=e172]:
+                      - generic [ref=e173]: Message seller
+                      - generic [ref=e174]: Message seller
+              - button "See more about this seller" [ref=e176]:
+                - img
+            - generic [ref=e179]:
+              - generic [ref=e180]: EUR 369.00
+              - generic [ref=e181]:
+                - generic [ref=e182]: €350.55 with coupon code
+                - button "Price details" [ref=e183] [cursor=pointer]:
+                  - generic [ref=e184]: Price details
+            - generic [ref=e185]:
+              - generic [ref=e186]: "Condition:"
+              - generic [ref=e188]:
+                - generic [ref=e189]:
+                  - generic [ref=e190]: Used
+                  - generic [ref=e191]: Used
+                - button "More information - About this item condition" [ref=e192] [cursor=pointer]:
+                  - generic [ref=e193]:
+                    - img "More information - About this item condition"
+              - generic [ref=e194]: “Sehr gut - Refurbished”
+            - generic [ref=e196]:
+              - generic [ref=e197]: "Quantity:"
+              - generic [ref=e198]:
+                - textbox "Quantity:" [ref=e200]: "1"
+                - generic [ref=e201]: More than 10 available 37 sold
+            - generic [ref=e205]:
+              - generic [ref=e206]:
+                - img
+              - generic [ref=e207]:
+                - generic [ref=e208]: 5% off with code PERFECTEBAY5
+                - generic [ref=e209]:
+                  - generic [ref=e210]: Ends 08 May • Max € 50.00
+                  - link "See details" [ref=e211] [cursor=pointer]:
+                    - /url: https://pages.ebay.de/gutscheine/perfectebay/
+                    - generic [ref=e212]: See details
+            - list [ref=e214]:
+              - listitem [ref=e215]:
+                - link "Buy It Now" [ref=e217] [cursor=pointer]:
+                  - /url: https://www.ebay.ie/bin/ctb?item=397692355643&quantity=1&fromPage=4429486&rev=13&fb=1
+                  - generic [ref=e218]: Buy It Now
+              - listitem [ref=e219]:
+                - button "Add to basket" [ref=e221] [cursor=pointer]:
+                  - generic [ref=e222]: Add to basket
+              - listitem [ref=e223]:
+                - generic [ref=e225]:
+                  - status [ref=e226]: Add to Watchlist
+                  - button "Add to Watchlist" [ref=e231] [cursor=pointer]:
+                    - generic [ref=e232]:
+                      - img
+                      - text: Add to Watchlist
+            - generic [ref=e235]:
+              - generic [ref=e236]:
+                - generic [ref=e237]:
+                  - img
+                - generic [ref=e239]: This one's trending. 37 have already sold.
+              - generic [ref=e240]:
+                - generic [ref=e241]:
+                  - img
+                - generic [ref=e243]: People want this. 56 people are watching this.
+            - generic [ref=e246]:
+              - heading "Postage, returns and payments" [level=2] [ref=e249]:
+                - generic [ref=e250]: Postage, returns and payments
+              - generic [ref=e252]:
+                - generic [ref=e255]:
+                  - generic [ref=e258]: "Postage:"
+                  - generic [ref=e260]:
+                    - generic [ref=e261]:
+                      - text: EUR 19.00 Hermes Paket International.
+                      - button "See details for postage" [ref=e262] [cursor=pointer]:
+                        - generic [ref=e263]:
+                          - text: See details
+                          - generic [ref=e264]: for postage
+                    - generic [ref=e265]: "Located in: Lübbecke, Germany"
+                - generic [ref=e269]:
+                  - generic [ref=e272]: "Delivery:"
+                  - generic [ref=e274]:
+                    - generic [ref=e275]:
+                      - text: Estimated between Mon, 11 May and Thu, 14 May to D08F97P
+                      - button "Information - Estimated delivery date - opens a layer" [ref=e281]:
+                        - img
+                    - generic [ref=e282]:
+                      - text: Seller dispatches within 1 day after
+                      - link "receiving cleared payment" [ref=e283] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/pages/help/buy/contextual/domestic-handling-time.html
+                      - text: .
+            - generic [ref=e290]:
+              - generic [ref=e293]: "Returns:"
+              - generic [ref=e296]:
+                - text: No returns accepted.
+                - button "See details - for more information about returns" [ref=e297] [cursor=pointer]:
+                  - generic [ref=e298]:
+                    - text: See details
+                    - generic [ref=e299]: "- for more information about returns"
+            - generic [ref=e306]:
+              - generic [ref=e309]: "Payments:"
+              - generic [ref=e312]:
+                - img "PayPal" [ref=e313]
+                - img "Google Pay" [ref=e315]
+                - img "Visa" [ref=e317]
+                - img "Mastercard" [ref=e319]
+                - img "Diners Club" [ref=e322]
+            - generic [ref=e326]:
+              - heading "Shop with confidence" [level=2] [ref=e329]
+              - generic [ref=e330]:
+                - generic [ref=e332]:
+                  - img
+                - generic [ref=e333]:
+                  - generic [ref=e334]: eBay Money Back Guarantee
+                  - generic [ref=e335]:
+                    - text: Get the item you ordered or your money back.
+                    - link "Learn more eBay Money Back Guarantee - opens new window or tab" [ref=e336] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/ebay-money-back-guarantee/
+                      - generic [ref=e337]:
+                        - text: Learn more
+                        - generic [ref=e338]: eBay Money Back Guarantee - opens new window or tab
+        - generic [ref=e339]:
+          - generic [ref=e344]:
+            - tablist [ref=e345]:
+              - tab "About this item" [selected] [ref=e346] [cursor=pointer]:
+                - generic [ref=e347]: About this item
+            - tabpanel "About this item" [ref=e349]:
+              - generic [ref=e352]:
+                - generic [ref=e355]:
+                  - generic [ref=e359]: Seller assumes all responsibility for this listing.
+                  - generic [ref=e363]: eBay item number:397692355643
+                  - generic [ref=e367]:
+                    - text: Last updated on 27 Apr, 2026 17:59:54 BST
+                    - link "View all revisions View all revisions" [ref=e368] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/rvh/397692355643?rt=nc&_trksid=p4429486.m148105.l48144
+                      - generic [ref=e369]:
+                        - text: View all revisions
+                        - generic [ref=e370]: View all revisions
+                - generic [ref=e373]:
+                  - heading "Item specifics" [level=2] [ref=e376]:
+                    - generic [ref=e377]: Item specifics
+                  - generic [ref=e379]:
+                    - generic [ref=e380]:
+                      - generic [ref=e382]:
+                        - term [ref=e383]:
+                          - generic [ref=e385]: Condition
+                        - definition [ref=e386]:
+                          - generic [ref=e388]: Used
+                          - button "More information about item condition" [ref=e393]:
+                            - img
+                      - generic [ref=e395]:
+                        - term [ref=e396]:
+                          - generic [ref=e398]: Seller notes
+                        - definition [ref=e399]:
+                          - generic [ref=e401]: “Sehr gut - Refurbished”
+                    - generic [ref=e402]:
+                      - generic [ref=e404]:
+                        - term [ref=e405]:
+                          - generic [ref=e407]: Speichergröße
+                        - definition [ref=e408]:
+                          - generic [ref=e410]: 24 GB
+                      - generic [ref=e412]:
+                        - term [ref=e413]:
+                          - generic [ref=e415]: Marke
+                        - definition [ref=e416]:
+                          - generic [ref=e418]: NVIDIA
+                    - generic [ref=e419]:
+                      - generic [ref=e421]:
+                        - term [ref=e422]:
+                          - generic [ref=e424]: Chipsatz/GPU-Modell
+                        - definition [ref=e425]:
+                          - generic [ref=e427]: Nvidia Tesla P40
+                      - generic [ref=e429]:
+                        - term [ref=e430]:
+                          - generic [ref=e432]: Chipsatz/GPU-Hersteller
+                        - definition [ref=e433]:
+                          - generic [ref=e435]: NVIDIA
+                - generic [ref=e436]:
+                  - generic [ref=e437]: Category
+                  - navigation "breadcrumb" [ref=e440]:
+                    - heading "breadcrumb" [level=2] [ref=e441]
+                    - list [ref=e442]:
+                      - listitem [ref=e443]:
+                        - link "Electronics" [ref=e444] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_7000259660
+                        - img
+                      - listitem [ref=e445]:
+                        - link "Computers/Tablets & Networking" [ref=e446] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_1838792
+                        - img
+                      - listitem [ref=e447]:
+                        - link "Computer Components & Parts" [ref=e448] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_1624167
+                        - img
+                      - listitem [ref=e449]:
+                        - link "Graphics/Video Cards" [ref=e450] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_661667
+                - generic [ref=e451]:
+                  - heading "Item description from the seller" [level=2] [ref=e454]
+                  - iframe [ref=e455]:
+                    - generic [ref=f305e2]:
+                      - heading "NVIDIA Tesla P40" [level=1] [ref=f305e3]
+                      - paragraph [ref=f305e4]:
+                        - strong [ref=f305e5]: NVIDIA Tesla 24GB PCIe 3.0 x16 GPU Passive Accelerator Card
+                        - strong [ref=f305e6]: "Modell: P40"
+                      - heading "Technische Daten" [level=2] [ref=f305e7]
+                      - paragraph [ref=f305e8]:
+                        - strong [ref=f305e9]: "Hersteller:"
+                        - text: NVIDIA Tesla
+                        - strong [ref=f305e10]: "Typ:"
+                        - text: GPU Accelerator Card / Grafikkarte
+                        - strong [ref=f305e11]: "Formfaktor:"
+                        - text: PCIe Full Height / Full Length, Dual Slot
+                        - strong [ref=f305e12]: "NVIDIA CUDA Cores:"
+                        - text: "3840"
+                        - strong [ref=f305e13]: "Bus Interface:"
+                        - text: PCIe 3.0 x16
+                        - strong [ref=f305e14]: "Speicher:"
+                        - text: 24 GB GDDR5
+                        - strong [ref=f305e15]: "Speicherinterface:"
+                        - text: 384-bit
+                        - strong [ref=f305e16]: "Speicherbandbreite:"
+                        - text: 346 GB/s
+                        - strong [ref=f305e17]: "Prozessor / Architektur:"
+                        - text: NVIDIA Pascal (GP102)
+                        - strong [ref=f305e18]: "Compute APIs:"
+                        - text: CUDA, DirectCompute, OpenCL, OpenACC
+                        - strong [ref=f305e19]: "Kühlung:"
+                        - text: Passiv
+                        - strong [ref=f305e20]: "Leistungsaufnahme:"
+                        - text: 250 W
+                        - strong [ref=f305e21]: "Stromanschluss:"
+                        - text: 1 x 8-Pin CPU Power Connector
+                        - strong [ref=f305e22]: "Betriebssystem-Unterstützung:"
+                        - text: Windows 64-bit, Linux 64-bit
+                        - strong [ref=f305e23]: "Lieferumfang:"
+                        - text: 1 x NVIDIA Tesla P40 24GB GPU + 1 x 8-Pin PCIe Power Adapter
+                      - separator [ref=f305e24]
+                      - heading "Beschreibung" [level=1] [ref=f305e25]
+                      - paragraph [ref=f305e26]:
+                        - text: Die
+                        - strong [ref=f305e27]: NVIDIA Tesla P40
+                        - text: ist ein leistungsstarker GPU-Beschleuniger auf Basis der
+                        - strong [ref=f305e28]: Pascal-Architektur
+                        - text: und wurde speziell für moderne
+                        - strong [ref=f305e29]: KI-, Deep-Learning- und Inference-Anwendungen
+                        - text: entwickelt. Sie bietet eine hohe Rechenleistung für Rechenzentren, Workstations und Serverumgebungen, in denen große Datenmengen schnell verarbeitet werden müssen.
+                      - paragraph [ref=f305e30]:
+                        - text: Die Tesla P40 wurde insbesondere für
+                        - strong [ref=f305e31]: Inference-Aufgaben
+                        - text: optimiert. Dazu gehören Anwendungen wie
+                        - strong [ref=f305e32]: Bild- und Spracherkennung
+                        - text: ","
+                        - strong [ref=f305e33]: Produktempfehlungen
+                        - text: ","
+                        - strong [ref=f305e34]: E-Mail-Filterung
+                        - text: ","
+                        - strong [ref=f305e35]: Videoanalyse
+                        - text: sowie andere KI-gestützte Dienste, die in Echtzeit auf Nutzereingaben reagieren müssen. Im Vergleich zu klassischen CPU-Lösungen kann die Tesla P40 die Verarbeitung deutlich beschleunigen und so eine wesentlich bessere Effizienz und geringere Antwortzeiten ermöglichen.
+                      - paragraph [ref=f305e36]:
+                        - text: Dank der
+                        - strong [ref=f305e37]: Pascal GP102 GPU
+                        - text: verfügt die Tesla P40 über
+                        - strong [ref=f305e38]: 3840 CUDA-Kerne
+                        - text: und
+                        - strong [ref=f305e39]: 24 GB GDDR5-Speicher
+                        - text: . Mit einer
+                        - strong [ref=f305e40]: Speicherbandbreite von 346 GB/s
+                        - text: und einem
+                        - strong [ref=f305e41]: 384-bit Speicherinterface
+                        - text: eignet sich die Karte hervorragend für rechenintensive Workloads. Die GPU erreicht bis zu
+                        - strong [ref=f305e42]: 12 TFLOPS FP32-Leistung
+                        - text: sowie bis zu
+                        - strong [ref=f305e43]: 47 TOPS bei INT8-Operationen
+                        - text: und ist damit ideal für moderne Inferenz-Workloads im professionellen Einsatz.
+                      - paragraph [ref=f305e44]:
+                        - text: Die Karte besitzt ein
+                        - strong [ref=f305e45]: passives Kühldesign
+                        - text: und ist für den Einsatz in Systemen mit geeignetem Airflow konzipiert. Durch den
+                        - strong [ref=f305e46]: PCI-Express 3.0 x16
+                        - text: Anschluss lässt sie sich in kompatible Server- und Workstation-Systeme integrieren.
+                      - paragraph [ref=f305e47]:
+                        - text: "Hinweis: Wenn kein Server-Mainboard verwendet wird, muss unter Umständen im BIOS die Option"
+                        - strong [ref=f305e48]: „Above 4G Decoding“
+                        - text: aktiviert werden, bevor die GPU installiert wird.
+                - generic [ref=e458]:
+                  - heading "Seller business information" [level=2] [ref=e461]:
+                    - generic [ref=e462]: Seller business information
+                  - generic [ref=e463]: I certify that all my selling activities will comply with all EU laws and regulations.
+                  - generic [ref=e466]: "VAT number: DE 340010682"
+                  - button "Seller contact information" [ref=e470] [cursor=pointer]
+          - generic [ref=e473]:
+            - generic [ref=e474]:
+              - generic [ref=e475]:
+                - heading "About this seller" [level=2] [ref=e476]:
+                  - generic [ref=e478]: About this seller
+                - generic [ref=e479]:
+                  - link [ref=e481] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/sch/konbrax-energy-cryptosolutions/m.html?item=397692355643&rt=nc&_trksid=p4429486.m145687.l2562
+                    - img [ref=e483]
+                  - generic [ref=e484]:
+                    - heading "konbrax-energy-cryptosolutions" [level=3] [ref=e485]:
+                      - link "konbrax-energy-cryptosolutions" [ref=e486] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/sch/konbrax-energy-cryptosolutions/m.html?item=397692355643&rt=nc&_trksid=p4429486.m145687.l2562
+                    - paragraph [ref=e487]: 100% positive Feedback•993 items sold
+                - generic [ref=e490]:
+                  - generic [ref=e492]:
+                    - generic [ref=e493]:
+                      - img
+                    - generic [ref=e494]: Joined Dec 2018
+                  - generic [ref=e496]:
+                    - generic [ref=e497]:
+                      - img
+                    - generic [ref=e498]: Usually responds within 24 hours
+                - generic [ref=e499]: Registered as a business seller
+                - generic [ref=e500]:
+                  - link "Seller's other items" [ref=e501] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/sch/konbrax-energy-cryptosolutions/m.html?item=397692355643&rt=nc&_trksid=p4429486.m145687.l2562
+                    - generic [ref=e502]: Seller's other items
+                  - button "Message seller - opens in a new dialog" [ref=e503] [cursor=pointer]:
+                    - generic [ref=e504]:
+                      - text: Message seller
+                      - generic [ref=e505]: "- opens in a new dialog"
+                  - button "Save seller - Save this seller konbrax-energy-cryptosolutions" [ref=e507] [cursor=pointer]:
+                    - generic [ref=e508]:
+                      - img
+                    - generic [ref=e509]: Save seller
+              - generic [ref=e511]:
+                - heading "Detailed seller ratings" [level=3] [ref=e512]
+                - generic [ref=e513]:
+                  - generic [ref=e514]: Average for the last 12 months
+                  - generic [ref=e515]:
+                    - generic [ref=e516]:
+                      - generic [ref=e517]: Accurate description
+                      - progressbar [ref=e518]
+                      - generic [ref=e519]: "4.9"
+                    - generic [ref=e520]:
+                      - generic [ref=e521]: Reasonable postage cost
+                      - progressbar [ref=e522]
+                      - generic [ref=e523]: "4.9"
+                    - generic [ref=e524]:
+                      - generic [ref=e525]: Delivery time
+                      - progressbar [ref=e526]
+                      - generic [ref=e527]: "5.0"
+                    - generic [ref=e528]:
+                      - generic [ref=e529]: Communication
+                      - progressbar [ref=e530]
+                      - generic [ref=e531]: "5.0"
+            - generic [ref=e534]:
+              - heading "Seller Feedback (384)" [level=2] [ref=e535]
+              - generic [ref=e536]:
+                - tablist [ref=e537]:
+                  - tab "This item (20)" [ref=e538]:
+                    - generic [ref=e539]: This item (20)
+                  - tab "All items (384)" [selected] [ref=e540]:
+                    - generic [ref=e541]: All items (384)
+                - tabpanel "All items (384)" [ref=e543]:
+                  - generic [ref=e545]:
+                    - generic [ref=e546]:
+                      - 'button "Filter: All ratings" [ref=e549] [cursor=pointer]':
+                        - generic [ref=e550]:
+                          - generic [ref=e551]: "Filter:"
+                          - generic [ref=e552]: All ratings
+                          - img
+                      - list [ref=e553]:
+                        - listitem [ref=e554]:
+                          - link "Customer loyalty" [ref=e555] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/fdbk/mweb_profile?fdbkType=FeedbackReceivedAsSeller&item_id=397692355643&username=konbrax-energy-cryptosolutions&filter=feedback_page%3ARECEIVED_AS_SELLER%2Cfilter_topic%3Acustomer-loyalty&sort=RELEVANCEV2#tab1
+                            - generic:
+                              - generic: Customer loyalty
+                        - listitem [ref=e556]:
+                          - link "Postage" [ref=e557] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/fdbk/mweb_profile?fdbkType=FeedbackReceivedAsSeller&item_id=397692355643&username=konbrax-energy-cryptosolutions&filter=feedback_page%3ARECEIVED_AS_SELLER%2Cfilter_topic%3Ashipping&sort=RELEVANCEV2#tab1
+                            - generic:
+                              - generic: Postage
+                        - listitem [ref=e558]:
+                          - link "Seller satisfaction" [ref=e559] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/fdbk/mweb_profile?fdbkType=FeedbackReceivedAsSeller&item_id=397692355643&username=konbrax-energy-cryptosolutions&filter=feedback_page%3ARECEIVED_AS_SELLER%2Cfilter_topic%3Aseller-satisfaction&sort=RELEVANCEV2#tab1
+                            - generic:
+                              - generic: Seller satisfaction
+                        - listitem [ref=e560]:
+                          - link "Service" [ref=e561] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/fdbk/mweb_profile?fdbkType=FeedbackReceivedAsSeller&item_id=397692355643&username=konbrax-energy-cryptosolutions&filter=feedback_page%3ARECEIVED_AS_SELLER%2Cfilter_topic%3Aservice&sort=RELEVANCEV2#tab1
+                            - generic:
+                              - generic: Service
+                        - listitem [ref=e562]:
+                          - link "Description" [ref=e563] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/fdbk/mweb_profile?fdbkType=FeedbackReceivedAsSeller&item_id=397692355643&username=konbrax-energy-cryptosolutions&filter=feedback_page%3ARECEIVED_AS_SELLER%2Cfilter_topic%3Adescription&sort=RELEVANCEV2#tab1
+                            - generic:
+                              - generic: Description
+                        - listitem [ref=e564]:
+                          - link "Packaging" [ref=e565] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/fdbk/mweb_profile?fdbkType=FeedbackReceivedAsSeller&item_id=397692355643&username=konbrax-energy-cryptosolutions&filter=feedback_page%3ARECEIVED_AS_SELLER%2Cfilter_topic%3Apackaging&sort=RELEVANCEV2#tab1
+                            - generic:
+                              - generic: Packaging
+                        - listitem [ref=e566]:
+                          - link "Refund" [ref=e567] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/fdbk/mweb_profile?fdbkType=FeedbackReceivedAsSeller&item_id=397692355643&username=konbrax-energy-cryptosolutions&filter=feedback_page%3ARECEIVED_AS_SELLER%2Cfilter_topic%3Arefund&sort=RELEVANCEV2#tab1
+                            - generic:
+                              - generic: Refund
+                    - list [ref=e568]:
+                      - listitem [ref=e569]:
+                        - generic [ref=e570]:
+                          - generic [ref=e572]:
+                            - generic [ref=e573]:
+                              - img "Positive feedback rating"
+                            - generic [ref=e574]:
+                              - text: e***z (55)
+                              - generic [ref=e575]: "- Feedback left by buyer."
+                            - generic [ref=e578]: Past month
+                            - generic [ref=e579]: Verified purchase
+                          - generic [ref=e581]: Schnelle Lieferung, und reagiert sogar noch am Abend auf Anfragen! Super ebayer, gerne wieder!
+                          - link "NVIDIA Tesla P100 16GB PCIe GPU Accelerator Grafikkarte mit 8-Pin CPU / EPS12V (#397560230381)" [ref=e583] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/itm/397560230381
+                            - generic [ref=e584]: NVIDIA Tesla P100 16GB PCIe GPU Accelerator Grafikkarte mit 8-Pin CPU / EPS12V (#397560230381)
+                      - listitem [ref=e585]:
+                        - generic [ref=e586]:
+                          - generic [ref=e588]:
+                            - generic [ref=e589]:
+                              - img "Positive feedback rating"
+                            - generic [ref=e590]:
+                              - text: g***i (12)
+                              - generic [ref=e591]: "- Feedback left by buyer."
+                            - generic [ref=e594]: Past year
+                            - generic [ref=e595]: Verified purchase
+                          - generic [ref=e597]: Der S9i kam nicht gut verpackt an. Lediglich in etwas Folie umwickelt und Lose im Karton liegend. Der Karton selbst war teilweise zerpflückt, als er hier ankam. Ob das vor dem Versand oder während des Versands entstanden ist, ist erstmal zu vernachlässigen. Leider hat es ein Hashboard nicht überlebt. Ich habe den Verkäufer angeschrieben und habe nach kurzer Zeit ein Ersatz-Hashboard empfangen.
+                          - generic [ref=e598]: Bitmain Antminer S9i 14TH/s mit Apw3++ Netzteil Bitcoin Miner (#396733907164)
+                      - listitem [ref=e599]:
+                        - generic [ref=e600]:
+                          - generic [ref=e602]:
+                            - generic [ref=e603]:
+                              - img "Positive feedback rating"
+                            - generic [ref=e604]:
+                              - text: 0***- (29)
+                              - generic [ref=e605]: "- Feedback left by buyer."
+                            - generic [ref=e608]: Past 6 months
+                            - generic [ref=e609]: Verified purchase
+                          - generic [ref=e611]: Vielen herzlichen Dank! Sehr schnelle Lieferung und eine hervorragende Verpackung.
+                          - link "NVIDIA Tesla P100 16GB PCIe GPU Accelerator Grafikkarte mit 8-Pin CPU / EPS12V (#397560230381)" [ref=e613] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/itm/397560230381
+                            - generic [ref=e614]: NVIDIA Tesla P100 16GB PCIe GPU Accelerator Grafikkarte mit 8-Pin CPU / EPS12V (#397560230381)
+                      - listitem [ref=e615]:
+                        - generic [ref=e616]:
+                          - generic [ref=e618]:
+                            - generic [ref=e619]:
+                              - img "Positive feedback rating"
+                            - generic [ref=e620]:
+                              - text: y***l (176)
+                              - generic [ref=e621]: "- Feedback left by buyer."
+                            - generic [ref=e624]: Past month
+                            - generic [ref=e625]: Verified purchase
+                          - generic [ref=e627]: Ich habe 3 Artikel gekauft leider war einer defekt. Der Verkäufer war sehr lösungsorientiert und hat direkt reagiert.
+                          - link "Antminer S9 13,5TH/s mit Awp3++ Netzteil Bitmain Bitcoin Miner (#396752450051)" [ref=e629] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/itm/396752450051
+                            - generic [ref=e630]: Antminer S9 13,5TH/s mit Awp3++ Netzteil Bitmain Bitcoin Miner (#396752450051)
+                      - listitem [ref=e631]:
+                        - generic [ref=e632]:
+                          - generic [ref=e634]:
+                            - generic [ref=e635]:
+                              - img "Positive feedback rating"
+                            - generic [ref=e636]:
+                              - text: f***1 (5)
+                              - generic [ref=e637]: "- Feedback left by buyer."
+                            - generic [ref=e640]: Past 6 months
+                            - generic [ref=e641]: Verified purchase
+                          - generic [ref=e643]: Schnelle Lieferung, Artikel wie beschrieben... immer wieder gerne :)
+                          - link "ICERIVER KAS KS0 Ultra 400GH/s 100W ASIC Crypto Kaspa Miner mit Netzteil (#397495392717)" [ref=e645] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/itm/397495392717
+                            - generic [ref=e646]: ICERIVER KAS KS0 Ultra 400GH/s 100W ASIC Crypto Kaspa Miner mit Netzteil (#397495392717)
+                      - listitem [ref=e647]:
+                        - generic [ref=e648]:
+                          - generic [ref=e650]:
+                            - generic [ref=e651]:
+                              - img "Positive feedback rating"
+                            - generic [ref=e652]:
+                              - text: 2***e (2)
+                              - generic [ref=e653]: "- Feedback left by buyer."
+                            - generic [ref=e656]: Past 6 months
+                            - generic [ref=e657]: Verified purchase
+                          - generic [ref=e659]: Oggetto Ome in descrizione, imballaggio accurato
+                          - link "Nvidia Tesla P40 24 GB GPU Accelerator Graphics Card (#397692355643)" [ref=e661] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/itm/397692355643
+                            - generic [ref=e662]: Nvidia Tesla P40 24 GB GPU Accelerator Graphics Card (#397692355643)
+                      - listitem [ref=e663]:
+                        - generic [ref=e664]:
+                          - generic [ref=e666]:
+                            - generic [ref=e667]:
+                              - img "Positive feedback rating"
+                            - generic [ref=e668]:
+                              - text: e***d (921)
+                              - generic [ref=e669]: "- Feedback left by buyer."
+                            - generic [ref=e672]: Past 6 months
+                            - generic [ref=e673]: Verified purchase
+                          - generic [ref=e675]: Fast delivery 5 star seller
+                          - link "ICERIVER KAS KS0 Ultra 400GH/s 100W ASIC Crypto Kaspa Miner mit Netzteil (#397495392717)" [ref=e677] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/itm/397495392717
+                            - generic [ref=e678]: ICERIVER KAS KS0 Ultra 400GH/s 100W ASIC Crypto Kaspa Miner mit Netzteil (#397495392717)
+                      - listitem [ref=e679]:
+                        - generic [ref=e680]:
+                          - generic [ref=e682]:
+                            - generic [ref=e683]:
+                              - img "Positive feedback rating"
+                            - generic [ref=e684]:
+                              - text: w***f (143)
+                              - generic [ref=e685]: "- Feedback left by buyer."
+                            - generic [ref=e688]: Past 6 months
+                            - generic [ref=e689]: Verified purchase
+                          - generic [ref=e691]: Einwandfreie Karte, Schneller Versand, Toller Verkäufer, danke vielmals!
+                          - link "Nvidia Tesla P100 16GB GPU Accelerator Graphics Card 900-2H400-3800-000 (#397560230381)" [ref=e693] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/itm/397560230381
+                            - generic [ref=e694]: Nvidia Tesla P100 16GB GPU Accelerator Graphics Card 900-2H400-3800-000 (#397560230381)
+                    - link "See all feedback. Opens in a new tab" [ref=e695] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/fdbk/mweb_profile?fdbkType=FeedbackReceivedAsSeller&item_id=397692355643&username=konbrax-energy-cryptosolutions&filter=feedback_page%3ARECEIVED_AS_SELLER&sort=RELEVANCEV2#tab1
+                      - text: See all Feedback
+          - generic [ref=e697]:
+            - navigation "Quick links" [ref=e698]:
+              - link "Back to home page" [ref=e699] [cursor=pointer]:
+                - /url: https://www.ebay.ie
+              - button "Return to top" [ref=e700] [cursor=pointer]
+            - generic [ref=e702]:
+              - heading "More to explore:" [level=2] [ref=e705]
+              - list [ref=e707]:
+                - listitem [ref=e708]:
+                  - link "NVIDIA Tesla V100 Computer Graphics & Video Cards," [ref=e709] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116613677
+                - listitem [ref=e710]:
+                  - link "NVIDIA Tesla T4 Computer Graphics & Video Cards," [ref=e711] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116609830
+                - listitem [ref=e712]:
+                  - link "NVIDIA Tesla P100 Computer Graphics & Video Cards," [ref=e713] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116582137
+                - listitem [ref=e714]:
+                  - link "Computer Graphics & Video Cards for NVIDIA Tesla P4," [ref=e715] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116624173
+                - listitem [ref=e716]:
+                  - link "8-Pin + 8-Pin PCI-E NVIDIA Computer Graphics & Video Cards," [ref=e717] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7026451754
+                - listitem [ref=e718]:
+                  - link "NVIDIA Computer Graphics & Video Cards," [ref=e719] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_2737588
+                - listitem [ref=e720]:
+                  - link "NVIDIA Computer Graphics and Video Cards," [ref=e721] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_614558
+                - listitem [ref=e722]:
+                  - link "Graphics NVIDIA Computer Graphics & Video Cards," [ref=e723] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7114943110
+                - listitem [ref=e724]:
+                  - link "6-Pin PCI-E NVIDIA Computer Graphics & Video Cards," [ref=e725] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7036538994
+                - listitem [ref=e726]:
+                  - link "NVIDIA Quadro 4000 Computer Graphics & Video Cards NVIDIA" [ref=e727] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116461298
+  - generic [ref=e735]:
+    - contentinfo [ref=e736]:
+      - list [ref=e737]:
+        - listitem [ref=e738]:
+          - link "About eBay" [ref=e739] [cursor=pointer]:
+            - /url: https://www.ebayinc.com/
+        - listitem [ref=e740]:
+          - link "News" [ref=e741] [cursor=pointer]:
+            - /url: https://community.ebay.co.uk/t5/Announcements/bg-p/Announcements
+        - listitem [ref=e742]:
+          - link "Community" [ref=e743] [cursor=pointer]:
+            - /url: https://community.ebay.co.uk
+        - listitem [ref=e744]:
+          - link "Safety Centre" [ref=e745] [cursor=pointer]:
+            - /url: https://pages.ebay.ie/safetycentre/index.html
+        - listitem [ref=e746]:
+          - link "Seller Centre" [ref=e747] [cursor=pointer]:
+            - /url: https://sellercentre.ebay.co.uk
+        - listitem [ref=e748]:
+          - 'link "VeRO: Protecting Intellectual Property" [ref=e749] [cursor=pointer]':
+            - /url: https://pages.ebay.ie/vero/
+        - listitem [ref=e750]:
+          - link "Policies" [ref=e751] [cursor=pointer]:
+            - /url: https://www.ebay.ie/pages/help/policies/index.html
+        - listitem [ref=e752]:
+          - link "Help & Contact" [ref=e753] [cursor=pointer]:
+            - /url: https://www.ebay.ie/help/home
+        - listitem [ref=e754]:
+          - link "Site Map" [ref=e755] [cursor=pointer]:
+            - /url: https://pages.ebay.ie/sitemap.html
+      - generic [ref=e756]:
+        - text: Copyright © 1995-2026 eBay Inc. All Rights Reserved.
+        - link "Accessibility" [ref=e757] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/accessibility
+        - text: ","
+        - link "User Agreement" [ref=e758] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-agreement?id=4259
+        - text: ","
+        - link "Privacy" [ref=e759] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260
+        - text: ","
+        - link "Payments Terms of Use" [ref=e760] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/payment/2.0/terms.html
+        - text: ","
+        - link "Cookies" [ref=e761] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267
+        - text: and
+        - link "AdChoice" [ref=e762] [cursor=pointer]:
+          - /url: https://www.ebay.ie/adchoice
+          - text: AdChoice
+          - img
+    - generic:
+      - generic "ADVERTISEMENT" [ref=e763]
+      - generic "ADVERTISEMENT" [ref=e764]
+      - generic "ADVERTISEMENT" [ref=e765]
+  - img
+  - img [ref=e767]

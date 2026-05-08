@@ -1,0 +1,522 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e6]:
+          - link "PCPartPicker" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - img "PCPartPicker" [ref=e8]
+          - link "Log In" [ref=e9] [cursor=pointer]:
+            - /url: /accounts/login/
+          - link "Register" [ref=e10] [cursor=pointer]:
+            - /url: /accounts/register/
+          - combobox [ref=e11] [cursor=pointer]:
+            - option "Australia"
+            - option "Austria"
+            - option "Belgium"
+            - option "Canada"
+            - option "Czech Republic"
+            - option "Denmark"
+            - option "Finland"
+            - option "France"
+            - option "Germany"
+            - option "Hungary"
+            - option "Ireland" [selected]
+            - option "Italy"
+            - option "Netherlands"
+            - option "New Zealand"
+            - option "Norway"
+            - option "Portugal"
+            - option "Romania"
+            - option "Saudi Arabia"
+            - option "Slovakia"
+            - option "Spain"
+            - option "Sweden"
+            - option "United Kingdom"
+            - option "United States"
+        - generic [ref=e17]:
+          - link "Builder" [ref=e18] [cursor=pointer]:
+            - /url: /list/
+            - img [ref=e19]
+            - text: Builder
+          - button "Products" [ref=e21] [cursor=pointer]:
+            - img [ref=e22]
+            - text: Products
+            - img [ref=e25]
+          - link "Guides" [ref=e27] [cursor=pointer]:
+            - /url: /guide/
+            - img [ref=e28]
+            - text: Guides
+          - link "Completed Builds" [ref=e30] [cursor=pointer]:
+            - /url: /builds/
+            - img [ref=e31]
+            - text: Completed Builds
+          - link "Trends" [ref=e35] [cursor=pointer]:
+            - /url: /trends/
+            - img [ref=e36]
+            - text: Trends
+          - link "Benchmarks" [ref=e39] [cursor=pointer]:
+            - /url: /benchmarks/
+            - img [ref=e40]
+            - text: Benchmarks
+          - link "Forums" [ref=e43] [cursor=pointer]:
+            - /url: /forums/
+            - img [ref=e44]
+            - text: Forums
+          - generic [ref=e46]:
+            - generic [ref=e47]:
+              - link [ref=e48] [cursor=pointer]:
+                - /url: /products/cpu/
+                - text: CPUs
+              - link [ref=e49] [cursor=pointer]:
+                - /url: /products/cpu-cooler/
+                - text: CPU Coolers
+              - link [ref=e50] [cursor=pointer]:
+                - /url: /products/motherboard/
+                - text: Motherboards
+              - link [ref=e51] [cursor=pointer]:
+                - /url: /products/memory/
+                - text: Memory
+              - link [ref=e52] [cursor=pointer]:
+                - /url: /products/internal-hard-drive/
+                - text: Storage
+              - link [ref=e53] [cursor=pointer]:
+                - /url: /products/video-card/
+                - text: Video Cards
+              - link [ref=e54] [cursor=pointer]:
+                - /url: /products/power-supply/
+                - text: Power Supplies
+              - link [ref=e55] [cursor=pointer]:
+                - /url: /products/case/
+                - text: Cases
+            - generic [ref=e56]:
+              - generic [ref=e57]:
+                - heading [level=2] [ref=e58]: Peripherals
+                - link [ref=e59] [cursor=pointer]:
+                  - /url: /products/headphones/
+                  - text: Headphones
+                - link [ref=e60] [cursor=pointer]:
+                  - /url: /products/keyboard/
+                  - text: Keyboards
+                - link [ref=e61] [cursor=pointer]:
+                  - /url: /products/mouse/
+                  - text: Mice
+                - link [ref=e62] [cursor=pointer]:
+                  - /url: /products/speakers/
+                  - text: Speakers
+                - link [ref=e63] [cursor=pointer]:
+                  - /url: /products/webcam/
+                  - text: Webcams
+                - heading [level=2] [ref=e64]: Displays
+                - link [ref=e65] [cursor=pointer]:
+                  - /url: /products/monitor/
+                  - text: Monitors
+                - heading [level=2] [ref=e66]: Software
+                - link [ref=e67] [cursor=pointer]:
+                  - /url: /products/os/
+                  - text: Operating Systems
+              - generic [ref=e68]:
+                - heading [level=2] [ref=e69]: Expansion
+                - link [ref=e70] [cursor=pointer]:
+                  - /url: /products/sound-card/
+                  - text: Sound Cards
+                - link [ref=e71] [cursor=pointer]:
+                  - /url: /products/wired-network-card/
+                  - text: Wired Networking
+                - link [ref=e72] [cursor=pointer]:
+                  - /url: /products/wireless-network-card/
+                  - text: Wireless Networking
+                - heading [level=2] [ref=e73]: Accessories / Other
+                - link [ref=e74] [cursor=pointer]:
+                  - /url: /products/case-fan/
+                  - text: Case Fans
+                - link [ref=e75] [cursor=pointer]:
+                  - /url: /products/fan-controller/
+                  - text: Fan Controllers
+                - link [ref=e76] [cursor=pointer]:
+                  - /url: /products/thermal-paste/
+                  - text: Thermal Compound
+                - link [ref=e77] [cursor=pointer]:
+                  - /url: /products/external-hard-drive/
+                  - text: External Hard Drives
+                - link [ref=e78] [cursor=pointer]:
+                  - /url: /products/optical-drive/
+                  - text: Optical Drives
+                - link [ref=e79] [cursor=pointer]:
+                  - /url: /products/ups/
+                  - text: Uninterruptible Power Supplies
+          - button "Search Products" [ref=e80] [cursor=pointer]:
+            - img [ref=e81]
+  - generic [ref=e84]:
+    - generic [ref=e86]:
+      - heading "Choose Your Parts" [level=1] [ref=e87]
+      - navigation [ref=e88]:
+        - list [ref=e89]:
+          - listitem [ref=e90]:
+            - link "Overview" [ref=e91] [cursor=pointer]:
+              - /url: /list/
+          - listitem [ref=e92]:
+            - link "Prices By Merchant" [ref=e93] [cursor=pointer]:
+              - /url: /list/by_merchant/
+    - generic [ref=e94]:
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - link "Copy Permalink" [ref=e99] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e100]: Copy Permalink
+            - img [ref=e101]
+          - textbox [ref=e103]: https://ie.pcpartpicker.com/list/xz9fZw
+        - list [ref=e104]:
+          - listitem [ref=e105]:
+            - paragraph [ref=e106]: "Markup:"
+          - listitem [ref=e107]:
+            - link "PCPP" [ref=e108] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e109]: PCPP
+              - img [ref=e110]
+          - listitem [ref=e112]:
+            - link "Reddit" [ref=e113] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e114]: Reddit
+              - img [ref=e115]
+          - listitem [ref=e117]:
+            - link "HTML" [ref=e118] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e119]: HTML
+              - img [ref=e120]
+          - listitem [ref=e122]:
+            - link "Plain Text" [ref=e123] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e124]: Plain Text
+              - img [ref=e125]
+          - listitem [ref=e127]:
+            - link "BB Code" [ref=e128] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e129]: BB Code
+              - img [ref=e130]
+        - list [ref=e132]:
+          - listitem [ref=e133]:
+            - link "History" [ref=e134] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e135]
+              - text: History
+          - listitem [ref=e137]:
+            - link "Save As" [ref=e138] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e139]
+              - text: Save As
+          - listitem [ref=e141]:
+            - link "Start New" [ref=e142] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e143]
+              - text: Start New
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - paragraph [ref=e149]:
+            - img [ref=e150]
+            - text: "Compatibility: See"
+            - link "details" [ref=e152] [cursor=pointer]:
+              - /url: "#compatibility_notes"
+            - text: below.
+          - 'link "Estimated Wattage: 65W" [ref=e154] [cursor=pointer]':
+            - /url: "#"
+            - img [ref=e155]
+            - text: "Estimated Wattage: 65W"
+        - table [ref=e158]:
+          - rowgroup [ref=e159]:
+            - row "Component Selection Base Promo Shipping Tax Availability Price Where" [ref=e160]:
+              - columnheader "Component" [ref=e161]
+              - columnheader [ref=e162]
+              - columnheader "Selection" [ref=e163]
+              - columnheader "Base" [ref=e164]
+              - columnheader "Promo" [ref=e165]
+              - columnheader "Shipping" [ref=e166]
+              - columnheader "Tax" [ref=e167]
+              - columnheader "Availability" [ref=e168]
+              - columnheader [ref=e169]
+              - columnheader "Price" [ref=e170]
+              - columnheader "Where" [ref=e171]
+              - columnheader [ref=e172]
+              - columnheader [ref=e173]
+          - rowgroup [ref=e174]:
+            - row "CPU AMD Ryzen 9 7900 3.7 GHz 12-Core Processor AMD Ryzen 9 7900 3.7 GHz 12-Core Processor €319.00 €9.95 €328.95 Paradigit Buy" [ref=e175]:
+              - cell "CPU" [ref=e176]:
+                - link "CPU" [ref=e177] [cursor=pointer]:
+                  - /url: /products/cpu/
+              - cell [ref=e178]
+              - cell "AMD Ryzen 9 7900 3.7 GHz 12-Core Processor" [ref=e179]:
+                - link "AMD Ryzen 9 7900 3.7 GHz 12-Core Processor" [ref=e180] [cursor=pointer]:
+                  - /url: /product/P3cG3C/amd-ryzen-9-7900-36-ghz-12-core-processor-100-100000590box
+                  - img "AMD Ryzen 9 7900 3.7 GHz 12-Core Processor" [ref=e181]
+              - cell "AMD Ryzen 9 7900 3.7 GHz 12-Core Processor" [ref=e182]:
+                - link "AMD Ryzen 9 7900 3.7 GHz 12-Core Processor" [ref=e183] [cursor=pointer]:
+                  - /url: /product/P3cG3C/amd-ryzen-9-7900-36-ghz-12-core-processor-100-100000590box
+              - cell "€319.00" [ref=e184]
+              - cell [ref=e185]
+              - cell "€9.95" [ref=e186]
+              - cell [ref=e187]
+              - cell [ref=e188]
+              - cell [ref=e189]:
+                - link [ref=e190] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e191]
+              - cell "€328.95" [ref=e193]:
+                - link "€328.95" [ref=e194] [cursor=pointer]:
+                  - /url: https://www.awin1.com/pclick.php?p=37687482407&a=127079&m=8912
+              - cell "Paradigit" [ref=e195]:
+                - link "Paradigit" [ref=e196] [cursor=pointer]:
+                  - /url: https://www.awin1.com/pclick.php?p=37687482407&a=127079&m=8912
+                  - img "Paradigit" [ref=e197]
+              - cell "Buy" [ref=e198]:
+                - link "Buy" [ref=e199] [cursor=pointer]:
+                  - /url: https://www.awin1.com/pclick.php?p=37687482407&a=127079&m=8912
+              - cell [ref=e200]:
+                - link [ref=e201] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e202]
+            - row "CPU Cooler Choose A CPU Cooler" [ref=e204]:
+              - cell "CPU Cooler" [ref=e205]:
+                - link "CPU Cooler" [ref=e206] [cursor=pointer]:
+                  - /url: /products/cpu-cooler/
+              - cell [ref=e207]
+              - cell "Choose A CPU Cooler" [ref=e208]:
+                - link "Choose A CPU Cooler" [ref=e209] [cursor=pointer]:
+                  - /url: /products/cpu-cooler/
+                  - img [ref=e210]
+                  - text: Choose A CPU Cooler
+            - row "Motherboard Choose A Motherboard" [ref=e212]:
+              - cell "Motherboard" [ref=e213]:
+                - link "Motherboard" [ref=e214] [cursor=pointer]:
+                  - /url: /products/motherboard/
+              - cell [ref=e215]
+              - cell "Choose A Motherboard" [ref=e216]:
+                - link "Choose A Motherboard" [ref=e217] [cursor=pointer]:
+                  - /url: /products/motherboard/
+                  - img [ref=e218]
+                  - text: Choose A Motherboard
+            - row "Memory Choose Memory" [ref=e220]:
+              - cell "Memory" [ref=e221]:
+                - link "Memory" [ref=e222] [cursor=pointer]:
+                  - /url: /products/memory/
+              - cell [ref=e223]
+              - cell "Choose Memory" [ref=e224]:
+                - link "Choose Memory" [ref=e225] [cursor=pointer]:
+                  - /url: /products/memory/
+                  - img [ref=e226]
+                  - text: Choose Memory
+            - row "Storage Choose Storage" [ref=e228]:
+              - cell "Storage" [ref=e229]:
+                - link "Storage" [ref=e230] [cursor=pointer]:
+                  - /url: /products/internal-hard-drive/
+              - cell [ref=e231]
+              - cell "Choose Storage" [ref=e232]:
+                - link "Choose Storage" [ref=e233] [cursor=pointer]:
+                  - /url: /products/internal-hard-drive/
+                  - img [ref=e234]
+                  - text: Choose Storage
+            - row "Video Card Choose A Video Card" [ref=e236]:
+              - cell "Video Card" [ref=e237]:
+                - link "Video Card" [ref=e238] [cursor=pointer]:
+                  - /url: /products/video-card/
+              - cell [ref=e239]
+              - cell "Choose A Video Card" [ref=e240]:
+                - link "Choose A Video Card" [ref=e241] [cursor=pointer]:
+                  - /url: /products/video-card/
+                  - img [ref=e242]
+                  - text: Choose A Video Card
+            - row "Case Choose A Case" [ref=e244]:
+              - cell "Case" [ref=e245]:
+                - link "Case" [ref=e246] [cursor=pointer]:
+                  - /url: /products/case/
+              - cell [ref=e247]
+              - cell "Choose A Case" [ref=e248]:
+                - link "Choose A Case" [ref=e249] [cursor=pointer]:
+                  - /url: /products/case/
+                  - img [ref=e250]
+                  - text: Choose A Case
+            - row "Power Supply Choose A Power Supply" [ref=e252]:
+              - cell "Power Supply" [ref=e253]:
+                - link "Power Supply" [ref=e254] [cursor=pointer]:
+                  - /url: /products/power-supply/
+              - cell [ref=e255]
+              - cell "Choose A Power Supply" [ref=e256]:
+                - link "Choose A Power Supply" [ref=e257] [cursor=pointer]:
+                  - /url: /products/power-supply/
+                  - img [ref=e258]
+                  - text: Choose A Power Supply
+            - row "Operating System Choose An Operating System" [ref=e260]:
+              - cell "Operating System" [ref=e261]:
+                - link "Operating System" [ref=e262] [cursor=pointer]:
+                  - /url: /products/os/
+              - cell [ref=e263]
+              - cell "Choose An Operating System" [ref=e264]:
+                - link "Choose An Operating System" [ref=e265] [cursor=pointer]:
+                  - /url: /products/os/
+                  - img [ref=e266]
+                  - text: Choose An Operating System
+            - row "Monitor Choose A Monitor" [ref=e268]:
+              - cell "Monitor" [ref=e269]:
+                - link "Monitor" [ref=e270] [cursor=pointer]:
+                  - /url: /products/monitor/
+              - cell [ref=e271]
+              - cell "Choose A Monitor" [ref=e272]:
+                - link "Choose A Monitor" [ref=e273] [cursor=pointer]:
+                  - /url: /products/monitor/
+                  - img [ref=e274]
+                  - text: Choose A Monitor
+            - row "Expansion Cards / Networking Sound Cards, Wired Network Adapters, Wireless Network Adapters" [ref=e276]:
+              - cell "Expansion Cards / Networking" [ref=e277]:
+                - paragraph [ref=e278]: Expansion Cards / Networking
+              - cell [ref=e279]
+              - cell "Sound Cards, Wired Network Adapters, Wireless Network Adapters" [ref=e280]:
+                - link "Sound Cards" [ref=e281] [cursor=pointer]:
+                  - /url: /products/sound-card/
+                - text: ","
+                - link "Wired Network Adapters" [ref=e282] [cursor=pointer]:
+                  - /url: /products/wired-network-card/
+                - text: ","
+                - link "Wireless Network Adapters" [ref=e283] [cursor=pointer]:
+                  - /url: /products/wireless-network-card/
+            - row "Peripherals Headphones, Keyboards, Mice, Speakers, Webcams" [ref=e284]:
+              - cell "Peripherals" [ref=e285]:
+                - paragraph [ref=e286]: Peripherals
+              - cell [ref=e287]
+              - cell "Headphones, Keyboards, Mice, Speakers, Webcams" [ref=e288]:
+                - link "Headphones" [ref=e289] [cursor=pointer]:
+                  - /url: /products/headphones/
+                - text: ","
+                - link "Keyboards" [ref=e290] [cursor=pointer]:
+                  - /url: /products/keyboard/
+                - text: ","
+                - link "Mice" [ref=e291] [cursor=pointer]:
+                  - /url: /products/mouse/
+                - text: ","
+                - link "Speakers" [ref=e292] [cursor=pointer]:
+                  - /url: /products/speakers/
+                - text: ","
+                - link "Webcams" [ref=e293] [cursor=pointer]:
+                  - /url: /products/webcam/
+            - row "Accessories / Other Case Accessories, Case Fans, Fan Controllers, Thermal Compound, External Storage, Optical Drives, UPS Systems" [ref=e294]:
+              - cell "Accessories / Other" [ref=e295]:
+                - paragraph [ref=e296]: Accessories / Other
+              - cell [ref=e297]
+              - cell "Case Accessories, Case Fans, Fan Controllers, Thermal Compound, External Storage, Optical Drives, UPS Systems" [ref=e298]:
+                - link "Case Accessories" [ref=e299] [cursor=pointer]:
+                  - /url: /products/case-accessory/
+                - text: ","
+                - link "Case Fans" [ref=e300] [cursor=pointer]:
+                  - /url: /products/case-fan/
+                - text: ","
+                - link "Fan Controllers" [ref=e301] [cursor=pointer]:
+                  - /url: /products/fan-controller/
+                - text: ","
+                - link "Thermal Compound" [ref=e302] [cursor=pointer]:
+                  - /url: /products/thermal-paste/
+                - text: ","
+                - link "External Storage" [ref=e303] [cursor=pointer]:
+                  - /url: /products/external-hard-drive/
+                - text: ","
+                - link "Optical Drives" [ref=e304] [cursor=pointer]:
+                  - /url: /products/optical-drive/
+                - text: ","
+                - link "UPS Systems" [ref=e305] [cursor=pointer]:
+                  - /url: /products/ups/
+            - 'row "Base Total: €319.00" [ref=e306]':
+              - cell "Base Total:" [ref=e307]
+              - cell "€319.00" [ref=e308]
+              - cell [ref=e309]
+            - 'row "Shipping: €9.95" [ref=e310]':
+              - cell "Shipping:" [ref=e311]
+              - cell "€9.95" [ref=e312]
+              - cell [ref=e313]
+            - 'row "Total: €328.95" [ref=e314]':
+              - cell "Total:" [ref=e315]
+              - cell "€328.95" [ref=e316]
+              - cell [ref=e317]
+        - paragraph [ref=e319]:
+          - text: "* PCPartPicker may receive compensation for purchases made at participating retailers linked on this site. This compensation does not affect what products or prices are displayed, or the order of prices listed. Learn more"
+          - link "here" [ref=e320] [cursor=pointer]:
+            - /url: /disclosure/
+          - text: .
+        - generic [ref=e321]:
+          - heading "Compatibility Notes" [level=2] [ref=e325]
+          - list [ref=e326]:
+            - listitem [ref=e327]:
+              - generic [ref=e328]: A
+              - paragraph [ref=e329]: "Disclaimer: Some physical constraints are not checked, such as RAM clearance with CPU Coolers."
+        - generic [ref=e330]:
+          - heading "Part List Price History" [level=2] [ref=e334]
+          - generic [ref=e337]:
+            - list [ref=e339]:
+              - listitem [ref=e340]: AMD Ryzen 9 7900 3.7 GHz 12-Core Processor
+            - generic [ref=e344]:
+              - generic [ref=e345]:
+                - generic [ref=e346]: Feb 08
+                - generic [ref=e347]: Feb 15
+                - generic [ref=e348]: Feb 22
+                - generic [ref=e349]: Mar 01
+                - generic [ref=e350]: Mar 08
+                - generic [ref=e351]: Mar 15
+                - generic [ref=e352]: Mar 22
+                - generic [ref=e353]: Mar 29
+                - generic [ref=e354]: Apr 05
+                - generic [ref=e355]: Apr 12
+                - generic [ref=e356]: Apr 19
+                - generic [ref=e357]: Apr 26
+                - generic [ref=e358]: May 03
+              - generic [ref=e359]:
+                - generic [ref=e360]: €0.00
+                - generic [ref=e361]: €100.00
+                - generic [ref=e362]: €200.00
+                - generic [ref=e363]: €300.00
+                - generic [ref=e364]: €400.00
+                - generic [ref=e365]: €500.00
+  - contentinfo [ref=e367]:
+    - navigation [ref=e368]:
+      - generic [ref=e369]:
+        - link "PCPartPicker" [ref=e372] [cursor=pointer]:
+          - /url: /
+          - img "PCPartPicker" [ref=e373]
+        - generic [ref=e374]:
+          - heading "PCPP" [level=2] [ref=e375]
+          - link "Builder" [ref=e376] [cursor=pointer]:
+            - /url: /list/
+          - link "Products" [ref=e377] [cursor=pointer]:
+            - /url: /products/
+          - link "Guides" [ref=e378] [cursor=pointer]:
+            - /url: /guide/
+          - link "Completed Builds" [ref=e379] [cursor=pointer]:
+            - /url: /builds/
+          - link "Trends" [ref=e380] [cursor=pointer]:
+            - /url: /trends/
+          - link "Forums" [ref=e381] [cursor=pointer]:
+            - /url: /forums/
+        - generic [ref=e382]:
+          - heading "Account" [level=2] [ref=e383]
+          - link "Log In" [ref=e384] [cursor=pointer]:
+            - /url: /accounts/login/
+          - link "Register" [ref=e385] [cursor=pointer]:
+            - /url: /accounts/register/
+        - generic [ref=e386]:
+          - heading "Company" [level=2] [ref=e387]
+          - link "About" [ref=e388] [cursor=pointer]:
+            - /url: /about/
+          - link "Affiliate Disclosure" [ref=e389] [cursor=pointer]:
+            - /url: /disclosure/
+          - link "Contact & Import" [ref=e390] [cursor=pointer]:
+            - /url: /contact/
+          - link "Do Not Sell My Personal Information" [ref=e391] [cursor=pointer]:
+            - /url: /do-not-sell-my-personal-information/
+          - link "Privacy Policy" [ref=e392] [cursor=pointer]:
+            - /url: /privacy/
+          - link "Terms of Service" [ref=e393] [cursor=pointer]:
+            - /url: /tos/
+        - generic [ref=e394]:
+          - heading "Information" [level=2] [ref=e395]
+          - link "Downloads" [ref=e396] [cursor=pointer]:
+            - /url: /downloads/
+          - link "Industry Code of Conduct" [ref=e397] [cursor=pointer]:
+            - /url: /code-of-conduct/industry-affiliate/
+          - link "User Code of Conduct" [ref=e398] [cursor=pointer]:
+            - /url: /code-of-conduct/
+      - paragraph [ref=e401]: ©2026 PCPartPicker, LLC. All rights reserved.

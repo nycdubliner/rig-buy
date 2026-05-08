@@ -1,0 +1,967 @@
+- generic [ref=e2]:
+  - navigation "Shortcuts menu" [ref=e3]:
+    - heading "Skip to" [level=2] [ref=e4]
+    - list "Skip to" [ref=e5]:
+      - listitem [ref=e6]:
+        - link "main content" [ref=e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Main content
+      - listitem [ref=e8]:
+        - link "Shopping basket" [ref=e9] [cursor=pointer]:
+          - /url: "#sc-active-cart"
+          - text: Your Amazon Basket
+      - listitem [ref=e10]:
+        - link "Saved for later" [ref=e11] [cursor=pointer]:
+          - /url: "#sc-saved-cart-caption"
+          - text: Saved for Later
+      - listitem [ref=e12]:
+        - link "Buy it again" [ref=e13] [cursor=pointer]:
+          - /url: "#sc-buy-it-again-caption"
+          - text: Buy it Again
+    - separator [ref=e14]
+    - heading "Keyboard shortcuts" [level=2] [ref=e15]
+    - list "Keyboard shortcuts" [ref=e16]:
+      - listitem [ref=e17]:
+        - link "Search, option, forward slash" [ref=e18] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e19]:
+            - generic [ref=e20]: Search
+            - generic [ref=e21]:
+              - generic [ref=e22]: opt
+              - generic [ref=e23]: +
+              - generic [ref=e24]: /
+      - listitem [ref=e25]:
+        - link "Basket, shift, option, c" [ref=e26] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e27]:
+            - generic [ref=e28]: Basket
+            - generic [ref=e29]:
+              - generic [ref=e30]: shift
+              - generic [ref=e31]: +
+              - generic [ref=e32]: opt
+              - generic [ref=e33]: +
+              - generic [ref=e34]: C
+      - listitem [ref=e35]:
+        - link "Home, shift, option, h" [ref=e36] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e37]:
+            - generic [ref=e38]: Home
+            - generic [ref=e39]:
+              - generic [ref=e40]: shift
+              - generic [ref=e41]: +
+              - generic [ref=e42]: opt
+              - generic [ref=e43]: +
+              - generic [ref=e44]: H
+      - listitem [ref=e45]:
+        - link "Your orders, shift, option, o" [ref=e46] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e47]:
+            - generic [ref=e48]: Orders
+            - generic [ref=e49]:
+              - generic [ref=e50]: shift
+              - generic [ref=e51]: +
+              - generic [ref=e52]: opt
+              - generic [ref=e53]: +
+              - generic [ref=e54]: O
+      - listitem [ref=e55]:
+        - button "Show/hide shortcuts, shift, option, z" [ref=e56] [cursor=pointer]:
+          - generic [ref=e57]:
+            - generic [ref=e58]: Show/Hide shortcuts
+            - generic [ref=e59]:
+              - generic [ref=e60]: shift
+              - generic [ref=e61]: +
+              - generic [ref=e62]: opt
+              - generic [ref=e63]: +
+              - generic [ref=e64]: Z
+    - generic [ref=e70]: To move between items, use your keyboard's up or down arrows.
+  - banner [ref=e71]:
+    - navigation "Primary" [ref=e72]:
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - link "Amazon.ie" [ref=e76] [cursor=pointer]:
+            - /url: /ref=nav_logo
+            - generic: .ie
+          - button "Deliver to Tiarnán Inchicore D08‌" [ref=e79] [cursor=pointer]:
+            - generic [ref=e81]:
+              - generic [ref=e82]: Deliver to Tiarnán
+              - generic [ref=e83]: Inchicore D08‌
+        - search [ref=e86]:
+          - generic [ref=e89]:
+            - generic [ref=e91]: All
+            - combobox "Select the department you want to search in" [ref=e93] [cursor=pointer]:
+              - option "All Departments" [selected]
+              - option "Amazon Devices"
+              - option "Arts & Crafts"
+              - option "Baby"
+              - option "Beauty"
+              - option "Books"
+              - option "Business & Professional"
+              - option "Car & Motorbike"
+              - option "CDs & Vinyl"
+              - option "Computing & Office"
+              - option "DIY & Tools"
+              - option "DVD & Blu-ray"
+              - option "Electronics"
+              - option "Fashion"
+              - option "Food & Grocery"
+              - option "Garden"
+              - option "Gift Cards"
+              - option "Health & Personal Care"
+              - option "Home & Kitchen"
+              - option "Musical Instruments"
+              - option "PC & Video Games"
+              - option "Pet Supplies"
+              - option "Software"
+              - option "Sports & Outdoors"
+              - option "Toys & Games"
+          - searchbox "Search Amazon.ie" [ref=e96]
+          - generic "Go" [ref=e99] [cursor=pointer]:
+            - button "Go" [ref=e100]
+        - generic [ref=e102]:
+          - generic [ref=e103]:
+            - link "Hello, Tiarnan Account & Lists" [ref=e104] [cursor=pointer]:
+              - /url: https://www.amazon.ie/gp/css/homepage.html?ref_=nav_youraccount_btn
+              - generic [ref=e106]: Hello, Tiarnan
+              - generic [ref=e107]: Account & Lists
+            - button "Expand Account and Lists" [ref=e108] [cursor=pointer]
+          - link "Returns & Orders" [ref=e109] [cursor=pointer]:
+            - /url: /gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=e110]: Returns
+            - generic [ref=e111]: "& Orders"
+          - link "4 items in shopping basket" [ref=e112] [cursor=pointer]:
+            - /url: /gp/cart/view.html?ref_=nav_cart
+            - generic [ref=e114]: "4"
+            - generic [ref=e117]: Basket
+      - generic [ref=e118]:
+        - button "Open All Categories Menu" [ref=e120] [cursor=pointer]:
+          - generic [ref=e122]: All
+        - list [ref=e126]:
+          - listitem [ref=e127]:
+            - link "Welcome to Amazon.ie" [ref=e129] [cursor=pointer]:
+              - /url: /gp/browse.html?node=100768625031&ref_=nav_Welcome_to_Amazon_IE
+          - listitem [ref=e130]:
+            - link "Today's Deals" [ref=e132] [cursor=pointer]:
+              - /url: /deals?ref_=nav_cs_ie
+          - listitem [ref=e133]:
+            - link "Brands of Ireland" [ref=e135] [cursor=pointer]:
+              - /url: /gp/browse.html?node=100549970031&ref_=nav_Brands_of_Ireland
+          - listitem [ref=e136]:
+            - link "Prime" [ref=e138] [cursor=pointer]:
+              - /url: /prime?ref_=nav_cs_primelink_nonmember
+          - listitem [ref=e139]:
+            - link "Prime Video" [ref=e141] [cursor=pointer]:
+              - /url: /gp/video/ssoredirect/?pvp=/ref%3Ddvm_crs_nav_ie_xs_s_dk_disco_eg_al?ref_=nav_cs_prime_video
+          - listitem [ref=e142]:
+            - link "Books" [ref=e144] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80926538031&ref_=nav_shopall_bks_all
+          - listitem [ref=e145]:
+            - link "Electronics" [ref=e147] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80926655031&ref_=nav_cs_electronics
+          - listitem [ref=e148]:
+            - link "Home & Kitchen" [ref=e150] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80927649031&ref_=nav_Nav_IE_All_Home_Garden
+          - listitem [ref=e151]:
+            - link "Beauty" [ref=e153] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80926421031&ref_=nav_Nav_IE_All_Beauty
+          - listitem [ref=e154]:
+            - link "Health & Household" [ref=e156] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80927394031&ref_=nav_Nav_IE_All_Health_Household
+          - listitem [ref=e157]:
+            - link "Pets" [ref=e159] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80928622031&ref_=nav_Nav_IE_Pet_Supplies
+          - listitem [ref=e160]:
+            - link "Office" [ref=e162] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80928483031&ref_=nav_Nav_IE_Office_Products
+          - listitem [ref=e163]:
+            - link "Grocery" [ref=e165] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80927268031&ref_=nav_Nav_IE_Grocery
+          - listitem [ref=e166]:
+            - link "Buy Again" [ref=e168] [cursor=pointer]:
+              - /url: /gp/buyagain?ref_=nav_cs_buy_again
+          - listitem [ref=e169]:
+            - link "Customer Service" [ref=e171] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_help
+          - listitem [ref=e172]:
+            - link "Sell on Amazon" [ref=e174] [cursor=pointer]:
+              - /url: https://sellercentral.amazon.ie/?ld=AZIESOANavbar
+        - link "24/7 Customer Service" [ref=e177] [cursor=pointer]:
+          - /url: /hz/contact-us/foresight/hubgateway/?_encoding=UTF8&ref_=nav_swm_nav_swm_text&pf_rd_p=724422c1-0656-4a83-b73a-261fc354a3ca&pf_rd_s=nav-sitewide-msg&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=A28R8C7NBKEWEA&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR
+  - main [ref=e180]:
+    - heading "All Baskets" [level=1] [ref=e181]
+    - generic [ref=e183]:
+      - generic [ref=e184]:
+        - generic [ref=e188]:
+          - status [ref=e189]:
+            - generic [ref=e197]:
+              - text: Part of your order qualifies for FREE Delivery. Select this option at checkout.
+              - link "Delivery Details" [ref=e198] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=GZXW7X6AKTHNUP6H&pop-up=1
+          - generic [ref=e199]:
+            - 'heading "Amazon Subtotal (4 items): €1,332.02" [level=3] [ref=e200]':
+              - generic [ref=e201]: Amazon
+              - generic [ref=e202]:
+                - text: "Subtotal (4 items):"
+                - generic [ref=e203]: €1,332.02
+            - generic [ref=e207]:
+              - checkbox "This order contains a gift" [ref=e208]
+              - generic [ref=e210]: This order contains a gift
+            - generic [ref=e214] [cursor=pointer]:
+              - button "Proceed to Checkout Check out Amazon Basket" [ref=e215]: Proceed to checkout
+              - generic [ref=e218]: Proceed to Checkout
+        - generic [ref=e226]:
+          - generic [ref=e227]:
+            - img "Amazon Prime Logo" [ref=e228]
+            - heading "Get unlimited fast delivery on millions of eligible items." [level=1] [ref=e230]
+          - generic [ref=e233] [cursor=pointer]:
+            - button "Join Prime" [ref=e234]
+            - generic [ref=e235]: Join Prime
+        - generic [ref=e244]:
+          - heading "Customers Who Bought ASUS ProArt X870E-CREATOR WIFI, AMD X870E ATX moth... Also Bought" [level=3] [ref=e245]
+          - list [ref=e246]:
+            - listitem [ref=e247]:
+              - generic [ref=e252]:
+                - link [ref=e254] [cursor=pointer]:
+                  - /url: /AMD-9950X-Processor-Unbridled-Architecture/dp/B0D6NNRBGP/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_1/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0D6NNRBGP&psc=1
+                  - img [ref=e256]
+                - generic [ref=e257]:
+                  - generic [ref=e259]:
+                    - link "AMD Ryzen 9 9950X Processor, 16 Cores/32 Unbridled Threads, Zen Architecture 5, 80MB L3 Cache, 170W TDP, Up to 5.7GHz Frequency Boost, Socket AM5, DDR5 & PCIe 5.0, No Fan" [ref=e260] [cursor=pointer]:
+                      - /url: /AMD-9950X-Processor-Unbridled-Architecture/dp/B0D6NNRBGP/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_1/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0D6NNRBGP&psc=1
+                      - generic [ref=e262]: AMD Ryzen 9 9950X Processor, 16 Cores/32 Unbridled Threads, Zen Architecture 5, 80MB L3 Cache, 170W TDP, Up to 5.7GHz Frequency Boost, Socket AM5, DDR5 & PCIe 5.0, No Fan
+                    - link "4.7 out of 5 stars, 1,064 ratings" [ref=e265] [cursor=pointer]:
+                      - /url: /product-reviews/B0D6NNRBGP/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_1_cr/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0D6NNRBGP
+                      - generic [ref=e267]: 4.7 out of 5 stars
+                      - text: 1,064
+                    - generic [ref=e268]:
+                      - link "€517.10" [ref=e271] [cursor=pointer]:
+                        - /url: /AMD-9950X-Processor-Unbridled-Architecture/dp/B0D6NNRBGP/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_1/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0D6NNRBGP&psc=1
+                        - generic [ref=e273]:
+                          - generic [ref=e274]: €517.10
+                          - generic [ref=e275]:
+                            - text: €
+                            - generic [ref=e276]: "517."
+                            - text: "10"
+                      - generic [ref=e278]: Get it as soon as Monday, May 11
+                    - text: FREE Delivery by Amazon
+                  - generic [ref=e286] [cursor=pointer]:
+                    - button "Add to cart, AMD Ryzen 9 9950X Processor, 16 Cores/32 Unbridled Threads, Zen Architecture 5, 80MB L3 Cache, 170W TDP, Up to 5.7GHz Frequency Boost, Socket AM5, DDR5 & PCIe 5.0, No Fan" [ref=e287]
+                    - generic [ref=e288]: Add to cart
+            - listitem [ref=e289]:
+              - generic [ref=e294]:
+                - link [ref=e296] [cursor=pointer]:
+                  - /url: /AMD-Processor-3D-V-CacheTM-Technology/dp/B0DVZSG8D5/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_2/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DVZSG8D5&psc=1
+                  - img [ref=e298]
+                - generic [ref=e299]:
+                  - generic [ref=e301]:
+                    - link "AMD Ryzen™ 9 9950X3D Processor With 3D V-Cache™ Technology, 16 Cores/32 Threads, 144MB Cache, 170W TDP, AM5 Socket, Up To 5.7 GHz Boost Frequency, DDR5 & PCIe 5.0" [ref=e302] [cursor=pointer]:
+                      - /url: /AMD-Processor-3D-V-CacheTM-Technology/dp/B0DVZSG8D5/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_2/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DVZSG8D5&psc=1
+                      - generic [ref=e304]: AMD Ryzen™ 9 9950X3D Processor With 3D V-Cache™ Technology, 16 Cores/32 Threads, 144MB Cache, 170W TDP, AM5 Socket, Up To 5.7 GHz Boost Frequency, DDR5 & PCIe 5.0
+                    - link "4.7 out of 5 stars, 1,530 ratings" [ref=e307] [cursor=pointer]:
+                      - /url: /product-reviews/B0DVZSG8D5/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_2_cr/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DVZSG8D5
+                      - generic [ref=e309]: 4.7 out of 5 stars
+                      - text: 1,530
+                    - generic [ref=e310]:
+                      - link "€648.50" [ref=e313] [cursor=pointer]:
+                        - /url: /AMD-Processor-3D-V-CacheTM-Technology/dp/B0DVZSG8D5/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_2/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DVZSG8D5&psc=1
+                        - generic [ref=e315]:
+                          - generic [ref=e316]: €648.50
+                          - generic [ref=e317]:
+                            - text: €
+                            - generic [ref=e318]: "648."
+                            - text: "50"
+                      - generic [ref=e320]: Get it May 14 - 16
+                    - text: FREE Delivery
+                    - generic [ref=e323]: Only 7 left in stock – order soon.
+                  - generic [ref=e331] [cursor=pointer]:
+                    - button "Add to cart, AMD Ryzen™ 9 9950X3D Processor With 3D V-Cache™ Technology, 16 Cores/32 Threads, 144MB Cache, 170W TDP, AM5 Socket, Up To 5.7 GHz Boost Frequency, DDR5 & PCIe 5.0" [ref=e332]
+                    - generic [ref=e333]: Add to cart
+            - listitem [ref=e334]:
+              - generic [ref=e339]:
+                - link [ref=e341] [cursor=pointer]:
+                  - /url: /Noctua-NH-D15-G2-chromax-black-Premium/dp/B0FXGWKHND/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_3/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0FXGWKHND&psc=1
+                  - img [ref=e343]
+                - generic [ref=e344]:
+                  - generic [ref=e346]:
+                    - link "Noctua NH-D15 G2 chromax.black Premium Dual Tower CPU Cooler for AMD AM5/AM4 and Intel LGA1851/LGA1700/LGA1200 (Black)" [ref=e347] [cursor=pointer]:
+                      - /url: /Noctua-NH-D15-G2-chromax-black-Premium/dp/B0FXGWKHND/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_3/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0FXGWKHND&psc=1
+                      - generic [ref=e349]: Noctua NH-D15 G2 chromax.black Premium Dual Tower CPU Cooler for AMD AM5/AM4 and Intel LGA1851/LGA1700/LGA1200 (Black)
+                    - link "4.8 out of 5 stars, 157 ratings" [ref=e352] [cursor=pointer]:
+                      - /url: /product-reviews/B0FXGWKHND/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_3_cr/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0FXGWKHND
+                      - generic [ref=e354]: 4.8 out of 5 stars
+                      - text: "157"
+                    - link "€167.86" [ref=e358] [cursor=pointer]:
+                      - /url: /Noctua-NH-D15-G2-chromax-black-Premium/dp/B0FXGWKHND/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_3/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0FXGWKHND&psc=1
+                      - generic [ref=e360]:
+                        - generic [ref=e361]: €167.86
+                        - generic [ref=e362]:
+                          - text: €
+                          - generic [ref=e363]: "167."
+                          - text: "86"
+                    - text: FREE Delivery
+                  - generic [ref=e371] [cursor=pointer]:
+                    - button "Add to cart, Noctua NH-D15 G2 chromax.black Premium Dual Tower CPU Cooler for AMD AM5/AM4 and Intel LGA1851/LGA1700/LGA1200 (Black)" [ref=e372]
+                    - generic [ref=e373]: Add to cart
+            - listitem [ref=e374]:
+              - generic [ref=e379]:
+                - link [ref=e381] [cursor=pointer]:
+                  - /url: /Crucial-2x64GB-5600MHz-Computer-Memory/dp/B0DSR5P84D/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_4/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DSR5P84D&psc=1
+                  - img [ref=e383]
+                - generic [ref=e384]:
+                  - generic [ref=e386]:
+                    - link "Crucial Pro DDR5 RAM 128GB Kit (2x64GB) 5600MHz, Intel XMP 3.0 / AMD EXPO, Computer Memory (PC) DDR5 128GB RAM - CP2K64G56C46U5" [ref=e387] [cursor=pointer]:
+                      - /url: /Crucial-2x64GB-5600MHz-Computer-Memory/dp/B0DSR5P84D/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_4/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DSR5P84D&psc=1
+                      - generic [ref=e389]: Crucial Pro DDR5 RAM 128GB Kit (2x64GB) 5600MHz, Intel XMP 3.0 / AMD EXPO, Computer Memory (PC) DDR5 128GB RAM - CP2K64G56C46U5
+                    - link "4.6 out of 5 stars, 2,642 ratings" [ref=e392] [cursor=pointer]:
+                      - /url: /product-reviews/B0DSR5P84D/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_4_cr/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DSR5P84D
+                      - generic [ref=e394]: 4.6 out of 5 stars
+                      - text: 2,642
+                    - generic [ref=e395]:
+                      - link "€1,299.99" [ref=e398] [cursor=pointer]:
+                        - /url: /Crucial-2x64GB-5600MHz-Computer-Memory/dp/B0DSR5P84D/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_4/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DSR5P84D&psc=1
+                        - generic [ref=e400]:
+                          - generic [ref=e401]: €1,299.99
+                          - generic [ref=e402]:
+                            - text: €
+                            - generic [ref=e403]: 1,299.
+                            - text: "99"
+                      - generic [ref=e405]: Get it as soon as Friday, May 15
+                    - text: FREE Delivery by Amazon
+                    - generic [ref=e408]: Only 1 left in stock – order soon.
+                  - generic [ref=e416] [cursor=pointer]:
+                    - button "Add to cart, Crucial Pro DDR5 RAM 128GB Kit (2x64GB) 5600MHz, Intel XMP 3.0 / AMD EXPO, Computer Memory (PC) DDR5 128GB RAM - CP2K64G56C46U5" [ref=e417]
+                    - generic [ref=e418]: Add to cart
+            - listitem [ref=e419]:
+              - generic [ref=e424]:
+                - link [ref=e426] [cursor=pointer]:
+                  - /url: /Samsung-14800MB-13400MB-Internal-MZ-VAP4T0BW/dp/B0DWFMD4FQ/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_5/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DWFMD4FQ&psc=1
+                  - img [ref=e428]
+                - generic [ref=e429]:
+                  - generic [ref=e431]:
+                    - link "Samsung 9100 PRO NVMe M.2 SSD, 4TB, PCIe 5.0, 14800MB/s Read, 13400MB/s Write, Internal SSD for Gaming, Video Editing and AI, Black, MZ-VAP4T0BW" [ref=e432] [cursor=pointer]:
+                      - /url: /Samsung-14800MB-13400MB-Internal-MZ-VAP4T0BW/dp/B0DWFMD4FQ/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_5/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DWFMD4FQ&psc=1
+                      - generic [ref=e434]: Samsung 9100 PRO NVMe M.2 SSD, 4TB, PCIe 5.0, 14800MB/s Read, 13400MB/s Write, Internal SSD for Gaming, Video Editing and AI, Black, MZ-VAP4T0BW
+                    - link "4.8 out of 5 stars, 1,195 ratings" [ref=e437] [cursor=pointer]:
+                      - /url: /product-reviews/B0DWFMD4FQ/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_5_cr/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DWFMD4FQ
+                      - generic [ref=e439]: 4.8 out of 5 stars
+                      - text: 1,195
+                    - generic [ref=e440]:
+                      - link "€599.95" [ref=e443] [cursor=pointer]:
+                        - /url: /Samsung-14800MB-13400MB-Internal-MZ-VAP4T0BW/dp/B0DWFMD4FQ/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_5/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DWFMD4FQ&psc=1
+                        - generic [ref=e445]:
+                          - generic [ref=e446]: €599.95
+                          - generic [ref=e447]:
+                            - text: €
+                            - generic [ref=e448]: "599."
+                            - text: "95"
+                      - generic [ref=e450]: Get it May 13 - 15
+                    - text: FREE Delivery
+                    - generic [ref=e453]: Only 4 left in stock – order soon.
+                  - generic [ref=e461] [cursor=pointer]:
+                    - button "Add to cart, Samsung 9100 PRO NVMe M.2 SSD, 4TB, PCIe 5.0, 14800MB/s Read, 13400MB/s Write, Internal SSD for Gaming, Video Editing and AI, Black, MZ-VAP4T0BW" [ref=e462]
+                    - generic [ref=e463]: Add to cart
+            - listitem [ref=e464]:
+              - generic [ref=e469]:
+                - link [ref=e471] [cursor=pointer]:
+                  - /url: /Noctua-Special-Version-Contact-Convexity/dp/B0D5B5B821/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_6/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0D5B5B821&psc=1
+                  - img [ref=e473]
+                - generic [ref=e474]:
+                  - generic [ref=e476]:
+                    - link "Noctua NH-D15 G2 LBC Dual Tower CPU Cooler Special Version with Low Contact Surface Convexity for AMD AM5/AM4 (Brown)" [ref=e477] [cursor=pointer]:
+                      - /url: /Noctua-Special-Version-Contact-Convexity/dp/B0D5B5B821/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_6/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0D5B5B821&psc=1
+                      - generic [ref=e479]: Noctua NH-D15 G2 LBC Dual Tower CPU Cooler Special Version with Low Contact Surface Convexity for AMD AM5/AM4 (Brown)
+                    - link "4.8 out of 5 stars, 360 ratings" [ref=e482] [cursor=pointer]:
+                      - /url: /product-reviews/B0D5B5B821/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_6_cr/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0D5B5B821
+                      - generic [ref=e484]: 4.8 out of 5 stars
+                      - text: "360"
+                    - generic [ref=e485]:
+                      - link "€210.72" [ref=e488] [cursor=pointer]:
+                        - /url: /Noctua-Special-Version-Contact-Convexity/dp/B0D5B5B821/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_6/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0D5B5B821&psc=1
+                        - generic [ref=e490]:
+                          - generic [ref=e491]: €210.72
+                          - generic [ref=e492]:
+                            - text: €
+                            - generic [ref=e493]: "210."
+                            - text: "72"
+                      - generic [ref=e495]: Get it May 22 - 28
+                    - text: FREE Delivery
+                    - generic [ref=e498]: Only 2 left in stock – order soon.
+                  - generic [ref=e506] [cursor=pointer]:
+                    - button "Add to cart, Noctua NH-D15 G2 LBC Dual Tower CPU Cooler Special Version with Low Contact Surface Convexity for AMD AM5/AM4 (Brown)" [ref=e507]
+                    - generic [ref=e508]: Add to cart
+            - listitem [ref=e509]:
+              - generic [ref=e514]:
+                - link [ref=e516] [cursor=pointer]:
+                  - /url: /CORSAIR-HX1500i-Modular-Ultra-Low-12V-2x6/dp/B0F3JHTL2R/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_7/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0F3JHTL2R&psc=1
+                  - img [ref=e518]
+                - generic [ref=e519]:
+                  - generic [ref=e521]:
+                    - link "CORSAIR HX1500i (2025) Fully Modular Ultra-Low ATX Power Supply with Low Noise and 12V-2x6 Cable – ATX 3.1 & PCIe 5.1, Cybenetics Platinum Efficiency, Liquid-Dynamic Bearing Fan – Black" [ref=e522] [cursor=pointer]:
+                      - /url: /CORSAIR-HX1500i-Modular-Ultra-Low-12V-2x6/dp/B0F3JHTL2R/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_7/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0F3JHTL2R&psc=1
+                      - generic [ref=e524]: CORSAIR HX1500i (2025) Fully Modular Ultra-Low ATX Power Supply with Low Noise and 12V-2x6 Cable – ATX 3.1 & PCIe 5.1, Cybenetics Platinum Efficiency, Liquid-Dynamic Bearing Fan – Black
+                    - link "4.7 out of 5 stars, 173 ratings" [ref=e527] [cursor=pointer]:
+                      - /url: /product-reviews/B0F3JHTL2R/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_7_cr/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0F3JHTL2R
+                      - generic [ref=e529]: 4.7 out of 5 stars
+                      - text: "173"
+                    - link "2 offers from €379.28" [ref=e531] [cursor=pointer]:
+                      - /url: /CORSAIR-HX1500i-Modular-Ultra-Low-12V-2x6/dp/B0F3JHTL2R/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_7/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0F3JHTL2R&psc=1
+                      - generic [ref=e532]:
+                        - text: 2 offers from
+                        - generic [ref=e533]: €379.28
+                  - link "See all buying options" [ref=e539] [cursor=pointer]:
+                    - /url: /CORSAIR-HX1500i-Modular-Ultra-Low-12V-2x6/dp/B0F3JHTL2R/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_7_atc_o/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0F3JHTL2R&psc=1
+            - listitem [ref=e540]:
+              - generic [ref=e545]:
+                - link [ref=e547] [cursor=pointer]:
+                  - /url: /ARCTIC-Liquid-Freezer-Pro-420/dp/B0DPHQ1353/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_8/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DPHQ1353&psc=1
+                  - img [ref=e549]
+                - generic [ref=e550]:
+                  - generic [ref=e552]:
+                    - link "ARCTIC Liquid Freezer III Pro 420 - AIO CPU Cooler, 3 x 140 mm Water Cooling, 38 mm Radiator, PWM Pump, VRM Fan, AMD AM5/AM4, Intel LGA1851/1700 Contact Frame - Black" [ref=e553] [cursor=pointer]:
+                      - /url: /ARCTIC-Liquid-Freezer-Pro-420/dp/B0DPHQ1353/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_8/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DPHQ1353&psc=1
+                      - generic [ref=e555]: ARCTIC Liquid Freezer III Pro 420 - AIO CPU Cooler, 3 x 140 mm Water Cooling, 38 mm Radiator, PWM Pump, VRM Fan, AMD AM5/AM4, Intel LGA1851/1700 Contact Frame - Black
+                    - link "4.5 out of 5 stars, 316 ratings" [ref=e558] [cursor=pointer]:
+                      - /url: /product-reviews/B0DPHQ1353/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_8_cr/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DPHQ1353
+                      - generic [ref=e560]: 4.5 out of 5 stars
+                      - text: "316"
+                    - generic [ref=e561]:
+                      - link "€94.63" [ref=e564] [cursor=pointer]:
+                        - /url: /ARCTIC-Liquid-Freezer-Pro-420/dp/B0DPHQ1353/ref=pd_cart_crc_cko_mrai_reranked_d_sccl_1_8/261-6711575-9331705?pd_rd_w=vPv1o&content-id=amzn1.sym.fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_p=fbc10e65-8bde-4811-abdf-f918ec379b48&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DPHQ1353&psc=1
+                        - generic [ref=e566]:
+                          - generic [ref=e567]: €94.63
+                          - generic [ref=e568]:
+                            - text: €
+                            - generic [ref=e569]: "94."
+                            - text: "63"
+                      - generic [ref=e571]: Get it May 16 - 19
+                    - text: €14.84 delivery
+                    - generic [ref=e574]: Usually ships within 2 to 3 days
+                  - generic [ref=e582] [cursor=pointer]:
+                    - button "Add to cart, ARCTIC Liquid Freezer III Pro 420 - AIO CPU Cooler, 3 x 140 mm Water Cooling, 38 mm Radiator, PWM Pump, VRM Fan, AMD AM5/AM4, Intel LGA1851/1700 Contact Frame - Black" [ref=e583]
+                    - generic [ref=e584]: Add to cart
+      - generic [ref=e585]:
+        - generic [ref=e587]:
+          - generic [ref=e588]:
+            - heading "Shopping Basket" [level=2] [ref=e591]
+            - link "Deselect all items" [ref=e596] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=e597]:
+            - generic [ref=e601]: Price
+            - list "Shopping Basket" [ref=e602]:
+              - listitem [ref=e603]:
+                - generic [ref=e605]:
+                  - checkbox "Select ASUS ProArt X870E-CREATOR WIFI, AMD X870E ATX motherboard, PCIe 5.0 x16 slots with full support for next-gen GPUs, 16+2+2 power stages, DDR5, dual USB4, 10 Gb &amp;amp; 2.5 Gb LAN, WiFi 7, four M.2 slots for checkout" [checked] [ref=e608]
+                  - link [ref=e611] [cursor=pointer]:
+                    - /url: /gp/product/B09KB8GGN1/ref=ox_sc_act_image_1?smid=A2N8G12PC7U0FI&psc=1
+                  - generic [ref=e612]:
+                    - link "ASUS ProArt X870E-CREATOR WIFI, AMD X870E ATX motherboard, PCIe 5.0 x16 slots with full support for next-gen GPUs, 16+2+2 power stages, DDR5, dual USB4, 10 Gb & 2.5 Gb LAN, WiFi 7, four M.2 slots" [ref=e614] [cursor=pointer]:
+                      - /url: /gp/product/B09KB8GGN1/ref=ox_sc_act_title_1?smid=A2N8G12PC7U0FI&psc=1
+                      - heading "ASUS ProArt X870E-CREATOR WIFI, AMD X870E ATX motherboard, PCIe 5.0 x16 slots with full support for next-gen GPUs, 16+2+2 power stages, DDR5, dual USB4, 10 Gb & 2.5 Gb LAN, WiFi 7, four M.2 slots" [level=3] [ref=e616]:
+                        - generic [ref=e617]:
+                          - generic [ref=e618]: ASUS ProArt X870E-CREATOR WIFI, AMD X870E ATX motherboard, PCIe 5.0 x16 slots with full support for next-gen GPUs, 16+2+2 power stages, DDR5, dual USB4, 10 Gb & 2.5 Gb LAN, WiFi 7, four M.2 slots
+                          - generic [ref=e619]: ASUS ProArt X870E-CREATOR WIFI, AMD X870E ATX motherboard, PCIe 5.0 x16 slots with full support for next-gen GPUs, 16+2+2 power stages, DDR5, dual US…
+                    - generic [ref=e624]:
+                      - generic [ref=e625]: €546.14
+                      - generic [ref=e626]:
+                        - text: €
+                        - generic [ref=e627]:
+                          - text: "546"
+                          - generic [ref=e628]: .
+                        - text: "14"
+                    - generic [ref=e629]:
+                      - generic [ref=e631]: Only 1 left in stock – order soon.
+                      - generic [ref=e633]:
+                        - text: "Sent from:"
+                        - link "Sotel-Ireland" [ref=e634] [cursor=pointer]:
+                          - /url: /gp/help/seller/at-a-glance.html/ref=ox_sc_seller_act_1?seller=A2N8G12PC7U0FI
+                      - generic [ref=e637]:
+                        - text: Gift options not available.
+                        - link "Gift options not available. Learn more" [ref=e638] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=ox_sc_gift?pop-up=1&nodeId=G9SVWVGTWQ7KK3G2
+                          - generic [ref=e639]:
+                            - generic [ref=e640]: Gift options not available.
+                            - text: Learn more
+                      - generic [ref=e641]: "Size Name: ProArt"
+                      - generic [ref=e642]: "Style Name: X870"
+                    - generic [ref=e643]:
+                      - group "Quantity is 1" [ref=e646]:
+                        - generic [ref=e647]: Quantity is 1
+                        - generic [ref=e649]:
+                          - button "Delete ASUS ProArt X870E-CREATOR WIFI, AMD X870E ATX motherboard, PCIe 5.0 x16 slots with full support for next-gen GPUs, 16+2+2 power stages, DDR5, dual USB4, 10 Gb &amp; 2.5 Gb LAN, WiFi 7, four M.2 slots" [ref=e650] [cursor=pointer]
+                          - generic [ref=e654]: "1"
+                          - generic [ref=e656]: "1"
+                          - button "Increase quantity by one ASUS ProArt X870E-CREATOR WIFI, AMD X870E ATX motherboard, PCIe 5.0 x16 slots with full support for next-gen GPUs, 16+2+2 power stages, DDR5, dual USB4, 10 Gb &amp; 2.5 Gb LAN, WiFi 7, four M.2 slots" [ref=e657] [cursor=pointer]
+                      - button "Delete ASUS ProArt X870E-CREATOR WIFI, AMD X870E ATX motherboard, PCIe 5.0 x16 slots with full support for next-gen GPUs, 16+2+2 power stages, DDR5, dual USB4, 10 Gb &amp; 2.5 Gb LAN, WiFi 7, four M.2 slots" [ref=e661] [cursor=pointer]: Delete
+                      - button "Save for later ASUS ProArt X870E-CREATOR WIFI, AMD X870E ATX motherboard, PCIe 5.0 x16 slots with full support for next-gen GPUs, 16+2+2 power stages, DDR5, dual USB4, 10 Gb &amp; 2.5 Gb LAN, WiFi 7, four M.2 slots" [ref=e664] [cursor=pointer]: Save for later
+                      - link "Share ASUS ProArt X870E-CREATOR WIFI, AMD X870E ATX motherboard, PCIe 5.0 x16 slots with full support for next-gen GPUs, 16+2+2 power stages, DDR5, dual USB4, 10 Gb &amp;amp; 2.5 Gb LAN, WiFi 7, four M.2 slots" [ref=e667] [cursor=pointer]:
+                        - /url: "#"
+                        - text: Share
+              - listitem [ref=e668]:
+                - generic [ref=e670]:
+                  - checkbox "Select 2025 RMe Series, RM1000e, 1000 Watt, ATX 3.1, PCIe 5.1, Cybenetics GOLD Certified, Fully Modular Power Supply for checkout" [checked] [ref=e673]
+                  - link [ref=e676] [cursor=pointer]:
+                    - /url: /gp/product/B0DMTKVDYR/ref=ox_sc_act_image_2?smid=A3IUX9VDQXPQEP&psc=1
+                  - generic [ref=e677]:
+                    - link "2025 RMe Series, RM1000e, 1000 Watt, ATX 3.1, PCIe 5.1, Cybenetics GOLD Certified, Fully Modular Power Supply" [ref=e679] [cursor=pointer]:
+                      - /url: /gp/product/B0DMTKVDYR/ref=ox_sc_act_title_2?smid=A3IUX9VDQXPQEP&psc=1
+                      - heading "2025 RMe Series, RM1000e, 1000 Watt, ATX 3.1, PCIe 5.1, Cybenetics GOLD Certified, Fully Modular Power Supply" [level=3] [ref=e681]:
+                        - generic [ref=e682]:
+                          - generic [ref=e683]: 2025 RMe Series, RM1000e, 1000 Watt, ATX 3.1, PCIe 5.1, Cybenetics GOLD Certified, Fully Modular Power Supply
+                          - generic [ref=e684]: 2025 RMe Series, RM1000e, 1000 Watt, ATX 3.1, PCIe 5.1, Cybenetics GOLD Certified, Fully Modular Power Supply
+                    - generic [ref=e689]:
+                      - generic [ref=e690]: €136.78
+                      - generic [ref=e691]:
+                        - text: €
+                        - generic [ref=e692]:
+                          - text: "136"
+                          - generic [ref=e693]: .
+                        - text: "78"
+                    - generic [ref=e694]:
+                      - generic [ref=e696]:
+                        - generic [ref=e698]: "#1 Best Seller"
+                        - generic [ref=e701]:
+                          - generic [ref=e702]: in Power Supplies
+                          - generic [ref=e703]: in Power Supplies
+                      - generic [ref=e704]: In stock
+                      - generic [ref=e706]:
+                        - text: "Sent from:"
+                        - link "Amazon UK" [ref=e707] [cursor=pointer]:
+                          - /url: /gp/help/seller/at-a-glance.html/ref=ox_sc_seller_act_2?seller=A3IUX9VDQXPQEP
+                      - generic [ref=e708]: Eligible for FREE Shipping
+                      - generic [ref=e711]:
+                        - text: Gift options not available.
+                        - link "Gift options not available. Learn more" [ref=e712] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=ox_sc_gift?pop-up=1&nodeId=G9SVWVGTWQ7KK3G2
+                          - generic [ref=e713]:
+                            - generic [ref=e714]: Gift options not available.
+                            - text: Learn more
+                      - generic [ref=e715]: "Size Name: 1000 Watts"
+                    - generic [ref=e716]:
+                      - group "Quantity is 1" [ref=e719]:
+                        - generic [ref=e720]: Quantity is 1
+                        - generic [ref=e722]:
+                          - button "Delete 2025 RMe Series, RM1000e, 1000 Watt, ATX 3.1, PCIe 5.1, Cybenetics GOLD Certified, Fully Modular Power Supply" [ref=e723] [cursor=pointer]
+                          - generic [ref=e727]: "1"
+                          - generic [ref=e729]: "1"
+                          - button "Increase quantity by one 2025 RMe Series, RM1000e, 1000 Watt, ATX 3.1, PCIe 5.1, Cybenetics GOLD Certified, Fully Modular Power Supply" [ref=e730] [cursor=pointer]
+                      - button "Delete 2025 RMe Series, RM1000e, 1000 Watt, ATX 3.1, PCIe 5.1, Cybenetics GOLD Certified, Fully Modular Power Supply" [ref=e734] [cursor=pointer]: Delete
+                      - button "Save for later 2025 RMe Series, RM1000e, 1000 Watt, ATX 3.1, PCIe 5.1, Cybenetics GOLD Certified, Fully Modular Power Supply" [ref=e737] [cursor=pointer]: Save for later
+                      - link "Share 2025 RMe Series, RM1000e, 1000 Watt, ATX 3.1, PCIe 5.1, Cybenetics GOLD Certified, Fully Modular Power Supply" [ref=e740] [cursor=pointer]:
+                        - /url: "#"
+                        - text: Share
+              - listitem [ref=e741]:
+                - generic [ref=e743]:
+                  - checkbox "Select ASRock AMD X870 Steel Legend WiFi AM5 DDR5 PCIe 5.0 ATX Motherboard for checkout" [checked] [ref=e746]
+                  - link [ref=e749] [cursor=pointer]:
+                    - /url: /gp/product/B0DG4FK9HP/ref=ox_sc_act_image_3?smid=A2N8G12PC7U0FI&psc=1
+                  - generic [ref=e750]:
+                    - link "ASRock AMD X870 Steel Legend WiFi AM5 DDR5 PCIe 5.0 ATX Motherboard" [ref=e752] [cursor=pointer]:
+                      - /url: /gp/product/B0DG4FK9HP/ref=ox_sc_act_title_3?smid=A2N8G12PC7U0FI&psc=1
+                      - heading "ASRock AMD X870 Steel Legend WiFi AM5 DDR5 PCIe 5.0 ATX Motherboard" [level=3] [ref=e754]:
+                        - generic [ref=e755]:
+                          - generic [ref=e756]: ASRock AMD X870 Steel Legend WiFi AM5 DDR5 PCIe 5.0 ATX Motherboard
+                          - generic [ref=e757]: ASRock AMD X870 Steel Legend WiFi AM5 DDR5 PCIe 5.0 ATX Motherboard
+                    - generic [ref=e762]:
+                      - generic [ref=e763]: €299.13
+                      - generic [ref=e764]:
+                        - text: €
+                        - generic [ref=e765]:
+                          - text: "299"
+                          - generic [ref=e766]: .
+                        - text: "13"
+                    - generic [ref=e767]:
+                      - generic [ref=e768]: In stock
+                      - generic [ref=e770]:
+                        - text: "Sent from:"
+                        - link "Sotel-Ireland" [ref=e771] [cursor=pointer]:
+                          - /url: /gp/help/seller/at-a-glance.html/ref=ox_sc_seller_act_3?seller=A2N8G12PC7U0FI
+                      - generic [ref=e774]:
+                        - text: Gift options not available.
+                        - link "Gift options not available. Learn more" [ref=e775] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=ox_sc_gift?pop-up=1&nodeId=G9SVWVGTWQ7KK3G2
+                          - generic [ref=e776]:
+                            - generic [ref=e777]: Gift options not available.
+                            - text: Learn more
+                      - generic [ref=e778]: "Style Name: Steel Legend"
+                    - generic [ref=e779]:
+                      - group "Quantity is 1" [ref=e782]:
+                        - generic [ref=e783]: Quantity is 1
+                        - generic [ref=e785]:
+                          - button "Delete ASRock AMD X870 Steel Legend WiFi AM5 DDR5 PCIe 5.0 ATX Motherboard" [ref=e786] [cursor=pointer]
+                          - generic [ref=e790]: "1"
+                          - generic [ref=e792]: "1"
+                          - button "Increase quantity by one ASRock AMD X870 Steel Legend WiFi AM5 DDR5 PCIe 5.0 ATX Motherboard" [ref=e793] [cursor=pointer]
+                      - button "Delete ASRock AMD X870 Steel Legend WiFi AM5 DDR5 PCIe 5.0 ATX Motherboard" [ref=e797] [cursor=pointer]: Delete
+                      - button "Save for later ASRock AMD X870 Steel Legend WiFi AM5 DDR5 PCIe 5.0 ATX Motherboard" [ref=e800] [cursor=pointer]: Save for later
+                      - link "Share ASRock AMD X870 Steel Legend WiFi AM5 DDR5 PCIe 5.0 ATX Motherboard" [ref=e803] [cursor=pointer]:
+                        - /url: "#"
+                        - text: Share
+              - listitem [ref=e804]:
+                - generic [ref=e806]:
+                  - checkbox "Select AMD Ryzen 9 7900 Desktop Processor (12-core/24-thread, 76MB Cache, up to 5.4 GHz max Boost) for checkout" [checked] [ref=e809]
+                  - link [ref=e812] [cursor=pointer]:
+                    - /url: /gp/product/B0BMQK718H/ref=ox_sc_act_image_4?smid=A2QHQAREJ10JUZ&psc=1
+                  - generic [ref=e813]:
+                    - link "AMD Ryzen 9 7900 Desktop Processor (12-core/24-thread, 76MB Cache, up to 5.4 GHz max Boost)" [ref=e815] [cursor=pointer]:
+                      - /url: /gp/product/B0BMQK718H/ref=ox_sc_act_title_4?smid=A2QHQAREJ10JUZ&psc=1
+                      - heading "AMD Ryzen 9 7900 Desktop Processor (12-core/24-thread, 76MB Cache, up to 5.4 GHz max Boost)" [level=3] [ref=e817]:
+                        - generic [ref=e818]:
+                          - generic [ref=e819]: AMD Ryzen 9 7900 Desktop Processor (12-core/24-thread, 76MB Cache, up to 5.4 GHz max Boost)
+                          - generic [ref=e820]: AMD Ryzen 9 7900 Desktop Processor (12-core/24-thread, 76MB Cache, up to 5.4 GHz max Boost)
+                    - generic [ref=e825]:
+                      - generic [ref=e826]: €349.97
+                      - generic [ref=e827]:
+                        - text: €
+                        - generic [ref=e828]:
+                          - text: "349"
+                          - generic [ref=e829]: .
+                        - text: "97"
+                    - generic [ref=e830]:
+                      - generic [ref=e832]: Only 7 left in stock – order soon.
+                      - generic [ref=e833]: Eligible for FREE Shipping
+                      - generic [ref=e837]:
+                        - checkbox "This will be a gift This is a gift Learn more" [ref=e838]
+                        - generic [ref=e840]:
+                          - text: This will be a gift
+                          - link "This is a gift Learn more" [ref=e842] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=ord_cart_shr?pop-up=1&nodeId=GJWJ8P5D7RYLC29Y
+                            - generic [ref=e843]:
+                              - generic [ref=e844]: This is a gift
+                              - text: Learn more
+                      - generic [ref=e845]: "Style Name: Ryzen 9 7900"
+                    - generic [ref=e846]:
+                      - group "Quantity is 1" [ref=e849]:
+                        - generic [ref=e850]: Quantity is 1
+                        - generic [ref=e852]:
+                          - button "Delete AMD Ryzen 9 7900 Desktop Processor (12-core/24-thread, 76MB Cache, up to 5.4 GHz max Boost)" [ref=e853] [cursor=pointer]
+                          - generic [ref=e857]: "1"
+                          - generic [ref=e859]: "1"
+                          - button "Increase quantity by one AMD Ryzen 9 7900 Desktop Processor (12-core/24-thread, 76MB Cache, up to 5.4 GHz max Boost)" [ref=e860] [cursor=pointer]
+                      - button "Delete AMD Ryzen 9 7900 Desktop Processor (12-core/24-thread, 76MB Cache, up to 5.4 GHz max Boost)" [ref=e864] [cursor=pointer]: Delete
+                      - button "Save for later AMD Ryzen 9 7900 Desktop Processor (12-core/24-thread, 76MB Cache, up to 5.4 GHz max Boost)" [ref=e867] [cursor=pointer]: Save for later
+                      - link "Share AMD Ryzen 9 7900 Desktop Processor (12-core/24-thread, 76MB Cache, up to 5.4 GHz max Boost)" [ref=e870] [cursor=pointer]:
+                        - /url: "#"
+                        - text: Share
+            - generic [ref=e872]:
+              - text: "Subtotal (4 items):"
+              - generic [ref=e873]: €1,332.02
+        - generic [ref=e875]:
+          - heading "Your Items" [level=3] [ref=e877]
+          - generic [ref=e878]:
+            - tablist [ref=e879]:
+              - tab "No items saved for later" [ref=e880] [cursor=pointer]:
+                - generic [ref=e881]: No items saved for later
+              - tab "Buy it again" [selected] [ref=e882] [cursor=pointer]:
+                - generic [ref=e883]: Buy it again
+            - tabpanel "Buy it again" [ref=e884]:
+              - generic [ref=e887]: No items
+        - generic [ref=e888]:
+          - paragraph [ref=e890]: The price and availability of items at Amazon.ie are subject to change. The shopping basket is a temporary place to store a list of your items and reflects each item's most recent price.
+          - paragraph [ref=e891]: Do you have a gift card or promotional code? We'll ask you to enter your claim code when it's time to pay.
+  - group [ref=e899]:
+    - generic [ref=e901]:
+      - heading "Customers who bought ASUS ProArt X870E-CREATOR WIFI, AMD X870E ATX moth... also bought these items from other categories:" [level=2] [ref=e904]
+      - button "Not interested in specific items" [ref=e909] [cursor=pointer]
+    - group [ref=e913]:
+      - list [ref=e914]:
+        - listitem [ref=e915]:
+          - generic [ref=e917]:
+            - link [ref=e918] [cursor=pointer]:
+              - /url: /ProArt-PA602-Wood-Tempered-Glass/dp/B08HCM4J5N/ref=pd_cart_crc_cko_cps_d_sccl_2_1/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B08HCM4J5N&psc=1
+              - img [ref=e920]
+            - generic [ref=e922]:
+              - link "ProArt PA602 Wood Edition - Tempered Glass" [ref=e923] [cursor=pointer]:
+                - /url: /ProArt-PA602-Wood-Tempered-Glass/dp/B08HCM4J5N/ref=pd_cart_crc_cko_cps_d_sccl_2_1/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B08HCM4J5N&psc=1
+                - generic [ref=e925]: ProArt PA602 Wood Edition - Tempered Glass
+              - link "4.6 out of 5 stars, 47 ratings" [ref=e928] [cursor=pointer]:
+                - /url: /product-reviews/B08HCM4J5N/ref=pd_cart_crc_cko_cps_d_sccl_2_1_cr/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B08HCM4J5N
+                - generic [ref=e930]: 4.6 out of 5 stars
+                - text: "47"
+              - generic [ref=e931]:
+                - link "€289.31" [ref=e934] [cursor=pointer]:
+                  - /url: /ProArt-PA602-Wood-Tempered-Glass/dp/B08HCM4J5N/ref=pd_cart_crc_cko_cps_d_sccl_2_1/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B08HCM4J5N&psc=1
+                  - generic [ref=e936]:
+                    - generic [ref=e937]: €289.31
+                    - generic [ref=e938]:
+                      - text: €
+                      - generic [ref=e939]: "289."
+                      - text: "31"
+                - generic [ref=e941]: Get it as soon as Friday, May 15
+              - text: FREE Delivery by Amazon
+            - generic [ref=e949] [cursor=pointer]:
+              - button "Add to cart, ProArt PA602 Wood Edition - Tempered Glass" [ref=e950]
+              - generic [ref=e951]: Add to cart
+        - listitem [ref=e952]:
+          - generic [ref=e954]:
+            - link [ref=e955] [cursor=pointer]:
+              - /url: /ARCTIC-Liquid-Freezer-Pro-360/dp/B0DLWGG85P/ref=pd_cart_crc_cko_cps_d_sccl_2_2/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DLWGG85P&psc=1
+              - img [ref=e957]
+            - generic [ref=e959]:
+              - link "ARCTIC Liquid Freezer III Pro 360 - Water Cooling PC, AIO CPU Water Cooler, 3 x 120 mm, 38 mm Radiator, PWM Pump, VRM Fan, AMD AM5/AM4, Intel LGA1851/1700 Contact Frame - Black" [ref=e960] [cursor=pointer]:
+                - /url: /ARCTIC-Liquid-Freezer-Pro-360/dp/B0DLWGG85P/ref=pd_cart_crc_cko_cps_d_sccl_2_2/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DLWGG85P&psc=1
+                - generic [ref=e962]: ARCTIC Liquid Freezer III Pro 360 - Water Cooling PC, AIO CPU Water Cooler, 3 x 120 mm, 38 mm Radiator, PWM Pump, VRM Fan, AMD AM5/AM4, Intel LGA1851/1700 Contact Frame - Black
+              - link "4.4 out of 5 stars, 1,696 ratings" [ref=e965] [cursor=pointer]:
+                - /url: /product-reviews/B0DLWGG85P/ref=pd_cart_crc_cko_cps_d_sccl_2_2_cr/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DLWGG85P
+                - generic [ref=e967]: 4.4 out of 5 stars
+                - text: 1,696
+              - generic [ref=e968]:
+                - link "€93.54" [ref=e971] [cursor=pointer]:
+                  - /url: /ARCTIC-Liquid-Freezer-Pro-360/dp/B0DLWGG85P/ref=pd_cart_crc_cko_cps_d_sccl_2_2/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DLWGG85P&psc=1
+                  - generic [ref=e973]:
+                    - generic [ref=e974]: €93.54
+                    - generic [ref=e975]:
+                      - text: €
+                      - generic [ref=e976]: "93."
+                      - text: "54"
+                - generic [ref=e978]: Get it May 16 - 19
+              - text: €13.92 delivery
+              - generic [ref=e981]: Usually ships within 2 to 3 days
+            - generic [ref=e989] [cursor=pointer]:
+              - button "Add to cart, ARCTIC Liquid Freezer III Pro 360 - Water Cooling PC, AIO CPU Water Cooler, 3 x 120 mm, 38 mm Radiator, PWM Pump, VRM Fan, AMD AM5/AM4, Intel LGA1851/1700 Contact Frame - Black" [ref=e990]
+              - generic [ref=e991]: Add to cart
+        - listitem [ref=e992]:
+          - generic [ref=e994]:
+            - link [ref=e995] [cursor=pointer]:
+              - /url: /Noctua-NA-FH1-Channel-Eight-Based/dp/B0BZQ3NXMD/ref=pd_cart_crc_cko_cps_d_sccl_2_3/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0BZQ3NXMD&psc=1
+              - img [ref=e997]
+            - generic [ref=e999]:
+              - link "Noctua NA-FH1, 8 Channel Fan Hub for up to Eight 12V or 5V Based 4-pin PWM or 3-pin Fans (Black)" [ref=e1000] [cursor=pointer]:
+                - /url: /Noctua-NA-FH1-Channel-Eight-Based/dp/B0BZQ3NXMD/ref=pd_cart_crc_cko_cps_d_sccl_2_3/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0BZQ3NXMD&psc=1
+                - generic [ref=e1002]: Noctua NA-FH1, 8 Channel Fan Hub for up to Eight 12V or 5V Based 4-pin PWM or 3-pin Fans (Black)
+              - link "4.8 out of 5 stars, 546 ratings" [ref=e1005] [cursor=pointer]:
+                - /url: /product-reviews/B0BZQ3NXMD/ref=pd_cart_crc_cko_cps_d_sccl_2_3_cr/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0BZQ3NXMD
+                - generic [ref=e1007]: 4.8 out of 5 stars
+                - text: "546"
+              - link "€37.29" [ref=e1011] [cursor=pointer]:
+                - /url: /Noctua-NA-FH1-Channel-Eight-Based/dp/B0BZQ3NXMD/ref=pd_cart_crc_cko_cps_d_sccl_2_3/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0BZQ3NXMD&psc=1
+                - generic [ref=e1013]:
+                  - generic [ref=e1014]: €37.29
+                  - generic [ref=e1015]:
+                    - text: €
+                    - generic [ref=e1016]: "37."
+                    - text: "29"
+              - text: FREE Delivery
+            - generic [ref=e1024] [cursor=pointer]:
+              - button "Add to cart, Noctua NA-FH1, 8 Channel Fan Hub for up to Eight 12V or 5V Based 4-pin PWM or 3-pin Fans (Black)" [ref=e1025]
+              - generic [ref=e1026]: Add to cart
+        - listitem [ref=e1027]:
+          - generic [ref=e1029]:
+            - link [ref=e1030] [cursor=pointer]:
+              - /url: /ASUS-GeForce-Graphics-RTX5090-DisplayPort/dp/B0DTHV8THW/ref=pd_cart_crc_cko_cps_d_sccl_2_4/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DTHV8THW&psc=1
+              - img [ref=e1032]
+            - generic [ref=e1034]:
+              - link "ASUS ROG Astral GeForce RTX 5090 32GB GDDR7 OC Edition Gaming Graphics Card (Nvidia GeForce RTX5090, Four Fans, 3.8 Slot Design, PCIe 5.0, 2X HDMI 2.1b, 3X DisplayPort 2.1a)" [ref=e1035] [cursor=pointer]:
+                - /url: /ASUS-GeForce-Graphics-RTX5090-DisplayPort/dp/B0DTHV8THW/ref=pd_cart_crc_cko_cps_d_sccl_2_4/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DTHV8THW&psc=1
+                - generic [ref=e1037]: ASUS ROG Astral GeForce RTX 5090 32GB GDDR7 OC Edition Gaming Graphics Card (Nvidia GeForce RTX5090, Four Fans, 3.8 Slot Design, PCIe 5.0, 2X HDMI 2.1b, 3X DisplayPort 2.1a)
+              - link "4.4 out of 5 stars, 123 ratings" [ref=e1040] [cursor=pointer]:
+                - /url: /product-reviews/B0DTHV8THW/ref=pd_cart_crc_cko_cps_d_sccl_2_4_cr/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DTHV8THW
+                - generic [ref=e1042]: 4.4 out of 5 stars
+                - text: "123"
+              - generic [ref=e1043]:
+                - link "€3,899.99" [ref=e1046] [cursor=pointer]:
+                  - /url: /ASUS-GeForce-Graphics-RTX5090-DisplayPort/dp/B0DTHV8THW/ref=pd_cart_crc_cko_cps_d_sccl_2_4/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0DTHV8THW&psc=1
+                  - generic [ref=e1048]:
+                    - generic [ref=e1049]: €3,899.99
+                    - generic [ref=e1050]:
+                      - text: €
+                      - generic [ref=e1051]: 3,899.
+                      - text: "99"
+                - generic [ref=e1053]: Get it May 19 - 21
+              - text: FREE Delivery
+              - generic [ref=e1056]: Only 10 left in stock – order soon.
+            - generic [ref=e1064] [cursor=pointer]:
+              - button "Add to cart, ASUS ROG Astral GeForce RTX 5090 32GB GDDR7 OC Edition Gaming Graphics Card (Nvidia GeForce RTX5090, Four Fans, 3.8 Slot Design, PCIe 5.0, 2X HDMI 2.1b, 3X DisplayPort 2.1a)" [ref=e1065]
+              - generic [ref=e1066]: Add to cart
+        - listitem [ref=e1067]:
+          - generic [ref=e1069]:
+            - link [ref=e1070] [cursor=pointer]:
+              - /url: /Noctua-NH-U12A-Chromax-Single-Tower-Cooler/dp/B098XP1Y38/ref=pd_cart_crc_cko_cps_d_sccl_2_5/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B098XP1Y38&psc=1
+              - img [ref=e1072]
+            - generic [ref=e1074]:
+              - link "Noctua NH-U12A Chromax Black, 120 mm Single-Tower CPU Cooler" [ref=e1075] [cursor=pointer]:
+                - /url: /Noctua-NH-U12A-Chromax-Single-Tower-Cooler/dp/B098XP1Y38/ref=pd_cart_crc_cko_cps_d_sccl_2_5/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B098XP1Y38&psc=1
+                - generic [ref=e1077]: Noctua NH-U12A Chromax Black, 120 mm Single-Tower CPU Cooler
+              - link "4.8 out of 5 stars, 2,650 ratings" [ref=e1080] [cursor=pointer]:
+                - /url: /product-reviews/B098XP1Y38/ref=pd_cart_crc_cko_cps_d_sccl_2_5_cr/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B098XP1Y38
+                - generic [ref=e1082]: 4.8 out of 5 stars
+                - text: 2,650
+              - generic [ref=e1083]:
+                - link "€185.52" [ref=e1086] [cursor=pointer]:
+                  - /url: /Noctua-NH-U12A-Chromax-Single-Tower-Cooler/dp/B098XP1Y38/ref=pd_cart_crc_cko_cps_d_sccl_2_5/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B098XP1Y38&psc=1
+                  - generic [ref=e1088]:
+                    - generic [ref=e1089]: €185.52
+                    - generic [ref=e1090]:
+                      - text: €
+                      - generic [ref=e1091]: "185."
+                      - text: "52"
+                - generic [ref=e1093]: Get it May 21 - 23
+              - text: €5.99 delivery
+            - generic [ref=e1101] [cursor=pointer]:
+              - button "Add to cart, Noctua NH-U12A Chromax Black, 120 mm Single-Tower CPU Cooler" [ref=e1102]
+              - generic [ref=e1103]: Add to cart
+        - listitem [ref=e1104]:
+          - generic [ref=e1106]:
+            - link [ref=e1107] [cursor=pointer]:
+              - /url: /quiet-Immensely-Performance-Virtually-Inaudible/dp/B0CJY3DYQ3/ref=pd_cart_crc_cko_cps_d_sccl_2_6/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0CJY3DYQ3&psc=1
+              - img [ref=e1109]
+            - generic [ref=e1111]:
+              - link "be quiet! Dark Rock Pro 5 Air Cooler, Immensely High Cooling Performance, 7 High Performance Heat Pipes, Silent Wings 120 mm PWM Fan, Silent Wings 135 mm PWM Fan, Virtually Inaudible Operation, Speed" [ref=e1112] [cursor=pointer]:
+                - /url: /quiet-Immensely-Performance-Virtually-Inaudible/dp/B0CJY3DYQ3/ref=pd_cart_crc_cko_cps_d_sccl_2_6/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0CJY3DYQ3&psc=1
+                - generic [ref=e1114]: be quiet! Dark Rock Pro 5 Air Cooler, Immensely High Cooling Performance, 7 High Performance Heat Pipes, Silent Wings 120 mm PWM Fan, Silent Wings 135 mm PWM Fan, Virtually Inaudible Operation, Speed
+              - link "4.7 out of 5 stars, 1,738 ratings" [ref=e1117] [cursor=pointer]:
+                - /url: /product-reviews/B0CJY3DYQ3/ref=pd_cart_crc_cko_cps_d_sccl_2_6_cr/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0CJY3DYQ3
+                - generic [ref=e1119]: 4.7 out of 5 stars
+                - text: 1,738
+              - link "€91.17" [ref=e1123] [cursor=pointer]:
+                - /url: /quiet-Immensely-Performance-Virtually-Inaudible/dp/B0CJY3DYQ3/ref=pd_cart_crc_cko_cps_d_sccl_2_6/261-6711575-9331705?pd_rd_w=XinVP&content-id=amzn1.sym.85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_p=85b52d4f-ec2c-4de2-af9b-3735ebf91bf9&pf_rd_r=N8JYNFWNPYBWJ4BXM1NR&pd_rd_wg=JRhAG&pd_rd_r=29cd6484-a9de-41ee-903e-b80327c546b1&pd_rd_i=B0CJY3DYQ3&psc=1
+                - generic [ref=e1125]:
+                  - generic [ref=e1126]: €91.17
+                  - generic [ref=e1127]:
+                    - text: €
+                    - generic [ref=e1128]: "91."
+                    - text: "17"
+              - text: FREE Delivery
+            - generic [ref=e1136] [cursor=pointer]:
+              - button "Add to cart, be quiet! Dark Rock Pro 5 Air Cooler, Immensely High Cooling Performance, 7 High Performance Heat Pipes, Silent Wings 120 mm PWM Fan, Silent Wings 135 mm PWM Fan, Virtually Inaudible Operation, Speed" [ref=e1137]
+              - generic [ref=e1138]: Add to cart
+  - generic [ref=e1139]:
+    - button "Back to top" [ref=e1140] [cursor=pointer]:
+      - generic [ref=e1141]: Back to top
+    - generic [ref=e1142]:
+      - generic [ref=e1143]:
+        - heading "Get to Know Us" [level=6] [ref=e1144]
+        - list [ref=e1145]:
+          - listitem [ref=e1146]:
+            - link "Careers" [ref=e1147] [cursor=pointer]:
+              - /url: https://www.amazon.jobs
+          - listitem [ref=e1148]:
+            - link "About Us" [ref=e1149] [cursor=pointer]:
+              - /url: https://www.aboutamazon.eu/amazon-in-ireland
+          - listitem [ref=e1150]:
+            - link "Sustainability" [ref=e1151] [cursor=pointer]:
+              - /url: /gp/browse.html?node=201173026031&ref_=Nav_IE_Sustainability
+          - listitem [ref=e1152]:
+            - link "Legal Notice" [ref=e1153] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=GWFZQ8U37JV9AUT5&ref_=footer_impressum
+          - listitem [ref=e1154]:
+            - link "Amazon Science" [ref=e1155] [cursor=pointer]:
+              - /url: https://www.amazon.science
+          - listitem [ref=e1156]:
+            - link "Welcome to Amazon.ie" [ref=e1157] [cursor=pointer]:
+              - /url: /gp/browse.html?node=100768625031&ref_=footer_welcome_amazon_ie
+      - generic [ref=e1159]:
+        - heading "Make Money with Us" [level=6] [ref=e1160]
+        - list [ref=e1161]:
+          - listitem [ref=e1162]:
+            - link "Advertise Your Products" [ref=e1163] [cursor=pointer]:
+              - /url: https://advertising.amazon.com/
+          - listitem [ref=e1164]:
+            - link "Protect and build your brand" [ref=e1165] [cursor=pointer]:
+              - /url: https://sellercentral.amazon.ie/welcome/brand-registry
+          - listitem [ref=e1166]:
+            - link "Sell with over €47,250 in incentives" [ref=e1167] [cursor=pointer]:
+              - /url: https://sellercentral.amazon.ie/?ld=AZIESOAFooter
+          - listitem [ref=e1168]:
+            - link "Fulfilment by Amazon" [ref=e1169] [cursor=pointer]:
+              - /url: https://sellercentral.amazon.ie/welcome/fulfilment-by-amazon/
+          - listitem [ref=e1170]:
+            - link "Associates Programme" [ref=e1171] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.ie/
+          - listitem [ref=e1172]:
+            - link "Supply to Amazon" [ref=e1173] [cursor=pointer]:
+              - /url: https://supply.amazon.com/?ref_=footer_sta&lang=en-IE
+          - listitem [ref=e1174]:
+            - link "Independently Publish with Us" [ref=e1175] [cursor=pointer]:
+              - /url: https://kdp.amazon.com/en_US/
+      - generic [ref=e1177]:
+        - heading "Amazon Payment Methods" [level=6] [ref=e1178]
+        - list [ref=e1179]:
+          - listitem [ref=e1180]:
+            - link "Payment Methods Help" [ref=e1181] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=GPXYBCMDK83JYUXR&ref_=footer_payment_methods
+      - generic [ref=e1183]:
+        - heading "Let Us Help You" [level=6] [ref=e1184]
+        - list [ref=e1185]:
+          - listitem [ref=e1186]:
+            - link "Track Packages or View Orders" [ref=e1187] [cursor=pointer]:
+              - /url: /gp/css/order-history?ref_=footer_hp_ss_comp_tmp
+          - listitem [ref=e1188]:
+            - link "Delivery Rates & Policies" [ref=e1189] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=GE66DNRRQVDZAR5E&ref_=footer_shiprates
+          - listitem [ref=e1190]:
+            - link "Returns & Replacements" [ref=e1191] [cursor=pointer]:
+              - /url: /gp/orc/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=e1192]:
+            - link "Recycling" [ref=e1193] [cursor=pointer]:
+              - /url: https://www.amazon.ie/recycling
+          - listitem [ref=e1194]:
+            - link "Manage Your Content and Devices" [ref=e1195] [cursor=pointer]:
+              - /url: /gp/browse.html?node=204680224031&ref_=footer_myk
+          - listitem [ref=e1196]:
+            - link "Recalls and Product Safety Alerts" [ref=e1197] [cursor=pointer]:
+              - /url: https://www.amazon.ie/your-product-safety-alerts?ref_=footer_bsx_ypsa
+          - listitem [ref=e1198]:
+            - link "Amazon Mobile App" [ref=e1199] [cursor=pointer]:
+              - /url: /gp/browse.html?node=205580392031&ref_=footer_mobapp
+          - listitem [ref=e1200]:
+            - link "Customer Service" [ref=e1201] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=508510&ref_=footer_gw_m_b_cs
+          - listitem [ref=e1202]:
+            - link "Accessibility" [ref=e1203] [cursor=pointer]:
+              - /url: https://www.amazon.ie/gp/help/customer/display.html?nodeId=GUUVBZ8WGVFP8R8X
+    - generic [ref=e1205]:
+      - link "Amazon UK Home" [ref=e1208] [cursor=pointer]:
+        - /url: /ref=footer_logo
+      - button "Choose a country/region for shopping. The current selection is Ireland, Republic of." [ref=e1212] [cursor=pointer]:
+        - generic [ref=e1214]: Ireland, Republic of
+    - generic "More on Amazon" [ref=e1215]:
+      - generic "More on Amazon" [ref=e1216]:
+        - list [ref=e1217]:
+          - listitem [ref=e1218]:
+            - link "Kindle Direct Publishing Indie Digital & Print Publishing Made Easy" [ref=e1219] [cursor=pointer]:
+              - /url: https://kdp.amazon.com/en_US/
+              - heading "Kindle Direct Publishing" [level=5] [ref=e1220]
+              - generic [ref=e1221]:
+                - text: Indie Digital & Print Publishing
+                - text: Made Easy
+          - listitem [ref=e1222]
+          - listitem [ref=e1223]:
+            - link "IMDb Movies, TV & Celebrities" [ref=e1224] [cursor=pointer]:
+              - /url: https://www.imdb.com/
+              - heading "IMDb" [level=5] [ref=e1225]
+              - generic [ref=e1226]:
+                - text: Movies, TV
+                - text: "& Celebrities"
+          - listitem [ref=e1227]
+          - listitem [ref=e1228]:
+            - link "Goodreads Book reviews & recommendations" [ref=e1229] [cursor=pointer]:
+              - /url: https://www.goodreads.com/
+              - heading "Goodreads" [level=5] [ref=e1230]
+              - generic [ref=e1231]:
+                - text: Book reviews
+                - text: "& recommendations"
+          - listitem [ref=e1232]
+          - listitem [ref=e1233]:
+            - link "Amazon Web Services Scalable Cloud Computing Services" [ref=e1234] [cursor=pointer]:
+              - /url: https://aws.amazon.com
+              - heading "Amazon Web Services" [level=5] [ref=e1235]
+              - generic [ref=e1236]:
+                - text: Scalable Cloud
+                - text: Computing Services
+    - generic [ref=e1237]:
+      - list [ref=e1238]:
+        - listitem [ref=e1239]:
+          - link "Conditions of Use & Sale" [ref=e1240] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM&ref_=footer_cou
+        - listitem [ref=e1241]:
+          - link "Privacy Notice" [ref=e1242] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ&ref_=footer_privacy
+        - listitem [ref=e1243]:
+          - link "Legal Notice" [ref=e1244] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=GWFZQ8U37JV9AUT5&ref_=footer_impressum
+        - listitem [ref=e1245]:
+          - link "Cookies Notice" [ref=e1246] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=GVASXV5UZ64R4Y25&ref_=footer_cookies_notice
+        - listitem [ref=e1247]:
+          - link "Interest-Based Ads Notice" [ref=e1248] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=G64JFZVFDY66XG9K&ref_=footer_Interest_Based_Ads_Notice
+      - generic [ref=e1249]: © 1996-2026, Amazon.com, Inc. or its affiliates

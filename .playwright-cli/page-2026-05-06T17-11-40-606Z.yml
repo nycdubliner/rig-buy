@@ -1,0 +1,659 @@
+- generic [active] [ref=e1]:
+  - img
+  - img
+  - generic [ref=e3]:
+    - banner [ref=e7]:
+      - link "Skip to main content" [ref=e9] [cursor=pointer]:
+        - /url: "#mainContent"
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - button "Hi Tiarnán!" [ref=e14] [cursor=pointer]:
+            - generic [ref=e15]: Hi Tiarnán!
+            - img
+          - link "Help & Contact" [ref=e17] [cursor=pointer]:
+            - /url: https://www.ebay.ie/help/home
+        - generic [ref=e18]:
+          - link "Sell" [ref=e20] [cursor=pointer]:
+            - /url: https://www.ebay.ie/sl/sell
+          - generic [ref=e21]:
+            - link "Watchlist" [ref=e22] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mye/myebay/watchlist
+              - generic [ref=e23]: Watchlist
+              - img
+            - button "Expand Watchlist" [ref=e24]
+          - generic [ref=e25]:
+            - link "My eBay" [ref=e26] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mys/home?source=GBH
+              - generic [ref=e27]: My eBay
+              - img
+            - button "Expand My eBay" [ref=e28]
+          - button "Notifications" [ref=e31] [cursor=pointer]:
+            - img
+            - generic [ref=e32]: Notifications
+          - generic [ref=e34]:
+            - link "Your shopping basket contains 0 items" [ref=e35] [cursor=pointer]:
+              - /url: https://cart.ebay.ie
+              - generic "Your shopping basket contains 0 items" [ref=e36]:
+                - img
+            - button "Expand Basket" [ref=e37]
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - link "eBay Home" [ref=e40] [cursor=pointer]:
+            - /url: https://www.ebay.ie
+            - img "eBay Home" [ref=e41]
+          - button "Shop by category" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: Shop by category
+            - img
+        - generic [ref=e51]:
+          - status [ref=e52]
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - combobox "Search for anything" [ref=e56]
+              - img
+            - combobox "Select a category for search" [ref=e57]:
+              - option "All Categories" [selected]
+              - option "Antiques"
+              - option "Art"
+              - option "Baby"
+              - option "Books, Comics & Magazines"
+              - option "Business, Office & Industrial"
+              - option "Cameras & Photography"
+              - option "Cars, Motorcycles & Vehicles"
+              - option "Clothes, Shoes & Accessories"
+              - option "Coins"
+              - option "Collectables"
+              - option "Computers/Tablets & Networking"
+              - option "Crafts"
+              - option "Dolls & Bears"
+              - option "DVDs, Films & TV"
+              - option "Events Tickets"
+              - option "Garden & Patio"
+              - option "Health & Beauty"
+              - option "Holidays & Travel"
+              - option "Home, Furniture & DIY"
+              - option "Jewellery & Watches"
+              - option "Mobile Phones & Communication"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Pet Supplies"
+              - option "Pottery, Porcelain & Glass"
+              - option "Property"
+              - option "Sound & Vision"
+              - option "Sporting Goods"
+              - option "Sports Memorabilia"
+              - option "Stamps"
+              - option "Toys & Games"
+              - option "Vehicle Parts & Accessories"
+              - option "Video Games & Consoles"
+              - option "Wholesale & Job Lots"
+              - option "Everything Else"
+          - generic [ref=e58]:
+            - button "Search" [ref=e59] [cursor=pointer]:
+              - generic [ref=e60]: Search
+            - link "Advanced" [ref=e61] [cursor=pointer]:
+              - /url: https://www.ebay.ie/sch/ebayadvsearch
+    - main [ref=e62]:
+      - generic [ref=e64]:
+        - generic [ref=e68]:
+          - generic [ref=e71]:
+            - generic [ref=e73]:
+              - generic [ref=e74]:
+                - button "Previous image - Item images thumbnails" [disabled] [ref=e75] [cursor=pointer]:
+                  - img
+                - generic [ref=e76]:
+                  - button "Picture 1 of 5" [ref=e77] [cursor=pointer]:
+                    - img "Picture 1 of 5" [ref=e78]
+                  - button "Picture 2 of 5" [ref=e79] [cursor=pointer]:
+                    - img "Picture 2 of 5" [ref=e80]
+                  - button "Picture 3 of 5" [ref=e81] [cursor=pointer]:
+                    - img "Picture 3 of 5" [ref=e82]
+                  - button "Picture 4 of 5" [ref=e83] [cursor=pointer]:
+                    - img "Picture 4 of 5" [ref=e84]
+                  - button "Picture 5 of 5" [ref=e85] [cursor=pointer]:
+                    - img "Picture 5 of 5" [ref=e86]
+                - button "Next image - Item images thumbnails" [ref=e87] [cursor=pointer]:
+                  - img
+              - generic [ref=e88]:
+                - heading "Picture 1 of 5" [level=2] [ref=e89]
+                - generic [ref=e93]: 7 viewed today
+                - button "Previous image - Item images thumbnails" [ref=e95] [cursor=pointer]:
+                  - img
+                - region "Opens image gallery dialogue Sapphire Pulse Radeon RX 7800 XT 16GB GDDR6 Graphics Card (11330-02-20G) - Picture 1 of 5" [ref=e96]:
+                  - group "1 of 5" [ref=e97]:
+                    - img "Sapphire Pulse Radeon RX 7800 XT 16GB GDDR6 Graphics Card (11330-02-20G) - Picture 1 of 5" [ref=e98]
+                  - group "2 of 5" [ref=e99]:
+                    - img "Sapphire Pulse Radeon RX 7800 XT 16GB GDDR6 Graphics Card (11330-02-20G) - Picture 2 of 5" [ref=e100]
+                  - group "3 of 5" [ref=e101]:
+                    - img "Sapphire Pulse Radeon RX 7800 XT 16GB GDDR6 Graphics Card (11330-02-20G) - Picture 3 of 5" [ref=e102]
+                  - group "4 of 5" [ref=e103]:
+                    - img "Sapphire Pulse Radeon RX 7800 XT 16GB GDDR6 Graphics Card (11330-02-20G) - Picture 4 of 5" [ref=e104]
+                  - group "5 of 5" [ref=e105]:
+                    - img "Sapphire Pulse Radeon RX 7800 XT 16GB GDDR6 Graphics Card (11330-02-20G) - Picture 5 of 5" [ref=e106]
+                - generic [ref=e107]:
+                  - button "Opens image gallery" [ref=e108] [cursor=pointer]:
+                    - img
+                  - button "Add to Watchlist - 14 watchers" [ref=e110] [cursor=pointer]:
+                    - generic [ref=e111]: "14"
+                    - img
+                - button "Next image - Item images thumbnails" [ref=e113] [cursor=pointer]:
+                  - img
+            - generic [ref=e118]:
+              - generic [ref=e119]: Have one to sell?
+              - link "Sell it yourself" [ref=e121] [cursor=pointer]:
+                - /url: https://www.ebay.ie/sl/list?mode=SellLikeItem&itemId=198087425425&rt=nc&_trksid=p4429486.m117039.l2567
+                - generic [ref=e122]: Sell it yourself
+            - button "Share" [ref=e128] [cursor=pointer]:
+              - img
+              - generic [ref=e129]: Share
+          - generic [ref=e132]:
+            - generic [ref=e133]:
+              - heading "Sapphire Pulse Radeon RX 7800 XT 16GB GDDR6 Graphics Card (11330-02-20G)-" [level=1] [ref=e134]
+              - button "show original title" [ref=e140] [cursor=pointer]
+            - generic [ref=e142] [cursor=pointer]:
+              - generic [ref=e144]:
+                - link [ref=e146]:
+                  - /url: https://www.ebay.ie/sch/lewi77/m.html?item=198087425425&rt=nc&_trksid=p4429486.m3561.l161210
+                  - img [ref=e148]: L
+                - generic [ref=e149]:
+                  - generic [ref=e150]:
+                    - link "lewi77" [ref=e151]:
+                      - /url: https://www.ebay.ie/sch/lewi77/m.html?item=198087425425&rt=nc&_trksid=p4429486.m3561.l161211
+                    - generic [ref=e152]:
+                      - generic [ref=e153]: (31)
+                      - generic [ref=e154]:
+                        - text: Private
+                        - button "Registered as private seller, so consumer rights stemming from EU consumer protection law do not apply. eBay Money Back Guarantee still applies to most purchases." [ref=e159]:
+                          - img
+                  - generic [ref=e160]:
+                    - button "88.2% positive Feedback" [ref=e162]
+                    - link "Seller's other items" [ref=e164]:
+                      - /url: https://www.ebay.ie/sch/lewi77/m.html?item=198087425425&rt=nc&_trksid=p4429486.m3561.l170197
+                      - generic [ref=e165]: Seller's other items
+                      - generic [ref=e166]: Seller's other items
+                    - button "Message seller" [ref=e168]:
+                      - generic [ref=e169]: Message seller
+                      - generic [ref=e170]: Message seller
+              - button "See more about this seller" [ref=e172]:
+                - img
+            - generic [ref=e176]:
+              - text: EUR 460.00
+              - generic [ref=e177]: or Best Offer
+            - generic [ref=e178]:
+              - generic [ref=e179]: "Condition:"
+              - generic [ref=e181]:
+                - generic [ref=e182]:
+                  - generic [ref=e183]: Used
+                  - generic [ref=e184]: Used
+                - button "More information - About this item condition" [ref=e185] [cursor=pointer]:
+                  - generic [ref=e186]:
+                    - img "More information - About this item condition"
+            - list [ref=e188]:
+              - listitem [ref=e189]:
+                - link "Buy It Now" [ref=e191] [cursor=pointer]:
+                  - /url: https://www.ebay.ie/bin/ctb?item=198087425425&quantity=1&fromPage=4429486&rev=1&fb=1
+                  - generic [ref=e192]: Buy It Now
+              - listitem [ref=e193]:
+                - button "Add to basket" [ref=e195] [cursor=pointer]:
+                  - generic [ref=e196]: Add to basket
+              - listitem [ref=e197]:
+                - button "Make offer" [ref=e199] [cursor=pointer]:
+                  - generic [ref=e200]: Make offer
+              - listitem [ref=e201]:
+                - generic [ref=e203]:
+                  - status [ref=e204]: Add to Watchlist
+                  - button "Add to Watchlist" [ref=e209] [cursor=pointer]:
+                    - generic [ref=e210]:
+                      - img
+                      - text: Add to Watchlist
+            - generic [ref=e214]:
+              - generic [ref=e215]:
+                - img
+              - generic [ref=e217]: People want this. 14 people are watching this.
+            - generic [ref=e220]:
+              - heading "Postage, returns and payments" [level=2] [ref=e223]:
+                - generic [ref=e224]: Postage, returns and payments
+              - generic [ref=e226]:
+                - generic [ref=e229]:
+                  - generic [ref=e232]: "Postage:"
+                  - generic [ref=e234]:
+                    - generic [ref=e235]:
+                      - text: EUR 17.49 DHL Paket International.
+                      - button "See details for postage" [ref=e236] [cursor=pointer]:
+                        - generic [ref=e237]:
+                          - text: See details
+                          - generic [ref=e238]: for postage
+                    - generic [ref=e239]: "Located in: Hamburg, Germany"
+                - generic [ref=e243]:
+                  - generic [ref=e246]: "Delivery:"
+                  - generic [ref=e248]:
+                    - generic [ref=e249]:
+                      - text: Estimated between Tue, 12 May and Mon, 18 May to D08F97P
+                      - button "Information - Estimated delivery date - opens a layer" [ref=e255]:
+                        - img
+                    - generic [ref=e256]:
+                      - text: Seller dispatches within 2 days after
+                      - link "receiving cleared payment" [ref=e257] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/pages/help/buy/contextual/domestic-handling-time.html
+                      - text: .
+            - generic [ref=e264]:
+              - generic [ref=e267]: "Returns:"
+              - generic [ref=e270]:
+                - text: No returns accepted.
+                - button "See details - for more information about returns" [ref=e271] [cursor=pointer]:
+                  - generic [ref=e272]:
+                    - text: See details
+                    - generic [ref=e273]: "- for more information about returns"
+            - generic [ref=e280]:
+              - generic [ref=e283]: "Payments:"
+              - generic [ref=e286]:
+                - img "PayPal" [ref=e287]
+                - img "Google Pay" [ref=e289]
+                - img "Visa" [ref=e291]
+                - img "Mastercard" [ref=e293]
+                - img "Diners Club" [ref=e296]
+            - generic [ref=e300]:
+              - heading "Shop with confidence" [level=2] [ref=e303]
+              - generic [ref=e304]:
+                - generic [ref=e306]:
+                  - img
+                - generic [ref=e307]:
+                  - generic [ref=e308]: eBay Money Back Guarantee
+                  - generic [ref=e309]:
+                    - text: Get the item you ordered or your money back.
+                    - link "Learn more eBay Money Back Guarantee - opens new window or tab" [ref=e310] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/ebay-money-back-guarantee/
+                      - generic [ref=e311]:
+                        - text: Learn more
+                        - generic [ref=e312]: eBay Money Back Guarantee - opens new window or tab
+        - generic [ref=e313]:
+          - generic [ref=e318]:
+            - tablist [ref=e319]:
+              - tab "About this item" [selected] [ref=e320] [cursor=pointer]:
+                - generic [ref=e321]: About this item
+            - tabpanel "About this item" [ref=e323]:
+              - generic [ref=e326]:
+                - generic [ref=e329]:
+                  - generic [ref=e333]: Seller assumes all responsibility for this listing.
+                  - generic [ref=e337]: eBay item number:198087425425
+                  - generic [ref=e341]:
+                    - text: Last updated on 03 Apr, 2026 21:43:34 BST
+                    - link "View all revisions View all revisions" [ref=e342] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/rvh/198087425425?rt=nc&_trksid=p4429486.m148105.l48144
+                      - generic [ref=e343]:
+                        - text: View all revisions
+                        - generic [ref=e344]: View all revisions
+                - generic [ref=e347]:
+                  - heading "Item specifics" [level=2] [ref=e350]:
+                    - generic [ref=e351]: Item specifics
+                  - generic [ref=e356]:
+                    - term [ref=e357]:
+                      - generic [ref=e359]: Condition
+                    - definition [ref=e360]:
+                      - generic [ref=e363]:
+                        - generic [ref=e364]: "Used: An item that has been previously used. The item may have some signs of cosmetic wear, but is ..."
+                        - button "Read more about the condition" [ref=e366]:
+                          - generic [ref=e367]:
+                            - text: Read more
+                            - generic [ref=e368]: about the condition
+                - generic [ref=e370]:
+                  - generic [ref=e371]: Category
+                  - navigation "breadcrumb" [ref=e374]:
+                    - heading "breadcrumb" [level=2] [ref=e375]
+                    - list [ref=e376]:
+                      - listitem [ref=e377]:
+                        - link "Electronics" [ref=e378] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_7000259660
+                        - img
+                      - listitem [ref=e379]:
+                        - link "Computers/Tablets & Networking" [ref=e380] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_1838792
+                        - img
+                      - listitem [ref=e381]:
+                        - link "Computer Components & Parts" [ref=e382] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_1624167
+                        - img
+                      - listitem [ref=e383]:
+                        - link "Graphics/Video Cards" [ref=e384] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_661667
+                - generic [ref=e387]:
+                  - heading "About this product" [level=2] [ref=e390]:
+                    - generic [ref=e391]: About this product
+                  - generic [ref=e392]:
+                    - heading "Produktkennzeichnungen" [level=2] [ref=e395]:
+                      - generic [ref=e396]: Produktkennzeichnungen
+                    - generic [ref=e397]:
+                      - generic [ref=e398]:
+                        - generic [ref=e400]:
+                          - generic [ref=e403]: Chipsatz/GPU-Hersteller
+                          - generic [ref=e406]: AMD
+                        - generic [ref=e408]:
+                          - generic [ref=e411]: Marke
+                          - generic [ref=e414]: SAPPHIRE
+                      - generic [ref=e415]:
+                        - generic [ref=e417]:
+                          - generic [ref=e420]: Herstellernummer
+                          - generic [ref=e423]: 11330-02-20G
+                        - generic [ref=e425]:
+                          - generic [ref=e428]: EAN
+                          - generic [ref=e431]: "4895106294349"
+                      - generic [ref=e432]:
+                        - generic [ref=e434]:
+                          - generic [ref=e437]: Upc
+                          - generic [ref=e440]: "4895106294349"
+                        - generic [ref=e442]:
+                          - generic [ref=e445]: eBay Product ID (ePID)
+                          - generic [ref=e448]: "8062681747"
+                  - generic [ref=e449]:
+                    - heading "Produkt Hauptmerkmale" [level=2] [ref=e452]:
+                      - generic [ref=e453]: Produkt Hauptmerkmale
+                    - generic [ref=e454]:
+                      - generic [ref=e455]:
+                        - generic [ref=e457]:
+                          - generic [ref=e460]: Speichergröße
+                          - generic [ref=e463]: 16 GB
+                        - generic [ref=e465]:
+                          - generic [ref=e468]: Speichertyp
+                          - generic [ref=e471]: GDDR6
+                      - generic [ref=e472]:
+                        - generic [ref=e474]:
+                          - generic [ref=e477]: APIs
+                          - generic [ref=e480]: DirectX 12 Ultimate, DirectX 12, OpenGL 4.6
+                        - generic [ref=e482]:
+                          - generic [ref=e485]: Anschlüsse
+                          - generic [ref=e488]: DisplayPort, HDMI
+                      - generic [ref=e489]:
+                        - generic [ref=e491]:
+                          - generic [ref=e494]: Chipsatz/GPU-Modell
+                          - generic [ref=e497]: AMD Radeon RX 7800 XT
+                        - generic [ref=e499]:
+                          - generic [ref=e502]: Besonderheiten
+                          - generic [ref=e505]: G-SYNC / FreeSync-kompatibel, Unterstützung mehrerer Monitore, Backplate, VR Ready
+                      - generic [ref=e506]:
+                        - generic [ref=e508]:
+                          - generic [ref=e511]: Enthaltene Kühlkomponente
+                          - generic [ref=e514]: Lüfter mit Kühlkörper
+                        - generic [ref=e516]:
+                          - generic [ref=e519]: Netzkabel Eigenschaften
+                          - generic [ref=e522]: 8-Pin + 8-Pin PCI-E
+                  - generic [ref=e523]:
+                    - heading "Maße" [level=2] [ref=e526]:
+                      - generic [ref=e527]: Maße
+                    - generic [ref=e528]:
+                      - generic [ref=e529]:
+                        - generic [ref=e531]:
+                          - generic [ref=e534]: Höhe
+                          - generic [ref=e537]: 52,57 mm
+                        - generic [ref=e539]:
+                          - generic [ref=e542]: Breite
+                          - generic [ref=e545]: 128,75 mm
+                      - generic [ref=e546]:
+                        - generic [ref=e548]:
+                          - generic [ref=e551]: Länge
+                          - generic [ref=e554]: 280 mm
+                        - generic [ref=e556]:
+                          - generic [ref=e559]: Gewicht
+                          - generic [ref=e562]: 1,5 Kg
+                - generic [ref=e563]:
+                  - heading "Item description from the seller" [level=2] [ref=e566]
+                  - iframe [ref=e567]:
+                    - generic [ref=f330e2]:
+                      - generic [ref=f330e3]: Zum Verkauf steht meine sehr gut erhaltene Sapphire Pulse AMD Radeon RX 7800 XT Gaming mit 16GB GDDR6 Speicher. Ich biete die Grafikkarte an, da ich mein Gaming-Setup auflöse.
+                      - generic [ref=f330e5]: "Die Karte ist ein absolutes Preis-Leistungs-Monster, besonders für Gaming in 1440p (WQHD), schafft aber auch viele Titel problemlos in 4K. Besonders hervorzuheben ist bei diesem Custom-Design von Sapphire die \"Pulse\"-Kühlung: Sie hält die Karte auch unter Last sehr kühl und bleibt dabei angenehm leise. Mit den 16GB VRAM ist man zudem bestens für aktuelle und kommende Spiele-Blockbuster gerüstet."
+                      - generic [ref=f330e7]: "Zustand und Historie: Die Grafikkarte befindet sich optisch wie technisch in einem sehr guten Zustand. Die Karte wurde nie für Mining verwendet und auch nicht übertaktet."
+                      - generic [ref=f330e9]: "Technische Highlights: Neben der rohen Leistung bietet dieses Modell eine tolle Anschlussvielfalt mit Dual HDMI und Dual DisplayPort, was den Anschluss von mehreren Monitoren oder VR-Headsets sehr flexibel macht."
+                      - generic [ref=f330e11]: "Lieferumfang: Versendet wird die Grafikkarte sicher verpackt in der Originalverpackung (OVP)."
+          - generic [ref=e570]:
+            - generic [ref=e572]:
+              - heading "About this seller" [level=2] [ref=e573]:
+                - generic [ref=e575]: About this seller
+              - generic [ref=e576]:
+                - link [ref=e578] [cursor=pointer]:
+                  - /url: https://www.ebay.ie/sch/lewi77/m.html?item=198087425425&rt=nc&_trksid=p4429486.m145687.l2562
+                  - img [ref=e580]: L
+                - generic [ref=e581]:
+                  - heading "lewi77" [level=3] [ref=e582]:
+                    - link "lewi77" [ref=e583] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/sch/lewi77/m.html?item=198087425425&rt=nc&_trksid=p4429486.m145687.l2562
+                  - paragraph [ref=e584]: 88.2% positive Feedback•72 items sold
+              - generic [ref=e589]:
+                - generic [ref=e590]:
+                  - img
+                - generic [ref=e591]: Joined Nov 2023
+              - generic [ref=e592]:
+                - generic [ref=e593]: Registered as a private seller
+                - text: Thereby, consumer rights stemming from EU consumer protection law do not apply. eBay buyer protection still applies to most purchases.
+              - generic [ref=e594]:
+                - link "Seller's other items" [ref=e595] [cursor=pointer]:
+                  - /url: https://www.ebay.ie/sch/lewi77/m.html?item=198087425425&rt=nc&_trksid=p4429486.m145687.l2562
+                  - generic [ref=e596]: Seller's other items
+                - button "Message seller - opens in a new dialog" [ref=e597] [cursor=pointer]:
+                  - generic [ref=e598]:
+                    - text: Message seller
+                    - generic [ref=e599]: "- opens in a new dialog"
+                - button "Save seller - Save this seller lewi77" [ref=e601] [cursor=pointer]:
+                  - generic [ref=e602]:
+                    - img
+                  - generic [ref=e603]: Save seller
+            - generic [ref=e606]:
+              - heading "Seller Feedback (35)" [level=2] [ref=e607]
+              - 'button "Filter: All ratings" [ref=e610] [cursor=pointer]':
+                - generic [ref=e611]:
+                  - generic [ref=e612]: "Filter:"
+                  - generic [ref=e613]: All ratings
+                  - img
+              - list [ref=e614]:
+                - listitem [ref=e615]:
+                  - generic [ref=e616]:
+                    - generic [ref=e618]:
+                      - generic [ref=e619]:
+                        - img "Negative feedback rating"
+                      - generic [ref=e620]:
+                        - text: y***3 (1208)
+                        - generic [ref=e621]: "- Feedback left by buyer."
+                      - generic [ref=e624]: Past 6 months
+                      - generic [ref=e625]: Verified purchase
+                    - generic [ref=e627]:
+                      - text: It took more than one month(!) for delivery within EU. Even parcels from another side of world ordered later was faster! And especially when postage cost basically the same as item price, it's DISASTER!!!
+                      - generic [ref=e628]:
+                        - generic [ref=e629]:
+                          - text: "Reply from: lewi77"
+                          - generic [ref=e630]: "- Feedback replied to by seller lewi77."
+                          - generic [ref=e631]: "- Feedback replied to by seller lewi77."
+                        - generic [ref=e632]: I apologize for the carrier's delay. However, I shipped the item immediately on time (see tracking). The long transit time was solely due to the shipping service and out of my control. I was happy to assist with the investigation until delivery. Shipping costs were clearly displayed before purchase.
+                    - generic [ref=e633]: TP-Link TL-PoE150S 2 Ports Power Over Ethernet Injektor Gigabit (#197032769138)
+                - listitem [ref=e634]:
+                  - generic [ref=e635]:
+                    - generic [ref=e637]:
+                      - generic [ref=e638]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e639]:
+                        - text: y***f (361)
+                        - generic [ref=e640]: "- Feedback left by buyer."
+                      - generic [ref=e643]: Past month
+                      - generic [ref=e644]: Verified purchase
+                    - generic [ref=e646]: Alles wie beschrieben
+                    - link "Logitech G502 Hero (910-005470) Kabelgebunden Gaming Maus (#198157457565)" [ref=e648] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/198157457565
+                      - generic [ref=e649]: Logitech G502 Hero (910-005470) Kabelgebunden Gaming Maus (#198157457565)
+                - listitem [ref=e650]:
+                  - generic [ref=e651]:
+                    - generic [ref=e653]:
+                      - generic [ref=e654]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e655]:
+                        - text: l***e (86)
+                        - generic [ref=e656]: "- Feedback left by buyer."
+                      - generic [ref=e659]: More than a year ago
+                      - generic [ref=e660]: Verified purchase
+                    - generic [ref=e662]: Great seller
+                    - generic [ref=e663]: iPad Air (4. Generation) 256 GB Sky Blue WiFi + LTE MYH62FD/A (#196806426038)
+                - listitem [ref=e664]:
+                  - generic [ref=e665]:
+                    - generic [ref=e667]:
+                      - generic [ref=e668]:
+                        - img "Negative feedback rating"
+                      - generic [ref=e669]:
+                        - text: d***2 (634)
+                        - generic [ref=e670]: "- Feedback left by buyer."
+                      - generic [ref=e673]: Past year
+                      - generic [ref=e674]: Verified purchase
+                    - generic [ref=e676]:
+                      - text: Artikel wurde nie geliefert. Bei diesem Betrüger nicht kaufen
+                      - generic [ref=e677]:
+                        - generic [ref=e678]:
+                          - text: "Reply from: lewi77"
+                          - generic [ref=e679]: "- Feedback replied to by seller lewi77."
+                          - generic [ref=e680]: "- Feedback replied to by seller lewi77."
+                        - generic [ref=e681]: Der Artikel wurde ordnungsgemäß mit Sendungsnummer verschickt. Leider ging die Sendung bei DPD verloren, und die Sendungsverfolgung blieb unverändert. Dem Käufer wurde daraufhin der volle Betrag erstattet. Schade, dass der Käufer mir trotzdem Betrug vorwirft.
+                    - generic [ref=e682]: TP-Link TL-PoE150S 2 Ports Power Over Ethernet Injektor Gigabit (#197032769138)
+                - listitem [ref=e683]:
+                  - generic [ref=e684]:
+                    - generic [ref=e686]:
+                      - generic [ref=e687]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e688]:
+                        - text: f***t (611)
+                        - generic [ref=e689]: "- Feedback left by buyer."
+                      - generic [ref=e692]: More than a year ago
+                      - generic [ref=e693]: Verified purchase
+                    - generic [ref=e695]: Top Artikel, schneller Versand, günstiger Preis, gern immer wieder!
+                    - generic [ref=e696]: Auerswald COMfortel M-520 Schnurloses Telefon DECT (#196827159218)
+                - listitem [ref=e697]:
+                  - generic [ref=e698]:
+                    - generic [ref=e700]:
+                      - generic [ref=e701]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e702]:
+                        - text: h***u (1570)
+                        - generic [ref=e703]: "- Feedback left by buyer."
+                      - generic [ref=e706]: Past month
+                      - generic [ref=e707]: Verified purchase
+                    - generic [ref=e709]: TOP
+                    - link "TP-Link TL-PoE150S 2 Ports Power Over Ethernet Injektor Gigabit (#197032769138)" [ref=e711] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/197032769138
+                      - generic [ref=e712]: TP-Link TL-PoE150S 2 Ports Power Over Ethernet Injektor Gigabit (#197032769138)
+                - listitem [ref=e713]:
+                  - generic [ref=e714]:
+                    - generic [ref=e716]:
+                      - generic [ref=e717]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e718]:
+                        - text: 2***a (42)
+                        - generic [ref=e719]: "- Feedback left by buyer."
+                      - generic [ref=e722]: Past 6 months
+                      - generic [ref=e723]: Verified purchase
+                    - generic [ref=e725]: Alles bestens
+                    - link "Corsair Lighting Node PRO RGB LED Controller Kit inkl. 4 Strips & OVP (#198120172489)" [ref=e727] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/198120172489
+                      - generic [ref=e728]: Corsair Lighting Node PRO RGB LED Controller Kit inkl. 4 Strips & OVP (#198120172489)
+                - listitem [ref=e729]:
+                  - generic [ref=e730]:
+                    - generic [ref=e732]:
+                      - generic [ref=e733]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e734]:
+                        - text: Automatische Bewertung von eBay
+                        - generic [ref=e735]: "- Feedback left by buyer."
+                      - generic [ref=e738]: Past month
+                    - generic [ref=e740]: Bestellung pünktlich und problemlos geliefert
+                    - link "Ubiquiti UniFi U6 Enterprise Access Point (U6-Enterprise) Wi-Fi 6E (#198037393338)" [ref=e742] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/198037393338
+                      - generic [ref=e743]: Ubiquiti UniFi U6 Enterprise Access Point (U6-Enterprise) Wi-Fi 6E (#198037393338)
+              - link "See all feedback. Opens in a new tab" [ref=e745] [cursor=pointer]:
+                - /url: https://www.ebay.ie/fdbk/mweb_profile?fdbkType=FeedbackReceivedAsSeller&item_id=198087425425&username=lewi77&filter=feedback_page%3ARECEIVED_AS_SELLER&sort=RELEVANCEV2
+                - text: See all Feedback
+          - generic [ref=e747]:
+            - navigation "Quick links" [ref=e748]:
+              - link "Back to home page" [ref=e749] [cursor=pointer]:
+                - /url: https://www.ebay.ie
+              - button "Return to top" [ref=e750] [cursor=pointer]
+            - generic [ref=e752]:
+              - heading "More to explore:" [level=2] [ref=e755]
+              - list [ref=e757]:
+                - listitem [ref=e758]:
+                  - link "AMD Radeon RX 5700 XT Computer Graphics & Video Cards," [ref=e759] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116583494
+                - listitem [ref=e760]:
+                  - link "Computer ATI Radeon X1800 XT Graphics & Video Cards," [ref=e761] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116566753
+                - listitem [ref=e762]:
+                  - link "AMD Radeon RX 570 Computer Graphics & Video Cards," [ref=e763] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116468385
+                - listitem [ref=e764]:
+                  - link "AMD Radeon RX 480 Computer Graphics & Video Cards," [ref=e765] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116461301
+                - listitem [ref=e766]:
+                  - link "Computer ATI Radeon X800 XT Graphics & Video Cards," [ref=e767] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116567756
+                - listitem [ref=e768]:
+                  - link "Computer Graphics AMD Radeon RX 5700 Video Cards," [ref=e769] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116567726
+                - listitem [ref=e770]:
+                  - link "AMD Radeon RX 580 AMD Computer Graphics & Video Cards," [ref=e771] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116456277
+                - listitem [ref=e772]:
+                  - link "AMD Radeon RX Vega 56 Computer Graphics & Video Cards," [ref=e773] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116580819
+                - listitem [ref=e774]:
+                  - link "AMD Radeon RX 580 8GB Memory Computer Graphics & Video Cards," [ref=e775] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116473261
+                - listitem [ref=e776]:
+                  - link "AMD Radeon RX Vega 64 AMD Computer Graphics & Video Cards" [ref=e777] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116470290
+  - generic [ref=e785]:
+    - contentinfo [ref=e786]:
+      - list [ref=e787]:
+        - listitem [ref=e788]:
+          - link "About eBay" [ref=e789] [cursor=pointer]:
+            - /url: https://www.ebayinc.com/
+        - listitem [ref=e790]:
+          - link "News" [ref=e791] [cursor=pointer]:
+            - /url: https://community.ebay.co.uk/t5/Announcements/bg-p/Announcements
+        - listitem [ref=e792]:
+          - link "Community" [ref=e793] [cursor=pointer]:
+            - /url: https://community.ebay.co.uk
+        - listitem [ref=e794]:
+          - link "Safety Centre" [ref=e795] [cursor=pointer]:
+            - /url: https://pages.ebay.ie/safetycentre/index.html
+        - listitem [ref=e796]:
+          - link "Seller Centre" [ref=e797] [cursor=pointer]:
+            - /url: https://sellercentre.ebay.co.uk
+        - listitem [ref=e798]:
+          - 'link "VeRO: Protecting Intellectual Property" [ref=e799] [cursor=pointer]':
+            - /url: https://pages.ebay.ie/vero/
+        - listitem [ref=e800]:
+          - link "Policies" [ref=e801] [cursor=pointer]:
+            - /url: https://www.ebay.ie/pages/help/policies/index.html
+        - listitem [ref=e802]:
+          - link "Help & Contact" [ref=e803] [cursor=pointer]:
+            - /url: https://www.ebay.ie/help/home
+        - listitem [ref=e804]:
+          - link "Site Map" [ref=e805] [cursor=pointer]:
+            - /url: https://pages.ebay.ie/sitemap.html
+      - generic [ref=e806]:
+        - text: Copyright © 1995-2026 eBay Inc. All Rights Reserved.
+        - link "Accessibility" [ref=e807] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/accessibility
+        - text: ","
+        - link "User Agreement" [ref=e808] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-agreement?id=4259
+        - text: ","
+        - link "Privacy" [ref=e809] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260
+        - text: ","
+        - link "Payments Terms of Use" [ref=e810] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/payment/2.0/terms.html
+        - text: ","
+        - link "Cookies" [ref=e811] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267
+        - text: and
+        - link "AdChoice" [ref=e812] [cursor=pointer]:
+          - /url: https://www.ebay.ie/adchoice
+          - text: AdChoice
+          - img
+    - generic:
+      - generic "ADVERTISEMENT" [ref=e813]
+      - generic "ADVERTISEMENT" [ref=e814]
+      - generic "ADVERTISEMENT" [ref=e815]
+  - img
+  - img [ref=e817]

@@ -1,0 +1,441 @@
+- generic [active] [ref=e1]:
+  - img
+  - img
+  - banner [ref=e5]:
+    - link "Skip to main content" [ref=e7] [cursor=pointer]:
+      - /url: "#mainContent"
+    - navigation [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e11]:
+          - text: Hello.
+          - link "Sign in" [ref=e12] [cursor=pointer]:
+            - /url: https://signin.ebay.ie/ws/eBayISAPI.dll?SignIn&sgfl=gh&ru=https%3A%2F%2Fwww.ebay.ie%2F
+          - generic [ref=e13]:
+            - text: or
+            - link "register" [ref=e14] [cursor=pointer]:
+              - /url: https://signup.ebay.ie/pa/crte?ru=https%3A%2F%2Fwww.ebay.ie%2F
+        - link "Help & Contact" [ref=e16] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/home
+      - generic [ref=e17]:
+        - link "Sell" [ref=e19] [cursor=pointer]:
+          - /url: https://www.ebay.ie/sl/sell
+        - generic [ref=e20]:
+          - link "Watchlist" [ref=e21] [cursor=pointer]:
+            - /url: https://www.ebay.ie/mye/myebay/watchlist
+            - generic [ref=e22]: Watchlist
+            - img
+          - button "Expand Watchlist" [ref=e23]
+        - generic [ref=e24]:
+          - link "My eBay" [ref=e25] [cursor=pointer]:
+            - /url: https://www.ebay.ie/mys/home?source=GBH
+            - generic [ref=e26]: My eBay
+            - img
+          - button "Expand My eBay" [ref=e27]
+        - button "Notifications" [ref=e30] [cursor=pointer]:
+          - img
+          - generic [ref=e31]: Notifications
+        - generic [ref=e33]:
+          - link "Your shopping basket contains 0 items" [ref=e34] [cursor=pointer]:
+            - /url: https://cart.ebay.ie
+            - generic "Your shopping basket contains 0 items" [ref=e35]:
+              - img
+          - button "Expand Basket" [ref=e36]
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - link "eBay Home" [ref=e39] [cursor=pointer]:
+          - /url: https://www.ebay.ie
+          - img "eBay Home" [ref=e40]
+        - button "Shop by category" [ref=e48] [cursor=pointer]:
+          - generic [ref=e49]: Shop by category
+          - img
+      - generic [ref=e50]:
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - combobox "Search for anything" [ref=e54]
+            - img
+          - combobox "Select a category for search" [ref=e55]:
+            - option "All Categories" [selected]
+            - option "Antiques"
+            - option "Art"
+            - option "Baby"
+            - option "Books, Comics & Magazines"
+            - option "Business, Office & Industrial"
+            - option "Cameras & Photography"
+            - option "Cars, Motorcycles & Vehicles"
+            - option "Clothes, Shoes & Accessories"
+            - option "Coins"
+            - option "Collectables"
+            - option "Computers/Tablets & Networking"
+            - option "Crafts"
+            - option "Dolls & Bears"
+            - option "DVDs, Films & TV"
+            - option "Events Tickets"
+            - option "Garden & Patio"
+            - option "Health & Beauty"
+            - option "Holidays & Travel"
+            - option "Home, Furniture & DIY"
+            - option "Jewellery & Watches"
+            - option "Mobile Phones & Communication"
+            - option "Music"
+            - option "Musical Instruments"
+            - option "Pet Supplies"
+            - option "Pottery, Porcelain & Glass"
+            - option "Property"
+            - option "Sound & Vision"
+            - option "Sporting Goods"
+            - option "Sports Memorabilia"
+            - option "Stamps"
+            - option "Toys & Games"
+            - option "Vehicle Parts & Accessories"
+            - option "Video Games & Consoles"
+            - option "Wholesale & Job Lots"
+            - option "Everything Else"
+        - generic [ref=e56]:
+          - button "Search" [ref=e57] [cursor=pointer]:
+            - generic [ref=e58]: Search
+          - link "Advanced" [ref=e59] [cursor=pointer]:
+            - /url: https://www.ebay.ie/sch/ebayadvsearch
+  - main [ref=e60]:
+    - heading "Electronics, Cars, Fashion, Collectibles & More | eBay" [level=1] [ref=e61]
+    - generic [ref=e63]:
+      - list [ref=e67]:
+        - listitem [ref=e68] [cursor=pointer]:
+          - link "Saved" [ref=e69]:
+            - /url: https://www.ebay.ie/mye/myebay/saved
+        - listitem [ref=e70] [cursor=pointer]:
+          - link "Electronics" [ref=e71]:
+            - /url: https://www.ebay.ie/b/bn_7000259660
+          - 'button "Expand: Electronics" [ref=e72]'
+        - listitem [ref=e73] [cursor=pointer]:
+          - link "Fashion" [ref=e74]:
+            - /url: https://www.ebay.ie/b/bn_7000259675?_catref=1
+          - 'button "Expand: Fashion" [ref=e75]'
+        - listitem [ref=e76] [cursor=pointer]:
+          - link "Home & Garden" [ref=e77]:
+            - /url: https://www.ebay.ie/b/bn_1842950
+          - 'button "Expand: Home & Garden" [ref=e78]'
+        - listitem [ref=e79] [cursor=pointer]:
+          - link "Jewellery & Beauty" [ref=e80]:
+            - /url: https://www.ebay.ie/b/bn_1840059?_catref=1
+          - 'button "Expand: Jewellery & Beauty" [ref=e81]'
+        - listitem [ref=e82] [cursor=pointer]:
+          - link "Sports & Leisure" [ref=e83]:
+            - /url: https://www.ebay.ie/b/bn_1838666?_catref=1
+          - 'button "Expand: Sports & Leisure" [ref=e84]'
+        - listitem [ref=e85] [cursor=pointer]:
+          - link "Films, Books, Music & Gaming" [ref=e86]:
+            - /url: https://www.ebay.ie/b/bn_1841038?_catref=1
+          - 'button "Expand: Films, Books, Music & Gaming" [ref=e87]'
+        - listitem [ref=e88] [cursor=pointer]:
+          - link "Collectables & Antiques" [ref=e89]:
+            - /url: https://www.ebay.ie/b/bn_1838976?_catref=1
+          - 'button "Expand: Collectables & Antiques" [ref=e90]'
+        - listitem [ref=e91] [cursor=pointer]:
+          - generic [ref=e92]:
+            - text: More
+            - img
+          - 'button "Expand: More" [ref=e93]'
+      - generic [ref=e94]:
+        - group [ref=e95]:
+          - generic [ref=e96]:
+            - button "Previous slide" [ref=e97] [cursor=pointer]:
+              - img
+            - list [ref=e99]:
+              - listitem [ref=e100]:
+                - complementary [ref=e101]:
+                  - generic [ref=e102]:
+                    - generic [ref=e103]:
+                      - heading "10%* off motorbike parts and gear" [level=2] [ref=e104]
+                      - paragraph [ref=e105]: Save on everything for your next motorbike and scooter trip.
+                      - link "To the coupon" [ref=e106] [cursor=pointer]:
+                        - /url: http://www.ebay.ie/e/special-events/1826-biker26
+                      - paragraph [ref=e107]:
+                        - link "*Redeemable 2x. Max. discount €50. Conditions." [ref=e109] [cursor=pointer]:
+                          - /url: https://pages.ebay.ie/coupons/2026/biker26/
+                    - img [ref=e111]
+              - listitem [ref=e112]:
+                - complementary [ref=e113]:
+                  - generic [ref=e116]:
+                    - generic [ref=e117]:
+                      - generic [ref=e118]:
+                        - heading [level=2] [ref=e119]: Whatever you're into, it's here
+                        - paragraph [ref=e120]: Turn a wrench, get a tech upgrade, and find everything you love.
+                      - link [ref=e121] [cursor=pointer]:
+                        - /url: https://pages.ebay.ie/sitemap.html
+                        - text: Do your thing
+                    - list [ref=e122]:
+                      - listitem [ref=e123]:
+                        - link [ref=e124] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_1528081
+                          - generic [ref=e125]:
+                            - text: Motors
+                            - img
+                      - listitem [ref=e126]:
+                        - link [ref=e127] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_7000259660
+                          - generic [ref=e128]:
+                            - text: Electronics
+                            - img
+                      - listitem [ref=e129]:
+                        - link [ref=e130] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_1838976?_catref=1
+                          - generic [ref=e131]:
+                            - text: Collectables & Antiques
+                            - img
+              - listitem [ref=e132]:
+                - complementary [ref=e133]:
+                  - generic [ref=e138]:
+                    - generic [ref=e139]:
+                      - heading [level=2] [ref=e140]: Get help exactly when you need it
+                      - paragraph [ref=e141]: From shipping to returns, find answers to all of your questions.
+                    - link [ref=e142] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/help/home
+                      - text: Start here
+              - listitem [ref=e143]:
+                - complementary [ref=e144]:
+                  - generic [ref=e145]:
+                    - generic [ref=e146]:
+                      - heading [level=2] [ref=e147]: Hello spring savings!
+                      - paragraph [ref=e148]: Discover new season picks from top Irish sellers.
+                      - link [ref=e149] [cursor=pointer]:
+                        - /url: http://www.ebay.ie/e/special-events/1826-spring-sale-ireland
+                        - text: Shop spring deals
+                    - img [ref=e151]
+            - button "Next slide" [ref=e152] [cursor=pointer]:
+              - img
+            - button "Pause" [ref=e153] [cursor=pointer]:
+              - img
+        - list [ref=e155]:
+          - listitem [ref=e156]
+          - listitem [ref=e157]
+          - listitem [ref=e158]
+          - listitem [ref=e159]
+      - complementary "Explore the hottest categories on eBay" [ref=e160]:
+        - heading "Explore the hottest categories on eBay" [level=2] [ref=e161]
+        - group [ref=e162]:
+          - list [ref=e165]:
+            - listitem [ref=e166]:
+              - link "Parts and accessories" [ref=e167] [cursor=pointer]:
+                - /url: https://www.ebay.ie/b/bn_1528081
+                - generic [ref=e170]: Parts and accessories
+            - listitem [ref=e171]:
+              - link "Refurbished" [ref=e172] [cursor=pointer]:
+                - /url: https://www.ebay.ie/b/bn_7117653182
+                - generic [ref=e175]: Refurbished
+            - listitem [ref=e176]:
+              - link "Collectibles and art" [ref=e177] [cursor=pointer]:
+                - /url: https://www.ebay.ie/b/bn_7000259665
+                - generic [ref=e180]: Collectibles and art
+            - listitem [ref=e181]:
+              - link "Pre-loved" [ref=e182] [cursor=pointer]:
+                - /url: https://www.ebay.ie/e/special-events/pre-loved-ie-new
+                - generic [ref=e185]: Pre-loved
+            - listitem [ref=e186]:
+              - link "Luxury" [ref=e187] [cursor=pointer]:
+                - /url: https://www.ebay.ie/b/bn_7121512158
+                - generic [ref=e190]: Luxury
+            - listitem [ref=e191]:
+              - link "Sales and coupons" [ref=e192] [cursor=pointer]:
+                - /url: https://www.ebay.ie/b/bn_7115216712
+                - generic [ref=e195]: Sales and coupons
+            - listitem [ref=e196]:
+              - link "Sell on eBay" [ref=e197] [cursor=pointer]:
+                - /url: https://www.ebay.ie/sl/sell
+                - generic [ref=e200]: Sell on eBay
+      - complementary "Get your order or your money back" [ref=e201]:
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - heading "Get your order or your money back" [ref=e204] [cursor=pointer]
+            - paragraph [ref=e206]: Shop confidently with eBay Money Back Guarantee.
+          - link "Learn more" [ref=e207] [cursor=pointer]:
+            - /url: https://pages.ebay.ie/ebay-money-back-guarantee/
+      - complementary "Find your perfect match here" [ref=e208]:
+        - heading "Find your perfect match here" [level=2] [ref=e209]
+        - group [ref=e210]:
+          - list [ref=e213]:
+            - listitem [ref=e214]:
+              - link "Computers and tablets" [ref=e215] [cursor=pointer]:
+                - /url: https://www.ebay.ie/b/bn_1838792
+                - generic [ref=e218]: Computers and tablets
+            - listitem [ref=e219]:
+              - link "Toys" [ref=e220] [cursor=pointer]:
+                - /url: https://www.ebay.ie/b/bn_1841704
+                - generic [ref=e223]: Toys
+            - listitem [ref=e224]:
+              - link "Smartphones" [ref=e225] [cursor=pointer]:
+                - /url: https://www.ebay.ie/b/bn_450671
+                - generic [ref=e228]: Smartphones
+            - listitem [ref=e229]:
+              - link "Watches and jewelry" [ref=e230] [cursor=pointer]:
+                - /url: https://www.ebay.ie/b/bn_1838540
+                - generic [ref=e233]: Watches and jewelry
+            - listitem [ref=e234]:
+              - link "Home and garden" [ref=e235] [cursor=pointer]:
+                - /url: https://www.ebay.ie/b/bn_1842950
+                - generic [ref=e238]: Home and garden
+            - listitem [ref=e239]:
+              - link "Consoles and video games" [ref=e240] [cursor=pointer]:
+                - /url: https://www.ebay.ie/b/bn_450873
+                - generic [ref=e243]: Consoles and video games
+            - listitem [ref=e244]:
+              - link "Trading cards" [ref=e245] [cursor=pointer]:
+                - /url: https://www.ebay.ie/b/bn_55159883
+                - generic [ref=e248]: Trading cards
+      - complementary "Take a look at these shops!" [ref=e249]:
+        - heading "Take a look at these shops!" [level=2] [ref=e250]
+        - group [ref=e251]:
+          - list [ref=e254]:
+            - listitem [ref=e255]:
+              - link "Big White Rabbit" [ref=e256] [cursor=pointer]:
+                - /url: https://www.ebay.ie/str/bigwhiterabbit
+                - generic [ref=e259]: Big White Rabbit
+            - listitem [ref=e260]:
+              - link "The Car Part Corner" [ref=e261] [cursor=pointer]:
+                - /url: https://www.ebay.ie/str/thecarpartcorner
+                - generic [ref=e264]: The Car Part Corner
+            - listitem [ref=e265]:
+              - link "Naughtons Used Parts" [ref=e266] [cursor=pointer]:
+                - /url: https://www.ebay.ie/str/naughtonsglobalusedparts
+                - generic [ref=e269]: Naughtons Used Parts
+            - listitem [ref=e270]:
+              - link "MW Books" [ref=e271] [cursor=pointer]:
+                - /url: https://www.ebay.ie/str/mwbooksselectantiquarianbooks
+                - generic [ref=e274]: MW Books
+            - listitem [ref=e275]:
+              - link "Agwatchshop" [ref=e276] [cursor=pointer]:
+                - /url: https://www.ebay.ie/str/agwtachshop
+                - generic [ref=e279]: Agwatchshop
+            - listitem [ref=e280]:
+              - link "Uncanny Collectibles" [ref=e281] [cursor=pointer]:
+                - /url: https://www.ebay.ie/str/uncannycollectiblesireland
+                - generic [ref=e284]: Uncanny Collectibles
+            - listitem [ref=e285]:
+              - link "Items IE" [ref=e286] [cursor=pointer]:
+                - /url: https://www.ebay.ie/str/itemsie
+                - generic [ref=e289]: Items IE
+      - complementary [ref=e290]:
+        - generic [ref=e291]:
+          - generic [ref=e292]:
+            - heading "Love spring, shop Irish" [level=2] [ref=e293]
+            - paragraph [ref=e294]: Discover local favourites and get up to 15% off a range of categories.
+            - link "Save now" [ref=e295] [cursor=pointer]:
+              - /url: http://www.ebay.ie/e/special-events/1826-spring-sale-ireland
+          - img [ref=e297]
+  - contentinfo [ref=e302]:
+    - generic [ref=e303]:
+      - generic [ref=e305]:
+        - heading "Buy" [level=3] [ref=e306]:
+          - link "Buy" [ref=e307] [cursor=pointer]:
+            - /url: https://www.ebay.ie/n/all-categories
+        - list [ref=e308]:
+          - listitem [ref=e309]:
+            - link "Buying Basics" [ref=e310] [cursor=pointer]:
+              - /url: https://www.ebay.ie/pages/help/buy/basics.html
+          - listitem [ref=e311]:
+            - link "eBay Shops" [ref=e312] [cursor=pointer]:
+              - /url: https://www.ebay.ie/b/Stores-Hub/bn_7004250158
+          - listitem [ref=e313]:
+            - link "Site Map" [ref=e314] [cursor=pointer]:
+              - /url: https://pages.ebay.ie/sitemap.html
+      - generic [ref=e316]:
+        - heading "Sell" [level=3] [ref=e317]:
+          - link "Sell" [ref=e318] [cursor=pointer]:
+            - /url: https://www.ebay.ie/sl/sell
+        - list [ref=e319]:
+          - listitem [ref=e320]:
+            - link "Selling Basics" [ref=e321] [cursor=pointer]:
+              - /url: https://www.ebay.ie/pages/help/sell/selling-basics.html
+          - listitem [ref=e322]:
+            - link "eBay Top-rated sellers" [ref=e323] [cursor=pointer]:
+              - /url: https://www.ebay.ie/pages/help/sell/top-rated.html
+          - listitem [ref=e324]:
+            - link "eBay for Business" [ref=e325] [cursor=pointer]:
+              - /url: https://sellercentre.ebay.co.uk/
+          - listitem [ref=e326]:
+            - link "Postage Centre" [ref=e327] [cursor=pointer]:
+              - /url: https://sellercentre.ebay.co.uk/postage/postage-made-easy
+          - listitem [ref=e328]:
+            - link "Sell Safely" [ref=e329] [cursor=pointer]:
+              - /url: https://pages.ebay.ie/safetycentre/selling.html
+      - generic [ref=e331]:
+        - heading "eBay companies" [level=3] [ref=e332]
+        - list [ref=e333]:
+          - listitem [ref=e334]:
+            - link "Shopping.com" [ref=e335] [cursor=pointer]:
+              - /url: https://www.shopping.com/ireland/products
+          - listitem [ref=e336]:
+            - link "eBay Motors" [ref=e337] [cursor=pointer]:
+              - /url: https://motors.ebay.ie/
+      - generic [ref=e339]:
+        - heading "About eBay" [level=3] [ref=e340]:
+          - link "About eBay" [ref=e341] [cursor=pointer]:
+            - /url: https://www.ebayinc.com/
+        - list [ref=e342]:
+          - listitem [ref=e343]:
+            - link "Legal imprint" [ref=e344] [cursor=pointer]:
+              - /url: https://www.ebayinc.com/company/contact-us/
+          - listitem [ref=e345]:
+            - link "Legal Notices" [ref=e346] [cursor=pointer]:
+              - /url: https://www.ebay.ie/pages/help/policies/legal-imprint.html
+          - listitem [ref=e347]:
+            - link "Affiliates" [ref=e348] [cursor=pointer]:
+              - /url: https://partnernetwork.ebay.com
+      - generic [ref=e349]:
+        - generic [ref=e350]:
+          - heading "Help & Contact" [level=3] [ref=e351]:
+            - link "Help & Contact" [ref=e352] [cursor=pointer]:
+              - /url: https://www.ebay.ie/help/home
+          - list [ref=e353]:
+            - listitem [ref=e354]:
+              - link "Safety Centre" [ref=e355] [cursor=pointer]:
+                - /url: https://pages.ebay.ie/safetycentre/index.html
+            - listitem [ref=e356]:
+              - link "eBay Money Back Guarantee" [ref=e357] [cursor=pointer]:
+                - /url: https://pages.ebay.ie/ebay-money-back-guarantee/
+        - generic [ref=e358]:
+          - heading "Community" [level=3] [ref=e359]:
+            - link "Community" [ref=e360] [cursor=pointer]:
+              - /url: https://community.ebay.co.uk
+          - list [ref=e361]:
+            - listitem [ref=e362]:
+              - link "Answer Centre" [ref=e363] [cursor=pointer]:
+                - /url: https://community.ebay.co.uk/t5/Help-from-Community-Experts/ct-p/11900000007
+            - listitem [ref=e364]:
+              - link "Discussion Boards" [ref=e365] [cursor=pointer]:
+                - /url: https://community.ebay.co.uk/t5/Discussion/ct-p/13
+            - listitem [ref=e366]:
+              - link "Groups" [ref=e367] [cursor=pointer]:
+                - /url: https://community.ebay.co.uk/t5/Groups/ct-p/11900000000
+            - listitem [ref=e368]:
+              - link "News" [ref=e369] [cursor=pointer]:
+                - /url: https://community.ebay.co.uk/t5/Announcements/bg-p/Announcements
+        - generic [ref=e370]:
+          - heading "eBay Sites" [level=3] [ref=e371]
+          - list [ref=e372]:
+            - listitem
+            - listitem [ref=e373]:
+              - button "eBay Sites - Ireland - change site" [ref=e375] [cursor=pointer]:
+                - generic [ref=e377]: Ireland
+                - img
+    - generic [ref=e378]:
+      - text: Copyright © 1995-2026 eBay Inc. All Rights Reserved.
+      - link "Accessibility" [ref=e379] [cursor=pointer]:
+        - /url: https://pages.ebay.ie/accessibility
+      - text: ","
+      - link "User Agreement" [ref=e380] [cursor=pointer]:
+        - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-agreement?id=4259
+      - text: ","
+      - link "Privacy" [ref=e381] [cursor=pointer]:
+        - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260
+      - text: ","
+      - link "Payments Terms of Use" [ref=e382] [cursor=pointer]:
+        - /url: https://pages.ebay.ie/payment/2.0/terms.html
+      - text: ","
+      - link "Cookies" [ref=e383] [cursor=pointer]:
+        - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267
+      - text: and
+      - link "AdChoice" [ref=e384] [cursor=pointer]:
+        - /url: https://www.ebay.ie/adchoice
+        - text: AdChoice
+        - img
+  - paragraph [ref=e386]

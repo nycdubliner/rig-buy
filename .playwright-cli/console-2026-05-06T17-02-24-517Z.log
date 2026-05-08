@@ -1,0 +1,7 @@
+[     522ms] [LOG] Meter provider shut down successfully @ https://ir.ebaystatic.com/cr/ebay-rum/cdn-assets/metrics.ebb041e86c5338dbe8f6.bundle.js:0
+[     526ms] [ERROR] The source list for the Content Security Policy directive 'connect-src' contains an invalid source: '.ucweb.com'. It will be ignored. @ https://cart.ebay.ie/:0
+[    6128ms] [WARNING] The PerformanceObserver does not support buffered flag with the entryTypes argument. @ https://ir.ebaystatic.com/rs/c/cartfe/vendor.desktop.dfa5b6899d73f1f1ae64.js:1
+[    6375ms] [ERROR] Access to fetch at 'https://pay.ebay.com/resources' from origin 'https://cart.ebay.ie' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://cart.ebay.ie/:0
+[    6375ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://pay.ebay.com/resources:0
+[    6563ms] [ERROR] The source list for the Content Security Policy directive 'connect-src' contains an invalid source: '.ucweb.com'. It will be ignored. @ https://ir.ebaystatic.com/cr/v/c1/globalheader_widget_platform__v2-b70676194b.js:1
+[    6582ms] [ERROR] The source list for the Content Security Policy directive 'connect-src' contains an invalid source: '.ucweb.com'. It will be ignored. @ :102

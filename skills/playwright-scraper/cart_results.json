@@ -1,0 +1,76 @@
+{
+  "AM5": {
+    "Caseking": [
+      {
+        "type": "CPU",
+        "title": "AMD Ryzen 5 7600X 4.7 GHz (Raphael) AM5 - boxed",
+        "price": "157,83 €",
+        "url": "https://www.caseking.de/en/amd-ryzen-5-7600x-4.7-ghz-raphael-am5-boxed/HPAM-248.html",
+        "hasAddBtn": true,
+        "added": true
+      },
+      {
+        "type": "Mobo",
+        "title": "ASUS ProArt B650-Creator, AMD B650 motherboard - Socket AM5, DDR5",
+        "price": "236,59 €",
+        "url": "https://www.caseking.de/en/asus-proart-b650-creator-amd-b650-motherboard-socket-am5-ddr5/MBAS-670.html",
+        "hasAddBtn": false,
+        "added": false
+      },
+      {
+        "type": "PSU",
+        "title": "Corsair RMe Series RM1200e 80 PLUS Gold power supply, modular, ATX 3.1, PCIe 5.1 - 1,200 watts, black",
+        "price": "247,96 €",
+        "url": "https://www.caseking.de/en/corsair-rme-series-rm1200e-80-plus-gold-power-supply-modular-atx-3.1-pcie-5.1-1-200-watts-black/NECS-189.html",
+        "hasAddBtn": true,
+        "added": true
+      },
+      {
+        "type": "Case",
+        "title": "Lian Li LANCOOL III E-ATX Case, Mid-Tower - black",
+        "price": "134,27 €",
+        "url": "https://www.caseking.de/en/lian-li-lancool-iii-e-atx-case-mid-tower-black/GELI-907.html",
+        "hasAddBtn": true,
+        "added": true
+      },
+      {
+        "type": "Cooler",
+        "title": "Arctic Liquid Freezer III Pro 360 ARGB AiO Water Cooling - 360mm, black",
+        "price": "87,75 €",
+        "url": "https://www.caseking.de/en/arctic-liquid-freezer-iii-pro-360-argb-aio-water-cooling-360mm-black/WASE-945.html",
+        "hasAddBtn": true,
+        "added": true
+      },
+      {
+        "type": "RAM",
+        "title": "Patriot Viper Gaming Elite 5 Ultra DDR5-6000 RAM, CL 28, AMD EXPO, XMP 3.0 - 2x 32GB, black",
+        "price": "1.221,35 €",
+        "url": "https://www.caseking.de/en/patriot-viper-gaming-elite-5-ultra-ddr5-6000-ram-cl-28-amd-expo-xmp-3.0-2x-32gb-black/MEPM-114.html",
+        "hasAddBtn": true,
+        "added": true
+      }
+    ]
+  },
+  "AM4": {
+    "eBay": [
+      {
+        "type": "Mobo",
+        "title": "ASUS ROG STRIX X570-E GAMING motherboard AM4 DDR4 128G HDMI+DP ATX Tested ok",
+        "price": "EUR 213.79",
+        "url": "https://www.ebay.ie/itm/376042736888?_skw=X570+motherboard&itmmeta=01KQZSFKTMJ6GJCF5ZVQP3BE7J&hash=item578de4ccf8%3Ag%3AJZoAAOSw-hJnx86Y&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xCFwx6gG5O0DFYILUIdKJMIx2XoSRvKxYx%2BJ1HYNEMeeqyfWl%2BNoffUsIeHI81ig19m84DED6fTTWPqZiVykRqNu1K0uiURXV2MJs6Z7sqQqbrJFcldBMCcxFJmPX%2FX8OpigDJ7a%2FPI88CvOYqSDe9%2BghcxNGAueplNeWo43qoPurGmPmrGzt6nkaTHKVS%2FaF1%2FSW55WhYQ699T--f1F7qcIEbGozMiMiaNeXfuSVOAIAlu%2BG7Mgpw9mkEIka07A%2B1pIlDFbTZZzGgRa4Tve%2Fp%2BZjAt5h5OEu%2FEyeXKaXg9Sg%3D%3D%7Ctkp%3ABFBMuL2--b9n&LH_BIN=1&LH_ItemCondition=3000%7C4000"
+      },
+      {
+        "type": "CPU",
+        "title": "New listing",
+        "price": "EUR 120.97",
+        "url": "https://www.ebay.ie/itm/287316385941?_skw=Ryzen+5+5600&itmmeta=01KQZSFQ4BYZEHNFBX1NG86X5C&hash=item42e5642095%3Ag%3AuAwAAeSwsj1p-8rU&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xBvroM3FrhNpQDcAQhGcfwKrHaaaaQkF3EmpyUCh1mlYvPYDSsUnFHVTWfrgBnNe6%2FzxnXTbw%2FA6kTUPxuqEbydL%2BIIcukcmiU7h3KTZs5BQ%2F76GQeVVEyvAuoSp11gWuP2pNLW%2FADV22WpbjcFKNBXQUCEq8QcVn5Iyk2jlapubJgUFzux9GdsfKjhM2xYikEd6bhmoHPQeilg5PCqPyATKz%2FlfWMNU688whKG%2BeMp3%2FHfdy4Xj%2B012kv7pwrQAQz9KgtAUSKrO4JfSbiQxwO0NUhw63qJiaO95voDtTWcHQ%3D%3D%7Ctkp%3ABk9SR6jyvvm_Zw&LH_BIN=1&LH_ItemCondition=3000%7C4000"
+      },
+      {
+        "type": "RAM",
+        "title": "PATRIOT RAM GAMING VIPER STEEL 32GB(2X16GB) 3600MHZ DIMM DDR4",
+        "price": "EUR 150.00",
+        "url": "https://www.ebay.ie/itm/358435553576?_skw=32GB+DDR4+3600&itmmeta=01KQZSFTADD1Y6WQGE7QTMBX2V&hash=item53746c8128%3Ag%3A04UAAeSwAU9p386u&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xBkB%2B8qfXXjQs74r4pBDTVJ%2Bxb%2FxTZJnqmQ4I08mRrOm4GcINsLKFbEJjsZcIQc0dl%2Fpz8b3ZtE1HzBNqsmjC0KmUAvKlieZjTcenYxH3s0LtwiWCWZlU9Jaf%2B55Bp65DywQGjrs%2FtHxbh4RRqJm7fNaT5A4vLo7gjxgtYGzrRtKwH0c4J%2FfzgDpmyKkmxc84hWUHMTSuy9mmuCx5HkRhadUUvIyceheom1avNMxkN4GIhOOcPLaGmexzXVYOH%2FOA7NGxEEF3Lq%2Fik8SKxzDIUJTj7ak1omg1oJYKBUl67o%2FA%3D%3D%7Ctkp%3ABFBMrqW_-b9n&LH_BIN=1&LH_ItemCondition=3000%7C4000"
+      }
+    ]
+  }
+}

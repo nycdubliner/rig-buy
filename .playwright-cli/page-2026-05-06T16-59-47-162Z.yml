@@ -1,0 +1,684 @@
+- generic [active] [ref=e1]:
+  - img
+  - img
+  - generic [ref=e3]:
+    - banner [ref=e7]:
+      - link "Skip to main content" [ref=e9] [cursor=pointer]:
+        - /url: "#mainContent"
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - button "Hi Tiarnán!" [ref=e14] [cursor=pointer]:
+            - generic [ref=e15]: Hi Tiarnán!
+            - img
+          - link "Help & Contact" [ref=e17] [cursor=pointer]:
+            - /url: https://www.ebay.ie/help/home
+        - generic [ref=e18]:
+          - link "Sell" [ref=e20] [cursor=pointer]:
+            - /url: https://www.ebay.ie/sl/sell
+          - generic [ref=e21]:
+            - link "Watchlist" [ref=e22] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mye/myebay/watchlist
+              - generic [ref=e23]: Watchlist
+              - img
+            - button "Expand Watchlist" [ref=e24]
+          - generic [ref=e25]:
+            - link "My eBay" [ref=e26] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mys/home?source=GBH
+              - generic [ref=e27]: My eBay
+              - img
+            - button "Expand My eBay" [ref=e28]
+          - button "Notifications" [ref=e31] [cursor=pointer]:
+            - img
+            - generic [ref=e32]: Notifications
+          - generic [ref=e34]:
+            - link "Your shopping basket contains 0 items" [ref=e35] [cursor=pointer]:
+              - /url: https://cart.ebay.ie
+              - generic "Your shopping basket contains 0 items" [ref=e36]:
+                - img
+            - button "Expand Basket" [ref=e37]
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - link "eBay Home" [ref=e40] [cursor=pointer]:
+            - /url: https://www.ebay.ie
+            - img "eBay Home" [ref=e41]
+          - button "Shop by category" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: Shop by category
+            - img
+        - generic [ref=e51]:
+          - status [ref=e52]
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - combobox "Search for anything" [ref=e56]
+              - img
+            - combobox "Select a category for search" [ref=e57]:
+              - option "All Categories" [selected]
+              - option "Antiques"
+              - option "Art"
+              - option "Baby"
+              - option "Books, Comics & Magazines"
+              - option "Business, Office & Industrial"
+              - option "Cameras & Photography"
+              - option "Cars, Motorcycles & Vehicles"
+              - option "Clothes, Shoes & Accessories"
+              - option "Coins"
+              - option "Collectables"
+              - option "Computers/Tablets & Networking"
+              - option "Crafts"
+              - option "Dolls & Bears"
+              - option "DVDs, Films & TV"
+              - option "Events Tickets"
+              - option "Garden & Patio"
+              - option "Health & Beauty"
+              - option "Holidays & Travel"
+              - option "Home, Furniture & DIY"
+              - option "Jewellery & Watches"
+              - option "Mobile Phones & Communication"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Pet Supplies"
+              - option "Pottery, Porcelain & Glass"
+              - option "Property"
+              - option "Sound & Vision"
+              - option "Sporting Goods"
+              - option "Sports Memorabilia"
+              - option "Stamps"
+              - option "Toys & Games"
+              - option "Vehicle Parts & Accessories"
+              - option "Video Games & Consoles"
+              - option "Wholesale & Job Lots"
+              - option "Everything Else"
+          - generic [ref=e58]:
+            - button "Search" [ref=e59] [cursor=pointer]:
+              - generic [ref=e60]: Search
+            - link "Advanced" [ref=e61] [cursor=pointer]:
+              - /url: https://www.ebay.ie/sch/ebayadvsearch
+    - main [ref=e62]:
+      - generic [ref=e64]:
+        - generic [ref=e68]:
+          - generic [ref=e71]:
+            - generic [ref=e73]:
+              - generic [ref=e75]:
+                - button "Picture 1 of 3" [ref=e76] [cursor=pointer]:
+                  - img "Picture 1 of 3" [ref=e77]
+                - button "Picture 2 of 3" [ref=e78] [cursor=pointer]:
+                  - img "Picture 2 of 3" [ref=e79]
+                - button "Picture 3 of 3" [ref=e80] [cursor=pointer]:
+                  - img "Picture 3 of 3" [ref=e81]
+              - generic [ref=e82]:
+                - heading "Picture 1 of 3" [level=2] [ref=e83]
+                - button "Previous image - Item images thumbnails" [ref=e85] [cursor=pointer]:
+                  - img
+                - region "Opens image gallery dialogue G.SKILL Flare X5 Series DDR5 RAM (AMD EXPO) 32GB (2x16GB) 6000MT/s CL30-38-38-96 - Picture 1 of 3" [ref=e86]:
+                  - group "1 of 3" [ref=e87]:
+                    - img "G.SKILL Flare X5 Series DDR5 RAM (AMD EXPO) 32GB (2x16GB) 6000MT/s CL30-38-38-96 - Picture 1 of 3" [ref=e88]
+                  - group "2 of 3" [ref=e89]:
+                    - img "G.SKILL Flare X5 Series DDR5 RAM (AMD EXPO) 32GB (2x16GB) 6000MT/s CL30-38-38-96 - Picture 2 of 3" [ref=e90]
+                  - group "3 of 3" [ref=e91]:
+                    - img "G.SKILL Flare X5 Series DDR5 RAM (AMD EXPO) 32GB (2x16GB) 6000MT/s CL30-38-38-96 - Picture 3 of 3" [ref=e92]
+                - generic [ref=e93]:
+                  - button "Opens image gallery" [ref=e94] [cursor=pointer]:
+                    - img
+                  - button "Add to Watchlist - 3 watchers" [ref=e96] [cursor=pointer]:
+                    - generic [ref=e97]: "3"
+                    - img
+                - button "Next image - Item images thumbnails" [ref=e99] [cursor=pointer]:
+                  - img
+            - generic [ref=e104]:
+              - generic [ref=e105]: Have one to sell?
+              - link "Sell it yourself" [ref=e107] [cursor=pointer]:
+                - /url: https://www.ebay.ie/sl/list?mode=SellLikeItem&itemId=358374872896&rt=nc&_trksid=p4429486.m117039.l2567
+                - generic [ref=e108]: Sell it yourself
+            - button "Share" [ref=e114] [cursor=pointer]:
+              - img
+              - generic [ref=e115]: Share
+          - generic [ref=e118]:
+            - heading "G.SKILL Flare X5 Series DDR5 RAM (AMD EXPO) 32GB (2x16GB) 6000MT/s CL30-38-38-96" [level=1] [ref=e120]
+            - generic [ref=e122] [cursor=pointer]:
+              - generic [ref=e124]:
+                - link [ref=e126]:
+                  - /url: https://www.ebay.ie/str/springfieldliquidations?_trksid=p4429486.m3561.l161210
+                  - img [ref=e128]
+                - generic [ref=e129]:
+                  - generic [ref=e130]:
+                    - link "Springfield Liquidations" [ref=e131]:
+                      - /url: https://www.ebay.ie/str/springfieldliquidations?_trksid=p4429486.m3561.l161211
+                    - generic [ref=e132]:
+                      - generic [ref=e133]: (4279)
+                      - generic [ref=e134]:
+                        - text: Business
+                        - button "Registered as business seller" [ref=e139]:
+                          - img
+                  - generic [ref=e140]:
+                    - button "99% positive Feedback" [ref=e142]
+                    - link "Seller's other items" [ref=e144]:
+                      - /url: https://www.ebay.ie/str/springfieldliquidations?_trksid=p4429486.m3561.l170197
+                      - generic [ref=e145]: Seller's other items
+                      - generic [ref=e146]: Seller's other items
+                    - button "Message seller" [ref=e148]:
+                      - generic [ref=e149]: Message seller
+                      - generic [ref=e150]: Message seller
+              - button "See more about this seller" [ref=e152]:
+                - img
+            - generic [ref=e155]:
+              - generic [ref=e156]: US $501.83
+              - generic [ref=e157]:
+                - generic [ref=e158]: Approximately
+                - generic [ref=e159]: EUR 429.17
+              - generic [ref=e162]: (US $501.83 / Kit)
+            - generic [ref=e163]:
+              - generic [ref=e164]: "Condition:"
+              - generic [ref=e166]:
+                - generic [ref=e167]:
+                  - generic [ref=e168]: New other (see details)
+                  - generic [ref=e169]: New other (see details)
+                - button "More information - About this item condition" [ref=e170] [cursor=pointer]:
+                  - generic [ref=e171]:
+                    - img "More information - About this item condition"
+            - generic [ref=e173]:
+              - generic [ref=e174]: "Quantity:"
+              - generic [ref=e175]:
+                - textbox "Quantity:" [ref=e177]: "1"
+                - generic [ref=e178]: 3 available
+            - list [ref=e180]:
+              - listitem [ref=e181]:
+                - link "Buy It Now" [ref=e183] [cursor=pointer]:
+                  - /url: https://pay.ebay.ie/rxo?action=create&rypsvc=true&pagename=ryp&item=358374872896&quantity=1&TransactionId=-1
+                  - generic [ref=e184]: Buy It Now
+              - listitem [ref=e185]:
+                - button "Add to basket" [ref=e187] [cursor=pointer]:
+                  - generic [ref=e188]: Add to basket
+              - listitem [ref=e189]:
+                - generic [ref=e191]:
+                  - status [ref=e192]: Add to Watchlist
+                  - button "Add to Watchlist" [ref=e197] [cursor=pointer]:
+                    - generic [ref=e198]:
+                      - img
+                      - text: Add to Watchlist
+            - generic [ref=e202]:
+              - generic [ref=e203]:
+                - img
+              - generic [ref=e205]: People are checking this out. 3 have added this to their Watchlist.
+            - generic [ref=e208]:
+              - heading "Postage, returns and payments" [level=2] [ref=e211]:
+                - generic [ref=e212]: Postage, returns and payments
+              - generic [ref=e214]:
+                - generic [ref=e218]:
+                  - generic [ref=e221]: "Postage:"
+                  - generic [ref=e223]:
+                    - generic [ref=e224]:
+                      - text: US $37.31 (approx EUR 31.91) eBay International Shipping
+                      - button "More information" [ref=e230]:
+                        - img
+                      - text: .
+                      - button "See details for postage" [ref=e231] [cursor=pointer]:
+                        - generic [ref=e232]:
+                          - text: See details
+                          - generic [ref=e233]: for postage
+                    - generic [ref=e234]: "Located in: Springfield, MO, United States"
+                - generic [ref=e242]:
+                  - text: Save on combined postage
+                  - button "More information on combined postage. Opens a layer." [ref=e248]:
+                    - img
+                - generic [ref=e252]:
+                  - generic [ref=e255]: "Import fees:"
+                  - generic [ref=e258]:
+                    - text: Estimated EUR 0.00Final at checkout
+                    - button "More information" [ref=e264]:
+                      - img
+                - generic [ref=e268]:
+                  - generic [ref=e271]: "Delivery:"
+                  - generic [ref=e273]:
+                    - generic [ref=e274]:
+                      - text: Estimated between Wed, 27 May and Wed, 3 Jun to D08F97P
+                      - button "Information - Estimated delivery date - opens a layer" [ref=e280]:
+                        - img
+                    - generic [ref=e281]:
+                      - text: Seller dispatches within 2 days after
+                      - link "receiving cleared payment" [ref=e282] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/pages/help/buy/contextual/domestic-handling-time.html
+                      - text: .
+            - generic [ref=e289]:
+              - generic [ref=e292]: "Returns:"
+              - generic [ref=e295]:
+                - text: 30 days return. Buyer pays for return postage. If you use an eBay delivery label, it will be deducted from your refund amount.
+                - button "See details - for more information about returns" [ref=e296] [cursor=pointer]:
+                  - generic [ref=e297]:
+                    - text: See details
+                    - generic [ref=e298]: "- for more information about returns"
+            - generic [ref=e305]:
+              - generic [ref=e308]: "Payments:"
+              - generic [ref=e311]:
+                - img "PayPal" [ref=e312]
+                - img "Google Pay" [ref=e314]
+                - img "Visa" [ref=e316]
+                - img "Mastercard" [ref=e318]
+                - img "Diners Club" [ref=e321]
+            - generic [ref=e325]:
+              - heading "Shop with confidence" [level=2] [ref=e328]
+              - generic [ref=e329]:
+                - generic [ref=e331]:
+                  - img
+                - generic [ref=e332]:
+                  - generic [ref=e333]: eBay Money Back Guarantee
+                  - generic [ref=e334]:
+                    - text: Get the item you ordered or your money back.
+                    - link "Learn more eBay Money Back Guarantee - opens new window or tab" [ref=e335] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/ebay-money-back-guarantee/
+                      - generic [ref=e336]:
+                        - text: Learn more
+                        - generic [ref=e337]: eBay Money Back Guarantee - opens new window or tab
+        - generic [ref=e338]:
+          - generic [ref=e343]:
+            - tablist [ref=e344]:
+              - tab "About this item" [selected] [ref=e345] [cursor=pointer]:
+                - generic [ref=e346]: About this item
+            - tabpanel "About this item" [ref=e348]:
+              - generic [ref=e351]:
+                - generic [ref=e354]:
+                  - generic [ref=e358]: Seller assumes all responsibility for this listing.
+                  - generic [ref=e362]: eBay item number:358374872896
+                - generic [ref=e365]:
+                  - heading "Item specifics" [level=2] [ref=e368]:
+                    - generic [ref=e369]: Item specifics
+                  - generic [ref=e371]:
+                    - generic [ref=e372]:
+                      - generic [ref=e374]:
+                        - term [ref=e375]:
+                          - generic [ref=e377]: Condition
+                        - definition [ref=e378]:
+                          - generic [ref=e381]:
+                            - generic [ref=e382]: "New other (see details): A new, unused item with absolutely no signs of wear. The item may be ..."
+                            - button "Read more about the condition" [ref=e384]:
+                              - generic [ref=e385]:
+                                - text: Read more
+                                - generic [ref=e386]: about the condition
+                      - generic [ref=e388]:
+                        - term [ref=e389]:
+                          - generic [ref=e391]: Brand
+                        - definition [ref=e392]:
+                          - generic [ref=e394]: G. SKILL
+                    - generic [ref=e395]:
+                      - generic [ref=e397]:
+                        - term [ref=e398]:
+                          - generic [ref=e400]: Type
+                        - definition [ref=e401]:
+                          - generic [ref=e403]: DDR5 SDRAM
+                      - generic [ref=e405]:
+                        - term [ref=e406]:
+                          - generic [ref=e408]: Form Factor
+                        - definition [ref=e409]:
+                          - generic [ref=e411]: DIMM
+                    - generic [ref=e412]:
+                      - generic [ref=e414]:
+                        - term [ref=e415]:
+                          - generic [ref=e417]: Number of Modules
+                        - definition [ref=e418]:
+                          - generic [ref=e420]: "2"
+                      - generic [ref=e422]:
+                        - term [ref=e423]:
+                          - generic [ref=e425]: Total Capacity
+                        - definition [ref=e426]:
+                          - generic [ref=e428]: 32 GB
+                    - generic [ref=e429]:
+                      - generic [ref=e431]:
+                        - term [ref=e432]:
+                          - generic [ref=e434]: Capacity per Module
+                        - definition [ref=e435]:
+                          - generic [ref=e437]: 16 GB
+                      - generic [ref=e439]:
+                        - term [ref=e440]:
+                          - generic [ref=e442]: Bus Speed
+                        - definition [ref=e443]:
+                          - generic [ref=e445]: PC5-48000 (DDR5-6000)
+                    - generic [ref=e446]:
+                      - generic [ref=e448]:
+                        - term [ref=e449]:
+                          - generic [ref=e451]: Model
+                        - definition [ref=e452]:
+                          - generic [ref=e454]: G. SKILL Flare X5 Series
+                      - generic [ref=e456]:
+                        - term [ref=e457]:
+                          - generic [ref=e459]: Memory Features
+                        - definition [ref=e460]:
+                          - generic [ref=e462]: AMD EXPO, Non-ECC
+                    - generic [ref=e463]:
+                      - generic [ref=e465]:
+                        - term [ref=e466]:
+                          - generic [ref=e468]: MPN
+                        - definition [ref=e469]:
+                          - generic [ref=e471]: F5-6000J3038F16GX2-FX5
+                      - generic [ref=e473]:
+                        - term [ref=e474]:
+                          - generic [ref=e476]: Number of Pins
+                        - definition [ref=e477]:
+                          - generic [ref=e479]: "288"
+                    - generic [ref=e480]:
+                      - generic [ref=e482]:
+                        - term [ref=e483]:
+                          - generic [ref=e485]: California Prop 65 Warning
+                        - definition [ref=e486]:
+                          - generic [ref=e488]: "Yes"
+                      - generic [ref=e490]:
+                        - term [ref=e491]:
+                          - generic [ref=e493]: UPC
+                        - definition [ref=e494]:
+                          - generic [ref=e496]: "848354040538"
+                    - generic [ref=e499]:
+                      - term [ref=e500]:
+                        - generic [ref=e502]: Country of Origin
+                      - definition [ref=e503]:
+                        - generic [ref=e505]: Taiwan
+                - generic [ref=e507]:
+                  - generic [ref=e508]: Category
+                  - navigation "breadcrumb" [ref=e511]:
+                    - heading "breadcrumb" [level=2] [ref=e512]
+                    - list [ref=e513]:
+                      - listitem [ref=e514]:
+                        - link "Electronics" [ref=e515] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_7000259660
+                        - img
+                      - listitem [ref=e516]:
+                        - link "Computers/Tablets & Networking" [ref=e517] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_1838792
+                        - img
+                      - listitem [ref=e518]:
+                        - link "Computer Components & Parts" [ref=e519] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_1624167
+                        - img
+                      - listitem [ref=e520]:
+                        - link "Memory (RAM)" [ref=e521] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_661670
+                - generic [ref=e522]:
+                  - heading "Item description from the seller" [level=2] [ref=e525]
+                  - iframe [ref=e526]:
+                    - generic [ref=f232e2]:
+                      - text: "Brand: G.SKILL"
+                      - text: "Model: Flare X5"
+                      - text: "Condition: Open Box - Tested, See photos. Item or your money back."
+                      - text: "In Packaging?: Yes"
+                      - text: "Functional?: Yes"
+                      - text: "Assembly Required?: No"
+                      - text: "UPC: 38"
+                      - text: "G.SKILL Flare X5 Series DDR5 U-DIMM Memory Kit, Model: F5-6000J3038F16GX2-FX5 32GB total capacity kit containing 2x16GB modules, rated for up to DDR5-6000 CL30-38-38-96 at 1.35V Non-ECC, DDR5 U-DIMM, 288-pin, for Desktop PC & Gaming Includes JEDEC default profile, and AMD EXPO memory overclock profile Do not mix memory kits. Memory kits are sold in matched kits that are designed to run together as a set. Mixing memory kits will result in stability issues or system failure. For AMD X870, AMD X670, AMD B850, AMD B840, AMD B650, AMD A620 platforms. Refer to G.SKILL memory QVL or RAM Configurator tool on the G.SKILL website for more details on validated motherboard and hardware. Usage in any manner inconsistent with manufacturer specifications, warnings, designs, or recommendations will result in lower speeds, system instability, or damage to the system or its components. Memory kits will boot at JEDEC default SPD speed at default BIOS settings with compatible hardware. For memory kits with XMP and/or EXPO overclock profile, enable XMP/EXPO/DOCP/A-XMP profile in BIOS to reach up to the rated potential XMP or EXPO overclock speed of the memory kit, subject to the use of compatible hardware. Enabling XMP or EXPO is an act of overclocking and requires BIOS setting adjustments. Reaching the rated XMP or EXPO overclock speed and system stability will depend on the compatibility and capability of the motherboard and CPU used."
+                - generic [ref=e529]:
+                  - heading "Seller business information" [level=2] [ref=e532]:
+                    - generic [ref=e533]: Seller business information
+                  - generic [ref=e534]: I certify that all my selling activities will comply with all EU laws and regulations.
+                  - button "Seller contact information" [ref=e538] [cursor=pointer]
+          - generic [ref=e541]:
+            - generic [ref=e542]:
+              - generic [ref=e543]:
+                - heading "About this seller" [level=2] [ref=e544]:
+                  - generic [ref=e546]: About this seller
+                - generic [ref=e547]:
+                  - link [ref=e549] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/springfieldliquidations?_trksid=p4429486.m145687.l149266
+                    - img [ref=e551]
+                  - generic [ref=e552]:
+                    - heading "Springfield Liquidations" [level=3] [ref=e553]:
+                      - link "Springfield Liquidations" [ref=e554] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/str/springfieldliquidations?_trksid=p4429486.m145687.l149267
+                    - paragraph [ref=e555]: 99% positive Feedback•15K items sold
+                - generic [ref=e560]:
+                  - generic [ref=e561]:
+                    - img
+                  - generic [ref=e562]: Joined Feb 2021
+                - generic [ref=e563]: Registered as a business seller
+                - generic [ref=e564]:
+                  - link "Visit shop" [ref=e565] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/springfieldliquidations?_trksid=p4429486.m145687.l149086
+                    - generic [ref=e566]: Visit shop
+                  - button "Message seller - opens in a new dialog" [ref=e567] [cursor=pointer]:
+                    - generic [ref=e568]:
+                      - text: Message seller
+                      - generic [ref=e569]: "- opens in a new dialog"
+                  - button "Save seller - Save this seller springfieldliquidation" [ref=e571] [cursor=pointer]:
+                    - generic [ref=e572]:
+                      - img
+                    - generic [ref=e573]: Save seller
+              - generic [ref=e575]:
+                - heading "Detailed seller ratings" [level=3] [ref=e576]
+                - generic [ref=e577]:
+                  - generic [ref=e578]: Average for the last 12 months
+                  - generic [ref=e579]:
+                    - generic [ref=e580]:
+                      - generic [ref=e581]: Accurate description
+                      - progressbar [ref=e582]
+                      - generic [ref=e583]: "4.8"
+                    - generic [ref=e584]:
+                      - generic [ref=e585]: Reasonable postage cost
+                      - progressbar [ref=e586]
+                      - generic [ref=e587]: "5.0"
+                    - generic [ref=e588]:
+                      - generic [ref=e589]: Delivery time
+                      - progressbar [ref=e590]
+                      - generic [ref=e591]: "5.0"
+                    - generic [ref=e592]:
+                      - generic [ref=e593]: Communication
+                      - progressbar [ref=e594]
+                      - generic [ref=e595]: "5.0"
+            - generic [ref=e598]:
+              - heading "Seller Feedback (4,644)" [level=2] [ref=e599]
+              - 'button "Filter: All ratings" [ref=e602] [cursor=pointer]':
+                - generic [ref=e603]:
+                  - generic [ref=e604]: "Filter:"
+                  - generic [ref=e605]: All ratings
+                  - img
+              - list [ref=e606]:
+                - listitem [ref=e607]:
+                  - generic [ref=e608]:
+                    - generic [ref=e610]:
+                      - generic [ref=e611]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e612]:
+                        - text: 3***t (0)
+                        - generic [ref=e613]: "- Feedback left by buyer."
+                      - generic [ref=e616]: Past 6 months
+                      - generic [ref=e617]: Verified purchase
+                    - generic [ref=e619]: The seller is very good in shipping out orders immediately and packaging the item with care. The item I purchased was as described and was delivered 4 days in advance. Highly recommend this seller.
+                    - link "PlayStation®5 console – 1TB (#358354672517)" [ref=e621] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/358354672517
+                      - generic [ref=e622]: PlayStation®5 console – 1TB (#358354672517)
+                - listitem [ref=e623]:
+                  - generic [ref=e624]:
+                    - generic [ref=e626]:
+                      - generic [ref=e627]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e628]:
+                        - text: a***n (7)
+                        - generic [ref=e629]: "- Feedback left by buyer."
+                      - generic [ref=e632]: Past month
+                      - generic [ref=e633]: Verified purchase
+                    - generic [ref=e635]: My item arrived as pictured; shrink-wrapped, unbroken seal, and un-opened. I appreciate this! It also arrived in the time-frame as was anticipated. I didn't realize that it was a single pump (my whoopsie), but the price is still a good value, especially for brand-new in the box.
+                    - link "Momcozy Wearable Breast Pump, Hands Free Upgraded Mobile Flow | M9, App Discreet (#358373860806)" [ref=e637] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/358373860806
+                      - generic [ref=e638]: Momcozy Wearable Breast Pump, Hands Free Upgraded Mobile Flow | M9, App Discreet (#358373860806)
+                - listitem [ref=e639]:
+                  - generic [ref=e640]:
+                    - generic [ref=e642]:
+                      - generic [ref=e643]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e644]:
+                        - text: e***n (7)
+                        - generic [ref=e645]: "- Feedback left by buyer."
+                      - generic [ref=e648]: Past month
+                      - generic [ref=e649]: Verified purchase
+                    - generic [ref=e651]: Great seller. Item exactly as described. Very fair price and free shipping that was well packaged. What’s not to like?
+                    - link "Anova Culinary Sous Vide Precision Cooker 3.0 (WiFi), 1100 Watts (#358374826021)" [ref=e653] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/358374826021
+                      - generic [ref=e654]: Anova Culinary Sous Vide Precision Cooker 3.0 (WiFi), 1100 Watts (#358374826021)
+                - listitem [ref=e655]:
+                  - generic [ref=e656]:
+                    - generic [ref=e658]:
+                      - generic [ref=e659]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e660]:
+                        - text: u***r (16)
+                        - generic [ref=e661]: "- Feedback left by buyer."
+                      - generic [ref=e664]: Past 6 months
+                      - generic [ref=e665]: Verified purchase
+                    - generic [ref=e666]:
+                      - generic [ref=e667]: Shipping was quite fast , it was packaged pretty well to so I didn’t even have to worry about damage, the item came in open box as described, an these are most definitely worth the price, there very good quality My room sounds like a mini movie theater .
+                      - button "Item photo(s) from verified buyer" [ref=e668] [cursor=pointer]:
+                        - img "Item photo(s) from verified buyer" [ref=e669]
+                    - link "Edifier G2000 32W PC Gaming Computer Speakers for Laptop Mac Desktop Computer Wo (#358263276771)" [ref=e671] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/358263276771
+                      - generic [ref=e672]: Edifier G2000 32W PC Gaming Computer Speakers for Laptop Mac Desktop Computer Wo (#358263276771)
+                - listitem [ref=e673]:
+                  - generic [ref=e674]:
+                    - generic [ref=e676]:
+                      - generic [ref=e677]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e678]:
+                        - text: o***b (3296)
+                        - generic [ref=e679]: "- Feedback left by buyer."
+                      - generic [ref=e682]: Past 6 months
+                      - generic [ref=e683]: Verified purchase
+                    - generic [ref=e685]: Got it, thanx! Hassle-free transaction. Ships fast. Item as described. Packed well. High value item for less. Excellent quality product in almost flawless condition. Packed well. Seller I would buy from again.
+                    - generic [ref=e686]: Paul McCartney & Wings - At The Speed Of Sound (LP) (Vinyl) (#357893551553)
+                - listitem [ref=e687]:
+                  - generic [ref=e688]:
+                    - generic [ref=e690]:
+                      - generic [ref=e691]:
+                        - img "Negative feedback rating"
+                      - generic [ref=e692]:
+                        - text: k***4 (4399)
+                        - generic [ref=e693]: "- Feedback left by buyer."
+                      - generic [ref=e696]: Past 6 months
+                      - generic [ref=e697]: Verified purchase
+                    - generic [ref=e699]:
+                      - text: Read feedback. Seller sends collectible items with absolutely no protection whatsoever. My item arrived in an envelope causing damage to the box. Seller wants to "make it right" by offering a bs minimal partial refund. Seller has no clue what box condition means to a collector. Finally agreed to their BS "refund" just to e d this horrible experience. I would ***AVOID*** this seller if you are looking for a decent product. You have officially been warned. Seller deserves every negative feedback
+                      - generic [ref=e700]:
+                        - generic [ref=e701]:
+                          - text: "Reply from: springfieldliquidation"
+                          - generic [ref=e702]: "- Feedback replied to by seller springfieldliquidation."
+                          - generic [ref=e703]: "- Feedback replied to by seller springfieldliquidation."
+                        - generic [ref=e704]: We’re sorry to hear about your experience. We take packaging and item condition seriously and regret that this order did not meet expectations. We did offer a resolution, including a refund, in an effort to make things right. We will use this feedback to improve our packaging process moving forward.
+                    - link "SD Toys Jaws 3D Movie Poster Statue (#358263245201)" [ref=e706] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/358263245201
+                      - generic [ref=e707]: SD Toys Jaws 3D Movie Poster Statue (#358263245201)
+                - listitem [ref=e708]:
+                  - generic [ref=e709]:
+                    - generic [ref=e711]:
+                      - generic [ref=e712]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e713]:
+                        - text: l***g (471)
+                        - generic [ref=e714]: "- Feedback left by buyer."
+                      - generic [ref=e717]: Past 6 months
+                      - generic [ref=e718]: Verified purchase
+                    - generic [ref=e720]: Outstanding fast and super secured packaging and shipping…described perfectly…excellent value and eBay experience…thank you!
+                    - generic [ref=e721]: Paul Mitchell Smooth+ Ceramic Flat Iron, Adjustable Heat Settings, For Smoothing (#358097183453)
+                - listitem [ref=e722]:
+                  - generic [ref=e723]:
+                    - generic [ref=e725]:
+                      - generic [ref=e726]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e727]:
+                        - text: 8***o (14)
+                        - generic [ref=e728]: "- Feedback left by buyer."
+                      - generic [ref=e731]: Past year
+                      - generic [ref=e732]: Verified purchase
+                    - generic [ref=e733]:
+                      - generic [ref=e734]: Seller shipped package the next day, the package only took 4 days to arriveee 🏎️ The item is as described and new!! Definitely recommend for new buyers 🫶🏻
+                      - button "Item photo(s) from verified buyer" [ref=e735] [cursor=pointer]:
+                        - img "Item photo(s) from verified buyer" [ref=e736]
+                    - generic [ref=e737]: PIXPRO FZ45 Friendly Zoom Camera (Red) (#357797177455)
+              - link "See all feedback. Opens in a new tab" [ref=e739] [cursor=pointer]:
+                - /url: https://www.ebay.ie/fdbk/mweb_profile?fdbkType=FeedbackReceivedAsSeller&item_id=358374872896&username=springfieldliquidation&filter=feedback_page%3ARECEIVED_AS_SELLER&sort=RELEVANCEV2
+                - text: See all Feedback
+          - generic [ref=e741]:
+            - navigation "Quick links" [ref=e742]:
+              - link "Back to home page" [ref=e743] [cursor=pointer]:
+                - /url: https://www.ebay.ie
+              - button "Return to top" [ref=e744] [cursor=pointer]
+            - generic [ref=e746]:
+              - heading "More to explore:" [level=2] [ref=e749]
+              - list [ref=e751]:
+                - listitem [ref=e752]:
+                  - link "AMD DDR5 AMD Computer Graphics & Video Cards," [ref=e753] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7030181457
+                - listitem [ref=e754]:
+                  - link "MacBook Pro 32GB RAM," [ref=e755] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7117199213
+                - listitem [ref=e756]:
+                  - link "Rackmount 38 U Rack Unit Height," [ref=e757] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116565376
+                - listitem [ref=e758]:
+                  - link "32GB RAM Computer Servers," [ref=e759] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_877721
+                - listitem [ref=e760]:
+                  - link "32GB Computer Memory RAM," [ref=e761] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7115455501
+                - listitem [ref=e762]:
+                  - link "Dell 32GB RAM PC Laptops & Netbooks," [ref=e763] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7025289606
+                - listitem [ref=e764]:
+                  - link "AMD A-Series Motherboard and CPU Combo," [ref=e765] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_608935
+                - listitem [ref=e766]:
+                  - link "32GB Capacity per Module DDR4 SDRAM Memory RAM," [ref=e767] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7115456414
+                - listitem [ref=e768]:
+                  - link "DDR5 Computer Graphics & Video Cards," [ref=e769] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7027947434
+                - listitem [ref=e770]:
+                  - link "AMD Radeon Pro 555 Apple 16 GB RAM" [ref=e771] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_98253309
+  - generic [ref=e779]:
+    - contentinfo [ref=e780]:
+      - list [ref=e781]:
+        - listitem [ref=e782]:
+          - link "About eBay" [ref=e783] [cursor=pointer]:
+            - /url: https://www.ebayinc.com/
+        - listitem [ref=e784]:
+          - link "News" [ref=e785] [cursor=pointer]:
+            - /url: https://community.ebay.co.uk/t5/Announcements/bg-p/Announcements
+        - listitem [ref=e786]:
+          - link "Community" [ref=e787] [cursor=pointer]:
+            - /url: https://community.ebay.co.uk
+        - listitem [ref=e788]:
+          - link "Safety Centre" [ref=e789] [cursor=pointer]:
+            - /url: https://pages.ebay.ie/safetycentre/index.html
+        - listitem [ref=e790]:
+          - link "Seller Centre" [ref=e791] [cursor=pointer]:
+            - /url: https://sellercentre.ebay.co.uk
+        - listitem [ref=e792]:
+          - 'link "VeRO: Protecting Intellectual Property" [ref=e793] [cursor=pointer]':
+            - /url: https://pages.ebay.ie/vero/
+        - listitem [ref=e794]:
+          - link "Policies" [ref=e795] [cursor=pointer]:
+            - /url: https://www.ebay.ie/pages/help/policies/index.html
+        - listitem [ref=e796]:
+          - link "Help & Contact" [ref=e797] [cursor=pointer]:
+            - /url: https://www.ebay.ie/help/home
+        - listitem [ref=e798]:
+          - link "Site Map" [ref=e799] [cursor=pointer]:
+            - /url: https://pages.ebay.ie/sitemap.html
+      - generic [ref=e800]:
+        - text: Copyright © 1995-2026 eBay Inc. All Rights Reserved.
+        - link "Accessibility" [ref=e801] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/accessibility
+        - text: ","
+        - link "User Agreement" [ref=e802] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-agreement?id=4259
+        - text: ","
+        - link "Privacy" [ref=e803] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260
+        - text: ","
+        - link "Payments Terms of Use" [ref=e804] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/payment/2.0/terms.html
+        - text: ","
+        - link "Cookies" [ref=e805] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267
+        - text: and
+        - link "AdChoice" [ref=e806] [cursor=pointer]:
+          - /url: https://www.ebay.ie/adchoice
+          - text: AdChoice
+          - img
+    - generic:
+      - generic "ADVERTISEMENT" [ref=e807]
+      - generic "ADVERTISEMENT" [ref=e808]
+      - generic "ADVERTISEMENT" [ref=e809]
+  - img
+  - img [ref=e811]

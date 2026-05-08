@@ -1,0 +1,693 @@
+- generic [active] [ref=e1]:
+  - img
+  - img
+  - generic [ref=e3]:
+    - banner [ref=e7]:
+      - link "Skip to main content" [ref=e9] [cursor=pointer]:
+        - /url: "#mainContent"
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - button "Hi Tiarnán!" [ref=e14] [cursor=pointer]:
+            - generic [ref=e15]: Hi Tiarnán!
+            - img
+          - link "Help & Contact" [ref=e17] [cursor=pointer]:
+            - /url: https://www.ebay.ie/help/home
+        - generic [ref=e18]:
+          - link "Sell" [ref=e20] [cursor=pointer]:
+            - /url: https://www.ebay.ie/sl/sell
+          - generic [ref=e21]:
+            - link "Watchlist" [ref=e22] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mye/myebay/watchlist
+              - generic [ref=e23]: Watchlist
+              - img
+            - button "Expand Watchlist" [ref=e24]
+          - generic [ref=e25]:
+            - link "My eBay" [ref=e26] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mys/home?source=GBH
+              - generic [ref=e27]: My eBay
+              - img
+            - button "Expand My eBay" [ref=e28]
+          - button "Notifications" [ref=e31] [cursor=pointer]:
+            - img
+            - generic [ref=e32]: Notifications
+          - generic [ref=e34]:
+            - link "Your shopping basket contains 0 items" [ref=e35] [cursor=pointer]:
+              - /url: https://cart.ebay.ie
+              - generic "Your shopping basket contains 0 items" [ref=e36]:
+                - img
+            - button "Expand Basket" [ref=e37]
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - link "eBay Home" [ref=e40] [cursor=pointer]:
+            - /url: https://www.ebay.ie
+            - img "eBay Home" [ref=e41]
+          - button "Shop by category" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: Shop by category
+            - img
+        - generic [ref=e51]:
+          - status [ref=e52]
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - combobox "Search for anything" [ref=e56]
+              - img
+            - combobox "Select a category for search" [ref=e57]:
+              - option "All Categories" [selected]
+              - option "Antiques"
+              - option "Art"
+              - option "Baby"
+              - option "Books, Comics & Magazines"
+              - option "Business, Office & Industrial"
+              - option "Cameras & Photography"
+              - option "Cars, Motorcycles & Vehicles"
+              - option "Clothes, Shoes & Accessories"
+              - option "Coins"
+              - option "Collectables"
+              - option "Computers/Tablets & Networking"
+              - option "Crafts"
+              - option "Dolls & Bears"
+              - option "DVDs, Films & TV"
+              - option "Events Tickets"
+              - option "Garden & Patio"
+              - option "Health & Beauty"
+              - option "Holidays & Travel"
+              - option "Home, Furniture & DIY"
+              - option "Jewellery & Watches"
+              - option "Mobile Phones & Communication"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Pet Supplies"
+              - option "Pottery, Porcelain & Glass"
+              - option "Property"
+              - option "Sound & Vision"
+              - option "Sporting Goods"
+              - option "Sports Memorabilia"
+              - option "Stamps"
+              - option "Toys & Games"
+              - option "Vehicle Parts & Accessories"
+              - option "Video Games & Consoles"
+              - option "Wholesale & Job Lots"
+              - option "Everything Else"
+          - generic [ref=e58]:
+            - button "Search" [ref=e59] [cursor=pointer]:
+              - generic [ref=e60]: Search
+            - link "Advanced" [ref=e61] [cursor=pointer]:
+              - /url: https://www.ebay.ie/sch/ebayadvsearch
+    - main [ref=e62]:
+      - generic [ref=e64]:
+        - generic [ref=e68]:
+          - generic [ref=e71]:
+            - generic [ref=e73]:
+              - generic [ref=e75]:
+                - button "Picture 1 of 4" [ref=e76] [cursor=pointer]:
+                  - img "Picture 1 of 4" [ref=e77]
+                - button "Picture 2 of 4" [ref=e78] [cursor=pointer]:
+                  - img "Picture 2 of 4" [ref=e79]
+                - button "Picture 3 of 4" [ref=e80] [cursor=pointer]:
+                  - img "Picture 3 of 4" [ref=e81]
+                - button "Picture 4 of 4" [ref=e82] [cursor=pointer]:
+                  - img "Picture 4 of 4" [ref=e83]
+              - generic [ref=e84]:
+                - heading "Picture 1 of 4" [level=2] [ref=e85]
+                - generic [ref=e89]: In 1 basket
+                - button "Previous image - Item images thumbnails" [ref=e91] [cursor=pointer]:
+                  - img
+                - region "Opens image gallery dialogue GIGABYTE Radeon RX 7800 XT GAMING OC 16GB GDDR6 Graphics Card - Picture 1 of 4" [ref=e92]:
+                  - group "1 of 4" [ref=e93]:
+                    - img "GIGABYTE Radeon RX 7800 XT GAMING OC 16GB GDDR6 Graphics Card - Picture 1 of 4" [ref=e94]
+                  - group "2 of 4" [ref=e95]:
+                    - img "GIGABYTE Radeon RX 7800 XT GAMING OC 16GB GDDR6 Graphics Card - Picture 2 of 4" [ref=e96]
+                  - group "3 of 4" [ref=e97]:
+                    - img "GIGABYTE Radeon RX 7800 XT GAMING OC 16GB GDDR6 Graphics Card - Picture 3 of 4" [ref=e98]
+                  - group "4 of 4" [ref=e99]:
+                    - img "GIGABYTE Radeon RX 7800 XT GAMING OC 16GB GDDR6 Graphics Card - Picture 4 of 4" [ref=e100]
+                - generic [ref=e101]:
+                  - button "Opens image gallery" [ref=e102] [cursor=pointer]:
+                    - img
+                  - button "Add to Watchlist - 1 watchers" [ref=e104] [cursor=pointer]:
+                    - generic [ref=e105]: "1"
+                    - img
+                - button "Next image - Item images thumbnails" [ref=e107] [cursor=pointer]:
+                  - img
+            - generic [ref=e112]:
+              - generic [ref=e113]: Have one to sell?
+              - link "Sell it yourself" [ref=e115] [cursor=pointer]:
+                - /url: https://www.ebay.ie/sl/list?mode=SellLikeItem&itemId=397899163199&rt=nc&_trksid=p4429486.m117039.l2567
+                - generic [ref=e116]: Sell it yourself
+            - button "Share" [ref=e122] [cursor=pointer]:
+              - img
+              - generic [ref=e123]: Share
+          - generic [ref=e126]:
+            - generic [ref=e127]:
+              - heading "GIGABYTE Radeon RX 7800 XT GAMING OC 16GB GDDR6 Graphics Card-" [level=1] [ref=e128]
+              - button "show original title" [ref=e134] [cursor=pointer]
+            - generic [ref=e136] [cursor=pointer]:
+              - generic [ref=e138]:
+                - link [ref=e140]:
+                  - /url: https://www.ebay.ie/str/dauriagame?_trksid=p4429486.m3561.l161210
+                  - img [ref=e142]
+                - generic [ref=e143]:
+                  - generic [ref=e144]:
+                    - link "D'Auria game" [ref=e145]:
+                      - /url: https://www.ebay.ie/str/dauriagame?_trksid=p4429486.m3561.l161211
+                    - generic [ref=e146]:
+                      - generic [ref=e147]: (5192)
+                      - generic [ref=e148]:
+                        - text: Business
+                        - button "Registered as business seller" [ref=e153]:
+                          - img
+                  - generic [ref=e154]:
+                    - button "99.9% positive Feedback" [ref=e156]
+                    - link "Seller's other items" [ref=e158]:
+                      - /url: https://www.ebay.ie/str/dauriagame?_trksid=p4429486.m3561.l170197
+                      - generic [ref=e159]: Seller's other items
+                      - generic [ref=e160]: Seller's other items
+                    - button "Message seller" [ref=e162]:
+                      - generic [ref=e163]: Message seller
+                      - generic [ref=e164]: Message seller
+              - button "See more about this seller" [ref=e166]:
+                - img
+            - generic [ref=e169]:
+              - generic [ref=e170]:
+                - text: EUR 600.00
+                - generic [ref=e171]: or Best Offer
+              - generic [ref=e172]:
+                - generic [ref=e173]: €570.00 with coupon code
+                - button "Price details" [ref=e174] [cursor=pointer]:
+                  - generic [ref=e175]: Price details
+            - generic [ref=e176]:
+              - generic [ref=e177]: "Condition:"
+              - generic [ref=e179]:
+                - generic [ref=e180]:
+                  - generic [ref=e181]: New other (see details)
+                  - generic [ref=e182]: New other (see details)
+                - button "More information - About this item condition" [ref=e183] [cursor=pointer]:
+                  - generic [ref=e184]:
+                    - img "More information - About this item condition"
+            - generic [ref=e188]:
+              - generic [ref=e189]:
+                - img
+              - generic [ref=e190]:
+                - generic [ref=e191]: 5% off with code MAG26
+                - generic [ref=e192]:
+                  - generic [ref=e193]: Ends 17 May • Max € 45.00
+                  - link "See details" [ref=e194] [cursor=pointer]:
+                    - /url: https://pages.ebay.it/coupon/2026/maggio26/index.html
+                    - generic [ref=e195]: See details
+            - list [ref=e197]:
+              - listitem [ref=e198]:
+                - link "Buy It Now" [ref=e200] [cursor=pointer]:
+                  - /url: https://www.ebay.ie/bin/ctb?item=397899163199&quantity=1&fromPage=4429486&rev=0&fb=1
+                  - generic [ref=e201]: Buy It Now
+              - listitem [ref=e202]:
+                - button "Add to basket" [ref=e204] [cursor=pointer]:
+                  - generic [ref=e205]: Add to basket
+              - listitem [ref=e206]:
+                - button "Make offer" [ref=e208] [cursor=pointer]:
+                  - generic [ref=e209]: Make offer
+              - listitem [ref=e210]:
+                - generic [ref=e212]:
+                  - status [ref=e213]: Add to Watchlist
+                  - button "Add to Watchlist" [ref=e218] [cursor=pointer]:
+                    - generic [ref=e219]:
+                      - img
+                      - text: Add to Watchlist
+            - generic [ref=e222]:
+              - generic [ref=e223]:
+                - generic [ref=e224]:
+                  - img
+                - generic [ref=e226]: Hurry before it's gone. 1 person is watching this item.
+              - generic [ref=e227]:
+                - generic [ref=e228]:
+                  - img
+                - generic [ref=e230]: Breathe easy. Returns accepted.
+            - generic [ref=e233]:
+              - heading "Postage, returns and payments" [level=2] [ref=e236]:
+                - generic [ref=e237]: Postage, returns and payments
+              - generic [ref=e239]:
+                - generic [ref=e242]:
+                  - generic [ref=e245]: "Postage:"
+                  - generic [ref=e247]:
+                    - generic [ref=e248]:
+                      - text: EUR 5.00 Poste delivery europe.
+                      - button "See details for postage" [ref=e249] [cursor=pointer]:
+                        - generic [ref=e250]:
+                          - text: See details
+                          - generic [ref=e251]: for postage
+                    - generic [ref=e252]: "Located in: Qualiano, Italy"
+                - generic [ref=e256]:
+                  - generic [ref=e259]: "Delivery:"
+                  - generic [ref=e262]:
+                    - text: Estimated between Mon, 11 May and Mon, 18 May to D08F97P
+                    - button "Information - Estimated delivery date - opens a layer" [ref=e268]:
+                      - img
+            - generic [ref=e275]:
+              - generic [ref=e278]: "Returns:"
+              - generic [ref=e281]:
+                - text: 30 days return. Buyer pays for return postage. If you use an eBay delivery label, it will be deducted from your refund amount.
+                - button "See details - for more information about returns" [ref=e282] [cursor=pointer]:
+                  - generic [ref=e283]:
+                    - text: See details
+                    - generic [ref=e284]: "- for more information about returns"
+            - generic [ref=e291]:
+              - generic [ref=e294]: "Payments:"
+              - generic [ref=e297]:
+                - img "PayPal" [ref=e298]
+                - img "Google Pay" [ref=e300]
+                - img "Visa" [ref=e302]
+                - img "Mastercard" [ref=e304]
+                - img "Diners Club" [ref=e307]
+            - generic [ref=e311]:
+              - heading "Shop with confidence" [level=2] [ref=e314]
+              - generic [ref=e315]:
+                - generic [ref=e317]:
+                  - img
+                - generic [ref=e318]:
+                  - generic [ref=e319]: eBay Money Back Guarantee
+                  - generic [ref=e320]:
+                    - text: Get the item you ordered or your money back.
+                    - link "Learn more eBay Money Back Guarantee - opens new window or tab" [ref=e321] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/ebay-money-back-guarantee/
+                      - generic [ref=e322]:
+                        - text: Learn more
+                        - generic [ref=e323]: eBay Money Back Guarantee - opens new window or tab
+        - generic [ref=e324]:
+          - generic [ref=e329]:
+            - tablist [ref=e330]:
+              - tab "About this item" [selected] [ref=e331] [cursor=pointer]:
+                - generic [ref=e332]: About this item
+            - tabpanel "About this item" [ref=e334]:
+              - generic [ref=e337]:
+                - generic [ref=e340]:
+                  - generic [ref=e344]: Seller assumes all responsibility for this listing.
+                  - generic [ref=e348]: eBay item number:397899163199
+                - generic [ref=e351]:
+                  - heading "Item specifics" [level=2] [ref=e354]:
+                    - generic [ref=e355]: Item specifics
+                  - generic [ref=e358]:
+                    - generic [ref=e360]:
+                      - term [ref=e361]:
+                        - generic [ref=e363]: Condition
+                      - definition [ref=e364]:
+                        - generic [ref=e367]:
+                          - generic [ref=e368]: "New other (see details): A new, unused item with absolutely no signs of wear. The item may be ..."
+                          - button "Read more about the condition" [ref=e370]:
+                            - generic [ref=e371]:
+                              - text: Read more
+                              - generic [ref=e372]: about the condition
+                    - generic [ref=e374]:
+                      - term [ref=e375]:
+                        - generic [ref=e377]: EAN
+                      - definition [ref=e378]:
+                        - generic [ref=e380]: "4719331314514"
+                - generic [ref=e381]:
+                  - generic [ref=e382]: Category
+                  - navigation "breadcrumb" [ref=e385]:
+                    - heading "breadcrumb" [level=2] [ref=e386]
+                    - list [ref=e387]:
+                      - listitem [ref=e388]:
+                        - link "Electronics" [ref=e389] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_7000259660
+                        - img
+                      - listitem [ref=e390]:
+                        - link "Computers/Tablets & Networking" [ref=e391] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_1838792
+                        - img
+                      - listitem [ref=e392]:
+                        - link "Computer Components & Parts" [ref=e393] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_1624167
+                        - img
+                      - listitem [ref=e394]:
+                        - link "Graphics/Video Cards" [ref=e395] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_661667
+                - generic [ref=e398]:
+                  - heading "About this product" [level=2] [ref=e401]:
+                    - generic [ref=e402]: About this product
+                  - generic [ref=e403]:
+                    - heading "Identificatori del prodotto" [level=2] [ref=e406]:
+                      - generic [ref=e407]: Identificatori del prodotto
+                    - generic [ref=e408]:
+                      - generic [ref=e409]:
+                        - generic [ref=e411]:
+                          - generic [ref=e414]: Marca
+                          - generic [ref=e417]: GIGABYTE
+                        - generic [ref=e419]:
+                          - generic [ref=e422]: MPN
+                          - generic [ref=e425]: GV-R78XTGAMING OC-16GD
+                      - generic [ref=e426]:
+                        - generic [ref=e428]:
+                          - generic [ref=e431]: Upc
+                          - generic [ref=e434]: "4719331314514"
+                        - generic [ref=e436]:
+                          - generic [ref=e439]: Modello
+                          - generic [ref=e442]: GIGABYTE Radeon RX 7800 XT GAMING OC
+                      - generic [ref=e445]:
+                        - generic [ref=e448]: eBay Product ID (ePID)
+                        - generic [ref=e451]: "19063447527"
+                  - generic [ref=e453]:
+                    - heading "Caratteristiche principali del prodotto" [level=2] [ref=e456]:
+                      - generic [ref=e457]: Caratteristiche principali del prodotto
+                    - generic [ref=e458]:
+                      - generic [ref=e459]:
+                        - generic [ref=e461]:
+                          - generic [ref=e464]: Slot compatibili
+                          - generic [ref=e467]: PCI Express 4.0 x16
+                        - generic [ref=e469]:
+                          - generic [ref=e472]: Caratteristiche
+                          - generic [ref=e475]: Compatibile G-SYNC/FreeSync, Illuminazione RGB
+                      - generic [ref=e476]:
+                        - generic [ref=e478]:
+                          - generic [ref=e481]: Modello Chipset/GPU
+                          - generic [ref=e484]: AMD Radeon RX 7800 XT
+                        - generic [ref=e486]:
+                          - generic [ref=e489]: Capacità di memoria
+                          - generic [ref=e492]: 16 GB
+                      - generic [ref=e493]:
+                        - generic [ref=e495]:
+                          - generic [ref=e498]: Tipo di memoria
+                          - generic [ref=e501]: GDDR6
+                        - generic [ref=e503]:
+                          - generic [ref=e506]: Produttore chipset
+                          - generic [ref=e509]: AMD
+                      - generic [ref=e510]:
+                        - generic [ref=e512]:
+                          - generic [ref=e515]: Requisiti del cavo di alimentazione
+                          - generic [ref=e518]: 8-Pin + 8-Pin PCI-E
+                        - generic [ref=e520]:
+                          - generic [ref=e523]: Connettori
+                          - generic [ref=e526]: DisplayPort, HDMI
+                      - generic [ref=e529]:
+                        - generic [ref=e532]: API
+                        - generic [ref=e535]: DirectX 12 Ultimate, OpenGL 4.6
+                - generic [ref=e537]:
+                  - heading "Item description from the seller" [level=2] [ref=e540]
+                  - iframe [ref=e541]:
+                    - paragraph [ref=f139e3]: GIGABYTE Radeon RX 7800 XT GAMING OC 16GB GDDR6 Scheda Grafica. E stata aperta solo per fare le foto mai usata ancora nelle buste sigillate
+                - generic [ref=e544]:
+                  - heading "Seller business information" [level=2] [ref=e547]:
+                    - generic [ref=e548]: Seller business information
+                  - generic [ref=e549]: I certify that all my selling activities will comply with all EU laws and regulations.
+                  - generic [ref=e552]: "VAT number: IT 09928331215"
+                  - button "Seller contact information" [ref=e556] [cursor=pointer]
+          - generic [ref=e559]:
+            - generic [ref=e560]:
+              - generic [ref=e561]:
+                - heading "About this seller" [level=2] [ref=e562]:
+                  - generic [ref=e564]: About this seller
+                - generic [ref=e565]:
+                  - link [ref=e567] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/dauriagame?_trksid=p4429486.m145687.l149266
+                    - img [ref=e569]
+                  - generic [ref=e570]:
+                    - heading "D'Auria game" [level=3] [ref=e571]:
+                      - link "D'Auria game" [ref=e572] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/str/dauriagame?_trksid=p4429486.m145687.l149267
+                    - paragraph [ref=e573]: 99.9% positive Feedback•17K items sold
+                - generic [ref=e576]:
+                  - generic [ref=e578]:
+                    - generic [ref=e579]:
+                      - img
+                    - generic [ref=e580]: Joined Apr 2021
+                  - generic [ref=e582]:
+                    - generic [ref=e583]:
+                      - img
+                    - generic [ref=e584]: Usually responds within 24 hours
+                - generic [ref=e585]: Registered as a business seller
+                - generic [ref=e586]:
+                  - link "Visit shop" [ref=e587] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/dauriagame?_trksid=p4429486.m145687.l149086
+                    - generic [ref=e588]: Visit shop
+                  - button "Message seller - opens in a new dialog" [ref=e589] [cursor=pointer]:
+                    - generic [ref=e590]:
+                      - text: Message seller
+                      - generic [ref=e591]: "- opens in a new dialog"
+                  - button "Save seller - Save this seller dauriagame" [ref=e593] [cursor=pointer]:
+                    - generic [ref=e594]:
+                      - img
+                    - generic [ref=e595]: Save seller
+              - generic [ref=e597]:
+                - heading "Detailed seller ratings" [level=3] [ref=e598]
+                - generic [ref=e599]:
+                  - generic [ref=e600]: Average for the last 12 months
+                  - generic [ref=e601]:
+                    - generic [ref=e602]:
+                      - generic [ref=e603]: Accurate description
+                      - progressbar [ref=e604]
+                      - generic [ref=e605]: "4.9"
+                    - generic [ref=e606]:
+                      - generic [ref=e607]: Reasonable postage cost
+                      - progressbar [ref=e608]
+                      - generic [ref=e609]: "4.9"
+                    - generic [ref=e610]:
+                      - generic [ref=e611]: Delivery time
+                      - progressbar [ref=e612]
+                      - generic [ref=e613]: "4.9"
+                    - generic [ref=e614]:
+                      - generic [ref=e615]: Communication
+                      - progressbar [ref=e616]
+                      - generic [ref=e617]: "5.0"
+              - generic [ref=e618]:
+                - generic [ref=e619]:
+                  - heading "Popular categories from this shop" [level=3] [ref=e620]
+                  - link "See all categories" [ref=e622] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/sch/i.html?_dkr=1&iconV2Request=true&_blrs=recall_filtering&_ssn=dauriagame&store_cat=0&store_name=dauriagame&_oac=1
+                    - generic [ref=e623]:
+                      - text: See all
+                      - generic [ref=e624]: categories
+                - generic [ref=e625]:
+                  - link "giochi ps1" [ref=e627] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/dauriagame/giochi-ps1/_i.html?store_cat=39193139017
+                  - link "giochi ps2" [ref=e629] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/dauriagame/giochi-ps2/_i.html?store_cat=39240140017
+                  - link "giochi ps3" [ref=e631] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/dauriagame/giochi-ps3/_i.html?store_cat=39240141017
+                  - link "PS4- PS5" [ref=e633] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/dauriagame/PS4-PS5/_i.html?store_cat=39240142017
+                  - link "telefonia" [ref=e635] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/dauriagame/telefonia/_i.html?store_cat=39240143017
+                  - link "componenti pc" [ref=e637] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/dauriagame/componenti-pc/_i.html?store_cat=39240144017
+                  - link "giochi psp e ps vita" [ref=e639] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/dauriagame/giochi-psp-e-ps-vita/_i.html?store_cat=39240145017
+                  - link "giochi nintendo in generale" [ref=e641] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/dauriagame/giochi-nintendo-in-generale/_i.html?store_cat=39240146017
+                  - link "Other" [ref=e643] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/dauriagame/Other/_i.html?store_cat=1
+            - generic [ref=e646]:
+              - heading "Seller Feedback (6,841)" [level=2] [ref=e647]
+              - 'button "Filter: All ratings" [ref=e650] [cursor=pointer]':
+                - generic [ref=e651]:
+                  - generic [ref=e652]: "Filter:"
+                  - generic [ref=e653]: All ratings
+                  - img
+              - list [ref=e654]:
+                - listitem [ref=e655]:
+                  - generic [ref=e656]:
+                    - generic [ref=e658]:
+                      - generic [ref=e659]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e660]:
+                        - text: t***t (45)
+                        - generic [ref=e661]: "- Feedback left by buyer."
+                      - generic [ref=e664]: Past 6 months
+                      - generic [ref=e665]: Verified purchase
+                    - generic [ref=e667]: Gioco arrivato in ottime condizioni come da foto, pacco ben incartato e coperto, schedina perfetta senza nemmeno un graffio, spedizione veloce e costi veramente buoni, sia per il gioco che per la spedizione. Venditore altamente consigliato e provvederò a fare altri acquisti da quest'ultimo.
+                    - generic [ref=e668]: Call Of Duty Black Ops Declassified Ps Vita Psvita N.L927 (#397226768043)
+                - listitem [ref=e669]:
+                  - generic [ref=e670]:
+                    - generic [ref=e672]:
+                      - generic [ref=e673]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e674]:
+                        - text: o***i (278)
+                        - generic [ref=e675]: "- Feedback left by buyer."
+                      - generic [ref=e678]: Past 6 months
+                      - generic [ref=e679]: Verified purchase
+                    - generic [ref=e681]: Come al solito tutto perfetto venditrice consigliata prodotto come da descrizione e in foto comunicazioni ottime confezione antiurto e spedizione veloce fatto parecchi acquisti da questa venditrice e sicuramente ne farò molti altri A+++
+                    - generic [ref=e682]: Tekken 3 PLAYSTATION 1 Ps1 DISCO COME NUOVO ITALIANO N.N714 (#397411893352)
+                - listitem [ref=e683]:
+                  - generic [ref=e684]:
+                    - generic [ref=e686]:
+                      - generic [ref=e687]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e688]:
+                        - text: i***v (111)
+                        - generic [ref=e689]: "- Feedback left by buyer."
+                      - generic [ref=e692]: Past month
+                      - generic [ref=e693]: Verified purchase
+                    - generic [ref=e695]: D'Auria game è TOP SELLER perchè da D'Auria game e solo da lui ho trovato l'oggetto che cercavo nelle migliori condizioni ed al miglior prezzo. D'Auria game spedisce subito in imballo professionale protetto esternamente ed internamente.l'oggetto è pari al nuovo,arrivato in due giorni tutto al TOP. D'Auria game è TOP SELLER 5 STARS
+                    - 'link "R: Racing PlayStation 2 Ps2 N. L515 (#397040329481)" [ref=e697] [cursor=pointer]':
+                      - /url: https://www.ebay.ie/itm/397040329481
+                      - generic [ref=e698]: "R: Racing PlayStation 2 Ps2 N. L515 (#397040329481)"
+                - listitem [ref=e699]:
+                  - generic [ref=e700]:
+                    - generic [ref=e702]:
+                      - generic [ref=e703]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e704]:
+                        - text: u***_ (2)
+                        - generic [ref=e705]: "- Feedback left by buyer."
+                      - generic [ref=e708]: Past 6 months
+                      - generic [ref=e709]: Verified purchase
+                    - generic [ref=e711]:
+                      - text: Though the item arrived as described, bubble wrap wrapped in black plastic and tape is not a good choice for shipping an expensive electronic internationally. The inside of the plastic wrap was wet and smelled like sour milk, though the item itself was dry. The smell was extremely unpleasant. As mentioned, the device itself arrived as described, fortunately.
+                      - generic [ref=e712]:
+                        - generic [ref=e713]:
+                          - text: "Follow-up from: u***_"
+                          - generic [ref=e714]: "- Feedback followed up on by buyer."
+                          - generic [ref=e715]: "- Feedback followed up on by buyer."
+                        - generic [ref=e716]: The device quit charging 9 days after receiving it. The seller's response amounted to "tough luck" and that I must have broken it myself. They refused to be of any form of assistance, and were actually quite rude.
+                    - link "Sony PS VITA PSVITA Modello Oled Nero Console + Caricatore MICRO SD DA 16 GB (#397620839680)" [ref=e718] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/397620839680
+                      - generic [ref=e719]: Sony PS VITA PSVITA Modello Oled Nero Console + Caricatore MICRO SD DA 16 GB (#397620839680)
+                - listitem [ref=e720]:
+                  - generic [ref=e721]:
+                    - generic [ref=e723]:
+                      - generic [ref=e724]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e725]:
+                        - text: 2***7 (19)
+                        - generic [ref=e726]: "- Feedback left by buyer."
+                      - generic [ref=e729]: Past 6 months
+                      - generic [ref=e730]: Verified purchase
+                    - generic [ref=e732]: Prodotto ben confezionato e corrispondente alla descrizione, arrivato molto presto e a prezzo super competitivo. Venditore rapidissimo nella risposta. Consigliato.
+                    - link "Donkey Kong Bananza Nintendo Switch 2 Lingua Italiana Copertina Eu (#397025206653)" [ref=e734] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/397025206653
+                      - generic [ref=e735]: Donkey Kong Bananza Nintendo Switch 2 Lingua Italiana Copertina Eu (#397025206653)
+                - listitem [ref=e736]:
+                  - generic [ref=e737]:
+                    - generic [ref=e739]:
+                      - generic [ref=e740]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e741]:
+                        - text: i***3 (251)
+                        - generic [ref=e742]: "- Feedback left by buyer."
+                      - generic [ref=e745]: Past month
+                      - generic [ref=e746]: Verified purchase
+                    - generic [ref=e748]: Come sempre tutto perfetto.venditore consigliato.prodotto come descritto, spedizione lampo, imballato con la dovuta cura ed attenzione. Non posso chiedere servizio migliore. Five star seller. item as descrived ,fast shipping, very well packed .cannot ask for a better service .Hope to deal again whit you
+                    - link "Trova touring car championship Ps1 C407 (#394482539232)" [ref=e750] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/394482539232
+                      - generic [ref=e751]: Trova touring car championship Ps1 C407 (#394482539232)
+                - listitem [ref=e752]:
+                  - generic [ref=e753]:
+                    - generic [ref=e755]:
+                      - generic [ref=e756]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e757]:
+                        - text: _***f (5)
+                        - generic [ref=e758]: "- Feedback left by buyer."
+                      - generic [ref=e761]: Past month
+                      - generic [ref=e762]: Verified purchase
+                    - generic [ref=e764]: Spedizione rapida imballo super robusto ottima comunicazione!!! Articoli esattamente come da descrizione, venditore serio preciso accurato TUTTO OK!!!!!!
+                    - link "P.T.O. IV Playstation 2 Ps2 DISCO COME NUOVO Q470 ITALIANO (#397738950581)" [ref=e766] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/397738950581
+                      - generic [ref=e767]: P.T.O. IV Playstation 2 Ps2 DISCO COME NUOVO Q470 ITALIANO (#397738950581)
+                - listitem [ref=e768]:
+                  - generic [ref=e769]:
+                    - generic [ref=e771]:
+                      - generic [ref=e772]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e773]:
+                        - text: 8***i (168)
+                        - generic [ref=e774]: "- Feedback left by buyer."
+                      - generic [ref=e777]: Past 6 months
+                      - generic [ref=e778]: Verified purchase
+                    - generic [ref=e780]: Spedizione rapida e oggetto arrivato esattamente come da foto. Molto soddisfatto dell'abbondante imballo applicato all'oggetto, cosa mai scontata e da apprezzare non avendo pagato molto l'oggetto. Esperienza molto positiva, consiglio con piacere questo venditore! 🙂
+                    - generic [ref=e781]: Spyro Year Of The Dragon PLAYSTATION 1 PS1 P535 DISCO COME NUOVO Solo Gioco (#397555576002)
+              - link "See all feedback. Opens in a new tab" [ref=e783] [cursor=pointer]:
+                - /url: https://www.ebay.ie/fdbk/mweb_profile?fdbkType=FeedbackReceivedAsSeller&item_id=397899163199&username=dauriagame&filter=feedback_page%3ARECEIVED_AS_SELLER&sort=RELEVANCEV2
+                - text: See all Feedback
+          - generic [ref=e785]:
+            - navigation "Quick links" [ref=e786]:
+              - link "Back to home page" [ref=e787] [cursor=pointer]:
+                - /url: https://www.ebay.ie
+              - button "Return to top" [ref=e788] [cursor=pointer]
+            - generic [ref=e790]:
+              - heading "More to explore:" [level=2] [ref=e793]
+              - list [ref=e795]:
+                - listitem [ref=e796]:
+                  - link "AMD Radeon RX 5700 XT Computer Graphics & Video Cards," [ref=e797] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116583494
+                - listitem [ref=e798]:
+                  - link "GIGABYTE GDDR6 Computer Graphics & Video Cards," [ref=e799] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7115157200
+                - listitem [ref=e800]:
+                  - link "GIGABYTE GeForce RTX 2070 GAMING OC Computer Graphics & Video Cards," [ref=e801] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116653335
+                - listitem [ref=e802]:
+                  - link "GIGABYTE GeForce RTX 2080 GAMING OC Computer Graphics & Video Cards," [ref=e803] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116654564
+                - listitem [ref=e804]:
+                  - link "GIGABYTE GeForce RTX 2080 Ti GAMING OC Computer Graphics & Video Cards," [ref=e805] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116579566
+                - listitem [ref=e806]:
+                  - link "AMD Radeon RX 570 Computer Graphics & Video Cards," [ref=e807] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116468385
+                - listitem [ref=e808]:
+                  - link "Computer Graphics AMD Radeon RX 5700 Video Cards," [ref=e809] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116567726
+                - listitem [ref=e810]:
+                  - link "GIGABYTE Computer Graphics & Video Cards," [ref=e811] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_2737996
+                - listitem [ref=e812]:
+                  - link "AMD Radeon RX Vega 56 Computer Graphics & Video Cards," [ref=e813] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116580819
+                - listitem [ref=e814]:
+                  - link "8GB GDDR6 Computer Graphics & Video Cards" [ref=e815] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7115057456
+  - generic [ref=e823]:
+    - contentinfo [ref=e824]:
+      - list [ref=e825]:
+        - listitem [ref=e826]:
+          - link "About eBay" [ref=e827] [cursor=pointer]:
+            - /url: https://www.ebayinc.com/
+        - listitem [ref=e828]:
+          - link "News" [ref=e829] [cursor=pointer]:
+            - /url: https://community.ebay.co.uk/t5/Announcements/bg-p/Announcements
+        - listitem [ref=e830]:
+          - link "Community" [ref=e831] [cursor=pointer]:
+            - /url: https://community.ebay.co.uk
+        - listitem [ref=e832]:
+          - link "Safety Centre" [ref=e833] [cursor=pointer]:
+            - /url: https://pages.ebay.ie/safetycentre/index.html
+        - listitem [ref=e834]:
+          - link "Seller Centre" [ref=e835] [cursor=pointer]:
+            - /url: https://sellercentre.ebay.co.uk
+        - listitem [ref=e836]:
+          - 'link "VeRO: Protecting Intellectual Property" [ref=e837] [cursor=pointer]':
+            - /url: https://pages.ebay.ie/vero/
+        - listitem [ref=e838]:
+          - link "Policies" [ref=e839] [cursor=pointer]:
+            - /url: https://www.ebay.ie/pages/help/policies/index.html
+        - listitem [ref=e840]:
+          - link "Help & Contact" [ref=e841] [cursor=pointer]:
+            - /url: https://www.ebay.ie/help/home
+        - listitem [ref=e842]:
+          - link "Site Map" [ref=e843] [cursor=pointer]:
+            - /url: https://pages.ebay.ie/sitemap.html
+      - generic [ref=e844]:
+        - text: Copyright © 1995-2026 eBay Inc. All Rights Reserved.
+        - link "Accessibility" [ref=e845] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/accessibility
+        - text: ","
+        - link "User Agreement" [ref=e846] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-agreement?id=4259
+        - text: ","
+        - link "Privacy" [ref=e847] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260
+        - text: ","
+        - link "Payments Terms of Use" [ref=e848] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/payment/2.0/terms.html
+        - text: ","
+        - link "Cookies" [ref=e849] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267
+        - text: and
+        - link "AdChoice" [ref=e850] [cursor=pointer]:
+          - /url: https://www.ebay.ie/adchoice
+          - text: AdChoice
+          - img
+    - generic:
+      - generic "ADVERTISEMENT" [ref=e851]
+      - generic "ADVERTISEMENT" [ref=e852]
+      - generic "ADVERTISEMENT" [ref=e853]
+  - img
+  - img [ref=e855]

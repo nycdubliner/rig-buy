@@ -1,0 +1,647 @@
+- generic [active] [ref=e1]:
+  - img
+  - img
+  - generic [ref=e3]:
+    - banner [ref=e7]:
+      - link "Skip to main content" [ref=e9] [cursor=pointer]:
+        - /url: "#mainContent"
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - button "Hi Tiarnán!" [ref=e14] [cursor=pointer]:
+            - generic [ref=e15]: Hi Tiarnán!
+            - img
+          - link "Help & Contact" [ref=e17] [cursor=pointer]:
+            - /url: https://www.ebay.ie/help/home
+        - generic [ref=e18]:
+          - link "Sell" [ref=e20] [cursor=pointer]:
+            - /url: https://www.ebay.ie/sl/sell
+          - generic [ref=e21]:
+            - link "Watchlist" [ref=e22] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mye/myebay/watchlist
+              - generic [ref=e23]: Watchlist
+              - img
+            - button "Expand Watchlist" [ref=e24]
+          - generic [ref=e25]:
+            - link "My eBay" [ref=e26] [cursor=pointer]:
+              - /url: https://www.ebay.ie/mys/home?source=GBH
+              - generic [ref=e27]: My eBay
+              - img
+            - button "Expand My eBay" [ref=e28]
+          - button "Notifications" [ref=e31] [cursor=pointer]:
+            - img
+            - generic [ref=e32]: Notifications
+          - generic [ref=e34]:
+            - link "Your shopping basket contains 0 items" [ref=e35] [cursor=pointer]:
+              - /url: https://cart.ebay.ie
+              - generic "Your shopping basket contains 0 items" [ref=e36]:
+                - img
+            - button "Expand Basket" [ref=e37]
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - link "eBay Home" [ref=e40] [cursor=pointer]:
+            - /url: https://www.ebay.ie
+            - img "eBay Home" [ref=e41]
+          - button "Shop by category" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: Shop by category
+            - img
+        - generic [ref=e51]:
+          - status [ref=e52]
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - combobox "Search for anything" [ref=e56]
+              - img
+            - combobox "Select a category for search" [ref=e57]:
+              - option "All Categories" [selected]
+              - option "Antiques"
+              - option "Art"
+              - option "Baby"
+              - option "Books, Comics & Magazines"
+              - option "Business, Office & Industrial"
+              - option "Cameras & Photography"
+              - option "Cars, Motorcycles & Vehicles"
+              - option "Clothes, Shoes & Accessories"
+              - option "Coins"
+              - option "Collectables"
+              - option "Computers/Tablets & Networking"
+              - option "Crafts"
+              - option "Dolls & Bears"
+              - option "DVDs, Films & TV"
+              - option "Events Tickets"
+              - option "Garden & Patio"
+              - option "Health & Beauty"
+              - option "Holidays & Travel"
+              - option "Home, Furniture & DIY"
+              - option "Jewellery & Watches"
+              - option "Mobile Phones & Communication"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Pet Supplies"
+              - option "Pottery, Porcelain & Glass"
+              - option "Property"
+              - option "Sound & Vision"
+              - option "Sporting Goods"
+              - option "Sports Memorabilia"
+              - option "Stamps"
+              - option "Toys & Games"
+              - option "Vehicle Parts & Accessories"
+              - option "Video Games & Consoles"
+              - option "Wholesale & Job Lots"
+              - option "Everything Else"
+          - generic [ref=e58]:
+            - button "Search" [ref=e59] [cursor=pointer]:
+              - generic [ref=e60]: Search
+            - link "Advanced" [ref=e61] [cursor=pointer]:
+              - /url: https://www.ebay.ie/sch/ebayadvsearch
+    - main [ref=e62]:
+      - generic [ref=e64]:
+        - generic [ref=e68]:
+          - generic [ref=e71]:
+            - generic [ref=e73]:
+              - generic [ref=e74]:
+                - button "Previous image - Item images thumbnails" [disabled] [ref=e75] [cursor=pointer]:
+                  - img
+                - generic [ref=e76]:
+                  - button "Picture 1 of 9" [ref=e77] [cursor=pointer]:
+                    - img "Picture 1 of 9" [ref=e78]
+                  - button "Picture 2 of 9" [ref=e79] [cursor=pointer]:
+                    - img "Picture 2 of 9" [ref=e80]
+                  - button "Picture 3 of 9" [ref=e81] [cursor=pointer]:
+                    - img "Picture 3 of 9" [ref=e82]
+                  - button "Picture 4 of 9" [ref=e83] [cursor=pointer]:
+                    - img "Picture 4 of 9" [ref=e84]
+                  - button "Picture 5 of 9" [ref=e85] [cursor=pointer]:
+                    - img "Picture 5 of 9" [ref=e86]
+                  - button "Picture 6 of 9" [ref=e87] [cursor=pointer]:
+                    - img "Picture 6 of 9" [ref=e88]
+                  - button "Picture 7 of 9" [ref=e89] [cursor=pointer]
+                  - button "Picture 8 of 9" [ref=e90] [cursor=pointer]
+                  - button "Picture 9 of 9" [ref=e91] [cursor=pointer]
+                - button "Next image - Item images thumbnails" [ref=e92] [cursor=pointer]:
+                  - img
+              - generic [ref=e93]:
+                - heading "Picture 1 of 9" [level=2] [ref=e94]
+                - generic [ref=e98]: 5 viewed today
+                - button "Previous image - Item images thumbnails" [ref=e100] [cursor=pointer]:
+                  - img
+                - region "Opens image gallery dialogue [Good Condition] SAPPHIRE AMD Radeon RX7800XT Reference Model - Picture 1 of 9" [ref=e101]:
+                  - group "1 of 9" [ref=e102]:
+                    - img "[Good Condition] SAPPHIRE AMD Radeon RX7800XT Reference Model - Picture 1 of 9" [ref=e103]
+                  - group "2 of 9" [ref=e104]:
+                    - img "[Good Condition] SAPPHIRE AMD Radeon RX7800XT Reference Model - Picture 2 of 9" [ref=e105]
+                  - group "3 of 9" [ref=e106]:
+                    - img "[Good Condition] SAPPHIRE AMD Radeon RX7800XT Reference Model - Picture 3 of 9" [ref=e107]
+                  - group "4 of 9" [ref=e108]:
+                    - img "[Good Condition] SAPPHIRE AMD Radeon RX7800XT Reference Model - Picture 4 of 9" [ref=e109]
+                  - group "5 of 9" [ref=e110]:
+                    - img "[Good Condition] SAPPHIRE AMD Radeon RX7800XT Reference Model - Picture 5 of 9" [ref=e111]
+                  - group "6 of 9" [ref=e112]:
+                    - img "[Good Condition] SAPPHIRE AMD Radeon RX7800XT Reference Model - Picture 6 of 9" [ref=e113]
+                  - group "7 of 9" [ref=e114]:
+                    - img "[Good Condition] SAPPHIRE AMD Radeon RX7800XT Reference Model - Picture 7 of 9" [ref=e115]
+                  - group "8 of 9" [ref=e116]:
+                    - img "[Good Condition] SAPPHIRE AMD Radeon RX7800XT Reference Model - Picture 8 of 9" [ref=e117]
+                  - group "9 of 9" [ref=e118]:
+                    - img "[Good Condition] SAPPHIRE AMD Radeon RX7800XT Reference Model - Picture 9 of 9" [ref=e119]
+                - generic [ref=e120]:
+                  - button "Opens image gallery" [ref=e121] [cursor=pointer]:
+                    - img
+                  - button "Add to Watchlist" [ref=e123] [cursor=pointer]:
+                    - img
+                - button "Next image - Item images thumbnails" [ref=e125] [cursor=pointer]:
+                  - img
+            - generic [ref=e130]:
+              - generic [ref=e131]: Have one to sell?
+              - link "Sell it yourself" [ref=e133] [cursor=pointer]:
+                - /url: https://www.ebay.ie/sl/list?mode=SellLikeItem&itemId=318170036286&rt=nc&_trksid=p4429486.m117039.l2567
+                - generic [ref=e134]: Sell it yourself
+            - button "Share" [ref=e140] [cursor=pointer]:
+              - img
+              - generic [ref=e141]: Share
+          - generic [ref=e144]:
+            - heading "[Good Condition] SAPPHIRE AMD Radeon RX7800XT Reference Model" [level=1] [ref=e146]
+            - generic [ref=e148] [cursor=pointer]:
+              - generic [ref=e150]:
+                - link [ref=e152]:
+                  - /url: https://www.ebay.ie/str/toru0000?_trksid=p4429486.m3561.l161210
+                  - img [ref=e154]
+                - generic [ref=e155]:
+                  - generic [ref=e156]:
+                    - link "toru_0000" [ref=e157]:
+                      - /url: https://www.ebay.ie/str/toru0000?_trksid=p4429486.m3561.l161211
+                    - generic [ref=e158]:
+                      - generic [ref=e159]: (315)
+                      - generic [ref=e160]:
+                        - text: Business
+                        - button "Registered as business seller" [ref=e165]:
+                          - img
+                  - generic [ref=e166]:
+                    - button "96.9% positive Feedback" [ref=e168]
+                    - link "Seller's other items" [ref=e170]:
+                      - /url: https://www.ebay.ie/str/toru0000?_trksid=p4429486.m3561.l170197
+                      - generic [ref=e171]: Seller's other items
+                      - generic [ref=e172]: Seller's other items
+                    - button "Message seller" [ref=e174]:
+                      - generic [ref=e175]: Message seller
+                      - generic [ref=e176]: Message seller
+              - button "See more about this seller" [ref=e178]:
+                - img
+            - generic [ref=e181]:
+              - generic [ref=e182]:
+                - text: US $768.01
+                - generic [ref=e183]: or Best Offer
+              - generic [ref=e184]:
+                - generic [ref=e185]: Approximately
+                - generic [ref=e186]: EUR 656.81
+            - generic [ref=e187]:
+              - generic [ref=e188]: "Condition:"
+              - generic [ref=e190]:
+                - generic [ref=e191]:
+                  - generic [ref=e192]: Used
+                  - generic [ref=e193]: Used
+                - button "More information - About this item condition" [ref=e194] [cursor=pointer]:
+                  - generic [ref=e195]:
+                    - img "More information - About this item condition"
+            - list [ref=e197]:
+              - listitem [ref=e198]:
+                - link "Buy It Now" [ref=e200] [cursor=pointer]:
+                  - /url: https://www.ebay.ie/bin/ctb?item=318170036286&quantity=1&fromPage=4429486&rev=1&fb=1
+                  - generic [ref=e201]: Buy It Now
+              - listitem [ref=e202]:
+                - button "Add to basket" [ref=e204] [cursor=pointer]:
+                  - generic [ref=e205]: Add to basket
+              - listitem [ref=e206]:
+                - button "Make offer" [ref=e208] [cursor=pointer]:
+                  - generic [ref=e209]: Make offer
+              - listitem [ref=e210]:
+                - generic [ref=e212]:
+                  - status [ref=e213]: Add to Watchlist
+                  - button "Add to Watchlist" [ref=e218] [cursor=pointer]:
+                    - generic [ref=e219]:
+                      - img
+                      - text: Add to Watchlist
+            - generic [ref=e223]:
+              - generic [ref=e224]:
+                - img
+              - generic [ref=e226]: Breathe easy. Free returns.
+            - generic [ref=e229]:
+              - heading "Postage, returns and payments" [level=2] [ref=e232]:
+                - generic [ref=e233]: Postage, returns and payments
+              - generic [ref=e235]:
+                - generic [ref=e238]:
+                  - generic [ref=e241]: "Postage:"
+                  - generic [ref=e243]:
+                    - generic [ref=e244]:
+                      - text: US $25.00 (approx EUR 21.38) Standard International Shipping.
+                      - button "See details for postage" [ref=e245] [cursor=pointer]:
+                        - generic [ref=e246]:
+                          - text: See details
+                          - generic [ref=e247]: for postage
+                    - generic [ref=e248]: "Located in: Yokohama, Japan"
+                - generic [ref=e252]:
+                  - generic [ref=e255]: "Delivery:"
+                  - generic [ref=e257]:
+                    - generic [ref=e258]:
+                      - text: Estimated between Thu, 4 Jun and Fri, 19 Jun to D08F97P
+                      - button "Information - Estimated delivery date - opens a layer" [ref=e264]:
+                        - img
+                    - generic [ref=e265]:
+                      - text: Seller dispatches within 10 days after
+                      - link "receiving cleared payment" [ref=e266] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/pages/help/buy/contextual/domestic-handling-time.html
+                      - text: .
+            - generic [ref=e273]:
+              - generic [ref=e276]: "Returns:"
+              - generic [ref=e279]:
+                - text: 60 days return. Seller pays for return postage.
+                - button "See details - for more information about returns" [ref=e280] [cursor=pointer]:
+                  - generic [ref=e281]:
+                    - text: See details
+                    - generic [ref=e282]: "- for more information about returns"
+            - generic [ref=e289]:
+              - generic [ref=e292]: "Payments:"
+              - generic [ref=e295]:
+                - img "PayPal" [ref=e296]
+                - img "Google Pay" [ref=e298]
+                - img "Visa" [ref=e300]
+                - img "Mastercard" [ref=e302]
+                - img "Diners Club" [ref=e305]
+            - generic [ref=e309]:
+              - heading "Shop with confidence" [level=2] [ref=e312]
+              - generic [ref=e313]:
+                - generic [ref=e315]:
+                  - img
+                - generic [ref=e316]:
+                  - generic [ref=e317]: eBay Money Back Guarantee
+                  - generic [ref=e318]:
+                    - text: Get the item you ordered or your money back.
+                    - link "Learn more eBay Money Back Guarantee - opens new window or tab" [ref=e319] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/ebay-money-back-guarantee/
+                      - generic [ref=e320]:
+                        - text: Learn more
+                        - generic [ref=e321]: eBay Money Back Guarantee - opens new window or tab
+        - generic [ref=e322]:
+          - generic [ref=e327]:
+            - tablist [ref=e328]:
+              - tab "About this item" [selected] [ref=e329] [cursor=pointer]:
+                - generic [ref=e330]: About this item
+            - tabpanel "About this item" [ref=e332]:
+              - generic [ref=e335]:
+                - generic [ref=e338]:
+                  - generic [ref=e342]: Seller assumes all responsibility for this listing.
+                  - generic [ref=e346]: eBay item number:318170036286
+                  - generic [ref=e350]:
+                    - text: Last updated on 19 Apr, 2026 05:41:53 BST
+                    - link "View all revisions View all revisions" [ref=e351] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/rvh/318170036286?rt=nc&_trksid=p4429486.m148105.l48144
+                      - generic [ref=e352]:
+                        - text: View all revisions
+                        - generic [ref=e353]: View all revisions
+                - generic [ref=e356]:
+                  - heading "Item specifics" [level=2] [ref=e359]:
+                    - generic [ref=e360]: Item specifics
+                  - generic [ref=e362]:
+                    - generic [ref=e363]:
+                      - generic [ref=e365]:
+                        - term [ref=e366]:
+                          - generic [ref=e368]: Condition
+                        - definition [ref=e369]:
+                          - generic [ref=e372]:
+                            - generic [ref=e373]: "Used: An item that has been previously used. The item may have some signs of cosmetic wear, but is ..."
+                            - button "Read more about the condition" [ref=e375]:
+                              - generic [ref=e376]:
+                                - text: Read more
+                                - generic [ref=e377]: about the condition
+                      - generic [ref=e379]:
+                        - term [ref=e380]:
+                          - generic [ref=e382]: Country of Origin
+                        - definition [ref=e383]:
+                          - generic [ref=e385]: Japan
+                    - generic [ref=e386]:
+                      - generic [ref=e388]:
+                        - term [ref=e389]:
+                          - generic [ref=e391]: Brand
+                        - definition [ref=e392]:
+                          - generic [ref=e394]: NA
+                      - generic [ref=e396]:
+                        - term [ref=e397]:
+                          - generic [ref=e399]: Chipset Manufacturer
+                        - definition [ref=e400]:
+                          - generic [ref=e402]: NA
+                    - generic [ref=e405]:
+                      - term [ref=e406]:
+                        - generic [ref=e408]: Chipset/GPU Model
+                      - definition [ref=e409]:
+                        - generic [ref=e411]: NA
+                - generic [ref=e413]:
+                  - generic [ref=e414]: Category
+                  - navigation "breadcrumb" [ref=e417]:
+                    - heading "breadcrumb" [level=2] [ref=e418]
+                    - list [ref=e419]:
+                      - listitem [ref=e420]:
+                        - link "Electronics" [ref=e421] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_7000259660
+                        - img
+                      - listitem [ref=e422]:
+                        - link "Computers/Tablets & Networking" [ref=e423] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_1838792
+                        - img
+                      - listitem [ref=e424]:
+                        - link "Computer Components & Parts" [ref=e425] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_1624167
+                        - img
+                      - listitem [ref=e426]:
+                        - link "Graphics/Video Cards" [ref=e427] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/b/bn_661667
+                - generic [ref=e428]:
+                  - heading "Item description from the seller" [level=2] [ref=e431]
+                  - iframe [ref=e432]:
+                    - generic [ref=f55e2]:
+                      - banner [ref=f55e3]:
+                        - heading "Description of item" [level=2] [ref=f55e4]
+                      - text: NA
+                      - banner [ref=f55e5]:
+                        - heading "Payment method" [level=2] [ref=f55e6]
+                      - text: Same as ebay payment method
+                      - banner [ref=f55e7]:
+                        - heading "shipping method" [level=2] [ref=f55e8]
+                      - text: Your order will be dispatched to you from Japan within the designated handling time from the date of payment.
+                      - banner [ref=f55e9]:
+                        - heading "Transaction matters" [level=2] [ref=f55e10]
+                      - text: "Packing state: We will carefully pack your items with the most appropriate protection materials to avoid your items from getting damaged during transport to you. Feedback:You will receive a positive feedback from our store as soon as you successfully complete your order and payment. We would very much appreciate if you could leave us one, too! We are a Japanese store specializing in Japanese high-quality products. Please let us hear from you with any inquiries you may have about our products. Happy shopping!"
+                      - banner [ref=f55e11]:
+                        - heading "To overseas buyers-Notes:" [level=2] [ref=f55e12]
+                      - text: For shipments to the United States, the payment will include customs duties as displayed at the time of checkout, so you will not be charged later.For shipments to other regions, please note that if you do not register your taxpayer identification number, you may be charged customs fees such as taxes and duties when your order arrives at customs. These fees vary by region and are not included in the product price or shipping costs. For details on fees in your area, please contact your local customs office. Refusal to pay these fees can result in an undeliverable order. Please note - we cannot undervalue orders, or mark them as a gift.
+                - generic [ref=e435]:
+                  - heading "Seller business information" [level=2] [ref=e438]:
+                    - generic [ref=e439]: Seller business information
+                  - generic [ref=e440]: I certify that all my selling activities will comply with all EU laws and regulations.
+                  - button "Seller contact information" [ref=e444] [cursor=pointer]
+          - generic [ref=e447]:
+            - generic [ref=e448]:
+              - generic [ref=e449]:
+                - heading "About this seller" [level=2] [ref=e450]:
+                  - generic [ref=e452]: About this seller
+                - generic [ref=e453]:
+                  - link [ref=e455] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/toru0000?_trksid=p4429486.m145687.l149266
+                    - img [ref=e457]
+                  - generic [ref=e458]:
+                    - heading "toru_0000" [level=3] [ref=e459]:
+                      - link "toru_0000" [ref=e460] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/str/toru0000?_trksid=p4429486.m145687.l149267
+                    - paragraph [ref=e461]: 96.9% positive Feedback•1.0K items sold
+                - generic [ref=e466]:
+                  - generic [ref=e467]:
+                    - img
+                  - generic [ref=e468]: Joined Dec 2019
+                - generic [ref=e469]: Registered as a business seller
+                - generic [ref=e471]:
+                  - generic [ref=e472]: Hi, I'm running a private shop in Japan.I want to deliver the good things of Japan to everyone in the world.If you have something you want in Japan, please feel free to contact us.Regards, Have a good ...
+                  - group [ref=e474]:
+                    - generic "See more" [ref=e475]:
+                      - generic [ref=e476]: See more
+                      - generic [ref=e477]:
+                        - img
+                - generic [ref=e478]:
+                  - link "Visit shop" [ref=e479] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/str/toru0000?_trksid=p4429486.m145687.l149086
+                    - generic [ref=e480]: Visit shop
+                  - button "Message seller - opens in a new dialog" [ref=e481] [cursor=pointer]:
+                    - generic [ref=e482]:
+                      - text: Message seller
+                      - generic [ref=e483]: "- opens in a new dialog"
+                  - button "Save seller - Save this seller toru_0000" [ref=e485] [cursor=pointer]:
+                    - generic [ref=e486]:
+                      - img
+                    - generic [ref=e487]: Save seller
+              - generic [ref=e489]:
+                - heading "Detailed seller ratings" [level=3] [ref=e490]
+                - generic [ref=e491]:
+                  - generic [ref=e492]: Average for the last 12 months
+                  - generic [ref=e493]:
+                    - generic [ref=e494]:
+                      - generic [ref=e495]: Accurate description
+                      - progressbar [ref=e496]
+                      - generic [ref=e497]: "4.9"
+                    - generic [ref=e498]:
+                      - generic [ref=e499]: Reasonable postage cost
+                      - progressbar [ref=e500]
+                      - generic [ref=e501]: "4.8"
+                    - generic [ref=e502]:
+                      - generic [ref=e503]: Delivery time
+                      - progressbar [ref=e504]
+                      - generic [ref=e505]: "5.0"
+                    - generic [ref=e506]:
+                      - generic [ref=e507]: Communication
+                      - progressbar [ref=e508]
+                      - generic [ref=e509]: "4.9"
+            - generic [ref=e512]:
+              - heading "Seller Feedback (405)" [level=2] [ref=e513]
+              - 'button "Filter: All ratings" [ref=e516] [cursor=pointer]':
+                - generic [ref=e517]:
+                  - generic [ref=e518]: "Filter:"
+                  - generic [ref=e519]: All ratings
+                  - img
+              - list [ref=e520]:
+                - listitem [ref=e521]:
+                  - generic [ref=e522]:
+                    - generic [ref=e524]:
+                      - generic [ref=e525]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e526]:
+                        - text: r***i (7)
+                        - generic [ref=e527]: "- Feedback left by buyer."
+                      - generic [ref=e530]: Past month
+                      - generic [ref=e531]: Verified purchase
+                    - generic [ref=e533]: Very carefully packed with bubble wrap and anti-static used a high quality shipper that ended up branching into trustworthy Canada Post instead of UPS. Spent very little time in transit which is good for the product. Very rare motherboard arrived nicely packaged and as described. Excellent experience.
+                    - link "MSI motherboard Z170A SLI PLUS/LGA1151/ATX with warranty (#318012754637)" [ref=e535] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/318012754637
+                      - generic [ref=e536]: MSI motherboard Z170A SLI PLUS/LGA1151/ATX with warranty (#318012754637)
+                - listitem [ref=e537]:
+                  - generic [ref=e538]:
+                    - generic [ref=e540]:
+                      - generic [ref=e541]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e542]:
+                        - text: a***2 (5)
+                        - generic [ref=e543]: "- Feedback left by buyer."
+                      - generic [ref=e546]: Past 6 months
+                      - generic [ref=e547]: Verified purchase
+                    - generic [ref=e548]:
+                      - generic [ref=e549]: El valor del producto fué lo justo por el precio, el envío fué muy rápido, el embalaje muy bien cuidado, venia muy protegido y cuando llegó la figura era tal como se describe, recomiendo comprar con el vendedor 👍 es muy confliable
+                      - button "Item photo(s) from verified buyer" [ref=e550] [cursor=pointer]:
+                        - img "Item photo(s) from verified buyer" [ref=e551]
+                    - generic [ref=e552]: Crash BandicooCrash Aqua Figure Neo Cortex (#317740853630)
+                - listitem [ref=e553]:
+                  - generic [ref=e554]:
+                    - generic [ref=e556]:
+                      - generic [ref=e557]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e558]:
+                        - text: 1***- (33)
+                        - generic [ref=e559]: "- Feedback left by buyer."
+                      - generic [ref=e562]: Past month
+                      - generic [ref=e563]: Verified purchase
+                    - generic [ref=e565]: Shipping was very fast and it was extremely well packaged. The item itself was flawless and exactly as described and all at a fair price. Wonderful seller.
+                    - link "CLUB LEGACY HYPER REV 2001 Vol. 1-2-4 CLUB LEGACY (#317985148274)" [ref=e567] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/317985148274
+                      - generic [ref=e568]: CLUB LEGACY HYPER REV 2001 Vol. 1-2-4 CLUB LEGACY (#317985148274)
+                - listitem [ref=e569]:
+                  - generic [ref=e570]:
+                    - generic [ref=e572]:
+                      - generic [ref=e573]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e574]:
+                        - text: v***n (35)
+                        - generic [ref=e575]: "- Feedback left by buyer."
+                      - generic [ref=e578]: Past month
+                      - generic [ref=e579]: Verified purchase
+                    - generic [ref=e581]: Item arrived quickly and in good condition. Packaged safely with no damage with expedited shipping, as described.
+                    - link "Shonen Champion 2023-03-09 Issue [Magazine] Aika Sawaguchi (#318191928574)" [ref=e583] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/318191928574
+                      - generic [ref=e584]: Shonen Champion 2023-03-09 Issue [Magazine] Aika Sawaguchi (#318191928574)
+                - listitem [ref=e585]:
+                  - generic [ref=e586]:
+                    - generic [ref=e588]:
+                      - generic [ref=e589]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e590]:
+                        - text: l***l (2123)
+                        - generic [ref=e591]: "- Feedback left by buyer."
+                      - generic [ref=e594]: Past 6 months
+                      - generic [ref=e595]: Verified purchase
+                    - generic [ref=e597]: Super great book, triple wrapped, shipped in 3 days from Japan!
+                    - link "I LOVE ALFA ROMEO [I LOVE ALFA ROMEO] first edition (#317863267713)" [ref=e599] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/317863267713
+                      - generic [ref=e600]: I LOVE ALFA ROMEO [I LOVE ALFA ROMEO] first edition (#317863267713)
+                - listitem [ref=e601]:
+                  - generic [ref=e602]:
+                    - generic [ref=e604]:
+                      - generic [ref=e605]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e606]:
+                        - text: r***a (362)
+                        - generic [ref=e607]: "- Feedback left by buyer."
+                      - generic [ref=e610]: Past 6 months
+                      - generic [ref=e611]: Verified purchase
+                    - generic [ref=e613]: Arrived quickly. Item was as described. Packaged well and arrived safely. Overall happy with my purchase
+                    - link "Zunda-an One Festival WF2026 Fuyu Zunda-an Takagi Movable Ferb Neil Mega Man Zer (#317879471021)" [ref=e615] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/itm/317879471021
+                      - generic [ref=e616]: Zunda-an One Festival WF2026 Fuyu Zunda-an Takagi Movable Ferb Neil Mega Man Zer (#317879471021)
+                - listitem [ref=e617]:
+                  - generic [ref=e618]:
+                    - generic [ref=e620]:
+                      - generic [ref=e621]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e622]:
+                        - text: d***d (90)
+                        - generic [ref=e623]: "- Feedback left by buyer."
+                      - generic [ref=e626]: Past 6 months
+                      - generic [ref=e627]: Verified purchase
+                    - generic [ref=e629]: Fast shipping! Good packaging! Good price! Magazines are in excellent condition
+                    - generic [ref=e630]: THE NORTH FACE BIGBANG T.O.P Catalogue (#317762878083)
+                - listitem [ref=e631]:
+                  - generic [ref=e632]:
+                    - generic [ref=e634]:
+                      - generic [ref=e635]:
+                        - img "Positive feedback rating"
+                      - generic [ref=e636]:
+                        - text: a***p (1748)
+                        - generic [ref=e637]: "- Feedback left by buyer."
+                      - generic [ref=e640]: Past 6 months
+                      - generic [ref=e641]: Verified purchase
+                    - generic [ref=e643]: Amazing item shipped quickly and packaged well! Five star seller, five star service! A++++++++
+                    - generic [ref=e644]: Weekly Baseball Special Edition 2015 Professional Baseball All Players Color Pho (#317730572586)
+              - link "See all feedback. Opens in a new tab" [ref=e646] [cursor=pointer]:
+                - /url: https://www.ebay.ie/fdbk/mweb_profile?fdbkType=FeedbackReceivedAsSeller&item_id=318170036286&username=toru_0000&filter=feedback_page%3ARECEIVED_AS_SELLER&sort=RELEVANCEV2
+                - text: See all Feedback
+          - generic [ref=e648]:
+            - navigation "Quick links" [ref=e649]:
+              - link "Back to home page" [ref=e650] [cursor=pointer]:
+                - /url: https://www.ebay.ie
+              - button "Return to top" [ref=e651] [cursor=pointer]
+            - generic [ref=e653]:
+              - heading "More to explore:" [level=2] [ref=e656]
+              - list [ref=e658]:
+                - listitem [ref=e659]:
+                  - link "SAPPHIRE AMD Radeon R9 270X AMD Computer Graphics & Video Cards," [ref=e660] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116467277
+                - listitem [ref=e661]:
+                  - link "SAPPHIRE AMD Radeon R9 390 AMD Computer Graphics & Video Cards," [ref=e662] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116459348
+                - listitem [ref=e663]:
+                  - link "SAPPHIRE AMD Radeon HD 7850 AMD Computer Graphics & Video Cards," [ref=e664] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116457270
+                - listitem [ref=e665]:
+                  - link "SAPPHIRE AMD Radeon R9 280X AMD Computer Graphics & Video Cards," [ref=e666] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116468371
+                - listitem [ref=e667]:
+                  - link "AMD SAPPHIRE AMD Radeon HD 6450 Computer Graphics & Video Cards," [ref=e668] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116458336
+                - listitem [ref=e669]:
+                  - link "AMD Radeon RX 580 AMD Computer Graphics & Video Cards," [ref=e670] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116456277
+                - listitem [ref=e671]:
+                  - link "AMD Radeon R9 Fury AMD Computer Graphics & Video Cards," [ref=e672] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116465286
+                - listitem [ref=e673]:
+                  - link "AMD Radeon R9 270X AMD Computer Graphics & Video Cards," [ref=e674] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116461326
+                - listitem [ref=e675]:
+                  - link "AMD Radeon R9 390X AMD Computer Graphics & Video Cards," [ref=e676] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116457321
+                - listitem [ref=e677]:
+                  - link "AMD Radeon RX Vega 64 AMD Computer Graphics & Video Cards" [ref=e678] [cursor=pointer]:
+                    - /url: https://www.ebay.ie/b/bn_7116470290
+  - contentinfo [ref=e687]:
+    - list [ref=e688]:
+      - listitem [ref=e689]:
+        - link "About eBay" [ref=e690] [cursor=pointer]:
+          - /url: https://www.ebayinc.com/
+      - listitem [ref=e691]:
+        - link "News" [ref=e692] [cursor=pointer]:
+          - /url: https://community.ebay.co.uk/t5/Announcements/bg-p/Announcements
+      - listitem [ref=e693]:
+        - link "Community" [ref=e694] [cursor=pointer]:
+          - /url: https://community.ebay.co.uk
+      - listitem [ref=e695]:
+        - link "Safety Centre" [ref=e696] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/safetycentre/index.html
+      - listitem [ref=e697]:
+        - link "Seller Centre" [ref=e698] [cursor=pointer]:
+          - /url: https://sellercentre.ebay.co.uk
+      - listitem [ref=e699]:
+        - 'link "VeRO: Protecting Intellectual Property" [ref=e700] [cursor=pointer]':
+          - /url: https://pages.ebay.ie/vero/
+      - listitem [ref=e701]:
+        - link "Policies" [ref=e702] [cursor=pointer]:
+          - /url: https://www.ebay.ie/pages/help/policies/index.html
+      - listitem [ref=e703]:
+        - link "Help & Contact" [ref=e704] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/home
+      - listitem [ref=e705]:
+        - link "Site Map" [ref=e706] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/sitemap.html
+    - generic [ref=e707]:
+      - text: Copyright © 1995-2026 eBay Inc. All Rights Reserved.
+      - link "Accessibility" [ref=e708] [cursor=pointer]:
+        - /url: https://pages.ebay.ie/accessibility
+      - text: ","
+      - link "User Agreement" [ref=e709] [cursor=pointer]:
+        - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-agreement?id=4259
+      - text: ","
+      - link "Privacy" [ref=e710] [cursor=pointer]:
+        - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260
+      - text: ","
+      - link "Payments Terms of Use" [ref=e711] [cursor=pointer]:
+        - /url: https://pages.ebay.ie/payment/2.0/terms.html
+      - text: ","
+      - link "Cookies" [ref=e712] [cursor=pointer]:
+        - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267
+      - text: and
+      - link "AdChoice" [ref=e713] [cursor=pointer]:
+        - /url: https://www.ebay.ie/adchoice
+        - text: AdChoice
+        - img
+  - img
+  - img [ref=e715]

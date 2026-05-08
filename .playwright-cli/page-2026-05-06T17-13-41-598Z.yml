@@ -1,0 +1,277 @@
+- generic [active] [ref=e1]:
+  - img
+  - banner [ref=e5]:
+    - link "Skip to main content" [ref=e7] [cursor=pointer]:
+      - /url: "#mainContent"
+    - navigation [ref=e8]:
+      - generic [ref=e9]:
+        - button "Hi Tiarnán!" [ref=e12] [cursor=pointer]:
+          - generic: Hi Tiarnán!
+          - img
+        - link "Help & Contact" [ref=e14] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/home
+      - generic [ref=e15]:
+        - link "Sell" [ref=e17] [cursor=pointer]:
+          - /url: https://www.ebay.ie/sl/sell
+        - generic [ref=e18]:
+          - link "Watchlist" [ref=e19] [cursor=pointer]:
+            - /url: https://www.ebay.ie/mye/myebay/watchlist
+            - generic [ref=e20]: Watchlist
+            - img
+          - button "Expand Watchlist" [ref=e21]
+        - generic [ref=e22]:
+          - link "My eBay" [ref=e23] [cursor=pointer]:
+            - /url: https://www.ebay.ie/mys/home?source=GBH
+            - generic [ref=e24]: My eBay
+            - img
+          - button "Expand My eBay" [ref=e25]
+        - button "Notifications" [ref=e28] [cursor=pointer]:
+          - img
+          - generic: Notifications
+        - link "Your shopping basket contains 2 items" [ref=e31] [cursor=pointer]:
+          - /url: https://cart.ebay.ie
+          - generic "Your shopping basket contains 2 items" [ref=e32]:
+            - img
+            - img "Your shopping basket contains 2 items" [ref=e33]: "2"
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - link "eBay Home" [ref=e36] [cursor=pointer]:
+          - /url: https://www.ebay.ie
+          - img "eBay Home" [ref=e37]
+        - button "Shop by category" [ref=e45] [cursor=pointer]:
+          - generic: Shop by category
+          - img
+      - generic [ref=e46]:
+        - status [ref=e47]
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - combobox "Search for anything" [ref=e51]
+            - img
+          - combobox "Select a category for search" [ref=e52]:
+            - option "All Categories" [selected]
+            - option "Antiques"
+            - option "Art"
+            - option "Baby"
+            - option "Books, Comics & Magazines"
+            - option "Business, Office & Industrial"
+            - option "Cameras & Photography"
+            - option "Cars, Motorcycles & Vehicles"
+            - option "Clothes, Shoes & Accessories"
+            - option "Coins"
+            - option "Collectables"
+            - option "Computers/Tablets & Networking"
+            - option "Crafts"
+            - option "Dolls & Bears"
+            - option "DVDs, Films & TV"
+            - option "Events Tickets"
+            - option "Garden & Patio"
+            - option "Health & Beauty"
+            - option "Holidays & Travel"
+            - option "Home, Furniture & DIY"
+            - option "Jewellery & Watches"
+            - option "Mobile Phones & Communication"
+            - option "Music"
+            - option "Musical Instruments"
+            - option "Pet Supplies"
+            - option "Pottery, Porcelain & Glass"
+            - option "Property"
+            - option "Sound & Vision"
+            - option "Sporting Goods"
+            - option "Sports Memorabilia"
+            - option "Stamps"
+            - option "Toys & Games"
+            - option "Vehicle Parts & Accessories"
+            - option "Video Games & Consoles"
+            - option "Wholesale & Job Lots"
+            - option "Everything Else"
+        - generic [ref=e53]:
+          - button "Search" [ref=e54] [cursor=pointer]:
+            - generic: Search
+          - link "Advanced" [ref=e55] [cursor=pointer]:
+            - /url: https://www.ebay.ie/sch/ebayadvsearch
+  - main [ref=e56]:
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - heading "Basket" [level=1] [ref=e59]
+        - link "Send us your comments - opens in new window or tab" [ref=e62] [cursor=pointer]:
+          - /url: https://connect.ebay.ie/srv/survey/a/payments.cart.survey
+          - generic [ref=e63]:
+            - generic [ref=e64]: Send us your comments - opens in new window or tab
+            - text: Send us your comments
+      - alert [ref=e65]:
+        - region "Information" [ref=e66]:
+          - generic [ref=e67]:
+            - img "Information"
+          - heading "You have more than one currency in your basket, so you'll complete checkout for each currency separately." [level=2] [ref=e69]:
+            - generic [ref=e71]: You have more than one currency in your basket, so you'll complete checkout for each currency separately.
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e75]:
+              - generic [ref=e76]:
+                - heading "turbotradejp 99.8% positive Feedback" [level=2] [ref=e77]:
+                  - generic [ref=e78]:
+                    - img [ref=e81]
+                    - generic [ref=e82]:
+                      - link "turbotradejp" [ref=e85] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/ulk/usr/turbotradejp
+                        - generic [ref=e86]:
+                          - generic [ref=e87]: turbotradejp
+                          - text: turbotradejp
+                      - generic [ref=e90]: 99.8% positive Feedback
+                - link "Pay only this seller – turbotradejp" [ref=e93] [cursor=pointer]:
+                  - /url: https://pay.ebay.ie/rxo?rypsvc=true&pagename=ryp&shoppingcartid=26902943780&sellerid=turbotradejp&action=create
+                  - generic [ref=e94]:
+                    - generic [ref=e95]: Pay only this seller – turbotradejp
+                    - text: Pay only this seller
+              - list [ref=e96]:
+                - listitem [ref=e97]:
+                  - generic [ref=e102]:
+                    - img [ref=e106]
+                    - generic [ref=e107]:
+                      - generic [ref=e108]:
+                        - heading "ASRock Phantom Gaming OC Radeon RX 7800 XT 16GB" [level=3] [ref=e110]:
+                          - link "ASRock Phantom Gaming OC Radeon RX 7800 XT 16GB" [ref=e111] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/itm/236167729747
+                        - generic [ref=e114]: Used
+                      - generic [ref=e116]:
+                        - generic [ref=e119]:
+                          - generic [ref=e122]: US $567.00
+                          - generic [ref=e126]: (EUR 484.91)
+                        - generic [ref=e128]:
+                          - generic [ref=e134]: Free postage
+                          - generic [ref=e139]: eBay SpeedPAK Expedited
+                          - generic [ref=e142]: Free returns
+                      - generic [ref=e143]:
+                        - generic [ref=e147]:
+                          - spinbutton "Qty:" [ref=e148]: "1"
+                          - button "Remove - ASRock Phantom Gaming OC Radeon RX 7800 XT 16GB" [ref=e149] [cursor=pointer]:
+                            - img
+                          - button [disabled] [ref=e150] [cursor=pointer]:
+                            - img
+                        - generic [ref=e151]:
+                          - link "Buy It Now" [ref=e153] [cursor=pointer]:
+                            - /url: https://pay.ebay.ie/rxo?item=236167729747&transactionId=-1&quantity=1&useCase=SHOPPING_CART_BUY_IT_NOW&shoppingCartId=26902943780&action=create
+                            - generic [ref=e154]:
+                              - generic [ref=e155]: Buy It Now
+                              - text: Buy It Now
+                          - button "Save for later - ASRock Phantom Gaming OC Radeon RX 7800 XT 16GB" [ref=e158] [cursor=pointer]:
+                            - generic: Save for later
+                          - button "Remove - ASRock Phantom Gaming OC Radeon RX 7800 XT 16GB" [ref=e161] [cursor=pointer]:
+                            - generic: Remove
+            - generic [ref=e162]:
+              - generic [ref=e163]:
+                - heading "namek2025 90.9% positive Feedback" [level=2] [ref=e164]:
+                  - generic [ref=e168]:
+                    - link "namek2025" [ref=e171] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/ulk/usr/namek2025
+                      - generic [ref=e172]:
+                        - generic [ref=e173]: namek2025
+                        - text: namek2025
+                    - generic [ref=e176]: 90.9% positive Feedback
+                - link "Pay only this seller – namek2025" [ref=e179] [cursor=pointer]:
+                  - /url: https://pay.ebay.ie/rxo?rypsvc=true&pagename=ryp&shoppingcartid=26902943780&sellerid=namek2025&action=create
+                  - generic [ref=e180]:
+                    - generic [ref=e181]: Pay only this seller – namek2025
+                    - text: Pay only this seller
+              - list [ref=e182]:
+                - listitem [ref=e183]:
+                  - generic [ref=e192]:
+                    - generic [ref=e193]:
+                      - heading "ACER NITRO RADEON RX 7800 XT OC 16GB - GPU RDNA3" [level=3] [ref=e195]:
+                        - link "ACER NITRO RADEON RX 7800 XT OC 16GB - GPU RDNA3" [ref=e196] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/itm/377090401152
+                      - generic [ref=e199]: Used
+                    - generic [ref=e201]:
+                      - generic [ref=e207]: EUR 420.00
+                      - generic [ref=e209]:
+                        - generic [ref=e215]: + EUR 45.00
+                        - generic [ref=e220]: Spedizione internazionale economica
+                    - generic [ref=e221]:
+                      - generic [ref=e225]:
+                        - spinbutton "Qty:" [ref=e226]: "1"
+                        - button "Remove - ACER NITRO RADEON RX 7800 XT OC 16GB - GPU RDNA3" [ref=e227] [cursor=pointer]:
+                          - img
+                        - button [disabled] [ref=e228] [cursor=pointer]:
+                          - img
+                      - generic [ref=e229]:
+                        - link "Buy It Now" [ref=e231] [cursor=pointer]:
+                          - /url: https://pay.ebay.ie/rxo?item=377090401152&transactionId=-1&quantity=1&useCase=SHOPPING_CART_BUY_IT_NOW&shoppingCartId=26902943780&action=create
+                          - generic [ref=e232]:
+                            - generic [ref=e233]: Buy It Now
+                            - text: Buy It Now
+                        - button "Save for later - ACER NITRO RADEON RX 7800 XT OC 16GB - GPU RDNA3" [ref=e236] [cursor=pointer]:
+                          - generic: Save for later
+                        - button "Remove - ACER NITRO RADEON RX 7800 XT OC 16GB - GPU RDNA3" [ref=e239] [cursor=pointer]:
+                          - generic: Remove
+          - list [ref=e244]
+        - generic [ref=e277]:
+          - heading "Order summary" [level=2] [ref=e278]
+          - heading "Order summary" [level=2] [ref=e279]
+          - generic [ref=e280]:
+            - generic [ref=e281]:
+              - generic [ref=e284]: Items (2)
+              - generic [ref=e287]: EUR 904.91
+            - generic [ref=e288]:
+              - generic [ref=e290]:
+                - generic [ref=e291]: Postage to D08F97P
+                - button "Information about postage options and costs" [ref=e293] [cursor=pointer]:
+                  - img
+              - generic [ref=e296]: EUR 45.00
+            - generic [ref=e298]:
+              - generic [ref=e301]: Total
+              - generic [ref=e304]: EUR 949.91
+          - button "Go to checkout" [ref=e306] [cursor=pointer]
+  - img
+  - contentinfo [ref=e310]:
+    - list [ref=e311]:
+      - listitem [ref=e312]:
+        - link "About eBay" [ref=e313] [cursor=pointer]:
+          - /url: https://www.ebayinc.com/
+      - listitem [ref=e314]:
+        - link "News" [ref=e315] [cursor=pointer]:
+          - /url: https://community.ebay.co.uk/t5/Announcements/bg-p/Announcements
+      - listitem [ref=e316]:
+        - link "Community" [ref=e317] [cursor=pointer]:
+          - /url: https://community.ebay.co.uk
+      - listitem [ref=e318]:
+        - link "Safety Centre" [ref=e319] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/safetycentre/index.html
+      - listitem [ref=e320]:
+        - link "Seller Centre" [ref=e321] [cursor=pointer]:
+          - /url: https://sellercentre.ebay.co.uk
+      - listitem [ref=e322]:
+        - 'link "VeRO: Protecting Intellectual Property" [ref=e323] [cursor=pointer]':
+          - /url: https://pages.ebay.ie/vero/
+      - listitem [ref=e324]:
+        - link "Policies" [ref=e325] [cursor=pointer]:
+          - /url: https://www.ebay.ie/pages/help/policies/index.html
+      - listitem [ref=e326]:
+        - link "Help & Contact" [ref=e327] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/home
+      - listitem [ref=e328]:
+        - link "Site Map" [ref=e329] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/sitemap.html
+    - generic [ref=e330]:
+      - text: Copyright © 1995-2026 eBay Inc. All Rights Reserved.
+      - link "Accessibility" [ref=e331] [cursor=pointer]:
+        - /url: https://pages.ebay.ie/accessibility
+      - text: ","
+      - link "User Agreement" [ref=e332] [cursor=pointer]:
+        - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-agreement?id=4259
+      - text: ","
+      - link "Privacy" [ref=e333] [cursor=pointer]:
+        - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260
+      - text: ","
+      - link "Payments Terms of Use" [ref=e334] [cursor=pointer]:
+        - /url: https://pages.ebay.ie/payment/2.0/terms.html
+      - text: ","
+      - link "Cookies" [ref=e335] [cursor=pointer]:
+        - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267
+      - text: and
+      - link "AdChoice" [ref=e336] [cursor=pointer]:
+        - /url: https://www.ebay.ie/adchoice
+        - text: AdChoice
+        - img
+  - img
+  - img [ref=e338]

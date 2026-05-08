@@ -1,0 +1,478 @@
+- generic [active] [ref=e1]:
+  - img
+  - banner [ref=e5]:
+    - link "Skip to main content" [ref=e7] [cursor=pointer]:
+      - /url: "#mainContent"
+    - navigation [ref=e8]:
+      - generic [ref=e9]:
+        - button "Hi Tiarnán!" [ref=e12] [cursor=pointer]:
+          - generic: Hi Tiarnán!
+          - img
+        - link "Help & Contact" [ref=e14] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/home
+      - generic [ref=e15]:
+        - link "Sell" [ref=e17] [cursor=pointer]:
+          - /url: https://www.ebay.ie/sl/sell
+        - generic [ref=e18]:
+          - link "Watchlist" [ref=e19] [cursor=pointer]:
+            - /url: https://www.ebay.ie/mye/myebay/watchlist
+            - generic [ref=e20]: Watchlist
+            - img
+          - button "Expand Watchlist" [ref=e21]
+        - generic [ref=e22]:
+          - link "My eBay" [ref=e23] [cursor=pointer]:
+            - /url: https://www.ebay.ie/mys/home?source=GBH
+            - generic [ref=e24]: My eBay
+            - img
+          - button "Expand My eBay" [ref=e25]
+        - button "Notifications" [ref=e28] [cursor=pointer]:
+          - img
+          - generic: Notifications
+        - link "Your shopping basket contains 6 items" [ref=e31] [cursor=pointer]:
+          - /url: https://cart.ebay.ie
+          - generic "Your shopping basket contains 6 items" [ref=e32]:
+            - img
+            - img "Your shopping basket contains 6 items" [ref=e33]: "6"
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - link "eBay Home" [ref=e36] [cursor=pointer]:
+          - /url: https://www.ebay.ie
+          - img "eBay Home" [ref=e37]
+        - button "Shop by category" [ref=e45] [cursor=pointer]:
+          - generic: Shop by category
+          - img
+      - generic [ref=e46]:
+        - status [ref=e47]
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - combobox "Search for anything" [ref=e51]
+            - img
+          - combobox "Select a category for search" [ref=e52]:
+            - option "All Categories" [selected]
+            - option "Antiques"
+            - option "Art"
+            - option "Baby"
+            - option "Books, Comics & Magazines"
+            - option "Business, Office & Industrial"
+            - option "Cameras & Photography"
+            - option "Cars, Motorcycles & Vehicles"
+            - option "Clothes, Shoes & Accessories"
+            - option "Coins"
+            - option "Collectables"
+            - option "Computers/Tablets & Networking"
+            - option "Crafts"
+            - option "Dolls & Bears"
+            - option "DVDs, Films & TV"
+            - option "Events Tickets"
+            - option "Garden & Patio"
+            - option "Health & Beauty"
+            - option "Holidays & Travel"
+            - option "Home, Furniture & DIY"
+            - option "Jewellery & Watches"
+            - option "Mobile Phones & Communication"
+            - option "Music"
+            - option "Musical Instruments"
+            - option "Pet Supplies"
+            - option "Pottery, Porcelain & Glass"
+            - option "Property"
+            - option "Sound & Vision"
+            - option "Sporting Goods"
+            - option "Sports Memorabilia"
+            - option "Stamps"
+            - option "Toys & Games"
+            - option "Vehicle Parts & Accessories"
+            - option "Video Games & Consoles"
+            - option "Wholesale & Job Lots"
+            - option "Everything Else"
+        - generic [ref=e53]:
+          - button "Search" [ref=e54] [cursor=pointer]:
+            - generic: Search
+          - link "Advanced" [ref=e55] [cursor=pointer]:
+            - /url: https://www.ebay.ie/sch/ebayadvsearch
+  - main [ref=e56]:
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - heading "Basket" [level=1] [ref=e59]
+        - link "Send us your comments - opens in new window or tab" [ref=e62] [cursor=pointer]:
+          - /url: https://connect.ebay.ie/srv/survey/a/payments.cart.survey
+          - generic [ref=e63]:
+            - generic [ref=e64]: Send us your comments - opens in new window or tab
+            - text: Send us your comments
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - generic [ref=e69]:
+                - heading "namek2025 90.9% positive Feedback" [level=2] [ref=e70]:
+                  - generic [ref=e71]:
+                    - img [ref=e74]
+                    - generic [ref=e75]:
+                      - link "namek2025" [ref=e78] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/ulk/usr/namek2025
+                        - generic [ref=e79]:
+                          - generic [ref=e80]: namek2025
+                          - text: namek2025
+                      - generic [ref=e83]: 90.9% positive Feedback
+                - link "Pay only this seller – namek2025" [ref=e86] [cursor=pointer]:
+                  - /url: https://pay.ebay.ie/rxo?rypsvc=true&pagename=ryp&shoppingcartid=26902943780&sellerid=namek2025&action=create
+                  - generic [ref=e87]:
+                    - generic [ref=e88]: Pay only this seller – namek2025
+                    - text: Pay only this seller
+              - list [ref=e89]:
+                - listitem [ref=e90]:
+                  - generic [ref=e95]:
+                    - img [ref=e99]
+                    - generic [ref=e100]:
+                      - generic [ref=e101]:
+                        - heading "ACER NITRO RADEON RX 7800 XT OC 16GB - GPU RDNA3" [level=3] [ref=e103]:
+                          - link "ACER NITRO RADEON RX 7800 XT OC 16GB - GPU RDNA3" [ref=e104] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/itm/377090401152
+                        - generic [ref=e107]: Used
+                      - generic [ref=e109]:
+                        - generic [ref=e115]: EUR 420.00
+                        - generic [ref=e117]:
+                          - generic [ref=e123]: + EUR 45.00
+                          - generic [ref=e128]: Spedizione internazionale economica
+                      - generic [ref=e129]:
+                        - generic [ref=e133]:
+                          - spinbutton "Qty:" [ref=e134]: "1"
+                          - button "Remove - ACER NITRO RADEON RX 7800 XT OC 16GB - GPU RDNA3" [ref=e135] [cursor=pointer]:
+                            - img
+                          - button [disabled] [ref=e136] [cursor=pointer]:
+                            - img
+                        - generic [ref=e137]:
+                          - link "Buy It Now" [ref=e139] [cursor=pointer]:
+                            - /url: https://pay.ebay.ie/rxo?item=377090401152&transactionId=-1&quantity=1&useCase=SHOPPING_CART_BUY_IT_NOW&shoppingCartId=26902943780&action=create
+                            - generic [ref=e140]:
+                              - generic [ref=e141]: Buy It Now
+                              - text: Buy It Now
+                          - button "Save for later - ACER NITRO RADEON RX 7800 XT OC 16GB - GPU RDNA3" [ref=e144] [cursor=pointer]:
+                            - generic: Save for later
+                          - button "Remove - ACER NITRO RADEON RX 7800 XT OC 16GB - GPU RDNA3" [ref=e147] [cursor=pointer]:
+                            - generic: Remove
+            - generic [ref=e148]:
+              - generic [ref=e149]:
+                - heading "rodney.mckay 100% positive Feedback" [level=2] [ref=e150]:
+                  - generic [ref=e151]:
+                    - img [ref=e154]
+                    - generic [ref=e155]:
+                      - link "rodney.mckay" [ref=e158] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/ulk/usr/rodney.mckay
+                        - generic [ref=e159]:
+                          - generic [ref=e160]: rodney.mckay
+                          - text: rodney.mckay
+                      - generic [ref=e163]: 100% positive Feedback
+                - link "Pay only this seller – rodney.mckay" [ref=e166] [cursor=pointer]:
+                  - /url: https://pay.ebay.ie/rxo?rypsvc=true&pagename=ryp&shoppingcartid=26902943780&sellerid=rodney.mckay&action=create
+                  - generic [ref=e167]:
+                    - generic [ref=e168]: Pay only this seller – rodney.mckay
+                    - text: Pay only this seller
+              - list [ref=e169]:
+                - listitem [ref=e170]:
+                  - generic [ref=e175]:
+                    - img [ref=e179]
+                    - generic [ref=e180]:
+                      - generic [ref=e181]:
+                        - heading "SAMA G750 Black 750W Gold Fully Modular ATX 3.1 Power Supply 80 Plus Gold" [level=3] [ref=e183]:
+                          - link "SAMA G750 Black 750W Gold Fully Modular ATX 3.1 Power Supply 80 Plus Gold" [ref=e184] [cursor=pointer]:
+                            - /url: https://www.ebay.ie/itm/168316774615
+                        - generic [ref=e187]: New other (see details)
+                      - generic [ref=e189]:
+                        - generic [ref=e195]: EUR 55.00
+                        - generic [ref=e197]:
+                          - generic [ref=e203]: + EUR 16.00
+                          - generic [ref=e208]: Standard International
+                      - generic [ref=e209]:
+                        - generic [ref=e213]:
+                          - spinbutton "Qty:" [ref=e214]: "1"
+                          - button "Remove - SAMA G750 Black 750W Gold vollmodulares ATX 3.1 Netzteil 80 Plus Gold" [ref=e215] [cursor=pointer]:
+                            - img
+                          - button [disabled] [ref=e216] [cursor=pointer]:
+                            - img
+                        - generic [ref=e217]:
+                          - link "Buy It Now" [ref=e219] [cursor=pointer]:
+                            - /url: https://pay.ebay.ie/rxo?item=168316774615&transactionId=-1&quantity=1&useCase=SHOPPING_CART_BUY_IT_NOW&shoppingCartId=26902943780&action=create
+                            - generic [ref=e220]:
+                              - generic [ref=e221]: Buy It Now
+                              - text: Buy It Now
+                          - button "Save for later - SAMA G750 Black 750W Gold vollmodulares ATX 3.1 Netzteil 80 Plus Gold" [ref=e224] [cursor=pointer]:
+                            - generic: Save for later
+                          - button "Remove - SAMA G750 Black 750W Gold vollmodulares ATX 3.1 Netzteil 80 Plus Gold" [ref=e227] [cursor=pointer]:
+                            - generic: Remove
+            - generic [ref=e228]:
+              - generic [ref=e229]:
+                - heading "Computer Store Berlin 99.8% positive Feedback" [level=2] [ref=e230]:
+                  - generic [ref=e234]:
+                    - link "Computer Store Berlin" [ref=e237] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/ulk/usr/computer-store-berlin
+                      - generic [ref=e238]:
+                        - generic [ref=e239]: Computer Store Berlin
+                        - text: Computer Store Berlin
+                    - generic [ref=e242]: 99.8% positive Feedback
+                - link "Pay only this seller – Computer Store Berlin" [ref=e245] [cursor=pointer]:
+                  - /url: https://pay.ebay.ie/rxo?rypsvc=true&pagename=ryp&shoppingcartid=26902943780&sellerid=computer-store-berlin&action=create
+                  - generic [ref=e246]:
+                    - generic [ref=e247]: Pay only this seller – Computer Store Berlin
+                    - text: Pay only this seller
+              - list [ref=e248]:
+                - listitem [ref=e249]:
+                  - generic [ref=e258]:
+                    - generic [ref=e259]:
+                      - 'heading "Gigabyte B650 Gaming X AX AMD B650 Motherboard ATX Socket AM5 #335904" [level=3] [ref=e261]':
+                        - 'link "Gigabyte B650 Gaming X AX AMD B650 Motherboard ATX Socket AM5 #335904" [ref=e262] [cursor=pointer]':
+                          - /url: https://www.ebay.ie/itm/117002256904
+                      - generic [ref=e265]: Used
+                    - generic [ref=e267]:
+                      - generic [ref=e273]: EUR 115.22
+                      - generic [ref=e275]:
+                        - generic [ref=e281]: + EUR 18.95
+                        - generic [ref=e286]: Economy Int'l Versand
+                        - generic [ref=e289]: Returns accepted
+                    - generic [ref=e290]:
+                      - generic [ref=e294]:
+                        - spinbutton "Qty:" [ref=e295]: "1"
+                        - 'button "Remove - Gigabyte B650 Gaming X AX AMD B650 Mainboard ATX Sockel AM5 #335904" [ref=e296] [cursor=pointer]':
+                          - img
+                        - button [disabled] [ref=e297] [cursor=pointer]:
+                          - img
+                      - generic [ref=e298]:
+                        - link "Buy It Now" [ref=e300] [cursor=pointer]:
+                          - /url: https://pay.ebay.ie/rxo?item=117002256904&transactionId=-1&quantity=1&useCase=SHOPPING_CART_BUY_IT_NOW&shoppingCartId=26902943780&action=create
+                          - generic [ref=e301]:
+                            - generic [ref=e302]: Buy It Now
+                            - text: Buy It Now
+                        - 'button "Save for later - Gigabyte B650 Gaming X AX AMD B650 Mainboard ATX Sockel AM5 #335904" [ref=e305] [cursor=pointer]':
+                          - generic: Save for later
+                        - 'button "Remove - Gigabyte B650 Gaming X AX AMD B650 Mainboard ATX Sockel AM5 #335904" [ref=e308] [cursor=pointer]':
+                          - generic: Remove
+            - generic [ref=e309]:
+              - generic [ref=e310]:
+                - heading "OpossumCZ 99.9% positive Feedback" [level=2] [ref=e311]:
+                  - generic [ref=e315]:
+                    - link "OpossumCZ" [ref=e318] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/ulk/usr/exander777
+                      - generic [ref=e319]:
+                        - generic [ref=e320]: OpossumCZ
+                        - text: OpossumCZ
+                    - generic [ref=e323]: 99.9% positive Feedback
+                - link "Pay only this seller – OpossumCZ" [ref=e326] [cursor=pointer]:
+                  - /url: https://pay.ebay.ie/rxo?rypsvc=true&pagename=ryp&shoppingcartid=26902943780&sellerid=exander777&action=create
+                  - generic [ref=e327]:
+                    - generic [ref=e328]: Pay only this seller – OpossumCZ
+                    - text: Pay only this seller
+              - list [ref=e329]:
+                - listitem [ref=e330]:
+                  - generic [ref=e339]:
+                    - generic [ref=e340]:
+                      - heading "AMD Ryzen 5 7600 6C/12T 5.10GHz Gaming Processor (100-100001015BOX)" [level=3] [ref=e342]:
+                        - link "AMD Ryzen 5 7600 6C/12T 5.10GHz Gaming Processor (100-100001015BOX)" [ref=e343] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/itm/267626774263
+                      - generic [ref=e346]: New
+                    - generic [ref=e348]:
+                      - generic [ref=e354]: EUR 170.00
+                      - generic [ref=e356]:
+                        - generic [ref=e362]: + EUR 13.00
+                        - generic [ref=e367]: Standard International
+                    - generic [ref=e368]:
+                      - generic [ref=e372]:
+                        - spinbutton "Qty:" [ref=e373]: "1"
+                        - button "Remove - AMD Ryzen 5 7600 6C/12T 5,10GHz Gaming-Prozessor (100-100001015BOX)" [ref=e374] [cursor=pointer]:
+                          - img
+                        - button [disabled] [ref=e375] [cursor=pointer]:
+                          - img
+                      - generic [ref=e376]:
+                        - link "Buy It Now" [ref=e378] [cursor=pointer]:
+                          - /url: https://pay.ebay.ie/rxo?item=267626774263&transactionId=-1&quantity=1&useCase=SHOPPING_CART_BUY_IT_NOW&shoppingCartId=26902943780&action=create
+                          - generic [ref=e379]:
+                            - generic [ref=e380]: Buy It Now
+                            - text: Buy It Now
+                        - button "Save for later - AMD Ryzen 5 7600 6C/12T 5,10GHz Gaming-Prozessor (100-100001015BOX)" [ref=e383] [cursor=pointer]:
+                          - generic: Save for later
+                        - button "Remove - AMD Ryzen 5 7600 6C/12T 5,10GHz Gaming-Prozessor (100-100001015BOX)" [ref=e386] [cursor=pointer]:
+                          - generic: Remove
+            - generic [ref=e387]:
+              - generic [ref=e388]:
+                - heading "art-835541 100% positive Feedback" [level=2] [ref=e389]:
+                  - generic [ref=e393]:
+                    - link "art-835541" [ref=e396] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/ulk/usr/art-835541
+                      - generic [ref=e397]:
+                        - generic [ref=e398]: art-835541
+                        - text: art-835541
+                    - generic [ref=e401]: 100% positive Feedback
+                - link "Pay only this seller – art-835541" [ref=e404] [cursor=pointer]:
+                  - /url: https://pay.ebay.ie/rxo?rypsvc=true&pagename=ryp&shoppingcartid=26902943780&sellerid=art-835541&action=create
+                  - generic [ref=e405]:
+                    - generic [ref=e406]: Pay only this seller – art-835541
+                    - text: Pay only this seller
+              - list [ref=e407]:
+                - listitem [ref=e408]:
+                  - generic [ref=e417]:
+                    - generic [ref=e418]:
+                      - heading "AMD Radeon Rx 7800 Xt" [level=3] [ref=e420]:
+                        - link "AMD Radeon Rx 7800 Xt" [ref=e421] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/itm/358325365378
+                      - generic [ref=e424]: Seller refurbished
+                    - generic [ref=e426]:
+                      - generic [ref=e432]: EUR 430.00
+                      - generic [ref=e434]:
+                        - generic [ref=e440]: Free collection
+                        - generic [ref=e445]: Collection in person
+                    - generic [ref=e446]:
+                      - generic [ref=e450]:
+                        - spinbutton "Qty:" [ref=e451]: "1"
+                        - button "Remove - AMD Radeon Rx 7800 Xt" [ref=e452] [cursor=pointer]:
+                          - img
+                        - button [disabled] [ref=e453] [cursor=pointer]:
+                          - img
+                      - generic [ref=e454]:
+                        - link "Buy It Now" [ref=e456] [cursor=pointer]:
+                          - /url: https://pay.ebay.ie/rxo?item=358325365378&transactionId=-1&quantity=1&useCase=SHOPPING_CART_BUY_IT_NOW&shoppingCartId=26902943780&action=create
+                          - generic [ref=e457]:
+                            - generic [ref=e458]: Buy It Now
+                            - text: Buy It Now
+                        - button "Save for later - AMD Radeon Rx 7800 Xt" [ref=e461] [cursor=pointer]:
+                          - generic: Save for later
+                        - button "Remove - AMD Radeon Rx 7800 Xt" [ref=e464] [cursor=pointer]:
+                          - generic: Remove
+            - generic [ref=e465]:
+              - generic [ref=e466]:
+                - heading "fox-ware 100% positive Feedback" [level=2] [ref=e467]:
+                  - generic [ref=e471]:
+                    - link "fox-ware" [ref=e474] [cursor=pointer]:
+                      - /url: https://www.ebay.ie/ulk/usr/fox-ware
+                      - generic [ref=e475]:
+                        - generic [ref=e476]: fox-ware
+                        - text: fox-ware
+                    - generic [ref=e479]: 100% positive Feedback
+                - link "Pay only this seller – fox-ware" [ref=e482] [cursor=pointer]:
+                  - /url: https://pay.ebay.ie/rxo?rypsvc=true&pagename=ryp&shoppingcartid=26902943780&sellerid=fox-ware&action=create
+                  - generic [ref=e483]:
+                    - generic [ref=e484]: Pay only this seller – fox-ware
+                    - text: Pay only this seller
+              - list [ref=e485]:
+                - listitem [ref=e486]:
+                  - generic [ref=e495]:
+                    - generic [ref=e496]:
+                      - heading "Lexar THOR RGB UDIMM 32GB Kit DDR5-6000 CL38-48-48-96 2x 16GB Memory RAM" [level=3] [ref=e498]:
+                        - link "Lexar THOR RGB UDIMM 32GB Kit DDR5-6000 CL38-48-48-96 2x 16GB Memory RAM" [ref=e499] [cursor=pointer]:
+                          - /url: https://www.ebay.ie/itm/306918244317
+                      - generic [ref=e502]: New
+                    - generic [ref=e504]:
+                      - generic [ref=e510]: EUR 364.99
+                      - generic [ref=e512]:
+                        - generic [ref=e518]: + EUR 14.49
+                        - generic [ref=e523]: DHL Paket International
+                    - generic [ref=e524]:
+                      - generic [ref=e528]:
+                        - spinbutton "Qty" [ref=e529]: "1"
+                        - button "Remove - Lexar THOR RGB UDIMM 32GB Kit DDR5-6000 CL38-48-48-96 2x 16GB Speicher RAM" [ref=e530] [cursor=pointer]:
+                          - img
+                        - button [ref=e531] [cursor=pointer]:
+                          - img
+                      - generic [ref=e532]:
+                        - link "Buy It Now" [ref=e534] [cursor=pointer]:
+                          - /url: https://pay.ebay.ie/rxo?item=306918244317&transactionId=-1&quantity=1&useCase=SHOPPING_CART_BUY_IT_NOW&shoppingCartId=26902943780&action=create
+                          - generic [ref=e535]:
+                            - generic [ref=e536]: Buy It Now
+                            - text: Buy It Now
+                        - button "Save for later - Lexar THOR RGB UDIMM 32GB Kit DDR5-6000 CL38-48-48-96 2x 16GB Speicher RAM" [ref=e539] [cursor=pointer]:
+                          - generic: Save for later
+                        - button "Remove - Lexar THOR RGB UDIMM 32GB Kit DDR5-6000 CL38-48-48-96 2x 16GB Speicher RAM" [ref=e542] [cursor=pointer]:
+                          - generic: Remove
+            - generic [ref=e543]:
+              - heading "lor-449431" [level=2] [ref=e545]:
+                - link "lor-449431" [ref=e552] [cursor=pointer]:
+                  - /url: https://www.ebay.ie/ulk/usr/lor-449431
+                  - generic [ref=e553]:
+                    - generic [ref=e554]: lor-449431
+                    - text: lor-449431
+              - list [ref=e555]:
+                - listitem [ref=e556]:
+                  - generic [ref=e565]:
+                    - heading "Gigabyte RTX 3090 24GB GDDR6X Turbo Graphics Card" [level=3] [ref=e568]:
+                      - link "Gigabyte RTX 3090 24GB GDDR6X Turbo Graphics Card" [ref=e569] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/itm/318242124895
+                    - generic [ref=e575]:
+                      - generic [ref=e578]: Item not available
+                      - link "Find similar items - Gigabyte RTX 3090 24GB GDDR6X Turbo Graphics Card" [ref=e581] [cursor=pointer]:
+                        - /url: https://www.ebay.ie/recs?item_id=318242124895&campaign=VOD
+                        - generic [ref=e582]:
+                          - generic [ref=e583]: Find similar items - Gigabyte RTX 3090 24GB GDDR6X Turbo Graphics Card
+                          - text: Find similar items
+                    - generic [ref=e585]:
+                      - button "Save for later - Gigabyte RTX 3090 24GB GDDR6X Turbo Graphics Card" [ref=e587] [cursor=pointer]:
+                        - generic: Save for later
+                      - button "Remove - Gigabyte RTX 3090 24GB GDDR6X Turbo Graphics Card" [ref=e590] [cursor=pointer]:
+                        - generic: Remove
+          - list [ref=e595]
+        - generic [ref=e628]:
+          - heading "Order summary" [level=2] [ref=e629]
+          - heading "Order summary" [level=2] [ref=e630]
+          - generic [ref=e631]:
+            - generic [ref=e632]:
+              - generic [ref=e635]: Items (6)
+              - generic [ref=e638]: EUR 1,555.21
+            - generic [ref=e639]:
+              - generic [ref=e641]:
+                - generic [ref=e642]: Postage to D08F97P
+                - button "Information about postage options and costs" [ref=e644] [cursor=pointer]:
+                  - img
+              - generic [ref=e647]: EUR 107.44
+            - generic [ref=e649]:
+              - generic [ref=e652]: Total
+              - generic [ref=e655]: EUR 1,662.65
+          - button "Go to checkout" [ref=e657] [cursor=pointer]
+  - img
+  - contentinfo [ref=e661]:
+    - list [ref=e662]:
+      - listitem [ref=e663]:
+        - link "About eBay" [ref=e664] [cursor=pointer]:
+          - /url: https://www.ebayinc.com/
+      - listitem [ref=e665]:
+        - link "News" [ref=e666] [cursor=pointer]:
+          - /url: https://community.ebay.co.uk/t5/Announcements/bg-p/Announcements
+      - listitem [ref=e667]:
+        - link "Community" [ref=e668] [cursor=pointer]:
+          - /url: https://community.ebay.co.uk
+      - listitem [ref=e669]:
+        - link "Safety Centre" [ref=e670] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/safetycentre/index.html
+      - listitem [ref=e671]:
+        - link "Seller Centre" [ref=e672] [cursor=pointer]:
+          - /url: https://sellercentre.ebay.co.uk
+      - listitem [ref=e673]:
+        - 'link "VeRO: Protecting Intellectual Property" [ref=e674] [cursor=pointer]':
+          - /url: https://pages.ebay.ie/vero/
+      - listitem [ref=e675]:
+        - link "Policies" [ref=e676] [cursor=pointer]:
+          - /url: https://www.ebay.ie/pages/help/policies/index.html
+      - listitem [ref=e677]:
+        - link "Help & Contact" [ref=e678] [cursor=pointer]:
+          - /url: https://www.ebay.ie/help/home
+      - listitem [ref=e679]:
+        - link "Site Map" [ref=e680] [cursor=pointer]:
+          - /url: https://pages.ebay.ie/sitemap.html
+    - generic [ref=e681]:
+      - text: Copyright © 1995-2026 eBay Inc. All Rights Reserved.
+      - link "Accessibility" [ref=e682] [cursor=pointer]:
+        - /url: https://pages.ebay.ie/accessibility
+      - text: ","
+      - link "User Agreement" [ref=e683] [cursor=pointer]:
+        - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-agreement?id=4259
+      - text: ","
+      - link "Privacy" [ref=e684] [cursor=pointer]:
+        - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260
+      - text: ","
+      - link "Payments Terms of Use" [ref=e685] [cursor=pointer]:
+        - /url: https://pages.ebay.ie/payment/2.0/terms.html
+      - text: ","
+      - link "Cookies" [ref=e686] [cursor=pointer]:
+        - /url: https://www.ebay.ie/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267
+      - text: and
+      - link "AdChoice" [ref=e687] [cursor=pointer]:
+        - /url: https://www.ebay.ie/adchoice
+        - text: AdChoice
+        - img
+  - img
+  - img [ref=e689]

@@ -1,0 +1,603 @@
+- generic [ref=e2]:
+  - navigation "Shortcuts menu" [ref=e3]:
+    - heading "Skip to" [level=2] [ref=e4]
+    - list "Skip to" [ref=e5]:
+      - listitem [ref=e6]:
+        - link "main content" [ref=e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Main content
+      - listitem [ref=e8]:
+        - link "Shopping basket" [ref=e9] [cursor=pointer]:
+          - /url: "#sc-active-cart"
+          - text: Your Amazon Basket
+      - listitem [ref=e10]:
+        - link "Saved for later" [ref=e11] [cursor=pointer]:
+          - /url: "#sc-saved-cart-caption"
+          - text: Saved for Later
+      - listitem [ref=e12]:
+        - link "Buy it again" [ref=e13] [cursor=pointer]:
+          - /url: "#sc-buy-it-again-caption"
+          - text: Buy it Again
+    - separator [ref=e14]
+    - heading "Keyboard shortcuts" [level=2] [ref=e15]
+    - list "Keyboard shortcuts" [ref=e16]:
+      - listitem [ref=e17]:
+        - link "Search, option, forward slash" [ref=e18] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e19]:
+            - generic [ref=e20]: Search
+            - generic [ref=e21]:
+              - generic [ref=e22]: opt
+              - generic [ref=e23]: +
+              - generic [ref=e24]: /
+      - listitem [ref=e25]:
+        - link "Basket, shift, option, c" [ref=e26] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e27]:
+            - generic [ref=e28]: Basket
+            - generic [ref=e29]:
+              - generic [ref=e30]: shift
+              - generic [ref=e31]: +
+              - generic [ref=e32]: opt
+              - generic [ref=e33]: +
+              - generic [ref=e34]: C
+      - listitem [ref=e35]:
+        - link "Home, shift, option, h" [ref=e36] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e37]:
+            - generic [ref=e38]: Home
+            - generic [ref=e39]:
+              - generic [ref=e40]: shift
+              - generic [ref=e41]: +
+              - generic [ref=e42]: opt
+              - generic [ref=e43]: +
+              - generic [ref=e44]: H
+      - listitem [ref=e45]:
+        - link "Your orders, shift, option, o" [ref=e46] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e47]:
+            - generic [ref=e48]: Orders
+            - generic [ref=e49]:
+              - generic [ref=e50]: shift
+              - generic [ref=e51]: +
+              - generic [ref=e52]: opt
+              - generic [ref=e53]: +
+              - generic [ref=e54]: O
+      - listitem [ref=e55]:
+        - button "Show/hide shortcuts, shift, option, z" [ref=e56] [cursor=pointer]:
+          - generic [ref=e57]:
+            - generic [ref=e58]: Show/Hide shortcuts
+            - generic [ref=e59]:
+              - generic [ref=e60]: shift
+              - generic [ref=e61]: +
+              - generic [ref=e62]: opt
+              - generic [ref=e63]: +
+              - generic [ref=e64]: Z
+    - generic [ref=e70]: To move between items, use your keyboard's up or down arrows.
+  - banner [ref=e71]:
+    - navigation "Primary" [ref=e72]:
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - link "Amazon.ie" [ref=e76] [cursor=pointer]:
+            - /url: /ref=nav_logo
+            - generic: .ie
+          - button "Deliver to Tiarnán Inchicore D08‌" [ref=e79] [cursor=pointer]:
+            - generic [ref=e81]:
+              - generic [ref=e82]: Deliver to Tiarnán
+              - generic [ref=e83]: Inchicore D08‌
+        - search [ref=e86]:
+          - generic [ref=e89]:
+            - generic [ref=e91]: All
+            - combobox "Select the department you want to search in" [ref=e93] [cursor=pointer]:
+              - option "All Departments" [selected]
+              - option "Amazon Devices"
+              - option "Arts & Crafts"
+              - option "Baby"
+              - option "Beauty"
+              - option "Books"
+              - option "Business & Professional"
+              - option "Car & Motorbike"
+              - option "CDs & Vinyl"
+              - option "Computing & Office"
+              - option "DIY & Tools"
+              - option "DVD & Blu-ray"
+              - option "Electronics"
+              - option "Fashion"
+              - option "Food & Grocery"
+              - option "Garden"
+              - option "Gift Cards"
+              - option "Health & Personal Care"
+              - option "Home & Kitchen"
+              - option "Musical Instruments"
+              - option "PC & Video Games"
+              - option "Pet Supplies"
+              - option "Software"
+              - option "Sports & Outdoors"
+              - option "Toys & Games"
+          - searchbox "Search Amazon.ie" [ref=e96]
+          - generic "Go" [ref=e99] [cursor=pointer]:
+            - button "Go" [ref=e100]
+        - generic [ref=e102]:
+          - generic [ref=e103]:
+            - link "Hello, Tiarnan Account & Lists" [ref=e104] [cursor=pointer]:
+              - /url: https://www.amazon.ie/gp/css/homepage.html?ref_=nav_youraccount_btn
+              - generic [ref=e106]: Hello, Tiarnan
+              - generic [ref=e107]: Account & Lists
+            - button "Expand Account and Lists" [ref=e108] [cursor=pointer]
+          - link "Returns & Orders" [ref=e109] [cursor=pointer]:
+            - /url: /gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=e110]: Returns
+            - generic [ref=e111]: "& Orders"
+          - link "0 items in shopping basket" [ref=e112] [cursor=pointer]:
+            - /url: /gp/cart/view.html?ref_=nav_cart
+            - generic [ref=e114]: "0"
+            - generic [ref=e117]: Basket
+      - generic [ref=e118]:
+        - button "Open All Categories Menu" [ref=e120] [cursor=pointer]:
+          - generic [ref=e122]: All
+        - list [ref=e126]:
+          - listitem [ref=e127]:
+            - link "Welcome to Amazon.ie" [ref=e129] [cursor=pointer]:
+              - /url: /gp/browse.html?node=100768625031&ref_=nav_Welcome_to_Amazon_IE
+          - listitem [ref=e130]:
+            - link "Today's Deals" [ref=e132] [cursor=pointer]:
+              - /url: /deals?ref_=nav_cs_ie
+          - listitem [ref=e133]:
+            - link "Brands of Ireland" [ref=e135] [cursor=pointer]:
+              - /url: /gp/browse.html?node=100549970031&ref_=nav_Brands_of_Ireland
+          - listitem [ref=e136]:
+            - link "Prime" [ref=e138] [cursor=pointer]:
+              - /url: /prime?ref_=nav_cs_primelink_nonmember
+          - listitem [ref=e139]:
+            - link "Prime Video" [ref=e141] [cursor=pointer]:
+              - /url: /gp/video/ssoredirect/?pvp=/ref%3Ddvm_crs_nav_ie_xs_s_dk_disco_eg_al?ref_=nav_cs_prime_video
+          - listitem [ref=e142]:
+            - link "Books" [ref=e144] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80926538031&ref_=nav_shopall_bks_all
+          - listitem [ref=e145]:
+            - link "Electronics" [ref=e147] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80926655031&ref_=nav_cs_electronics
+          - listitem [ref=e148]:
+            - link "Home & Kitchen" [ref=e150] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80927649031&ref_=nav_Nav_IE_All_Home_Garden
+          - listitem [ref=e151]:
+            - link "Beauty" [ref=e153] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80926421031&ref_=nav_Nav_IE_All_Beauty
+          - listitem [ref=e154]:
+            - link "Health & Household" [ref=e156] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80927394031&ref_=nav_Nav_IE_All_Health_Household
+          - listitem [ref=e157]:
+            - link "Pets" [ref=e159] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80928622031&ref_=nav_Nav_IE_Pet_Supplies
+          - listitem [ref=e160]:
+            - link "Office" [ref=e162] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80928483031&ref_=nav_Nav_IE_Office_Products
+          - listitem [ref=e163]:
+            - link "Grocery" [ref=e165] [cursor=pointer]:
+              - /url: /gp/browse.html?node=80927268031&ref_=nav_Nav_IE_Grocery
+          - listitem [ref=e166]:
+            - link "Buy Again" [ref=e168] [cursor=pointer]:
+              - /url: /gp/buyagain?ref_=nav_cs_buy_again
+          - listitem [ref=e169]:
+            - link "Customer Service" [ref=e171] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_help
+          - listitem [ref=e172]:
+            - link "Sell on Amazon" [ref=e174] [cursor=pointer]:
+              - /url: https://sellercentral.amazon.ie/?ld=AZIESOANavbar
+        - link "24/7 Customer Service" [ref=e177] [cursor=pointer]:
+          - /url: /hz/contact-us/foresight/hubgateway/?_encoding=UTF8&ref_=nav_swm_nav_swm_text&pf_rd_p=724422c1-0656-4a83-b73a-261fc354a3ca&pf_rd_s=nav-sitewide-msg&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=A28R8C7NBKEWEA&pf_rd_r=GXQRBARQBK3Y8MEX6WFK
+  - main [ref=e180]:
+    - heading "All Baskets" [level=1] [ref=e181]
+    - generic [ref=e183]:
+      - generic [ref=e184]:
+        - generic [ref=e192]:
+          - generic [ref=e193]:
+            - img "Amazon Prime Logo" [ref=e194]
+            - heading "Get unlimited fast delivery on millions of eligible items." [level=1] [ref=e196]
+          - generic [ref=e199] [cursor=pointer]:
+            - button "Join Prime" [ref=e200]
+            - generic [ref=e201]: Join Prime
+        - generic [ref=e210]:
+          - heading "Recommendations for all products:" [level=3] [ref=e211]
+          - list [ref=e212]:
+            - listitem [ref=e213]:
+              - generic [ref=e218]:
+                - link [ref=e220] [cursor=pointer]:
+                  - /url: /Seca-1009150-Mechanical-Roll-Meter/dp/B000IOMZCE/ref=pd_cart_crc_cko_qp_d_sccl_1_1/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B000IOMZCE&psc=1
+                  - img [ref=e222]
+                - generic [ref=e223]:
+                  - generic [ref=e225]:
+                    - link "Seca 1009150 Mechanical Roll Up Meter" [ref=e226] [cursor=pointer]:
+                      - /url: /Seca-1009150-Mechanical-Roll-Meter/dp/B000IOMZCE/ref=pd_cart_crc_cko_qp_d_sccl_1_1/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B000IOMZCE&psc=1
+                      - generic [ref=e228]: Seca 1009150 Mechanical Roll Up Meter
+                    - link "4.3 out of 5 stars, 266 ratings" [ref=e231] [cursor=pointer]:
+                      - /url: /product-reviews/B000IOMZCE/ref=pd_cart_crc_cko_qp_d_sccl_1_1_cr/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B000IOMZCE
+                      - generic [ref=e233]: 4.3 out of 5 stars
+                      - text: "266"
+                    - generic [ref=e234]:
+                      - link "€33.61" [ref=e237] [cursor=pointer]:
+                        - /url: /Seca-1009150-Mechanical-Roll-Meter/dp/B000IOMZCE/ref=pd_cart_crc_cko_qp_d_sccl_1_1/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B000IOMZCE&psc=1
+                        - generic [ref=e239]:
+                          - generic [ref=e240]: €33.61
+                          - generic [ref=e241]:
+                            - text: €
+                            - generic [ref=e242]: "33."
+                            - text: "61"
+                      - generic [ref=e244]: Get it May 14 - 16
+                    - text: €14.00 delivery
+                  - generic [ref=e252] [cursor=pointer]:
+                    - button "Add to cart, Seca 1009150 Mechanical Roll Up Meter" [ref=e253]
+                    - generic [ref=e254]: Add to cart
+            - listitem [ref=e255]:
+              - generic [ref=e260]:
+                - link [ref=e262] [cursor=pointer]:
+                  - /url: /GIMA-27335-Tape-Height-Measure/dp/B00ISRGYQQ/ref=pd_cart_crc_cko_qp_d_sccl_1_2/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B00ISRGYQQ&psc=1
+                  - img [ref=e264]
+                - generic [ref=e265]:
+                  - generic [ref=e267]:
+                    - link "GIMA 27335 Tape Height Measure" [ref=e268] [cursor=pointer]:
+                      - /url: /GIMA-27335-Tape-Height-Measure/dp/B00ISRGYQQ/ref=pd_cart_crc_cko_qp_d_sccl_1_2/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B00ISRGYQQ&psc=1
+                      - generic [ref=e270]: GIMA 27335 Tape Height Measure
+                    - link "4.2 out of 5 stars, 721 ratings" [ref=e273] [cursor=pointer]:
+                      - /url: /product-reviews/B00ISRGYQQ/ref=pd_cart_crc_cko_qp_d_sccl_1_2_cr/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B00ISRGYQQ
+                      - generic [ref=e275]: 4.2 out of 5 stars
+                      - text: "721"
+                    - generic [ref=e276]:
+                      - link "€13.61" [ref=e279] [cursor=pointer]:
+                        - /url: /GIMA-27335-Tape-Height-Measure/dp/B00ISRGYQQ/ref=pd_cart_crc_cko_qp_d_sccl_1_2/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B00ISRGYQQ&psc=1
+                        - generic [ref=e281]:
+                          - generic [ref=e282]: €13.61
+                          - generic [ref=e283]:
+                            - text: €
+                            - generic [ref=e284]: "13."
+                            - text: "61"
+                      - generic [ref=e286]: Get it as soon as Monday, May 11
+                    - text: FREE Delivery on orders over €25 dispatched by Amazon
+                  - generic [ref=e294] [cursor=pointer]:
+                    - button "Add to cart, GIMA 27335 Tape Height Measure" [ref=e295]
+                    - generic [ref=e296]: Add to cart
+            - listitem [ref=e297]:
+              - generic [ref=e302]:
+                - link [ref=e304] [cursor=pointer]:
+                  - /url: /Saga-10-Brian-K-Vaughan/dp/1534323341/ref=pd_cart_crc_cko_qp_d_sccl_1_3/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=1534323341&psc=1
+                  - img [ref=e306]
+                - generic [ref=e307]:
+                  - generic [ref=e309]:
+                    - link "Saga Volume 10" [ref=e310] [cursor=pointer]:
+                      - /url: /Saga-10-Brian-K-Vaughan/dp/1534323341/ref=pd_cart_crc_cko_qp_d_sccl_1_3/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=1534323341&psc=1
+                      - generic [ref=e312]: Saga Volume 10
+                    - generic [ref=e315]: Brian K Vaughan
+                    - link "4.8 out of 5 stars, 922 ratings" [ref=e318] [cursor=pointer]:
+                      - /url: /product-reviews/1534323341/ref=pd_cart_crc_cko_qp_d_sccl_1_3_cr/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=1534323341
+                      - generic [ref=e320]: 4.8 out of 5 stars
+                      - text: "922"
+                    - generic [ref=e321]: Paperback
+                    - generic [ref=e322]:
+                      - link "€24.06" [ref=e325] [cursor=pointer]:
+                        - /url: /Saga-10-Brian-K-Vaughan/dp/1534323341/ref=pd_cart_crc_cko_qp_d_sccl_1_3/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=1534323341&psc=1
+                        - generic [ref=e327]:
+                          - generic [ref=e328]: €24.06
+                          - generic [ref=e329]:
+                            - text: €
+                            - generic [ref=e330]: "24."
+                            - text: "06"
+                      - generic [ref=e332]: Get it May 28 – Jun 5
+                    - text: €3.00 delivery
+                    - generic [ref=e335]: Usually ships within 2 to 3 days
+                  - generic [ref=e343] [cursor=pointer]:
+                    - button "Add to cart, Saga Volume 10" [ref=e344]
+                    - generic [ref=e345]: Add to cart
+            - listitem [ref=e346]:
+              - generic [ref=e351]:
+                - link [ref=e353] [cursor=pointer]:
+                  - /url: /Removable-Leak-proof-Insulated-Drinking-Dishwasher/dp/B0FT3WWHDH/ref=pd_cart_crc_cko_qp_d_sccl_1_4/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0FT3WWHDH&psc=1
+                  - img [ref=e355]
+                - generic [ref=e356]:
+                  - generic [ref=e358]:
+                    - link "NBA Los Angeles Lakers Sports Thermal Water Bottle with Removable Straw, 750ml/24oz, Leak-proof Insulated Drinking Bottle, Easy to Open, Secure Lock, Dishwasher Safe, Flip Cover, Metal Bottle" [ref=e359] [cursor=pointer]:
+                      - /url: /Removable-Leak-proof-Insulated-Drinking-Dishwasher/dp/B0FT3WWHDH/ref=pd_cart_crc_cko_qp_d_sccl_1_4/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0FT3WWHDH&psc=1
+                      - generic [ref=e361]: NBA Los Angeles Lakers Sports Thermal Water Bottle with Removable Straw, 750ml/24oz, Leak-proof Insulated Drinking Bottle, Easy to Open, Secure Lock, Dishwasher Safe, Flip Cover, Metal Bottle
+                    - link "4.7 out of 5 stars, 140 ratings" [ref=e364] [cursor=pointer]:
+                      - /url: /product-reviews/B0FT3WWHDH/ref=pd_cart_crc_cko_qp_d_sccl_1_4_cr/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0FT3WWHDH
+                      - generic [ref=e366]: 4.7 out of 5 stars
+                      - text: "140"
+                    - generic [ref=e367]:
+                      - link "€34.62" [ref=e370] [cursor=pointer]:
+                        - /url: /Removable-Leak-proof-Insulated-Drinking-Dishwasher/dp/B0FT3WWHDH/ref=pd_cart_crc_cko_qp_d_sccl_1_4/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0FT3WWHDH&psc=1
+                        - generic [ref=e372]:
+                          - generic [ref=e373]: €34.62
+                          - generic [ref=e374]:
+                            - text: €
+                            - generic [ref=e375]: "34."
+                            - text: "62"
+                      - generic [ref=e377]: Get it as soon as Monday, May 11
+                    - text: FREE Delivery by Amazon
+                  - generic [ref=e385] [cursor=pointer]:
+                    - button "Add to cart, NBA Los Angeles Lakers Sports Thermal Water Bottle with Removable Straw, 750ml/24oz, Leak-proof Insulated Drinking Bottle, Easy to Open, Secure Lock, Dishwasher Safe, Flip Cover, Metal Bottle" [ref=e386]
+                    - generic [ref=e387]: Add to cart
+            - listitem [ref=e388]:
+              - generic [ref=e393]:
+                - link [ref=e395] [cursor=pointer]:
+                  - /url: /JSAUX-Tempered-Hardness-Anti-Scratch-Protector/dp/B0CL92H125/ref=pd_cart_crc_cko_qp_d_sccl_1_5/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0CL92H125&psc=1
+                  - img [ref=e397]
+                - generic [ref=e398]:
+                  - generic [ref=e400]:
+                    - link "JSAUX Tempered Glass for ROG Xbox Ally/ROG Xbox Ally X 2025 / ROG Ally 2-Pack, Ultra HD 9H Hardness Tempered Glass with Frame Guide, 7 Inch Anti-Scratch Screen Protector for ASUS ROG Ally X" [ref=e401] [cursor=pointer]:
+                      - /url: /JSAUX-Tempered-Hardness-Anti-Scratch-Protector/dp/B0CL92H125/ref=pd_cart_crc_cko_qp_d_sccl_1_5/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0CL92H125&psc=1
+                      - generic [ref=e403]: JSAUX Tempered Glass for ROG Xbox Ally/ROG Xbox Ally X 2025 / ROG Ally 2-Pack, Ultra HD 9H Hardness Tempered Glass with Frame Guide, 7 Inch Anti-Scratch Screen Protector for ASUS ROG Ally X
+                    - link "4.5 out of 5 stars, 2,384 ratings" [ref=e406] [cursor=pointer]:
+                      - /url: /product-reviews/B0CL92H125/ref=pd_cart_crc_cko_qp_d_sccl_1_5_cr/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0CL92H125
+                      - generic [ref=e408]: 4.5 out of 5 stars
+                      - text: 2,384
+                    - generic [ref=e411]:
+                      - link:
+                        - /url: /JSAUX-Tempered-Hardness-Anti-Scratch-Protector/dp/B0CL92H125/ref=pd_cart_crc_cko_qp_d_sccl_1_5/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0CL92H125&psc=1
+                      - generic [ref=e412]:
+                        - link "€10.99" [ref=e413] [cursor=pointer]:
+                          - /url: /JSAUX-Tempered-Hardness-Anti-Scratch-Protector/dp/B0CL92H125/ref=pd_cart_crc_cko_qp_d_sccl_1_5/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0CL92H125&psc=1
+                          - generic [ref=e414]:
+                            - generic [ref=e415]: €10.99
+                            - generic [ref=e416]:
+                              - text: €
+                              - generic [ref=e417]: "10."
+                              - text: "99"
+                        - link "(€5.50/count)" [ref=e418] [cursor=pointer]:
+                          - /url: /JSAUX-Tempered-Hardness-Anti-Scratch-Protector/dp/B0CL92H125/ref=pd_cart_crc_cko_qp_d_sccl_1_5/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0CL92H125&psc=1
+                    - text: FREE Delivery on orders over €25 dispatched by Amazon
+                    - generic [ref=e421]: Only 1 left in stock – order soon.
+                  - generic [ref=e429] [cursor=pointer]:
+                    - button "Add to cart, JSAUX Tempered Glass for ROG Xbox Ally/ROG Xbox Ally X 2025 / ROG Ally 2-Pack, Ultra HD 9H Hardness Tempered Glass with Frame Guide, 7 Inch Anti-Scratch Screen Protector for ASUS ROG Ally X" [ref=e430]
+                    - generic [ref=e431]: Add to cart
+            - listitem [ref=e432]:
+              - generic [ref=e437]:
+                - link [ref=e439] [cursor=pointer]:
+                  - /url: /Bighan-Protector-Compatible-Handheld-Anti-Bubble/dp/B0DPM51737/ref=pd_cart_crc_cko_qp_d_sccl_1_6/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0DPM51737&psc=1
+                  - img [ref=e441]
+                - generic [ref=e442]:
+                  - generic [ref=e444]:
+                    - link "Bighan 2 Pack Screen Protector Compatible with ASUS ROG Ally Handheld 7\" 2023 / Asus Rog Ally X 2024, 9H Hardness Tempered Glass Film Clear Anti-Bubble Full Coverage foil" [ref=e445] [cursor=pointer]:
+                      - /url: /Bighan-Protector-Compatible-Handheld-Anti-Bubble/dp/B0DPM51737/ref=pd_cart_crc_cko_qp_d_sccl_1_6/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0DPM51737&psc=1
+                      - generic [ref=e447]: Bighan 2 Pack Screen Protector Compatible with ASUS ROG Ally Handheld 7" 2023 / Asus Rog Ally X 2024, 9H Hardness Tempered Glass Film Clear Anti-Bubble Full Coverage foil
+                    - link "4.4 out of 5 stars, 24 ratings" [ref=e450] [cursor=pointer]:
+                      - /url: /product-reviews/B0DPM51737/ref=pd_cart_crc_cko_qp_d_sccl_1_6_cr/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0DPM51737
+                      - generic [ref=e452]: 4.4 out of 5 stars
+                      - text: "24"
+                    - generic [ref=e455]:
+                      - link:
+                        - /url: /Bighan-Protector-Compatible-Handheld-Anti-Bubble/dp/B0DPM51737/ref=pd_cart_crc_cko_qp_d_sccl_1_6/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0DPM51737&psc=1
+                      - generic [ref=e456]:
+                        - link "€7.12" [ref=e457] [cursor=pointer]:
+                          - /url: /Bighan-Protector-Compatible-Handheld-Anti-Bubble/dp/B0DPM51737/ref=pd_cart_crc_cko_qp_d_sccl_1_6/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0DPM51737&psc=1
+                          - generic [ref=e458]:
+                            - generic [ref=e459]: €7.12
+                            - generic [ref=e460]:
+                              - text: €
+                              - generic [ref=e461]: "7."
+                              - text: "12"
+                        - link "(€3.56/count)" [ref=e462] [cursor=pointer]:
+                          - /url: /Bighan-Protector-Compatible-Handheld-Anti-Bubble/dp/B0DPM51737/ref=pd_cart_crc_cko_qp_d_sccl_1_6/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0DPM51737&psc=1
+                    - text: €3.99 delivery
+                  - generic [ref=e470] [cursor=pointer]:
+                    - button "Add to cart, Bighan 2 Pack Screen Protector Compatible with ASUS ROG Ally Handheld 7\" 2023 / Asus Rog Ally X 2024, 9H Hardness Tempered Glass Film Clear Anti-Bubble Full Coverage foil" [ref=e471]
+                    - generic [ref=e472]: Add to cart
+            - listitem [ref=e473]:
+              - generic [ref=e478]:
+                - link [ref=e480] [cursor=pointer]:
+                  - /url: /Wilson-Basketball-Giannis-Antetokounmpo-Milwaukee/dp/B09CKSTYLP/ref=pd_cart_crc_cko_qp_d_sccl_1_7/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0D6NKLH1D&psc=1
+                  - img [ref=e482]
+                - generic [ref=e483]:
+                  - generic [ref=e485]:
+                    - link "WILSON NBA Player Icon Outdoor Basketball - Size 7-29.5\" and Mini Size" [ref=e486] [cursor=pointer]:
+                      - /url: /Wilson-Basketball-Giannis-Antetokounmpo-Milwaukee/dp/B09CKSTYLP/ref=pd_cart_crc_cko_qp_d_sccl_1_7/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0D6NKLH1D&psc=1
+                      - generic [ref=e488]: WILSON NBA Player Icon Outdoor Basketball - Size 7-29.5" and Mini Size
+                    - link "4.4 out of 5 stars, 377 ratings" [ref=e491] [cursor=pointer]:
+                      - /url: /product-reviews/B0D6NKLH1D/ref=pd_cart_crc_cko_qp_d_sccl_1_7_cr/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0D6NKLH1D
+                      - generic [ref=e493]: 4.4 out of 5 stars
+                      - text: "377"
+                    - link "€13.91" [ref=e497] [cursor=pointer]:
+                      - /url: /Wilson-Basketball-Giannis-Antetokounmpo-Milwaukee/dp/B09CKSTYLP/ref=pd_cart_crc_cko_qp_d_sccl_1_7/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0D6NKLH1D&psc=1
+                      - generic [ref=e499]:
+                        - generic [ref=e500]: €13.91
+                        - generic [ref=e501]:
+                          - text: €
+                          - generic [ref=e502]: "13."
+                          - text: "91"
+                  - link "See all buying options" [ref=e508] [cursor=pointer]:
+                    - /url: /Wilson-Basketball-Giannis-Antetokounmpo-Milwaukee/dp/B09CKSTYLP/ref=pd_cart_crc_cko_qp_d_sccl_1_7_atc_o/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B0D6NKLH1D&psc=1
+            - listitem [ref=e509]:
+              - generic [ref=e514]:
+                - link [ref=e516] [cursor=pointer]:
+                  - /url: /HWC-Trading-Presentation-Basketball-Memorabilia/dp/B098FGJDXF/ref=pd_cart_crc_cko_qp_d_sccl_1_8/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B098FGJDXF&psc=1
+                  - img [ref=e518]
+                - generic [ref=e519]:
+                  - generic [ref=e521]:
+                    - link "HWC Trading FR A3 Steph Curry Golden State Warriors Gifts Printed Signed Autograph Presentation Display for Basketball Memorabilia Fans - A3 Framed" [ref=e522] [cursor=pointer]:
+                      - /url: /HWC-Trading-Presentation-Basketball-Memorabilia/dp/B098FGJDXF/ref=pd_cart_crc_cko_qp_d_sccl_1_8/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B098FGJDXF&psc=1
+                      - generic [ref=e524]: HWC Trading FR A3 Steph Curry Golden State Warriors Gifts Printed Signed Autograph Presentation Display for Basketball Memorabilia Fans - A3 Framed
+                    - link "4.4 out of 5 stars, 252 ratings" [ref=e527] [cursor=pointer]:
+                      - /url: /product-reviews/B098FGJDXF/ref=pd_cart_crc_cko_qp_d_sccl_1_8_cr/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B098FGJDXF
+                      - generic [ref=e529]: 4.4 out of 5 stars
+                      - text: "252"
+                    - generic [ref=e530]:
+                      - link "€39.41" [ref=e533] [cursor=pointer]:
+                        - /url: /HWC-Trading-Presentation-Basketball-Memorabilia/dp/B098FGJDXF/ref=pd_cart_crc_cko_qp_d_sccl_1_8/261-6711575-9331705?pd_rd_w=fPmE5&content-id=amzn1.sym.32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_p=32035979-b4e3-469d-ae40-1bf3bfaa0230&pf_rd_r=GXQRBARQBK3Y8MEX6WFK&pd_rd_wg=opfu7&pd_rd_r=8ace7483-750c-46c7-b2d5-4d5a3823e80c&pd_rd_i=B098FGJDXF&psc=1
+                        - generic [ref=e535]:
+                          - generic [ref=e536]: €39.41
+                          - generic [ref=e537]:
+                            - text: €
+                            - generic [ref=e538]: "39."
+                            - text: "41"
+                      - generic [ref=e540]: Get it as soon as Saturday, May 30
+                  - generic [ref=e548] [cursor=pointer]:
+                    - button "Add to cart, HWC Trading FR A3 Steph Curry Golden State Warriors Gifts Printed Signed Autograph Presentation Display for Basketball Memorabilia Fans - A3 Framed" [ref=e549]
+                    - generic [ref=e550]: Add to cart
+      - generic [ref=e551]:
+        - generic [ref=e553]:
+          - heading "Your Amazon Cart is empty" [level=3] [ref=e554]
+          - paragraph [ref=e556]:
+            - text: Your shopping basket lives to serve. Give it purpose – fill it with groceries, clothing, household supplies, electronics and more.
+            - text: Continue shopping on the
+            - link "Amazon.ie homepage" [ref=e557] [cursor=pointer]:
+              - /url: /ref=ord_cart_empty
+            - text: ", learn about"
+            - link "today's deals" [ref=e558] [cursor=pointer]:
+              - /url: /gp/goldbox/ref=ord_cart_empty
+            - text: ", or visit your"
+            - link "Wish List" [ref=e559] [cursor=pointer]:
+              - /url: /gp/registry/wishlist/ref=ord_cart_empty
+            - text: .
+        - generic [ref=e561]:
+          - heading "Your Items" [level=3] [ref=e563]
+          - generic [ref=e564]:
+            - tablist [ref=e565]:
+              - tab "No items saved for later" [ref=e566] [cursor=pointer]:
+                - generic [ref=e567]: No items saved for later
+              - tab "Buy it again" [selected] [ref=e568] [cursor=pointer]:
+                - generic [ref=e569]: Buy it again
+            - tabpanel "Buy it again" [ref=e570]:
+              - generic [ref=e573]: No items
+        - generic [ref=e574]:
+          - paragraph [ref=e576]: The price and availability of items at Amazon.ie are subject to change. The shopping basket is a temporary place to store a list of your items and reflects each item's most recent price.
+          - paragraph [ref=e577]: Do you have a gift card or promotional code? We'll ask you to enter your claim code when it's time to pay.
+  - generic [ref=e578]:
+    - button "Back to top" [ref=e579] [cursor=pointer]:
+      - generic [ref=e580]: Back to top
+    - generic [ref=e581]:
+      - generic [ref=e582]:
+        - heading "Get to Know Us" [level=6] [ref=e583]
+        - list [ref=e584]:
+          - listitem [ref=e585]:
+            - link "Careers" [ref=e586] [cursor=pointer]:
+              - /url: https://www.amazon.jobs
+          - listitem [ref=e587]:
+            - link "About Us" [ref=e588] [cursor=pointer]:
+              - /url: https://www.aboutamazon.eu/amazon-in-ireland
+          - listitem [ref=e589]:
+            - link "Sustainability" [ref=e590] [cursor=pointer]:
+              - /url: /gp/browse.html?node=201173026031&ref_=Nav_IE_Sustainability
+          - listitem [ref=e591]:
+            - link "Legal Notice" [ref=e592] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=GWFZQ8U37JV9AUT5&ref_=footer_impressum
+          - listitem [ref=e593]:
+            - link "Amazon Science" [ref=e594] [cursor=pointer]:
+              - /url: https://www.amazon.science
+          - listitem [ref=e595]:
+            - link "Welcome to Amazon.ie" [ref=e596] [cursor=pointer]:
+              - /url: /gp/browse.html?node=100768625031&ref_=footer_welcome_amazon_ie
+      - generic [ref=e598]:
+        - heading "Make Money with Us" [level=6] [ref=e599]
+        - list [ref=e600]:
+          - listitem [ref=e601]:
+            - link "Advertise Your Products" [ref=e602] [cursor=pointer]:
+              - /url: https://advertising.amazon.com/
+          - listitem [ref=e603]:
+            - link "Protect and build your brand" [ref=e604] [cursor=pointer]:
+              - /url: https://sellercentral.amazon.ie/welcome/brand-registry
+          - listitem [ref=e605]:
+            - link "Sell with over €47,250 in incentives" [ref=e606] [cursor=pointer]:
+              - /url: https://sellercentral.amazon.ie/?ld=AZIESOAFooter
+          - listitem [ref=e607]:
+            - link "Fulfilment by Amazon" [ref=e608] [cursor=pointer]:
+              - /url: https://sellercentral.amazon.ie/welcome/fulfilment-by-amazon/
+          - listitem [ref=e609]:
+            - link "Associates Programme" [ref=e610] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.ie/
+          - listitem [ref=e611]:
+            - link "Supply to Amazon" [ref=e612] [cursor=pointer]:
+              - /url: https://supply.amazon.com/?ref_=footer_sta&lang=en-IE
+          - listitem [ref=e613]:
+            - link "Independently Publish with Us" [ref=e614] [cursor=pointer]:
+              - /url: https://kdp.amazon.com/en_US/
+      - generic [ref=e616]:
+        - heading "Amazon Payment Methods" [level=6] [ref=e617]
+        - list [ref=e618]:
+          - listitem [ref=e619]:
+            - link "Payment Methods Help" [ref=e620] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=GPXYBCMDK83JYUXR&ref_=footer_payment_methods
+      - generic [ref=e622]:
+        - heading "Let Us Help You" [level=6] [ref=e623]
+        - list [ref=e624]:
+          - listitem [ref=e625]:
+            - link "Track Packages or View Orders" [ref=e626] [cursor=pointer]:
+              - /url: /gp/css/order-history?ref_=footer_hp_ss_comp_tmp
+          - listitem [ref=e627]:
+            - link "Delivery Rates & Policies" [ref=e628] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=GE66DNRRQVDZAR5E&ref_=footer_shiprates
+          - listitem [ref=e629]:
+            - link "Returns & Replacements" [ref=e630] [cursor=pointer]:
+              - /url: /gp/orc/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=e631]:
+            - link "Recycling" [ref=e632] [cursor=pointer]:
+              - /url: https://www.amazon.ie/recycling
+          - listitem [ref=e633]:
+            - link "Manage Your Content and Devices" [ref=e634] [cursor=pointer]:
+              - /url: /gp/browse.html?node=204680224031&ref_=footer_myk
+          - listitem [ref=e635]:
+            - link "Recalls and Product Safety Alerts" [ref=e636] [cursor=pointer]:
+              - /url: https://www.amazon.ie/your-product-safety-alerts?ref_=footer_bsx_ypsa
+          - listitem [ref=e637]:
+            - link "Amazon Mobile App" [ref=e638] [cursor=pointer]:
+              - /url: /gp/browse.html?node=205580392031&ref_=footer_mobapp
+          - listitem [ref=e639]:
+            - link "Customer Service" [ref=e640] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=508510&ref_=footer_gw_m_b_cs
+          - listitem [ref=e641]:
+            - link "Accessibility" [ref=e642] [cursor=pointer]:
+              - /url: https://www.amazon.ie/gp/help/customer/display.html?nodeId=GUUVBZ8WGVFP8R8X
+    - generic [ref=e644]:
+      - link "Amazon UK Home" [ref=e647] [cursor=pointer]:
+        - /url: /ref=footer_logo
+      - button "Choose a country/region for shopping. The current selection is Ireland, Republic of." [ref=e651] [cursor=pointer]:
+        - generic [ref=e653]: Ireland, Republic of
+    - generic "More on Amazon" [ref=e654]:
+      - generic "More on Amazon" [ref=e655]:
+        - list [ref=e656]:
+          - listitem [ref=e657]:
+            - link "Kindle Direct Publishing Indie Digital & Print Publishing Made Easy" [ref=e658] [cursor=pointer]:
+              - /url: https://kdp.amazon.com/en_US/
+              - heading "Kindle Direct Publishing" [level=5] [ref=e659]
+              - generic [ref=e660]:
+                - text: Indie Digital & Print Publishing
+                - text: Made Easy
+          - listitem [ref=e661]
+          - listitem [ref=e662]:
+            - link "IMDb Movies, TV & Celebrities" [ref=e663] [cursor=pointer]:
+              - /url: https://www.imdb.com/
+              - heading "IMDb" [level=5] [ref=e664]
+              - generic [ref=e665]:
+                - text: Movies, TV
+                - text: "& Celebrities"
+          - listitem [ref=e666]
+          - listitem [ref=e667]:
+            - link "Goodreads Book reviews & recommendations" [ref=e668] [cursor=pointer]:
+              - /url: https://www.goodreads.com/
+              - heading "Goodreads" [level=5] [ref=e669]
+              - generic [ref=e670]:
+                - text: Book reviews
+                - text: "& recommendations"
+          - listitem [ref=e671]
+          - listitem [ref=e672]:
+            - link "Amazon Web Services Scalable Cloud Computing Services" [ref=e673] [cursor=pointer]:
+              - /url: https://aws.amazon.com
+              - heading "Amazon Web Services" [level=5] [ref=e674]
+              - generic [ref=e675]:
+                - text: Scalable Cloud
+                - text: Computing Services
+    - generic [ref=e676]:
+      - list [ref=e677]:
+        - listitem [ref=e678]:
+          - link "Conditions of Use & Sale" [ref=e679] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM&ref_=footer_cou
+        - listitem [ref=e680]:
+          - link "Privacy Notice" [ref=e681] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ&ref_=footer_privacy
+        - listitem [ref=e682]:
+          - link "Legal Notice" [ref=e683] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=GWFZQ8U37JV9AUT5&ref_=footer_impressum
+        - listitem [ref=e684]:
+          - link "Cookies Notice" [ref=e685] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=GVASXV5UZ64R4Y25&ref_=footer_cookies_notice
+        - listitem [ref=e686]:
+          - link "Interest-Based Ads Notice" [ref=e687] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=G64JFZVFDY66XG9K&ref_=footer_Interest_Based_Ads_Notice
+      - generic [ref=e688]: © 1996-2026, Amazon.com, Inc. or its affiliates

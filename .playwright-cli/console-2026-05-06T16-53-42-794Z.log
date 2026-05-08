@@ -1,0 +1,4 @@
+[     643ms] [ERROR] The source list for the Content Security Policy directive 'connect-src' contains an invalid source: '.ucweb.com'. It will be ignored. @ https://cart.ebay.ie/:0
+[    1665ms] [WARNING] The PerformanceObserver does not support buffered flag with the entryTypes argument. @ https://ir.ebaystatic.com/rs/c/cartfe/vendor.desktop.dfa5b6899d73f1f1ae64.js:1
+[    2682ms] [ERROR] The source list for the Content Security Policy directive 'connect-src' contains an invalid source: '.ucweb.com'. It will be ignored. @ https://ir.ebaystatic.com/cr/v/c1/globalheader_widget_platform__v2-b70676194b.js:1
+[    2698ms] [ERROR] The source list for the Content Security Policy directive 'connect-src' contains an invalid source: '.ucweb.com'. It will be ignored. @ :102
