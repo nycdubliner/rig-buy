@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Comparison: Strix Halo vs Discrete Dual-GPU</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #059669;
+            --danger: #dc2626;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --card: #ffffff;
+            --border: #e2e8f0;
+            --pcie: #f59e0b;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1rem;
+        }
+        h1 { margin: 0; color: var(--primary); }
+        .nav-links { margin-top: 0.5rem; font-weight: 600; }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+        
+        .card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            justify-content: center;
+        }
+        button {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border);
+            background: #f1f5f9;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        button.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .diagram-container {
+            position: relative;
+            height: 400px;
+            background: #0f172a;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-family: monospace;
+        }
+
+        /* Hardware Blocks */
+        .hw-block {
+            position: absolute;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(4px);
+            z-index: 10;
+        }
+        
+        .hw-title { font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem; }
+        .hw-subtitle { font-size: 0.8rem; color: #94a3b8; }
+
+        /* Strix Halo Layout */
+        .strix-soc { top: 120px; left: 40px; width: 140px; height: 160px; border-color: var(--primary); }
+        .strix-ram { top: 100px; right: 40px; width: 160px; height: 200px; border-color: var(--secondary); background: rgba(5, 150, 105, 0.1); }
+        .strix-bus { top: 180px; left: 180px; width: calc(100% - 380px); height: 40px; background: rgba(255,255,255,0.1); position: absolute; z-index: 1; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: #cbd5e1; }
+
+        /* Discrete GPU Layout */
+        .ds-cpu { top: 20px; left: 50%; transform: translateX(-50%); width: 120px; height: 80px; border-color: var(--primary); }
+        .ds-sysram { top: 20px; right: 20px; width: 100px; height: 80px; border-color: #64748b; }
+        .ds-pcie { top: 120px; left: 15%; width: 70%; height: 20px; background: var(--pcie); position: absolute; z-index: 1; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: black; font-weight: bold; border-radius: 10px; }
+        .ds-gpu1 { top: 180px; left: 40px; width: 160px; height: 180px; border-color: var(--danger); background: rgba(220, 38, 38, 0.1); }
+        .ds-gpu2 { top: 180px; right: 40px; width: 160px; height: 180px; border-color: var(--danger); background: rgba(220, 38, 38, 0.1); }
+        .ds-vram { margin-top: 10px; padding: 4px; border: 1px dashed rgba(255,255,255,0.3); border-radius: 4px; font-size: 0.7rem; width: 80%; background: rgba(0,0,0,0.5); }
+
+        /* Data Packets & Animations */
+        .packet {
+            position: absolute;
+            border-radius: 4px;
+            opacity: 0;
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* --- STRIX HALO ANIMATIONS --- */
+        /* AI Mode: Massive unified block moving back and forth */
+        .strix-ai-packet { width: 100px; height: 30px; background: var(--primary); top: 185px; left: 190px; }
+        .strix-ai .strix-ai-packet { animation: strix-ai-flow 1.5s infinite alternate ease-in-out; }
+        @keyframes strix-ai-flow {
+            0% { transform: translateX(0); opacity: 1; }
+            100% { transform: translateX(120px); opacity: 1; }
+        }
+
+        /* Gaming Mode: Colliding/Contention */
+        .strix-game-cpu { width: 40px; height: 15px; background: #8b5cf6; top: 180px; left: 190px; }
+        .strix-game-gpu { width: 40px; height: 15px; background: var(--secondary); top: 200px; right: 190px; }
+        .strix-gaming .strix-game-cpu { animation: strix-contention-cpu 2s infinite linear; }
+        .strix-gaming .strix-game-gpu { animation: strix-contention-gpu 2s infinite linear; }
+        @keyframes strix-contention-cpu {
+            0% { transform: translateX(0); opacity: 1; }
+            45% { transform: translateX(60px); opacity: 1; } /* Hit bottleneck */
+            55% { transform: translateX(60px); opacity: 1; } /* Wait */
+            100% { transform: translateX(140px); opacity: 0; }
+        }
+        @keyframes strix-contention-gpu {
+            0% { transform: translateX(0); opacity: 1; }
+            45% { transform: translateX(-60px); opacity: 1; } /* Hit bottleneck */
+            55% { transform: translateX(-60px); opacity: 1; } /* Wait */
+            100% { transform: translateX(-140px); opacity: 0; }
+        }
+
+        /* --- DISCRETE GPU ANIMATIONS --- */
+        /* AI Mode: Layer Splitting via PCIe */
+        .ds-ai-packet { width: 30px; height: 30px; background: var(--primary); border-radius: 50%; }
+        .ds-ai .ds-ai-packet { animation: ds-layer-split 4s infinite linear; }
+        @keyframes ds-layer-split {
+            0% { top: 200px; left: 100px; opacity: 1; transform: scale(1); } /* Compute in GPU 1 */
+            15% { top: 200px; left: 100px; opacity: 1; transform: scale(1.5); } /* Finish layer */
+            25% { top: 125px; left: 100px; opacity: 1; transform: scale(0.5); } /* Squeeze into PCIe */
+            40% { top: 125px; left: 50%; opacity: 1; transform: scale(0.5); } /* Cross CPU */
+            55% { top: 125px; right: 100px; left: auto; opacity: 1; transform: scale(0.5); } /* Cross PCIe */
+            65% { top: 200px; right: 100px; left: auto; opacity: 1; transform: scale(1); } /* Arrive GPU 2 */
+            80% { top: 200px; right: 100px; left: auto; opacity: 1; transform: scale(1.5); } /* Compute layer */
+            100% { top: 200px; right: 100px; left: auto; opacity: 0; transform: scale(1); }
+        }
+
+        /* Gaming Mode: Local VRAM Loop + Tiny PCIe stream */
+        .ds-game-vram { width: 60px; height: 60px; background: rgba(16, 185, 129, 0.6); border-radius: 50%; top: 240px; left: 90px; }
+        .ds-game-pcie { width: 10px; height: 10px; background: white; border-radius: 50%; top: 60px; left: 50%; }
+        .ds-gaming .ds-game-vram { animation: ds-vram-loop 0.5s infinite linear; }
+        .ds-gaming .ds-game-pcie { animation: ds-pcie-stream 1s infinite linear; }
+        @keyframes ds-vram-loop {
+            0% { transform: rotate(0deg) translateX(30px) rotate(0deg); opacity: 1; }
+            100% { transform: rotate(360deg) translateX(30px) rotate(-360deg); opacity: 1; }
+        }
+        @keyframes ds-pcie-stream {
+            0% { top: 100px; left: 50%; opacity: 1; }
+            50% { top: 125px; left: 100px; opacity: 1; }
+            100% { top: 180px; left: 100px; opacity: 0; }
+        }
+
+        /* Explanations */
+        .explanation {
+            min-height: 120px;
+            font-size: 0.95rem;
+            color: #475569;
+        }
+        .explanation h4 { color: var(--text); margin-top: 0; margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Data Flow: Unified Memory vs. Discrete GPUs</h1>
+            <p>Visualizing why APUs (Strix Halo/Mac Apple Silicon) dominate large-model AI inference, while traditional discrete GPUs absolutely crush them in PC gaming.</p>
+            <div class="nav-links">
+                &larr; <a href="index.html">Back to Main Build Quote</a>
+            </div>
+        </header>
+
+        <div class="grid">
+            <!-- STRIX HALO CARD -->
+            <section class="card">
+                <h2>1. Unified Memory (APU / Strix Halo)</h2>
+                <div class="controls" id="strix-controls">
+                    <button class="active" onclick="setMode('strix', 'ai')">AI Workload</button>
+                    <button onclick="setMode('strix', 'gaming')">Gaming Workload</button>
+                </div>
+                
+                <div class="diagram-container strix-ai" id="strix-diagram">
+                    <div class="hw-block strix-soc">
+                        <div class="hw-title">SoC</div>
+                        <div class="hw-subtitle">CPU Cores</div>
+                        <div class="hw-subtitle" style="color:var(--secondary)">iGPU Cores</div>
+                    </div>
+                    <div class="hw-block strix-ram">
+                        <div class="hw-title">Unified RAM</div>
+                        <div class="hw-subtitle">e.g. 64GB LPDDR5X</div>
+                        <div class="hw-subtitle">~120 GB/s</div>
+                    </div>
+                    <div class="strix-bus">Unified Memory Bus</div>
+                    
+                    <!-- AI Packets -->
+                    <div class="packet strix-ai-packet">Model Weights</div>
+                    
+                    <!-- Gaming Packets -->
+                    <div class="packet strix-game-cpu">Phys</div>
+                    <div class="packet strix-game-gpu">Tex</div>
+                </div>
+
+                <div class="explanation" id="strix-desc">
+                    <h4>Zero-Copy AI Supremacy</h4>
+                    <p>When running large Local LLMs, the massive model weights sit in the 64GB+ unified RAM pool. The iGPU has <strong>direct, zero-copy access</strong> to this memory. It doesn't need to copy the 30GB model over a PCIe bus to its own VRAM because it already owns the system RAM. This allows APUs to run massive 32B+ models incredibly efficiently.</p>
+                </div>
+            </section>
+
+            <!-- DISCRETE GPU CARD -->
+            <section class="card">
+                <h2>2. Discrete Dual-GPU (Your Rig)</h2>
+                <div class="controls" id="ds-controls">
+                    <button onclick="setMode('ds', 'ai')">AI Workload (32B Model)</button>
+                    <button class="active" onclick="setMode('ds', 'gaming')">Gaming Workload</button>
+                </div>
+                
+                <div class="diagram-container ds-gaming" id="ds-diagram">
+                    <div class="hw-block ds-cpu">
+                        <div class="hw-title">CPU</div>
+                    </div>
+                    <div class="hw-block ds-sysram">
+                        <div class="hw-title">Sys RAM</div>
+                        <div class="hw-subtitle">DDR4</div>
+                    </div>
+                    <div class="ds-pcie">PCIe 4.0 Bus (Bottleneck for AI, fine for Gaming)</div>
+                    
+                    <div class="hw-block ds-gpu1">
+                        <div class="hw-title">GPU 1 (Gaming)</div>
+                        <div class="ds-vram">16GB GDDR6<br>~624 GB/s</div>
+                    </div>
+                    <div class="hw-block ds-gpu2">
+                        <div class="hw-title">GPU 2 (Idle/AI)</div>
+                        <div class="ds-vram">16GB GDDR6<br>~624 GB/s</div>
+                    </div>
+
+                    <!-- AI Packets -->
+                    <div class="packet ds-ai-packet"></div>
+                    
+                    <!-- Gaming Packets -->
+                    <div class="packet ds-game-vram">600GB/s</div>
+                    <div class="packet ds-game-pcie">Draw</div>
+                </div>
+
+                <div class="explanation" id="ds-desc">
+                    <h4>The Gaming King</h4>
+                    <p>In gaming, the massive graphical textures are pre-loaded into GPU 1's dedicated GDDR6 VRAM. The GPU core communicates with this VRAM at an insane <strong>~624 GB/s</strong>. The PCIe bus is barely stressed, only receiving geometry and draw calls from the CPU. Because there is no bandwidth sharing with the CPU, framerates are blistering compared to an APU.</p>
+                </div>
+            </section>
+        </div>
+        
+        <section class="validation card" style="margin-top: 2rem;">
+            <h3>The Synthesis: Why Build Dual-GPU?</h3>
+            <p>If APUs (like Mac Studio or Strix Halo) are so good at AI, why build a Dual-GPU rig? <strong>Because of the VRAM bandwidth multiplier.</strong></p>
+            <p>An APU might have 64GB of RAM, but its bandwidth is limited to ~120 GB/s. A single RX 7800 XT has 624 GB/s of bandwidth. When you run a 32B model across <em>two</em> 7800 XTs, you suffer a slight latency penalty when the layers split across the PCIe bus (as shown in the AI animation above), but the actual computation happening inside the GDDR6 VRAM is happening at <strong>over 1,200 GB/s combined</strong>.</p>
+            <p>Result? The APU can hold the model, but generates tokens slowly (e.g., 5-8 tokens/sec). The Dual-GPU rig has to split the model, but computes so violently fast that it overcomes the PCIe penalty and outputs at <strong>25+ tokens/sec</strong>, while also remaining a world-class gaming PC.</p>
+        </section>
+    </div>
+
+    <script>
+        const descriptions = {
+            'strix-ai': `<h4>Zero-Copy AI Supremacy</h4><p>When running large Local LLMs, the massive model weights sit in the 64GB+ unified RAM pool. The iGPU has <strong>direct, zero-copy access</strong> to this memory. It doesn't need to copy the 30GB model over a narrow PCIe bus to its own VRAM. This allows APUs to hold and run massive 32B+ models incredibly efficiently without VRAM limits.</p>`,
+            'strix-gaming': `<h4>Bandwidth Contention (The Gaming Flaw)</h4><p>In modern 1440p/4K gaming, textures are massive. The iGPU needs to pull these textures from system RAM while the CPU simultaneously tries to calculate physics and game logic from the <em>same</em> RAM. Because LPDDR5X bandwidth (~120GB/s) is vastly lower than dedicated GDDR6 (~600GB/s), the CPU and iGPU choke each other in a bandwidth traffic jam, tanking framerates.</p>`,
+            'ds-ai': `<h4>The Layer-Split PCIe Penalty (The AI Flaw)</h4><p>A 32B LLM requires ~20GB of VRAM. A single 7800 XT only has 16GB. Therefore, the model is split. GPU 1 computes the first half of the neural network, but then it must squeeze the resulting tensor activations through the narrow PCIe bus, up to the CPU, and back down the PCIe bus to GPU 2 to finish the thought. This traversal introduces significant latency.</p>`,
+            'ds-gaming': `<h4>The Gaming King</h4><p>In gaming, the massive graphical textures are pre-loaded into GPU 1's dedicated GDDR6 VRAM. The GPU core communicates with this VRAM at an insane <strong>~624 GB/s</strong>. The narrow PCIe bus is barely stressed, only receiving tiny geometry and draw calls from the CPU. Because there is no bandwidth sharing, framerates are blistering compared to an APU.</p>`
+        };
+
+        function setMode(diagram, mode) {
+            // Update buttons
+            const btns = document.querySelectorAll(`#${diagram}-controls button`);
+            btns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Update diagram class
+            const container = document.getElementById(`${diagram}-diagram`);
+            container.className = `diagram-container ${diagram}-${mode}`;
+
+            // Update description
+            document.getElementById(`${diagram}-desc`).innerHTML = descriptions[`${diagram}-${mode}`];
+        }
+    </script>
+</body>
+</html>
