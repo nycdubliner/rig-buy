@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Sourcing Guide - Ireland & EU</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --card: #ffffff;
+            --border: #e2e8f0;
+            --irish: #059669;
+            --eu: #0284c7;
+            --new: #8b5cf6;
+            --used: #ea580c;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1rem;
+        }
+        h1 { margin: 0; color: var(--primary); }
+        .nav-links { margin-top: 0.5rem; font-weight: 600; display: flex; gap: 1.5rem; }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+        
+        .card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 {
+            margin-top: 0;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+        .tag {
+            display: inline-block;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: #fff;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+        .tag.irish { background: var(--irish); }
+        .tag.eu { background: var(--eu); }
+        .tag.new { background: var(--new); }
+        .tag.used { background: var(--used); }
+        
+        .vendor-item {
+            margin-bottom: 1.5rem;
+        }
+        .vendor-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+        }
+        .vendor-desc {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-top: 0.25rem;
+        }
+        .pro-tip {
+            background: #f0fdf4;
+            border-left: 3px solid #22c55e;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            color: #166534;
+        }
+        .warning {
+            background: #fef2f2;
+            border-left: 3px solid #ef4444;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            color: #991b1b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Market Sourcing Intelligence</h1>
+            <p>A breakdown of the vendors and strategies used to beat the "EU Tech Tax" and source high-end AI hardware in Ireland at US-equivalent pricing.</p>
+            <div class="nav-links">
+                &larr; <a href="index.html">Back to Main Build Quote</a>
+            </div>
+        </header>
+
+        <div class="grid">
+            <!-- IRISH MARKET -->
+            <section class="card">
+                <h2>Domestic: Ireland</h2>
+                
+                <div class="vendor-item">
+                    <div class="vendor-title">GG Machines <span class="tag irish">IE</span><span class="tag new">NEW</span></div>
+                    <div class="vendor-desc">A highly reliable domestic system builder and parts retailer. They offer competitive pricing on heavy or fragile components that are expensive to ship internationally (like PC cases and power supplies). We sourced the 1000W ATX 3.1 PSU, Lancool 216 Case, and Xilence Cooler here.</div>
+                    <div class="pro-tip">Buying heavy items domestically avoids massive international shipping fees and ensures quick, easy returns if glass shatters in transit.</div>
+                </div>
+
+                <div class="vendor-item">
+                    <div class="vendor-title">Adverts.ie / DoneDeal <span class="tag irish">IE</span><span class="tag used">USED</span></div>
+                    <div class="vendor-desc">The primary Irish secondary market. This is where the real value is found if you are willing to negotiate. Sellers often overvalue their used parts initially, but cash offers and local pickup can drive prices down significantly.</div>
+                    <div class="pro-tip">We negotiated the XFX RX 7800 XT down to €400 here. Always test the hardware in person or request a video of it running a benchmark (like FurMark or 3DMark) before handing over cash.</div>
+                </div>
+
+                <div class="vendor-item">
+                    <div class="vendor-title">CeX Ireland <span class="tag irish">IE</span><span class="tag used">USED</span></div>
+                    <div class="vendor-desc">A massive physical and online presence for second-hand tech. While their GPU prices are often terrible (priced close to retail), their CPU prices can be surprisingly good.</div>
+                    <div class="pro-tip">We sourced the 12-core Ryzen 9 5900X here for €260. The massive advantage of CeX is their <strong>24-month warranty</strong> on used hardware, which offers incredible peace of mind when buying complex silicon like a CPU.</div>
+                </div>
+
+                <div class="vendor-item">
+                    <div class="vendor-title">Facebook Marketplace <span class="tag irish">IE</span><span class="tag used">USED</span></div>
+                    <div class="vendor-desc">High risk, high reward. It lacks the feedback systems of Adverts or eBay, making it the Wild West. However, because it's so casual, you can occasionally find desperate sellers or incredible deals.</div>
+                    <div class="pro-tip">We secured the 64GB DDR4 Patriot Viper RAM kit here for €250. Never arrange shipping on FB Marketplace—face-to-face cash deals only to avoid scams.</div>
+                </div>
+            </section>
+
+            <!-- EU MARKET -->
+            <section class="card">
+                <h2>International: European Union</h2>
+                
+                <div class="vendor-item">
+                    <div class="vendor-title">eBay Germany (eBay.de) <span class="tag eu">EU</span><span class="tag used">USED</span></div>
+                    <div class="vendor-desc">The holy grail for niche or high-end used PC components in Europe. Germany has a massive PC building culture, meaning their secondary market is flooded with flagship hardware that you simply cannot find in Ireland.</div>
+                    <div class="pro-tip">We sourced the extremely rare MSI MEG X570 Unify (essential for x8/x8 dual-GPU bifurcation) from eBay Germany. Buying from within the EU guarantees zero customs duties or surprise VAT bills upon delivery.</div>
+                </div>
+
+                <div class="vendor-item">
+                    <div class="vendor-title">Amazon EU (.de / .fr / .es) <span class="tag eu">EU</span><span class="tag new">NEW</span></div>
+                    <div class="vendor-desc">When buying new components that Irish retailers lack, Amazon's European sites are the fallback. Amazon.de (Germany) typically has the best tech stock and pricing.</div>
+                    <div class="warning"><strong>The Brexit Trap:</strong> Avoid Amazon.co.uk (UK) for anything over €150. Post-Brexit, high-value electronics coming from the UK will be hit with import duties and Irish VAT (23%) by customs, destroying any initial savings. Always stick to mainland EU domains.</div>
+                </div>
+
+                <div class="vendor-item">
+                    <div class="vendor-title">Geizhals.eu <span class="tag eu">EU</span><span class="tag new">NEW</span></div>
+                    <div class="vendor-desc">An absolutely critical tool for EU builders. Geizhals is an aggregator that scrapes almost every hardware retailer across Germany, Austria, and Poland.</div>
+                    <div class="pro-tip">Use this strictly for price benchmarking. If a seller on Adverts.ie wants €500 for a used GPU, use Geizhals to prove that a brand new one from Germany costs €520. It is the ultimate negotiation weapon.</div>
+                </div>
+
+                <div class="vendor-item">
+                    <div class="vendor-title">Paradigit / Caseking <span class="tag eu">EU</span><span class="tag new">NEW</span></div>
+                    <div class="vendor-desc">Large European retailers. Paradigit (Dutch) operates a localized .ie storefront which makes shipping easy, but their prices can be inflated. Caseking (German) has a legendary selection of watercooling and niche parts, but international shipping to Ireland can be steep (€20-€30).</div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
