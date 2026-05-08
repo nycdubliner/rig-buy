@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Pricing Comparison - Dual RX 7800 XT Rig</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --card: #ffffff;
+            --border: #e2e8f0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1rem;
+        }
+        h1 { margin: 0; color: var(--primary); }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        .card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+        th { background: #f1f5f9; font-weight: 600; }
+        .price { font-family: monospace; font-weight: bold; color: #059669; }
+        .total {
+            font-size: 1.25rem;
+            text-align: right;
+            margin-top: 1rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        .validation {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .nav-links { margin-top: 0.5rem; font-weight: 600; }
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #fff;
+        }
+        .tag.am4 { background: #059669; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>US Market Value Comparison</h1>
+            <p>A breakdown of equivalent components sourced entirely via standard "Buy It Now" pricing on US retailers (Amazon & eBay) to benchmark against the finalized Irish build.</p>
+            <div class="nav-links">
+                &larr; <a href="index.html">Back to Main Build Quote</a>
+            </div>
+        </header>
+
+        <div class="grid">
+            <section class="card">
+                <h2>US Equivalent Build <span class="tag am4">NO NEGOTIATION</span></h2>
+                <p>This list assumes immediate purchase without aggressive manual negotiation, acting as a baseline for the global value of the components.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Model</th>
+                            <th>Price (USD)</th>
+                            <th>Source</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>CPU</strong></td>
+                            <td>Ryzen 9 5900X (Used)</td>
+                            <td class="price">$265.00</td>
+                            <td>eBay US</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GPU 1</strong></td>
+                            <td>RX 7800 XT 16GB (Used)</td>
+                            <td class="price">$450.00</td>
+                            <td>eBay US</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GPU 2</strong></td>
+                            <td>RX 7800 XT 16GB (Used)</td>
+                            <td class="price">$450.00</td>
+                            <td>eBay US</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mobo</strong></td>
+                            <td>AM4 X570 w/ x8/x8 (Used)</td>
+                            <td class="price">$280.00</td>
+                            <td>eBay US</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PSU</strong></td>
+                            <td>Corsair RM1000e ATX 3.1 (New)</td>
+                            <td class="price">$125.71</td>
+                            <td>Amazon US</td>
+                        </tr>
+                        <tr>
+                            <td><strong>RAM</strong></td>
+                            <td>64GB (2x32GB) DDR4-3600 (Used)</td>
+                            <td class="price">$360.00</td>
+                            <td>eBay US</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Case</strong></td>
+                            <td>Lian Li LANCOOL 216 (New)</td>
+                            <td class="price">$100.00</td>
+                            <td>Amazon US</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cooler</strong></td>
+                            <td>Thermalright Peerless Assassin 120 SE (New)</td>
+                            <td class="price">$33.89</td>
+                            <td>Amazon US</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="total">US Total: ~$2,064.60 USD</div>
+            </section>
+
+            <section class="validation card full-width">
+                <h3>Executive Summary: Evading the "EU Tech Tax"</h3>
+                <p>The current finalized cost for the Irish build is <strong>&euro;1,961.76</strong>. At current exchange rates, this translates to approximately <strong>$2,118 USD</strong>.</p>
+                <p>Typically, European builders face a 20% to 30% regional markup ("EU Tech Tax") due to value-added tax (VAT), import duties, and general logistics. Based on the scraped US total of $2,064.60, the Irish build is within $50 of the raw American cost.</p>
+                <p>This narrow margin confirms that circumventing automated online carts in favor of aggressive, manual negotiation on local secondary markets (Adverts.ie, FB Marketplace) successfully offset the standard regional premium. You have constructed a US-priced rig in Ireland.</p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
