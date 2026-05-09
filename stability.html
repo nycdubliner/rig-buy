@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stability & Stress Testing - Dual RX 7800 XT Rig</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --card: #ffffff;
+            --border: #e2e8f0;
+            --danger: #ef4444;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1rem;
+        }
+        h1 { margin: 0; color: var(--primary); }
+        h2 { margin-top: 2rem; color: var(--text); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+        .card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        .warning {
+            background: #fff7ed;
+            border-left: 4px solid #f97316;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-weight: 500;
+        }
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .check-box {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary);
+            border-radius: 4px;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: var(--primary); text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Back to Build Quote</a>
+        <header>
+            <h1>Stability & Stress Testing Guide</h1>
+            <p>A 1000W system with dual GPUs and a 12-core CPU generates immense heat and transient power loads. Use this guide to ensure your Phase 2 build is rock-solid before committing to long AI training runs or VR sessions.</p>
+        </header>
+
+        <section class="card">
+            <h2>The "Transient Spike" Test</h2>
+            <div class="warning">DANGER: This test pulls maximum wattage. If your PSU is faulty or cables are loose, this is when it will fail.</div>
+            <p>To verify the **Fortron 1000W ATX 3.1** PSU can handle the simultaneous spikes of two 7800 XTs + the 5900X:</p>
+            <ul>
+                <li><strong>Tools (Windows VM):</strong> OCCT (Power Test) or Furmark + Prime95.</li>
+                <li><strong>Procedure:</strong> Run Furmark on <em>both</em> GPUs while running Prime95 (Small FFTs) on the CPU.</li>
+                <li><strong>Success Criteria:</strong> 30 minutes without a shutdown. If the PC turns off instantly, you have a "Power Trip," likely due to using "daisy-chained" PCIe cables. Ensure each GPU has <strong>independent</strong> cables from the PSU.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Thermal Throttle Verification</h2>
+            <p>With a **3-slot gap**, the top GPU (XFX QICK) will be breathing the hot exhaust of the bottom GPU (Gigabyte Gaming OC).</p>
+            <ul>
+                <li><strong>The Test:</strong> Run an AI inference loop (e.g., <code>llama.cpp</code> with <code>--n-gpu-layers 100</code>) for 1 hour.</li>
+                <li><strong>Target Temps:</strong> 
+                    <ul>
+                        <li>Bottom GPU: < 70°C (Fresh air access).</li>
+                        <li>Top GPU: < 85°C (Re-circulated air).</li>
+                    </ul>
+                </li>
+                <li><strong>Mitigation:</strong> If the top card hits 90°C+, increase the <strong>Lian Li 216</strong> front fan speeds and consider adding two 120mm fans on top of the PSU shroud to "shove" air into the gap.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>VFIO Integrity Check</h2>
+            <p>Verify that your Linux isolation is actually working and you aren't losing performance to "interrupt storms."</p>
+            <div class="check-item">
+                <div class="check-box"></div>
+                <div><strong>LSPCI Verification:</strong> Run <code>lspci -nnk</code> and ensure both GPUs show <code>Kernel driver in use: vfio-pci</code>.</div>
+            </div>
+            <div class="check-item">
+                <div class="check-box"></div>
+                <div><strong>IOMMU Grouping:</strong> Ensure the GPUs are in their own groups. If they share a group with a USB controller or SATA port, you will get "Input Lag."</div>
+            </div>
+            <div class="check-item">
+                <div class="check-box"></div>
+                <div><strong>DPC Latency:</strong> Inside the Windows VM, run <em>LatencyMon</em>. If the bars are red, your CPU pinning is likely crossing CCD boundaries.</div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Phase 2 Maintenance</h2>
+            <ul>
+                <li><strong>BIOS Updates:</strong> Check the MSI support page for "Agesa" updates. Newer Agesa versions often improve PCIe 4.0 stability for dual-GPU setups.</li>
+                <li><strong>Dust Management:</strong> The Lancool 216 is a high-airflow case, which means it is a vacuum cleaner. Clean the front mesh every 2 weeks or the bottom GPU will start to choke.</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

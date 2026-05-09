@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Virtualization Setup - Dual RX 7800 XT Rig</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --card: #ffffff;
+            --border: #e2e8f0;
+            --code-bg: #1e293b;
+            --code-text: #f8fafc;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1rem;
+        }
+        h1 { margin: 0; color: var(--primary); }
+        h2 { margin-top: 2rem; color: var(--text); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+        .card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        code {
+            background: var(--code-bg);
+            color: var(--code-text);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        pre {
+            background: var(--code-bg);
+            color: var(--code-text);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .tag.setup { background: #dbeafe; color: #1e40af; }
+        .tag.warning { background: #fef3c7; color: #92400e; }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: var(--primary); text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Back to Build Quote</a>
+        <header>
+            <h1>Gaming Virtualization Setup (VFIO)</h1>
+            <p>Transform your dual-GPU AI rig into a high-performance gaming workstation. Using KVM/QEMU and VFIO passthrough, you can run Windows at near-native speeds inside Linux.</p>
+        </header>
+
+        <section class="card">
+            <h2>The Software Stack</h2>
+            <ul>
+                <li><strong>Host OS:</strong> Arch Linux (Rolling release, best Wiki) or Proxmox (Web-GUI managed hypervisor).</li>
+                <li><strong>Hypervisor:</strong> KVM (Kernel-based Virtual Machine).</li>
+                <li><strong>Management:</strong> <code>libvirt</code> + <strong>Virt-Manager</strong> (GUI for VM management).</li>
+                <li><strong>Performance:</strong> <strong>Looking Glass</strong> (Low-latency frame buffer for windowed VM gaming).</li>
+                <li><strong>Peripherals:</strong> <code>evdev</code> passthrough (Keyboard/Mouse sharing via double-Ctrl toggle).</li>
+            </ul>
+        </section>
+
+        <div class="grid">
+            <section class="card">
+                <span class="tag setup">Option A: Two Gamers, One CPU</span>
+                <p>Maximize hardware usage by running two independent Windows instances simultaneously.</p>
+                <strong>Hardware Allocation:</strong>
+                <ul>
+                    <li><strong>GPU 1:</strong> Dedicated to VM 1</li>
+                    <li><strong>GPU 2:</strong> Dedicated to VM 2</li>
+                    <li><strong>CPU (5900X):</strong> 5 Cores per VM (Pinned to individual CCDs)</li>
+                    <li><strong>RAM:</strong> 24GB per VM (Recommended)</li>
+                </ul>
+                <p><small><em>Best for: Multi-user households or dual-boxing.</em></small></p>
+            </section>
+
+            <section class="card">
+                <span class="tag setup">Option B: Single Player (Max Performance)</span>
+                <p>Dedicate the bulk of the machine to one flagship VR or 4K gaming experience.</p>
+                <strong>Hardware Allocation:</strong>
+                <ul>
+                    <li><strong>GPU 1:</strong> Dedicated to VM 1 (Top Slot)</li>
+                    <li><strong>GPU 2:</strong> Remains available for Host (AI/Encoding)</li>
+                    <li><strong>CPU (5900X):</strong> 10 Cores (Pinned across both CCDs)</li>
+                    <li><strong>RAM:</strong> 32GB+ for VM 1</li>
+                </ul>
+                <p><small><em>Best for: High-end VR, MSFS 2020, and 4K Ultra gaming.</em></small></p>
+            </section>
+        </div>
+
+        <section class="card">
+            <h2>BIOS & Hardware Checklist</h2>
+            <p>Ensure these settings are toggled in your <strong>MSI X570 Unify</strong> BIOS:</p>
+            <ul>
+                <li><strong>SVM Mode:</strong> Enabled (AMD Virtualization).</li>
+                <li><strong>IOMMU:</strong> Enabled (Mandatory for hardware passthrough).</li>
+                <li><strong>SR-IOV Support:</strong> Enabled.</li>
+                <li><strong>Amd-Vi:</strong> Enabled.</li>
+                <li><strong>Primary Video Adapter:</strong> Set to the slot you want Linux to use (or use headless).</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>OS-Level Optimizations</h2>
+            <p>Add these parameters to your GRUB or systemd-boot command line (<code>/etc/default/grub</code>):</p>
+            <pre>amd_iommu=on iommu=pt isolcpus=1-5,7-11 nohz_full=1-5,7-11 rcu_nocbs=1-5,7-11</pre>
+            
+            <h3>1. Hugepages (Crucial for VR)</h3>
+            <p>Pre-allocating memory in 1GB chunks prevents the CPU from searching for RAM addresses, eliminating stutters.</p>
+            <pre># Edit /etc/sysctl.d/90-hugepages.conf
+vm.nr_hugepages = 24</pre>
+
+            <h3>2. CPU Isolation & Pinning</h3>
+            <p>The <code>isolcpus</code> parameter tells Linux to ignore these cores at boot, leaving them "pristine" for the VM. In your XML configuration (Virt-Manager), use strict pinning:</p>
+            <pre>&lt;cputune&gt;
+  &lt;vcpupin vcpu='0' cpuset='1'/&gt;
+  &lt;vcpupin vcpu='1' cpuset='7'/&gt;
+  &lt;!-- Continue pinning matching threads to cores --&gt;
+&lt;/cputune&gt;</pre>
+        </section>
+
+        <section class="card">
+            <span class="tag warning">The "Gotchas"</span>
+            <ul>
+                <li><strong>AMD Reset Bug:</strong> The RX 7000 series is more stable, but if a VM fails to restart, you may need the <code>vendor-reset</code> kernel module.</li>
+                <li><strong>Anti-Cheat:</strong> Games like <em>Valorant</em> or <em>Call of Duty</em> may detect the VM. You must hide the KVM signature in the XML:
+                    <pre>&lt;kvm&gt;&lt;hidden state='on'/&gt;&lt;/kvm&gt;</pre>
+                </li>
+                <li><strong>Power/Heat:</strong> Running two 7800 XTs at full load generates ~500W of GPU heat. Ensure your <strong>Lian Li 216</strong> fans are set to a performance curve.</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
