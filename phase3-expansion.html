@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 3: eGPU Expansion Guide - Dual RX 7800 XT Rig</title>
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --surface: #ffffff;
+            --border: #e2e8f0;
+            --amd: #ef4444;
+        }
+        body { font-family: -apple-system, system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        h1, h2, h3 { color: #0f172a; margin-top: 0; }
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; margin-left: 8px; }
+        .tag.am4 { background: #fee2e2; color: #991b1b; }
+        .price { font-family: monospace; font-weight: bold; color: #059669; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { background: #f1f5f9; font-weight: 600; }
+        .total { text-align: right; font-size: 1.25rem; font-weight: 800; margin-top: 1rem; color: var(--primary); }
+        .warning { background: #fff7ed; border-left: 4px solid #f97316; padding: 1rem; border-radius: 4px; margin: 1rem 0; font-size: 0.9rem; }
+        .nav-links { margin-top: 1rem; margin-bottom: 2rem; }
+        .nav-links a { color: var(--primary); text-decoration: none; font-weight: bold; }
+        .nav-links a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Phase 3: eGPU Expansion Guide <span class="tag am4">48GB VRAM GOAL</span></h1>
+            <p>Strategic roadmap for adding a third RX 7800 XT via OCuLink to cross the 40GB VRAM "cliff" and run 70B models at high precision.</p>
+            <div class="nav-links">
+                &larr; <a href="index.html">Back to Main Build Quote</a>
+            </div>
+        </header>
+
+        <section class="card">
+            <h2>The Strategy: Why OCuLink?</h2>
+            <p>Your <strong>MSI MEG X570 Unify</strong> lacks a Thunderbolt header, making standard eGPU enclosures unstable. However, it features three <strong>M.2 PCIe 4.0 x4</strong> slots. We will convert the 3rd slot into an external 64Gbps port—twice the bandwidth of Thunderbolt 3.</p>
+            <ul>
+                <li><strong>No Bottleneck:</strong> OCuLink 4.0 provides a native PCIe link, ensuring your 3rd GPU performs at ~95% of its internal speed.</li>
+                <li><strong>Pure AMD:</strong> Adding a third 7800 XT keeps your ROCm drivers unified and ensures seamless layer splitting in <code>llama.cpp</code>.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Phase 3 Bill of Materials</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Recommended Model</th>
+                        <th>Est. Price</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>GPU 3</strong></td>
+                        <td><a href="https://www.computeruniverse.net/de/c/hardware-komponenten/pci-express-amd-grafikkarten?refinementList=%7B%22facets.Grafikchipsatz%22%3A%5B%22AMD%20Radeon%E2%84%A2%20RX%207800%20XT%22%5D%7D" target="_blank">Sapphire/Gigabyte RX 7800 XT 16GB</a></td>
+                        <td class="price">€520.00</td>
+                        <td>Computeruniverse</td>
+                    </tr>
+                    <tr>
+                        <td><strong>eGPU Dock</strong></td>
+                        <td><a href="https://store.minisforum.de/products/minisforum-egpu-dock" target="_blank">Minisforum DEG1 OCuLink Dock</a></td>
+                        <td class="price">€99.00</td>
+                        <td>Minisforum Store</td>
+                    </tr>
+                    <tr>
+                        <td><strong>M.2 Adapter</strong></td>
+                        <td><a href="https://www.amazon.de/s?k=ADT-Link+M.2+Oculink+SFF-8612" target="_blank">ADT-Link M.2 to SFF-8612</a></td>
+                        <td class="price">€30.00</td>
+                        <td>Amazon.de</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OCuLink Cable</strong></td>
+                        <td><a href="https://www.amazon.de/s?k=OCuLink+SFF-8611+cable" target="_blank">SFF-8611 to SFF-8611 (0.5m)</a></td>
+                        <td class="price">€25.00</td>
+                        <td>Amazon.de</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PSU (External)</strong></td>
+                        <td><a href="https://www.amazon.de/dp/B0BVL173Z5" target="_blank">Corsair RM750e 750W ATX 3.0</a></td>
+                        <td class="price">€100.00</td>
+                        <td>Amazon.de</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="total">Estimated Phase 3 Cost: ~&euro;774.00</div>
+        </section>
+
+        <section class="card">
+            <h2>Implementation Notes</h2>
+            <div class="warning">
+                <strong>Physical Modification:</strong> You will need to route the OCuLink cable out of your <strong>Lian Li 216</strong> case. This is easily done by removing a PCIe slot bracket or using the rear grommets.
+            </div>
+            <h3>BIOS Configuration</h3>
+            <ol>
+                <li>Install the M.2 adapter into the bottom-most slot (M2_3).</li>
+                <li>In BIOS, set the PCIe speed for that slot to <strong>Gen 4</strong> (do not leave on Auto).</li>
+                <li>Enable <strong>Above 4G Decoding</strong> and <strong>Re-size BAR Support</strong>.</li>
+            </ol>
+            <h3>Software Setup</h3>
+            <p>ROCm will automatically detect the 3rd card. When running <code>llama.cpp</code>, you can now use the <code>-ngl</code> flag to offload 100% of a 70B model's layers across the 48GB VRAM pool.</p>
+        </section>
+
+        <footer>
+            <p style="text-align: center; color: #64748b; font-size: 0.8rem; margin-top: 2rem;">&copy; 2026 Machine Build Quote - Phase 3 Roadmap</p>
+        </footer>
+    </div>
+</body>
+</html>
