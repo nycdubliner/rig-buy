@@ -91,6 +91,8 @@
             margin: 1rem 0;
             color: #166534;
         }
+        dt { font-weight: bold; color: var(--primary); margin-top: 1rem; }
+        dd { margin-left: 0; margin-bottom: 0.5rem; }
     </style>
 </head>
 <body>
@@ -111,7 +113,8 @@
                 <li><a href="#model-families">3. Model Families & Quantization</a></li>
                 <li><a href="#benchmarks">4. Benchmarks & Local Evaluation</a></li>
                 <li><a href="#agentic">5. Hooking up Agentic Workloads</a></li>
-                <li><a href="#monitoring">6. Staying Updated (RSS OPML)</a></li>
+                <li><a href="#glossary">6. Glossary of Terms</a></li>
+                <li><a href="#monitoring">7. Staying Updated (RSS OPML)</a></li>
             </ul>
         </div>
 
@@ -120,7 +123,7 @@
             <p>While Windows has improved, <strong>Ubuntu 22.04 LTS or 24.04 LTS</strong> is mandatory for a stable, multi-GPU AMD setup. Linux memory allocation and tensor splitting algorithms are vastly superior here.</p>
             
             <h3>Installation Steps</h3>
-            <p>After installing Ubuntu, you must install the proprietary AMD drivers and the ROCm (Radeon Open Compute) stack. Your 7800 XTs use the RDNA3 architecture (gfx1101), which is officially supported by modern ROCm.</p>
+            <p>After installing Ubuntu, you must install the proprietary AMD drivers and the <a href="https://rocm.docs.amd.com/en/latest/" target="_blank">ROCm (Radeon Open Compute)</a> stack. Your 7800 XTs use the RDNA3 architecture (gfx1101), which is officially supported by modern ROCm.</p>
             
 <pre><code># 1. Download the AMD installer
 wget https://repo.radeon.com/amdgpu-install/6.1.2/ubuntu/jammy/amdgpu-install_6.1.20102-1_all.deb
@@ -144,7 +147,7 @@ sudo usermod -a -G render $USER
 
         <div class="card" id="inference-stack">
             <h2>2. The Inference Stack (Ollama)</h2>
-            <p>The "Engine" loads the massive matrix of numbers into your VRAM and calculates the next token. <strong>Ollama</strong> (backed by <code>llama.cpp</code>) is the easiest and most robust tool for this.</p>
+            <p>The "Engine" loads the massive matrix of numbers into your VRAM and calculates the next token. <a href="https://ollama.com" target="_blank"><strong>Ollama</strong></a> (backed by <a href="https://github.com/ggerganov/llama.cpp" target="_blank"><code>llama.cpp</code></a>) is the easiest and most robust tool for this.</p>
             
             <h3>Why Ollama? (Tensor Splitting)</h3>
             <p>When you load a 24GB model, it will not fit on a single 16GB 7800 XT. Ollama automatically handles <strong>Tensor Splitting</strong>, slicing the model in half across the PCIe bus, utilizing both GPUs seamlessly.</p>
@@ -157,7 +160,7 @@ sudo usermod -a -G render $USER
 
         <div class="card" id="model-families">
             <h2>3. Model Families & Quantization</h2>
-            <p>A standard uncompressed (FP16) 32 Billion parameter model requires ~64GB of VRAM. To fit it into your 32GB budget, we use <strong>Quantization</strong> (compressing the model to 4-bit, 5-bit, or 6-bit precision, typically using the GGUF format).</p>
+            <p>A standard uncompressed (FP16) 32 Billion parameter model requires ~64GB of VRAM. To fit it into your 32GB budget, we use <strong>Quantization</strong> (compressing the model to 4-bit, 5-bit, or 6-bit precision, typically using the <a href="https://huggingface.co/docs/hub/en/gguf" target="_blank">GGUF format</a>).</p>
             
             <div class="pro-tip">
                 A 32B model quantized to 6-bit (Q6_K) shrinks from 64GB down to <strong>~24GB</strong>. This fits beautifully across your dual 7800 XTs, leaving 8GB of VRAM left over for your "Context Window" (the code files you send the agent).
@@ -165,9 +168,9 @@ sudo usermod -a -G render $USER
 
             <h3>The Heavyweights</h3>
             <ul>
-                <li><strong>Qwen 2.5 Coder 32B:</strong> The undisputed king of open-weight coding models. Exceptionally strong in typed languages like Golang and Rust. This is your primary daily driver for agentic coding. Run via: <code>ollama run qwen2.5-coder:32b</code></li>
-                <li><strong>Llama 3.1 8B:</strong> Blazing fast. Excellent for quick bash scripting, formatting text, or "router" agents. Uses < 6GB of VRAM.</li>
-                <li><strong>Gemma 2 27B:</strong> Google's dense powerhouse. Incredible general reasoning and logic skills, fits comfortably in your VRAM limit.</li>
+                <li><a href="https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct" target="_blank"><strong>Qwen 2.5 Coder 32B:</strong></a> The undisputed king of open-weight coding models. Exceptionally strong in typed languages like Golang and Rust. This is your primary daily driver for agentic coding. Run via: <code>ollama run qwen2.5-coder:32b</code></li>
+                <li><a href="https://llama.meta.com/llama3/" target="_blank"><strong>Llama 3.1 8B:</strong></a> Blazing fast. Excellent for quick bash scripting, formatting text, or "router" agents. Uses < 6GB of VRAM.</li>
+                <li><a href="https://ai.google.dev/gemma" target="_blank"><strong>Gemma 2 27B:</strong></a> Google's <strong>dense</strong> powerhouse. Incredible general reasoning and logic skills, fits comfortably in your VRAM limit.</li>
             </ul>
 
             <div class="warning">
@@ -199,8 +202,8 @@ export OPENAI_API_KEY="dummy-key-ollama"</code></pre>
             <h3>The Tools</h3>
             <ul>
                 <li><strong>CLAW / Gemini CLI:</strong> Terminal-based, multi-step execution. Excellent for massive refactoring loops and running integration tests autonomously.</li>
-                <li><strong>Aider:</strong> A terminal pair programmer that tracks your git repository and surgically edits your files.</li>
-                <li><strong>Cline / Claude Dev:</strong> A VSCode extension that lives in your sidebar, reads open files, and proposes diffs visually.</li>
+                <li><a href="https://aider.chat/" target="_blank"><strong>Aider:</strong></a> A terminal pair programmer that tracks your git repository and surgically edits your files.</li>
+                <li><a href="https://cline.bot/" target="_blank"><strong>Cline / Claude Dev:</strong></a> A VSCode extension that lives in your sidebar, reads open files, and proposes diffs visually.</li>
             </ul>
 
             <div class="warning">
@@ -208,16 +211,53 @@ export OPENAI_API_KEY="dummy-key-ollama"</code></pre>
             </div>
         </div>
 
+        <div class="card" id="glossary">
+            <h2>6. Glossary of Terms</h2>
+            <dl>
+                <dt>Dense Models</dt>
+                <dd>A standard model architecture (like Llama 3 or Gemma 2) where 100% of the parameters are used to calculate every single token. These are generally more stable and easier to train but require more compute per token as they scale up.</dd>
+
+                <dt>Mixture of Experts (MoE)</dt>
+                <dd>An architecture (like Mixtral or DeepSeek-V3) where only a small subset of the total parameters (the "Experts") are active for any given token. This allows for massive total parameter counts while maintaining fast inference speeds.</dd>
+
+                <dt>Effective Parameters</dt>
+                <dd>In the context of MoE models, this is the number of parameters actually used per token. For example, a 141B parameter MoE model might only use 39B "effective" parameters per forward pass, meaning it runs as fast as a 39B dense model while having the knowledge of a much larger one.</dd>
+
+                <dt>Temperature</dt>
+                <dd>A hyperparameter that controls the "randomness" or "creativity" of the output. 
+                    <ul>
+                        <li><strong>0.0 (Deterministic):</strong> Best for coding and math. The model always picks the most likely next token.</li>
+                        <li><strong>0.7 - 1.0 (Creative):</strong> Best for creative writing or brainstorming.</li>
+                    </ul>
+                </dd>
+
+                <dt><strong>Top-P (Nucleus Sampling)</strong></dt>
+                <dd>A companion to Temperature. It limits the model's choices to a subset of tokens whose cumulative probability reaches a certain threshold (e.g., 0.9). This helps cut off the "long tail" of low-probability, nonsensical words.</dd>
+
+                <dt><strong>Tokens</strong></dt>
+                <dd>The atomic units of an LLM. A token is roughly 3/4 of a word. When you see <strong>TPS (Tokens Per Second)</strong>, it's the speed at which the model is "thinking." For coding, you generally want at least 15-20 TPS for a fluid experience.</dd>
+
+                <dt><strong>KV Cache (Key-Value Cache)</strong></dt>
+                <dd>This is where your VRAM goes when you send a large context. It stores the mathematical representations of the conversation history so the model doesn't have to re-calculate everything for every new word. This is why "Context Window Blowout" happens—more context = more KV Cache = more VRAM usage.</dd>
+
+                <dt><strong>System Prompt</strong></dt>
+                <dd>The high-level instructions given to a model before the conversation starts (e.g., "You are an expert Rust engineer"). In agentic coding, the system prompt is what gives the model the "personality" and rules it needs to edit files and run tests safely.</dd>
+
+                <dt>Context Window</dt>
+                <dd>The "short-term memory" of the model. It defines how many tokens (roughly words or code fragments) the model can look at at once. For agentic coding, a large context window is vital for reading multiple files simultaneously.</dd>
+            </dl>
+        </div>
+
         <div class="card" id="monitoring">
-            <h2>6. Staying Updated (RSS OPML)</h2>
+            <h2>7. Staying Updated (RSS OPML)</h2>
             <p>The open-weight AI space moves incredibly fast. To maintain your edge, you need to monitor the pulse of the community for new model drops, quantization formats, and AMD ROCm optimizations.</p>
 
             <p>I have prepared a curated <strong>OPML file</strong> for your RSS reader containing feeds for:</p>
             <ul>
-                <li><strong>r/LocalLLaMA:</strong> The epicenter of the offline AI community.</li>
-                <li><strong>HuggingFace Creators:</strong> Track <em>bartowski</em> and <em>MaziyarPanahi</em>. When a new 30B model drops, wait for them to publish the GGUF quant versions so you can actually run them on your GPUs.</li>
-                <li><strong>Engine Releases:</strong> Track Ollama and llama.cpp GitHub releases for performance patches.</li>
-                <li><strong>Agent Tooling:</strong> Track updates from the Aider and Cline developer blogs.</li>
+                <li><a href="https://www.reddit.com/r/LocalLLaMA/" target="_blank"><strong>r/LocalLLaMA:</strong></a> The epicenter of the offline AI community.</li>
+                <li><strong>HuggingFace Creators:</strong> Track <a href="https://huggingface.co/bartowski" target="_blank"><em>bartowski</em></a> and <a href="https://huggingface.co/MaziyarPanahi" target="_blank"><em>MaziyarPanahi</em></a>. When a new 30B model drops, wait for them to publish the GGUF quant versions so you can actually run them on your GPUs.</li>
+                <li><strong>Engine Releases:</strong> Track <a href="https://github.com/ollama/ollama/releases" target="_blank">Ollama</a> and <a href="https://github.com/ggerganov/llama.cpp/releases" target="_blank">llama.cpp</a> GitHub releases for performance patches.</li>
+                <li><strong>Agent Tooling:</strong> Track updates from the <a href="https://aider.chat/blog/" target="_blank">Aider</a> and <a href="https://cline.bot/blog" target="_blank">Cline</a> developer blogs.</li>
             </ul>
 
             <div style="margin-top: 1.5rem;">
