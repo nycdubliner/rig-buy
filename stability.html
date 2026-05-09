@@ -77,7 +77,7 @@
             <div class="warning">DANGER: This test pulls maximum wattage. If your PSU is faulty or cables are loose, this is when it will fail.</div>
             <p>To verify the **Fortron 1000W ATX 3.1** PSU can handle the simultaneous spikes of two 7800 XTs + the 5900X:</p>
             <ul>
-                <li><strong>Tools (Windows VM):</strong> OCCT (Power Test) or Furmark + Prime95.</li>
+                <li><strong>Tools (Windows VM):</strong> <a href="https://www.ocbase.com" target="_blank">OCCT</a> (Power Test) or <a href="https://geeks3d.com/furmark/" target="_blank">Furmark</a> + <a href="https://www.mersenne.org/download/" target="_blank">Prime95</a>.</li>
                 <li><strong>Procedure:</strong> Run Furmark on <em>both</em> GPUs while running Prime95 (Small FFTs) on the CPU.</li>
                 <li><strong>Success Criteria:</strong> 30 minutes without a shutdown. If the PC turns off instantly, you have a "Power Trip," likely due to using "daisy-chained" PCIe cables. Ensure each GPU has <strong>independent</strong> cables from the PSU.</li>
             </ul>
@@ -87,7 +87,7 @@
             <h2>Thermal Throttle Verification</h2>
             <p>With a **3-slot gap**, the top GPU (XFX QICK) will be breathing the hot exhaust of the bottom GPU (Gigabyte Gaming OC).</p>
             <ul>
-                <li><strong>The Test:</strong> Run an AI inference loop (e.g., <code>llama.cpp</code> with <code>--n-gpu-layers 100</code>) for 1 hour.</li>
+                <li><strong>The Test:</strong> Run an AI inference loop (e.g., <a href="https://github.com/ggerganov/llama.cpp" target="_blank"><code>llama.cpp</code></a> with <code>--n-gpu-layers 100</code>) for 1 hour.</li>
                 <li><strong>Target Temps:</strong> 
                     <ul>
                         <li>Bottom GPU: < 70°C (Fresh air access).</li>
@@ -111,14 +111,18 @@
             </div>
             <div class="check-item">
                 <div class="check-box"></div>
-                <div><strong>DPC Latency:</strong> Inside the Windows VM, run <em>LatencyMon</em>. If the bars are red, your CPU pinning is likely crossing CCD boundaries.</div>
+                <div><strong>DPC Latency:</strong> Inside the Windows VM, run <a href="https://www.resplendence.com/latencymon" target="_blank"><em>LatencyMon</em></a>. If the bars are red, your CPU pinning is likely crossing CCD boundaries.</div>
+            </div>
+            <div class="check-item">
+                <div class="check-box"></div>
+                <div><strong>Network Latency (VR):</strong> If using AX200 Hotspot, ensure the channel is set to **5GHz (160MHz)** with minimal interference. Test with a ping to the Gateway inside the headset.</div>
             </div>
         </section>
 
         <section class="card">
             <h2>Phase 2 Maintenance</h2>
             <ul>
-                <li><strong>BIOS Updates:</strong> Check the MSI support page for "Agesa" updates. Newer Agesa versions often improve PCIe 4.0 stability for dual-GPU setups.</li>
+                <li><strong>BIOS Updates:</strong> Check the <a href="https://www.msi.com/Motherboard/MEG-X570-UNIFY/support" target="_blank">MSI support page</a> for "Agesa" updates. Newer Agesa versions often improve PCIe 4.0 stability for dual-GPU setups.</li>
                 <li><strong>Dust Management:</strong> The Lancool 216 is a high-airflow case, which means it is a vacuum cleaner. Clean the front mesh every 2 weeks or the bottom GPU will start to choke.</li>
             </ul>
         </section>

@@ -11,7 +11,8 @@ Design and source a highly optimized, "bang for buck" dual RX 7800 XT AI worksta
 
 ## Next Steps
 - Wait for physical component delivery and begin the actual machine assembly.
-- Utilize the `ai-guide.html` and `ai-feeds.opml` to configure the OS and agentic workflows once built.
+- Utilize the [AI Software Setup Guide](ai-guide.html) and [RSS Feeds](ai-feeds.opml) to configure the OS and agentic workflows once built.
 
 ## Working Rule
-The current dual-GPU AM4 build is locked in. Do not change the core parts unless the user explicitly requests an alteration.
+- The current dual-GPU AM4 build is locked in. Do not change the core parts unless the user explicitly requests an alteration.
+- **Voice Usage:** Only use the Mac Voice skill (`bash skills/mac-voice/scripts/speak.sh "<message>"`) when explicitly asked by the user (e.g., "Tell me", "use your voice", or "uyv"). Do not trigger it autonomously.

@@ -195,7 +195,7 @@ sudo usermod -a -G render $USER
 
         <div class="card" id="agentic">
             <h2>5. Hooking up Agentic Workloads</h2>
-            <p>Agentic tools (like CLAW, Aider, and Cline) are typically hardcoded to look for the OpenAI API. You "trick" them into talking to your local GPUs by overriding two environment variables:</p>
+            <p>Agentic tools (like CLAW, <a href="https://aider.chat/" target="_blank">Aider</a>, and <a href="https://cline.bot/" target="_blank">Cline</a>) are typically hardcoded to look for the OpenAI API. You "trick" them into talking to your local GPUs by overriding two environment variables:</p>
 
 <pre><code>export OPENAI_API_BASE="http://localhost:11434/v1"
 export OPENAI_API_KEY="dummy-key-ollama"</code></pre>
