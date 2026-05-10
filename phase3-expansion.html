@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phase 3: eGPU Expansion Guide - Dual RX 7800 XT Rig</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
             --primary: #3b82f6;
@@ -14,7 +16,7 @@
             --amd: #ef4444;
         }
         body { font-family: -apple-system, system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: 0 auto; }
+        .container { max-width: 1000px; margin: 0 auto; }
         .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
         h1, h2, h3 { color: #0f172a; margin-top: 0; }
         .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; margin-left: 8px; }
@@ -28,6 +30,11 @@
         .nav-links { margin-top: 1rem; margin-bottom: 2rem; }
         .nav-links a { color: var(--primary); text-decoration: none; font-weight: bold; }
         .nav-links a:hover { text-decoration: underline; }
+
+        /* Matrix Specific */
+        .matrix-panel { background: #0f172a; color: #f8fafc; border-radius: 16px; overflow: hidden; border: 1px solid #1e293b; }
+        .matrix-header { background: #1e293b; padding: 1.5rem; border-bottom: 1px solid #334155; }
+        .matrix-body { padding: 1.5rem; }
     </style>
 </head>
 <body>
@@ -96,6 +103,50 @@
             <div class="total">Estimated Phase 3 Cost: ~&euro;774.00</div>
         </section>
 
+        <!-- GPU MATRIX SECTION -->
+        <section class="card" style="padding: 0; overflow: hidden;">
+            <div class="matrix-panel">
+                <div class="matrix-header">
+                    <h2 class="text-xl font-bold text-white mb-2">AI Accelerator Market Matrix</h2>
+                    <p class="text-slate-400 text-sm">Comparing 3rd-card candidates based on bandwidth vs. 2026 used price.</p>
+                </div>
+                <div class="matrix-body">
+                    <div class="flex flex-col md:flex-row gap-6 items-center mb-6">
+                        <div class="flex-1 w-full">
+                            <label class="text-sm font-medium text-slate-300 flex justify-between mb-2">
+                                <span>Minimum Bandwidth:</span>
+                                <span id="bwVal" class="text-emerald-400 font-mono">688 GB/s</span>
+                            </label>
+                            <input type="range" id="bwFilter" min="0" max="1600" step="16" value="688" 
+                                class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                                oninput="updateMatrix(this.value)">
+                        </div>
+                        <div class="text-xs text-slate-500 italic">
+                            Filtered to slightly below your current 7800 XT speed.
+                        </div>
+                    </div>
+
+                    <div style="height: 400px; width: 100%;">
+                        <canvas id="matrixChart"></canvas>
+                    </div>
+
+                    <div class="mt-6 overflow-x-auto">
+                        <table class="w-full text-xs text-left text-slate-300">
+                            <thead class="bg-slate-800 text-slate-100 uppercase">
+                                <tr>
+                                    <th class="p-3">Model</th>
+                                    <th class="p-3">VRAM</th>
+                                    <th class="p-3">BW (GB/s)</th>
+                                    <th class="p-3">Est. Price</th>
+                                </tr>
+                            </thead>
+                            <tbody id="matrixTable"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="card">
             <h2>Implementation Notes</h2>
             <div class="warning">
@@ -115,5 +166,72 @@
             <p style="text-align: center; color: #64748b; font-size: 0.8rem; margin-top: 2rem;">&copy; 2026 Machine Build Quote - Phase 3 Roadmap</p>
         </footer>
     </div>
+
+    <script>
+        const gpuData = [
+            { m: "RTX 5090", b: "NVIDIA", v: 32, bw: 1536, p: 2200 },
+            { m: "RTX 4090", b: "NVIDIA", v: 24, bw: 1008, p: 1600 },
+            { m: "Radeon VII", b: "AMD", v: 16, bw: 1024, p: 350 },
+            { m: "RTX 6000 Ada", b: "NVIDIA", v: 48, bw: 960, p: 6800 },
+            { m: "RX 7900 XTX", b: "AMD", v: 24, bw: 960, p: 850 },
+            { m: "RTX 3090 Ti", b: "NVIDIA", v: 24, bw: 1008, p: 1050 },
+            { m: "RTX 3090", b: "NVIDIA", v: 24, bw: 936, p: 950 },
+            { m: "Tesla V100", b: "NVIDIA", v: 32, bw: 900, p: 500 },
+            { m: "Mac Studio M2U", b: "UMA", v: 192, bw: 800, p: 4500 },
+            { m: "RTX A6000", b: "NVIDIA", v: 48, bw: 768, p: 2800 },
+            { m: "RX 7800 XT", b: "AMD", v: 16, bw: 624, p: 450 },
+            { m: "Arc B770", b: "INTEL", v: 16, bw: 600, p: 450 },
+            { m: "RTX 2080 Ti", b: "NVIDIA", v: 11, bw: 616, p: 300 }
+        ];
+
+        let chart;
+        function updateMatrix(minBw) {
+            document.getElementById('bwVal').innerText = minBw + " GB/s";
+            const filtered = gpuData.filter(g => g.bw >= minBw).sort((a,b) => b.bw - a.bw);
+            
+            // Update Table
+            const tbody = document.getElementById('matrixTable');
+            tbody.innerHTML = filtered.map(g => `
+                <tr class="border-b border-slate-800">
+                    <td class="p-3 font-bold">${g.m}</td>
+                    <td class="p-3">${g.v}GB</td>
+                    <td class="p-3 text-emerald-400 font-mono">${g.bw}</td>
+                    <td class="p-3 text-rose-400 font-mono">$${g.p}</td>
+                </tr>
+            `).join('');
+
+            // Update Chart
+            if (chart) chart.destroy();
+            const ctx = document.getElementById('matrixChart').getContext('2d');
+            chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: filtered.map(g => g.m),
+                    datasets: [{
+                        label: 'Bandwidth (GB/s)',
+                        data: filtered.map(g => g.bw),
+                        backgroundColor: '#10b981',
+                        xAxisID: 'x1'
+                    }, {
+                        label: 'Price ($)',
+                        data: filtered.map(g => g.p),
+                        backgroundColor: '#f43f5e',
+                        xAxisID: 'x2'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: {
+                        x1: { position: 'bottom', grid: { color: '#1e293b' } },
+                        x2: { position: 'top', display: false }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+        window.onload = () => updateMatrix(688);
+    </script>
 </body>
 </html>
