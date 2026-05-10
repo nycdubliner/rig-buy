@@ -24,7 +24,7 @@
         .price { font-family: monospace; font-weight: bold; color: #059669; }
         table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
         th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
-        th { background: #f1f5f9; font-weight: 600; }
+        th { background: #f1f5f9; font-weight: 600; color: #0f172a !important; }
         .total { text-align: right; font-size: 1.25rem; font-weight: 800; margin-top: 1rem; color: var(--primary); }
         .warning { background: #fff7ed; border-left: 4px solid #f97316; padding: 1rem; border-radius: 4px; margin: 1rem 0; font-size: 0.9rem; }
         .nav-links { margin-top: 1rem; margin-bottom: 2rem; }
@@ -32,9 +32,14 @@
         .nav-links a:hover { text-decoration: underline; }
 
         /* Matrix Specific */
-        .matrix-panel { background: #0f172a; color: #f8fafc; border-radius: 16px; overflow: hidden; border: 1px solid #1e293b; }
+        .matrix-panel { background: #0f172a; color: #f8fafc; border-radius: 16px; overflow: hidden; border: 1px solid #1e293b; margin-top: 1rem; }
         .matrix-header { background: #1e293b; padding: 1.5rem; border-bottom: 1px solid #334155; }
         .matrix-body { padding: 1.5rem; }
+        .non-tensor { opacity: 0.6; font-style: italic; background: rgba(255,255,255,0.02); }
+        .non-tensor td:first-child::after { content: " (No Tensors / Legacy)"; font-size: 0.65rem; color: #94a3b8; display: block; font-style: normal; }
+        .sort-btn { background: #1e293b; border: 1px solid #334155; color: #94a3b8; padding: 6px 12px; border-radius: 6px; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
+        .sort-btn:hover { background: #334155; color: #fff; border-color: var(--primary); }
+        .sort-btn.active { border-color: var(--primary); color: #fff; background: rgba(59, 130, 246, 0.2); }
     </style>
 </head>
 <body>
@@ -104,11 +109,11 @@
         </section>
 
         <!-- GPU MATRIX SECTION -->
-        <section class="card" style="padding: 0; overflow: hidden;">
+        <section class="card" style="padding: 0; overflow: hidden; border: none;">
             <div class="matrix-panel">
                 <div class="matrix-header">
-                    <h2 class="text-xl font-bold text-white mb-2">AI Accelerator Market Matrix</h2>
-                    <p class="text-slate-400 text-sm">Comparing 3rd-card candidates based on bandwidth vs. 2026 used price.</p>
+                    <h2 class="text-xl font-bold text-white mb-2">AI Accelerator Market Matrix (2026 Verified)</h2>
+                    <p class="text-slate-400 text-sm">Comparing 3rd-card candidates. Distinguishing modern Tensor/Matrix cards from legacy HBM silicon.</p>
                 </div>
                 <div class="matrix-body">
                     <div class="flex flex-col md:flex-row gap-6 items-center mb-6">
@@ -121,18 +126,19 @@
                                 class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
                                 oninput="updateMatrix(this.value)">
                         </div>
-                        <div class="text-xs text-slate-500 italic">
-                            Filtered to slightly below your current 7800 XT speed.
+                        <div class="flex gap-2 shrink-0">
+                            <button id="sortBw" onclick="setSort('bw')" class="sort-btn active">Sort: Bandwidth ↕</button>
+                            <button id="sortPrice" onclick="setSort('p')" class="sort-btn">Sort: Price ↕</button>
                         </div>
                     </div>
 
-                    <div style="height: 400px; width: 100%;">
+                    <div style="height: 450px; width: 100%;">
                         <canvas id="matrixChart"></canvas>
                     </div>
 
                     <div class="mt-6 overflow-x-auto">
                         <table class="w-full text-xs text-left text-slate-300">
-                            <thead class="bg-slate-800 text-slate-100 uppercase">
+                            <thead style="background: #1e293b; color: #fff;">
                                 <tr>
                                     <th class="p-3">Model</th>
                                     <th class="p-3">VRAM</th>
@@ -169,32 +175,47 @@
 
     <script>
         const gpuData = [
-            { m: "RTX 5090", b: "NVIDIA", v: 32, bw: 1536, p: 2200 },
-            { m: "RTX 4090", b: "NVIDIA", v: 24, bw: 1008, p: 1600 },
-            { m: "Radeon VII", b: "AMD", v: 16, bw: 1024, p: 350 },
-            { m: "RTX 6000 Ada", b: "NVIDIA", v: 48, bw: 960, p: 6800 },
-            { m: "RX 7900 XTX", b: "AMD", v: 24, bw: 960, p: 850 },
-            { m: "RTX 3090 Ti", b: "NVIDIA", v: 24, bw: 1008, p: 1050 },
-            { m: "RTX 3090", b: "NVIDIA", v: 24, bw: 936, p: 950 },
-            { m: "Tesla V100", b: "NVIDIA", v: 32, bw: 900, p: 500 },
-            { m: "Mac Studio M2U", b: "UMA", v: 192, bw: 800, p: 4500 },
-            { m: "RTX A6000", b: "NVIDIA", v: 48, bw: 768, p: 2800 },
-            { m: "RX 7800 XT", b: "AMD", v: 16, bw: 624, p: 450 },
-            { m: "Arc B770", b: "INTEL", v: 16, bw: 600, p: 450 },
-            { m: "RTX 2080 Ti", b: "NVIDIA", v: 11, bw: 616, p: 300 }
+            { m: "RTX 5090 32GB", b: "NVIDIA", bw: 1536, p: 2200, t: true },
+            { m: "RTX 4090 24GB", b: "NVIDIA", bw: 1008, p: 1600, t: true },
+            { m: "Radeon VII 16GB", b: "AMD", bw: 1024, p: 350, t: false },
+            { m: "RTX 6000 Ada 48GB", b: "NVIDIA", bw: 960, p: 6800, t: true },
+            { m: "RX 7900 XTX 24GB", b: "AMD", bw: 960, p: 850, t: true },
+            { m: "RTX 3090 Ti 24GB", b: "NVIDIA", bw: 1008, p: 1050, t: true },
+            { m: "RTX 3090 24GB", b: "NVIDIA", bw: 936, p: 950, t: true },
+            { m: "Tesla V100 32GB", b: "NVIDIA", bw: 900, p: 500, t: false },
+            { m: "Mac Studio M2U 192GB", b: "UMA", bw: 800, p: 4500, t: true },
+            { m: "RTX A6000 48GB", b: "NVIDIA", bw: 768, p: 2800, t: true },
+            { m: "RX 7800 XT 16GB", b: "AMD", bw: 624, p: 450, t: true },
+            { m: "Tesla P40 24GB", b: "NVIDIA", bw: 346, p: 150, t: false },
+            { m: "Arc B770 16GB", b: "INTEL", bw: 600, p: 450, t: true },
+            { m: "RTX 2080 Ti 11GB", b: "NVIDIA", bw: 616, p: 300, t: true }
         ];
 
         let chart;
+        let currentSort = 'bw';
+        let currentMinBw = 688;
+
+        function setSort(key) {
+            currentSort = key;
+            document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(key === 'bw' ? 'sortBw' : 'sortPrice').classList.add('active');
+            updateMatrix(currentMinBw);
+        }
+
         function updateMatrix(minBw) {
+            currentMinBw = minBw;
             document.getElementById('bwVal').innerText = minBw + " GB/s";
-            const filtered = gpuData.filter(g => g.bw >= minBw).sort((a,b) => b.bw - a.bw);
+            
+            const filtered = gpuData.filter(g => g.bw >= minBw).sort((a,b) => {
+                return currentSort === 'bw' ? b.bw - a.bw : a.p - b.p;
+            });
             
             // Update Table
             const tbody = document.getElementById('matrixTable');
             tbody.innerHTML = filtered.map(g => `
-                <tr class="border-b border-slate-800">
-                    <td class="p-3 font-bold">${g.m}</td>
-                    <td class="p-3">${g.v}GB</td>
+                <tr class="border-b border-slate-800 ${g.t ? '' : 'non-tensor'}">
+                    <td class="p-3 font-bold text-slate-100">${g.m}</td>
+                    <td class="p-3">${g.m.match(/\d+GB/)[0]}</td>
                     <td class="p-3 text-emerald-400 font-mono">${g.bw}</td>
                     <td class="p-3 text-rose-400 font-mono">$${g.p}</td>
                 </tr>
@@ -210,12 +231,12 @@
                     datasets: [{
                         label: 'Bandwidth (GB/s)',
                         data: filtered.map(g => g.bw),
-                        backgroundColor: '#10b981',
+                        backgroundColor: filtered.map(g => g.t ? '#10b981' : '#475569'),
                         xAxisID: 'x1'
                     }, {
                         label: 'Price ($)',
                         data: filtered.map(g => g.p),
-                        backgroundColor: '#f43f5e',
+                        backgroundColor: 'rgba(244, 63, 94, 0.4)',
                         xAxisID: 'x2'
                     }]
                 },
@@ -224,10 +245,19 @@
                     maintainAspectRatio: false,
                     indexAxis: 'y',
                     scales: {
-                        x1: { position: 'bottom', grid: { color: '#1e293b' } },
-                        x2: { position: 'top', display: false }
+                        x1: { position: 'bottom', grid: { color: '#1e293b' }, title: { display: true, text: 'BW (GB/s)', color: '#10b981'} },
+                        x2: { position: 'top', grid: { display: false }, title: { display: true, text: 'Price ($)', color: '#f43f5e'} }
                     },
-                    plugins: { legend: { display: false } }
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + context.raw;
+                                }
+                            }
+                        }
+                    }
                 }
             });
         }
