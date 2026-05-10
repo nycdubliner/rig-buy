@@ -62,6 +62,25 @@
         </section>
 
         <section class="card">
+            <h2>The "40GB Cliff" & Context Windows</h2>
+            <p>To run a <strong>70B model</strong> (like Llama-3 70B) at a highly accurate 4-bit quantization entirely in VRAM, you need to cross the <strong>~40GB VRAM threshold</strong>. If you fall short, the model spills over into slow system DDR4 RAM, and generation speed plummets to ~1-2 tokens/sec.</p>
+            <div class="warning">
+                <strong>The Context Ceiling:</strong> Hitting 40GB is only half the battle. You also need VRAM headroom for your "Context Window" (the conversation history and documents you feed the AI). 
+            </div>
+            <h3>The 3rd GPU Dilemma: Speed vs. Capacity</h3>
+            <p>Adding a third GPU to your current 32GB pool presents a critical choice:</p>
+            <ul>
+                <li><strong>Setup A: Add RTX 3080 10GB (~€350) = 42GB Total.</strong>
+                    <br><em>The Speed Play:</em> The 3080 has a massive 760 GB/s bandwidth and Tensor Cores. It will generate text very quickly. However, with only 42GB total, you have just <strong>~2GB of headroom</strong>. You will hit Out-Of-Memory (OOM) errors on long documents.
+                </li>
+                <li><strong>Setup B: Add RX 7600 XT 16GB (~€330) = 48GB Total.</strong>
+                    <br><em>The Capacity Play:</em> The 7600 XT is much slower (288 GB/s), which will throttle your overall generation speed slightly. But, it gives you <strong>~8GB of headroom</strong>. You can comfortably load massive 32k+ token contexts without crashing.
+                </li>
+            </ul>
+            <p><strong>Verdict:</strong> If you prioritize <strong>snappy, short-form chat</strong>, the used RTX 3080 10GB is an incredible "Bang for Buck" speed upgrade. If you prioritize <strong>analyzing massive documents</strong> or coding workflows with long histories, prioritize the 16GB capacity of the 7600 XT or save up for a 3090.</p>
+        </section>
+
+        <section class="card">
             <h2>Phase 3 Bill of Materials</h2>
             <table>
                 <thead>
@@ -182,9 +201,11 @@
             { m: "RX 7900 XTX 24GB", b: "AMD", bw: 960, p: 850, t: true },
             { m: "RTX 3090 Ti 24GB", b: "NVIDIA", bw: 1008, p: 1050, t: true },
             { m: "RTX 3090 24GB", b: "NVIDIA", bw: 936, p: 950, t: true },
+            { m: "RTX 3080 12GB", b: "NVIDIA", bw: 912, p: 450, t: true },
             { m: "Tesla V100 32GB", b: "NVIDIA", bw: 900, p: 500, t: false },
             { m: "Mac Studio M2U 192GB", b: "UMA", bw: 800, p: 4500, t: true },
             { m: "RTX A6000 48GB", b: "NVIDIA", bw: 768, p: 2800, t: true },
+            { m: "RTX 3080 10GB", b: "NVIDIA", bw: 760, p: 350, t: true },
             { m: "RX 7800 XT 16GB", b: "AMD", bw: 624, p: 450, t: true },
             { m: "Tesla P40 24GB", b: "NVIDIA", bw: 346, p: 150, t: false },
             { m: "Arc B770 16GB", b: "INTEL", bw: 600, p: 450, t: true },
