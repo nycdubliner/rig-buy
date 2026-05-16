@@ -95,6 +95,9 @@
         <section class="card">
             <h2><span class="step-number">1</span> Storage: NVMe SSD</h2>
             <p>Install the <strong>WD Blue SN5100</strong> before the GPUs obstruct access to the motherboard surface.</p>
+            <div style="text-align: center; margin: 1.5rem 0;">
+                <img src="nanobanana-output/technical_diagram_of_an_nvme_ssd.png" alt="NVMe Installation Diagram" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+            </div>
             <ul>
                 <li><strong>Slot:</strong> Use <code>M2_1</code> (the topmost slot, located between the CPU socket and the first PCIe slot).</li>
                 <li><strong>Rationale:</strong> This slot is wired directly to the Ryzen 5900X's Gen4 lanes, ensuring the fastest boot and model loading times.</li>
@@ -105,6 +108,9 @@
         <section class="card">
             <h2><span class="step-number">2</span> Dual-GPU Placement (The x8/x8 Split)</h2>
             <p>To run two GPUs for AI, you must bypass the chipset and use the CPU-connected lanes.</p>
+            <div style="text-align: center; margin: 1.5rem 0;">
+                <img src="nanobanana-output/technical_diagram_of_a_dual_gpu_.png" alt="Dual GPU Placement Diagram" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+            </div>
             <ul>
                 <li><strong>Primary Slot (PCI_E1 - Top):</strong> Install the <strong>XFX Speedster QICK 319</strong>.</li>
                 <li><strong>Secondary Slot (PCI_E3 - Third Slot Down):</strong> Install the <strong>Gigabyte Gaming OC</strong>.</li>
@@ -119,6 +125,9 @@
 
         <section class="card">
             <h2><span class="step-number">3</span> Motherboard Power</h2>
+            <div style="text-align: center; margin: 1.5rem 0;">
+                <img src="nanobanana-output/technical_diagram_showing_mother.png" alt="Motherboard Power Connections" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+            </div>
             <ul>
                 <li><strong>24-Pin ATX:</strong> Standard connection on the right edge of the board.</li>
                 <li><strong>CPU Power (8+8 Pin):</strong> Located at the top left. The MSI Unify has two 8-pin headers.</li>
@@ -128,6 +137,9 @@
 
         <section class="card">
             <h2><span class="step-number">4</span> GPU Power</h2>
+            <div style="text-align: center; margin: 1.5rem 0;">
+                <img src="nanobanana-output/technical_diagram_showing_gpu_po.png" alt="GPU Power Connections" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+            </div>
             <p>Each RX 7800 XT requires two 8-pin PCIe connections.</p>
             <ul>
                 <li><strong>Cable Strategy:</strong> Use <strong>four separate PCIe cables</strong> from the PSU.</li>
@@ -137,6 +149,9 @@
 
         <section class="card">
             <h2><span class="step-number">5</span> Case Headers & Fans</h2>
+            <div style="text-align: center; margin: 1.5rem 0;">
+                <img src="nanobanana-output/technical_diagram_of_case_header.png" alt="Case Headers and Hub Connections" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+            </div>
             <ul>
                 <li><strong>Lian Li Hub:</strong> Connect a <strong>SATA power cable</strong> to the fan/RGB hub on the back of the tray.</li>
                 <li><strong>PWM Control:</strong> Connect the hub's 4-pin header to <code>SYS_FAN1</code> on the motherboard.</li>
@@ -147,6 +162,9 @@
 
         <section class="card">
             <h2><span class="step-number">6</span> BIOS Initialization</h2>
+            <div style="text-align: center; margin: 1.5rem 0;">
+                <img src="nanobanana-output/technical_diagram_or_stylized_ui.png" alt="BIOS Configuration Settings" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+            </div>
             <p>Once power is connected, boot into the BIOS (mash <code>DEL</code>).</p>
             <ul>
                 <li><strong>XMP/A-XMP:</strong> Enable this to ensure your Patriot Viper RAM runs at its rated <code>3600MHz</code>.</li>
