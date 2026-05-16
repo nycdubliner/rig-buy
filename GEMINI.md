@@ -5,7 +5,7 @@ Design and source a highly optimized, "bang for buck" dual RX 7800 XT AI worksta
 
 ## Current State
 - **Phase 2 Dual-GPU Build Finalized:** The build is fully specced and parts are purchased/ordered. (Total: ~€1,961.76).
-- **Documentation Complete:** The GitHub Pages site contains the quote, vendor intelligence, and the AI Software Setup Guide.
+- **Documentation Complete:** The GitHub Pages site contains the quote, vendor intelligence, physical assembly guide, and the AI Software Setup Guide.
 - **Agent Capabilities:** The `logged-in-scraper` skill is globally installed and the "Jem's Browser" desktop app is available for bypassing bot protection.
 - Reusable skills live in `skills/`
 

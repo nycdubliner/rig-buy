@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Assembly Guide - Dual 7800 XT AI Rig</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #059669;
+            --danger: #dc2626;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --card: #ffffff;
+            --border: #e2e8f0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1rem;
+        }
+        h1 { margin: 0; color: var(--primary); }
+        .nav-links { margin-top: 0.5rem; font-weight: 600; }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        .card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        h2 { color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-top: 2rem; }
+        h3 { color: var(--text); margin-top: 1.5rem; }
+        
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .warning {
+            background: #fff1f2;
+            border-left: 4px solid var(--danger);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .pro-tip {
+            background: #f0fdf4;
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        ul { padding-left: 1.5rem; }
+        li { margin-bottom: 0.5rem; }
+        code { background: #f1f5f9; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Physical Assembly Guide: Build Day</h1>
+            <p>Finalizing the Dual RX 7800 XT AI Workstation on the MSI MEG X570 Unify platform.</p>
+            <div class="nav-links">
+                &larr; <a href="index.html">Back to Main Build Quote</a>
+            </div>
+        </header>
+
+        <section class="card">
+            <h2><span class="step-number">1</span> Storage: NVMe SSD</h2>
+            <p>Install the <strong>WD Blue SN5100</strong> before the GPUs obstruct access to the motherboard surface.</p>
+            <ul>
+                <li><strong>Slot:</strong> Use <code>M2_1</code> (the topmost slot, located between the CPU socket and the first PCIe slot).</li>
+                <li><strong>Rationale:</strong> This slot is wired directly to the Ryzen 5900X's Gen4 lanes, ensuring the fastest boot and model loading times.</li>
+                <li><strong>Installation:</strong> Unscrew the "Frozr" heatsink, insert the drive at a 30-degree angle, press down, and secure the heatsink back over the drive.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2><span class="step-number">2</span> Dual-GPU Placement (The x8/x8 Split)</h2>
+            <p>To run two GPUs for AI, you must bypass the chipset and use the CPU-connected lanes.</p>
+            <ul>
+                <li><strong>Primary Slot (PCI_E1 - Top):</strong> Install the <strong>XFX Speedster QICK 319</strong>.</li>
+                <li><strong>Secondary Slot (PCI_E3 - Third Slot Down):</strong> Install the <strong>Gigabyte Gaming OC</strong>.</li>
+            </ul>
+            <div class="warning">
+                <strong>CRITICAL:</strong> Do NOT use the middle slot (PCI_E2). On the MSI Unify, only slots 1 and 3 support the x8/x8 bifurcation required for dual-GPU AI workloads.
+            </div>
+            <div class="pro-tip">
+                <strong>Airflow Check:</strong> The LANCOOL 216 should be in <strong>Air Cooling Mode</strong> (check the rear PCIe bracket position) to maximize the gap between the bottom GPU and the PSU shroud.
+            </div>
+        </section>
+
+        <section class="card">
+            <h2><span class="step-number">3</span> Motherboard Power</h2>
+            <ul>
+                <li><strong>24-Pin ATX:</strong> Standard connection on the right edge of the board.</li>
+                <li><strong>CPU Power (8+8 Pin):</strong> Located at the top left. The MSI Unify has two 8-pin headers.</li>
+                <li><strong>Action:</strong> Use <strong>two separate</strong> 4+4/8-pin CPU cables from the FSP VITA PSU. This provides maximum stability for the 12-core 5900X during heavy inference.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2><span class="step-number">4</span> GPU Power</h2>
+            <p>Each RX 7800 XT requires two 8-pin PCIe connections.</p>
+            <ul>
+                <li><strong>Cable Strategy:</strong> Use <strong>four separate PCIe cables</strong> from the PSU.</li>
+                <li><strong>Safety:</strong> Avoid using "pigtail" cables (one cable splitting into two connectors) for these cards to prevent cable overheating and transient voltage drops during peak AI compute.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2><span class="step-number">5</span> Case Headers & Fans</h2>
+            <ul>
+                <li><strong>Lian Li Hub:</strong> Connect a <strong>SATA power cable</strong> to the fan/RGB hub on the back of the tray.</li>
+                <li><strong>PWM Control:</strong> Connect the hub's 4-pin header to <code>SYS_FAN1</code> on the motherboard.</li>
+                <li><strong>JFP1:</strong> Connect power/reset switches. Note the "+" and "-" markings on the board.</li>
+                <li><strong>USB:</strong> Connect the USB 3.0 (blue) and USB-C headers on the right edge.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2><span class="step-number">6</span> BIOS Initialization</h2>
+            <p>Once power is connected, boot into the BIOS (mash <code>DEL</code>).</p>
+            <ul>
+                <li><strong>XMP/A-XMP:</strong> Enable this to ensure your Patriot Viper RAM runs at its rated <code>3600MHz</code>.</li>
+                <li><strong>Resizable BAR:</strong> Ensure this is <strong>Enabled</strong>. It is mandatory for modern GPU performance and AI memory management.</li>
+                <li><strong>PCIe Mode:</strong> Verify that the slots are running in <code>Gen4 x8/x8</code> mode.</li>
+            </ul>
+            <div class="pro-tip">
+                <strong>Final Step:</strong> Plug your monitor into the <strong>Top GPU (XFX)</strong>. This will be your primary display output for both Windows and VR.
+            </div>
+        </section>
+
+        <footer>
+            <p style="text-align: center; color: #64748b; font-size: 0.875rem;">
+                &copy; 2026 Machine Build Quote - Managed by Gemini CLI
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
