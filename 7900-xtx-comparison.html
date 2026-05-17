@@ -3,207 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7900 XTX Slot Width Comparison</title>
+    <title>7900 XTX Slot Width Comparison - Dual AI Rig Guide</title>
     <style>
         :root {
-            --primary: #2563eb;
-            --bg: #f8fafc;
-            --text: #1e293b;
-            --card: #ffffff;
-            --border: #e2e8f0;
-            --success: #10b981;
-            --success-bg: #dcfce7;
+            --primary: #3b82f6;
+            --bg: #0f172a;
+            --text: #f8fafc;
+            --surface: #1e293b;
+            --border: #334155;
+            --highlight: #10b981;
         }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.5;
-            margin: 0;
-            padding: 2rem;
+        body { 
+            font-family: -apple-system, system-ui, sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 20px; 
         }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
+        .container { max-width: 1000px; margin: 0 auto; }
+        .card { 
+            background: var(--surface); 
+            border: 1px solid var(--border); 
+            border-radius: 12px; 
+            padding: 1.5rem; 
+            margin-bottom: 1.5rem; 
         }
-        header {
-            margin-bottom: 2rem;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 1rem;
-        }
-        h1 { margin: 0; color: var(--primary); }
-        .nav-links { margin-top: 0.5rem; font-weight: 600; }
-        a { color: var(--primary); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        h1 { font-size: 1.875rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem; }
+        p { color: #94a3b8; margin-bottom: 1.5rem; }
         
-        .card {
-            background: var(--card);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
             margin-top: 1rem;
+            background: rgba(0,0,0,0.2);
+            border-radius: 8px;
+            overflow: hidden;
         }
-        th, td {
-            text-align: left;
-            padding: 0.75rem;
-            border-bottom: 1px solid var(--border);
-        }
+        th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
         th { 
-            background: #f1f5f9; 
+            background: #1e293b; 
             font-weight: 600; 
-            cursor: pointer;
+            color: #fff; 
+            cursor: pointer; 
             user-select: none;
+            position: sticky;
+            top: 0;
         }
-        th:hover { background: #e2e8f0; }
-        th::after { content: ' ↕'; font-size: 0.8rem; color: #94a3b8; }
+        th:hover { background: #334155; }
+        tr:hover { background: rgba(59, 130, 246, 0.1); }
         
-        .thin-card {
-            background-color: var(--success-bg);
-            color: #166534;
-            font-weight: 600;
+        .thin-card { border-left: 4px solid var(--highlight); background: rgba(16, 185, 129, 0.05); }
+        .thick-card { opacity: 0.8; }
+        
+        .tag { 
+            display: inline-block; 
+            padding: 2px 6px; 
+            border-radius: 4px; 
+            font-size: 0.7rem; 
+            font-weight: bold; 
+            text-transform: uppercase;
         }
-        .tag {
-            display: inline-block;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            margin-left: 0.5rem;
-        }
-        .tag.water { background: #0ea5e9; color: white; }
-        .tag.reference { background: #64748b; color: white; }
+        .tag.thin { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+        .tag.wc { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+        
+        .nav-links { margin-bottom: 2rem; }
+        .nav-links a { color: var(--primary); text-decoration: none; font-weight: bold; }
+        .nav-links a:hover { text-decoration: underline; }
 
-        .legend {
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-        .legend-item { display: flex; align-items: center; gap: 0.5rem; }
-        .box { width: 16px; height: 16px; border-radius: 4px; }
-        .box.green { background-color: var(--success-bg); border: 1px solid var(--success); }
+        .sort-icon::after { content: ' ↕'; font-size: 0.8rem; opacity: 0.5; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Radeon RX 7900 XTX Models Comparison</h1>
-            <p>Comparing physical dimensions for multi-GPU clearance. The threshold for "Thin" is 2.5 slots (matching the current XFX 7800 XT).</p>
             <div class="nav-links">
-                &larr; <a href="index.html">Back to Main Build Quote</a>
+                &larr; <a href="phase3-expansion.html">Back to Phase 3 Guide</a>
             </div>
+            <h1>7900 XTX Clearance Master List</h1>
+            <p>A complete comparison of all Add-In Board (AIB) models, sorted by slot width. <strong>Goal:</strong> Find cards &le; 2.7 slots for the primary position to maintain a 0.5-slot air gap in dual-GPU configurations.</p>
         </header>
 
         <section class="card">
             <table id="gpuTable">
                 <thead>
                     <tr>
-                        <th onclick="sortTable(0)">Model</th>
-                        <th onclick="sortTable(1)">Slot Width</th>
-                        <th onclick="sortTable(2)">Thickness (mm)</th>
-                        <th onclick="sortTable(3)">Length (mm)</th>
+                        <th onclick="sortTable(0)" class="sort-icon">Model</th>
+                        <th onclick="sortTable(1)" class="sort-icon">Slot Width</th>
+                        <th onclick="sortTable(2)" class="sort-icon">Thickness (mm)</th>
+                        <th onclick="sortTable(3)" class="sort-icon">Length (mm)</th>
+                        <th onclick="sortTable(4)" class="sort-icon">Last Paid (eBay)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="thin-card">
-                        <td>ASRock Aqua OC <span class="tag water">Water-Cooled</span></td>
+                        <td>ASRock Aqua OC <span class="tag wc">Water-Cooled</span></td>
                         <td data-val="2.0">2.0 Slots</td>
                         <td data-val="0">N/A</td>
                         <td data-val="275">275 mm</td>
+                        <td data-val="920">&euro;920</td>
                     </tr>
                     <tr class="thin-card">
-                        <td>PowerColor Liquid Devil <span class="tag water">Water-Cooled</span></td>
+                        <td>PowerColor Liquid Devil <span class="tag wc">Water-Cooled</span></td>
                         <td data-val="2.0">2.0 Slots</td>
                         <td data-val="0">N/A</td>
                         <td data-val="288">288 mm</td>
+                        <td data-val="875">&euro;875</td>
                     </tr>
                     <tr class="thin-card">
-                        <td>AMD Reference Model (MBA) <span class="tag reference">Standard</span></td>
+                        <td>AMD Reference Model (MBA) <span class="tag thin">High Clearance</span></td>
                         <td data-val="2.5">2.5 Slots</td>
                         <td data-val="51">51 mm</td>
                         <td data-val="287">287 mm</td>
+                        <td data-val="735">&euro;735</td>
                     </tr>
                     <tr class="thin-card">
-                        <td>Gigabyte Gaming OC</td>
+                        <td>Biostar Reference <span class="tag thin">High Clearance</span></td>
+                        <td data-val="2.5">2.5 Slots</td>
+                        <td data-val="51">51 mm</td>
+                        <td data-val="287">287 mm</td>
+                        <td data-val="735">&euro;735</td>
+                    </tr>
+                    <tr class="thin-card">
+                        <td>Gigabyte Gaming OC <span class="tag thin">High Clearance</span></td>
                         <td data-val="2.5">2.5 Slots</td>
                         <td data-val="50">50 mm</td>
                         <td data-val="331">331 mm</td>
+                        <td data-val="795">&euro;795</td>
                     </tr>
                     <tr class="thin-card">
-                        <td>MSI Gaming Trio Classic</td>
+                        <td>MSI Gaming Trio Classic <span class="tag thin">High Clearance</span></td>
                         <td data-val="2.5">2.5 Slots</td>
                         <td data-val="56">56 mm</td>
                         <td data-val="325">325 mm</td>
+                        <td data-val="770">&euro;770</td>
                     </tr>
-                    <tr>
+                    <tr class="thick-card">
                         <td>Sapphire Pulse</td>
                         <td data-val="2.7">2.7 Slots</td>
                         <td data-val="52.5">52.5 mm</td>
                         <td data-val="313">313 mm</td>
+                        <td data-val="790">&euro;790</td>
                     </tr>
-                    <tr>
+                    <tr class="thick-card">
                         <td>ASRock Phantom Gaming OC</td>
                         <td data-val="2.8">2.8 Slots</td>
                         <td data-val="58">58 mm</td>
                         <td data-val="330">330 mm</td>
+                        <td data-val="830">&euro;830</td>
                     </tr>
-                    <tr>
-                        <td>XFX Speedster MERC 310 Black Edition</td>
+                    <tr class="thick-card">
+                        <td>ASUS Dual OC</td>
+                        <td data-val="2.9">2.9 Slots</td>
+                        <td data-val="58">58 mm</td>
+                        <td data-val="323">323 mm</td>
+                        <td data-val="750">&euro;750</td>
+                    </tr>
+                    <tr class="thick-card">
+                        <td>XFX Speedster MERC 310 (Standard/Black)</td>
                         <td data-val="2.9">2.9 Slots</td>
                         <td data-val="57">57 mm</td>
                         <td data-val="344">344 mm</td>
+                        <td data-val="765">&euro;765</td>
                     </tr>
-                    <tr>
-                        <td>ASRock Taichi OC</td>
+                    <tr class="thick-card">
+                        <td>ASRock Taichi OC / White</td>
                         <td data-val="3.0">3.0 Slots</td>
                         <td data-val="61">61 mm</td>
                         <td data-val="345">345 mm</td>
+                        <td data-val="830">&euro;830</td>
                     </tr>
-                    <tr>
-                        <td>PowerColor Hellhound</td>
+                    <tr class="thick-card">
+                        <td>PowerColor Hellhound / Spectral White</td>
                         <td data-val="3.0">3.0 Slots</td>
                         <td data-val="62">62 mm</td>
                         <td data-val="338">338 mm</td>
+                        <td data-val="780">&euro;780</td>
                     </tr>
-                    <tr>
+                    <tr class="thick-card">
+                        <td>Yeston Sakura Sugar</td>
+                        <td data-val="3.0">3.0 Slots</td>
+                        <td data-val="58">58 mm</td>
+                        <td data-val="330">330 mm</td>
+                        <td data-val="945">&euro;945</td>
+                    </tr>
+                    <tr class="thick-card">
+                        <td>PELADN Armor / SOYO Armor</td>
+                        <td data-val="3.5">3.5 Slots</td>
+                        <td data-val="65">65 mm</td>
+                        <td data-val="330">330 mm</td>
+                        <td data-val="695">&euro;695</td>
+                    </tr>
+                    <tr class="thick-card">
+                        <td>Maxsun MGG (Mega Gaming Galaxy)</td>
+                        <td data-val="3.5">3.5 Slots</td>
+                        <td data-val="66">66 mm</td>
+                        <td data-val="337">337 mm</td>
+                        <td data-val="855">&euro;855</td>
+                    </tr>
+                    <tr class="thick-card">
                         <td>Gigabyte AORUS Elite</td>
                         <td data-val="3.5">3.5 Slots</td>
                         <td data-val="69">69 mm</td>
                         <td data-val="335">335 mm</td>
+                        <td data-val="840">&euro;840</td>
                     </tr>
-                    <tr>
+                    <tr class="thick-card">
+                        <td>Vastarmor Super Alloy / Starry Sky</td>
+                        <td data-val="3.5">3.5 Slots</td>
+                        <td data-val="69.5">69.5 mm</td>
+                        <td data-val="330">330 mm</td>
+                        <td data-val="790">&euro;790</td>
+                    </tr>
+                    <tr class="thick-card">
                         <td>Sapphire Nitro+ Vapor-X</td>
                         <td data-val="3.5">3.5 Slots</td>
                         <td data-val="71.6">71.6 mm</td>
                         <td data-val="320">320 mm</td>
+                        <td data-val="920">&euro;920</td>
                     </tr>
-                    <tr>
-                        <td>PowerColor Red Devil</td>
+                    <tr class="thick-card">
+                        <td>PowerColor Red Devil / Spectral White</td>
                         <td data-val="3.5">3.5 Slots</td>
                         <td data-val="73">73 mm</td>
                         <td data-val="338">338 mm</td>
+                        <td data-val="870">&euro;870</td>
                     </tr>
-                    <tr>
+                    <tr class="thick-card">
                         <td>ASUS TUF Gaming OC</td>
                         <td data-val="3.63">3.63 Slots</td>
                         <td data-val="72.6">72.6 mm</td>
                         <td data-val="353">353 mm</td>
+                        <td data-val="945">&euro;945</td>
                     </tr>
                 </tbody>
             </table>
-
-            <div class="legend">
-                <div class="legend-item">
-                    <div class="box green"></div>
-                    <span>Thin or thinner than current thinnest card (&le; 2.5 slots)</span>
-                </div>
-            </div>
+        </section>
+        
+        <section class="card" style="border-color: #f59e0b; background: rgba(245, 158, 11, 0.05);">
+            <h2 style="color: #f59e0b; margin-top: 0;">Compatibility Advisory</h2>
+            <p style="color: #d1d5db; margin-bottom: 0;">Models marked with <strong>High Clearance</strong> are the only variants recommended for the <em>Top Slot</em> on standard ATX boards (like your MSI X570 Unify) when using a second card below. Using a 3.0-slot card in the top position will leave less than 5mm of clearance, likely leading to thermal throttling during long inference runs.</p>
         </section>
     </div>
 
@@ -221,12 +260,16 @@
                     x = rows[i].getElementsByTagName("TD")[n];
                     y = rows[i + 1].getElementsByTagName("TD")[n];
                     
-                    let xVal = x.getAttribute('data-val') || x.innerText.toLowerCase();
-                    let yVal = y.getAttribute('data-val') || y.innerText.toLowerCase();
+                    let xVal = x.getAttribute("data-val") || x.innerText;
+                    let yVal = y.getAttribute("data-val") || y.innerText;
                     
+                    // Numerical sort for columns with data-val
                     if (!isNaN(parseFloat(xVal)) && !isNaN(parseFloat(yVal))) {
                         xVal = parseFloat(xVal);
                         yVal = parseFloat(yVal);
+                    } else {
+                        xVal = xVal.toLowerCase();
+                        yVal = yVal.toLowerCase();
                     }
 
                     if (dir == "asc") {
@@ -244,7 +287,7 @@
                 if (shouldSwitch) {
                     rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
                     switching = true;
-                    switchcount ++;
+                    switchcount++;
                 } else {
                     if (switchcount == 0 && dir == "asc") {
                         dir = "desc";
@@ -252,11 +295,6 @@
                     }
                 }
             }
-        }
-        
-        // Default sort by slot width
-        window.onload = function() {
-            sortTable(1);
         }
     </script>
 </body>
