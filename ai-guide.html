@@ -291,12 +291,12 @@ sudo usermod -a -G render $USER
         </div>
 
         <div class="card" id="visualizer">
-            <h2>7. Performance Visualizer</h2>
-            <p>Use this tool to track your hardware's performance as you update drivers and engines. Paste your results from the benchmarking script below.</p>
+            <h2>8. Performance Visualizer</h2>
+            <p>Use this tool to track your hardware's performance as you update drivers and engines. Paste your results from the benchmarking scripts below.</p>
 
             <div style="margin-bottom: 1.5rem;">
-                <label for="benchmarkData" style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Benchmark Data (JSON or Key-Value):</label>
-                <textarea id="benchmarkData" style="width: 100%; height: 100px; padding: 0.5rem; border: 1px solid var(--border); border-radius: 4px; font-family: monospace;" placeholder='{"date": "2026-05-17", "prefill": 390, "decode": 10.4}'></textarea>
+                <label for="benchmarkData" style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Benchmark Data (JSON):</label>
+                <textarea id="benchmarkData" style="width: 100%; height: 100px; padding: 0.5rem; border: 1px solid var(--border); border-radius: 4px; font-family: monospace;" placeholder='{"model": "Qwen 2.5 Coder 32B", "prefill": 494, "decode": 16.3}'></textarea>
                 <button onclick="updateChart()" style="margin-top: 0.5rem; padding: 0.5rem 1rem; background: var(--primary); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600;">Update Graph</button>
             </div>
 
@@ -308,22 +308,29 @@ sudo usermod -a -G render $USER
                 let chart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: ['Ollama (Current)', 'vLLM (Target)', 'llama.cpp (Max)'],
+                        labels: ['Ollama (Baseline)', 'llama.cpp (Optimized)', 'vLLM (Target)'],
                         datasets: [
                             {
                                 label: 'Prefill (t/s)',
-                                data: [393, 600, 450],
+                                data: [327, 494, 600],
                                 backgroundColor: 'rgba(37, 99, 235, 0.7)',
                             },
                             {
                                 label: 'Decode (t/s)',
-                                data: [10.4, 18, 16],
+                                data: [10.4, 16.3, 20],
                                 backgroundColor: 'rgba(34, 197, 94, 0.7)',
                             }
                         ]
                     },
                     options: {
                         responsive: true,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Model: Qwen 2.5 Coder 32B (Q4_K_M)',
+                                font: { size: 16 }
+                            }
+                        },
                         scales: {
                             y: { beginAtZero: true, title: { display: true, text: 'Tokens Per Second' } }
                         }
@@ -335,12 +342,19 @@ sudo usermod -a -G render $USER
                         const raw = document.getElementById('benchmarkData').value;
                         const data = JSON.parse(raw);
                         if (data.prefill && data.decode) {
-                            chart.data.datasets[0].data[0] = data.prefill;
-                            chart.data.datasets[1].data[0] = data.decode;
+                            // Update data
+                            chart.data.datasets[0].data[1] = data.prefill;
+                            chart.data.datasets[1].data[1] = data.decode;
+                            
+                            // Update title if model is provided
+                            if (data.model) {
+                                chart.options.plugins.title.text = "Model: " + data.model;
+                            }
+                            
                             chart.update();
                         }
                     } catch (e) {
-                        alert("Invalid JSON format. Please use {\"prefill\": 390, \"decode\": 10.4}");
+                        alert("Invalid JSON format. Please use {\"model\": \"My Model\", \"prefill\": 390, \"decode\": 10.4}");
                     }
                 }
             </script>
