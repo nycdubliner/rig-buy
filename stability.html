@@ -73,6 +73,20 @@
         </header>
 
         <section class="card">
+            <h2>Dual-GPU VRAM Verification</h2>
+            <p>Before proceeding to thermal stress tests, verify that ROCm is correctly addressing both cards and that tensor splitting is active.</p>
+            <div class="pro-tip" style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0;">
+                <strong>Test Result: PASSED</strong><br>
+                Model: <code>qwen2.5-coder:32b</code> (quantized ~19GB)<br>
+                Allocation: GPU 0 (~12.6GB) | GPU 1 (~12.2GB)<br>
+                Status: Verified functional on 2026-05-17.
+            </div>
+            <p>Run <code>rocm-smi</code> during inference to confirm the split:</p>
+            <pre><code># Monitor in a second terminal
+watch -n 1 rocm-smi</code></pre>
+        </section>
+
+        <section class="card">
             <h2>The "Transient Spike" Test</h2>
             <div class="warning">DANGER: This test pulls maximum wattage. If your PSU is faulty or cables are loose, this is when it will fail.</div>
             <p>To verify the **Fortron 1000W ATX 3.1** PSU can handle the simultaneous spikes of two 7800 XTs + the 5900X:</p>

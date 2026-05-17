@@ -4,7 +4,9 @@
 Design and source a highly optimized, "bang for buck" dual RX 7800 XT AI workstation (AM4 platform) for delivery to Ireland, avoiding EU Tech Tax.
 
 ## Current State
-- **Phase 2 Dual-GPU Build Finalized:** The build is fully specced and parts are purchased/ordered. (Total: ~€1,961.76).
+- **Phase 2 Dual-GPU Build Assembled & Verified:** The rig is fully built and functional. (Total: €2,400.84).
+- **Dual-GPU Verification Complete:** Successfully verified both RX 7800 XT GPUs using Ollama with the Qwen 2.5 Coder 32B model. Tensor splitting across both cards is working with ~12GB/12GB VRAM distribution.
+- **Upgraded Specs:** The build features a significant RAM upgrade to 128GB (Kingston Fury Renegade 3600MT/s) and a high-end FSP VITA GM 1000W ATX 3.1 PSU from GG Machines Dublin.
 - **Documentation Complete:** The GitHub Pages site contains the quote, vendor intelligence, physical assembly guide, and the AI Software Setup Guide.
 - **Agent Capabilities:** The `logged-in-scraper` skill is globally installed and the "Jem's Browser" desktop app is available for bypassing bot protection.
 - Reusable skills live in `skills/`
