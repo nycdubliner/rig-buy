@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7900 XTX Slot Width Comparison</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --card: #ffffff;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --success-bg: #dcfce7;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1rem;
+        }
+        h1 { margin: 0; color: var(--primary); }
+        .nav-links { margin-top: 0.5rem; font-weight: 600; }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        .card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+        th { 
+            background: #f1f5f9; 
+            font-weight: 600; 
+            cursor: pointer;
+            user-select: none;
+        }
+        th:hover { background: #e2e8f0; }
+        th::after { content: ' ↕'; font-size: 0.8rem; color: #94a3b8; }
+        
+        .thin-card {
+            background-color: var(--success-bg);
+            color: #166534;
+            font-weight: 600;
+        }
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+        .tag.water { background: #0ea5e9; color: white; }
+        .tag.reference { background: #64748b; color: white; }
+
+        .legend {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .legend-item { display: flex; align-items: center; gap: 0.5rem; }
+        .box { width: 16px; height: 16px; border-radius: 4px; }
+        .box.green { background-color: var(--success-bg); border: 1px solid var(--success); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Radeon RX 7900 XTX Models Comparison</h1>
+            <p>Comparing physical dimensions for multi-GPU clearance. The threshold for "Thin" is 2.5 slots (matching the current XFX 7800 XT).</p>
+            <div class="nav-links">
+                &larr; <a href="index.html">Back to Main Build Quote</a>
+            </div>
+        </header>
+
+        <section class="card">
+            <table id="gpuTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Model</th>
+                        <th onclick="sortTable(1)">Slot Width</th>
+                        <th onclick="sortTable(2)">Thickness (mm)</th>
+                        <th onclick="sortTable(3)">Length (mm)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="thin-card">
+                        <td>ASRock Aqua OC <span class="tag water">Water-Cooled</span></td>
+                        <td data-val="2.0">2.0 Slots</td>
+                        <td data-val="0">N/A</td>
+                        <td data-val="275">275 mm</td>
+                    </tr>
+                    <tr class="thin-card">
+                        <td>PowerColor Liquid Devil <span class="tag water">Water-Cooled</span></td>
+                        <td data-val="2.0">2.0 Slots</td>
+                        <td data-val="0">N/A</td>
+                        <td data-val="288">288 mm</td>
+                    </tr>
+                    <tr class="thin-card">
+                        <td>AMD Reference Model (MBA) <span class="tag reference">Standard</span></td>
+                        <td data-val="2.5">2.5 Slots</td>
+                        <td data-val="51">51 mm</td>
+                        <td data-val="287">287 mm</td>
+                    </tr>
+                    <tr class="thin-card">
+                        <td>Gigabyte Gaming OC</td>
+                        <td data-val="2.5">2.5 Slots</td>
+                        <td data-val="50">50 mm</td>
+                        <td data-val="331">331 mm</td>
+                    </tr>
+                    <tr class="thin-card">
+                        <td>MSI Gaming Trio Classic</td>
+                        <td data-val="2.5">2.5 Slots</td>
+                        <td data-val="56">56 mm</td>
+                        <td data-val="325">325 mm</td>
+                    </tr>
+                    <tr>
+                        <td>Sapphire Pulse</td>
+                        <td data-val="2.7">2.7 Slots</td>
+                        <td data-val="52.5">52.5 mm</td>
+                        <td data-val="313">313 mm</td>
+                    </tr>
+                    <tr>
+                        <td>ASRock Phantom Gaming OC</td>
+                        <td data-val="2.8">2.8 Slots</td>
+                        <td data-val="58">58 mm</td>
+                        <td data-val="330">330 mm</td>
+                    </tr>
+                    <tr>
+                        <td>XFX Speedster MERC 310 Black Edition</td>
+                        <td data-val="2.9">2.9 Slots</td>
+                        <td data-val="57">57 mm</td>
+                        <td data-val="344">344 mm</td>
+                    </tr>
+                    <tr>
+                        <td>ASRock Taichi OC</td>
+                        <td data-val="3.0">3.0 Slots</td>
+                        <td data-val="61">61 mm</td>
+                        <td data-val="345">345 mm</td>
+                    </tr>
+                    <tr>
+                        <td>PowerColor Hellhound</td>
+                        <td data-val="3.0">3.0 Slots</td>
+                        <td data-val="62">62 mm</td>
+                        <td data-val="338">338 mm</td>
+                    </tr>
+                    <tr>
+                        <td>Gigabyte AORUS Elite</td>
+                        <td data-val="3.5">3.5 Slots</td>
+                        <td data-val="69">69 mm</td>
+                        <td data-val="335">335 mm</td>
+                    </tr>
+                    <tr>
+                        <td>Sapphire Nitro+ Vapor-X</td>
+                        <td data-val="3.5">3.5 Slots</td>
+                        <td data-val="71.6">71.6 mm</td>
+                        <td data-val="320">320 mm</td>
+                    </tr>
+                    <tr>
+                        <td>PowerColor Red Devil</td>
+                        <td data-val="3.5">3.5 Slots</td>
+                        <td data-val="73">73 mm</td>
+                        <td data-val="338">338 mm</td>
+                    </tr>
+                    <tr>
+                        <td>ASUS TUF Gaming OC</td>
+                        <td data-val="3.63">3.63 Slots</td>
+                        <td data-val="72.6">72.6 mm</td>
+                        <td data-val="353">353 mm</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="box green"></div>
+                    <span>Thin or thinner than current thinnest card (&le; 2.5 slots)</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function sortTable(n) {
+            var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            table = document.getElementById("gpuTable");
+            switching = true;
+            dir = "asc";
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+                    
+                    let xVal = x.getAttribute('data-val') || x.innerText.toLowerCase();
+                    let yVal = y.getAttribute('data-val') || y.innerText.toLowerCase();
+                    
+                    if (!isNaN(parseFloat(xVal)) && !isNaN(parseFloat(yVal))) {
+                        xVal = parseFloat(xVal);
+                        yVal = parseFloat(yVal);
+                    }
+
+                    if (dir == "asc") {
+                        if (xVal > yVal) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else if (dir == "desc") {
+                        if (xVal < yVal) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    switchcount ++;
+                } else {
+                    if (switchcount == 0 && dir == "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
+            }
+        }
+        
+        // Default sort by slot width
+        window.onload = function() {
+            sortTable(1);
+        }
+    </script>
+</body>
+</html>
