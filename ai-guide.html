@@ -256,15 +256,15 @@ sudo usermod -a -G render $USER
                 </div>
             </div>
 
-            <h3>Key Findings</h3>
+            <h3>Key Findings (HIP vs. Vulkan)</h3>
             <ul>
-                <li><strong>llama.cpp wins on Qwen 32B:</strong> For the primary coding model, llama.cpp achieved <strong>16.3 t/s</strong> decode speed, a 56% improvement over Ollama's 10.4 t/s.</li>
-                <li><strong>Ollama excels at Gemma:</strong> For Gemma 2 27B, Ollama reached <strong>30.4 t/s</strong>, slightly outperforming llama.cpp. This suggests Ollama's built-in optimizations are well-tuned for Google's architecture.</li>
-                <li><strong>Prefill Speeds:</strong> llama.cpp showed superior raw prefill performance for large models, hitting over <strong>600 t/s</strong> on Qwen with a 1k context.</li>
+                <li><strong>Vulkan is a Decode Beast for Qwen:</strong> Surprisingly, the Vulkan backend achieved <strong>24.0 t/s</strong> decode on Qwen 2.5 Coder 32B, outperforming both native HIP (16.3 t/s) and Ollama (10.4 t/s) for generation.</li>
+                <li><strong>HIP wins on raw Prefill:</strong> For large prompt ingestion, native HIP remains superior, hitting <strong>494 t/s</strong> on Qwen vs Vulkan's 433 t/s.</li>
+                <li><strong>Ollama still king for Gemma:</strong> Ollama's HIP implementation remains the fastest for Gemma 2 27B decode at <strong>30.4 t/s</strong>.</li>
             </ul>
 
             <div class="pro-tip">
-                <strong>Recommendation:</strong> Use <strong>Ollama</strong> for general chat and Gemma 2. Switch to <strong>llama.cpp</strong> when using Qwen 2.5 Coder for large codebase refactoring to maximize throughput.
+                <strong>Recommendation:</strong> For pure coding speed with Qwen 2.5 Coder, use <strong>llama.cpp with Vulkan</strong>. For low-latency chat with Gemma, stick to <strong>Ollama</strong>. Use native HIP for heavy batch processing where prefill dominates.
             </div>
 
             <h3>vLLM Status</h3>
