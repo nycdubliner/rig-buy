@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Burn-in & Instrumentation - Dual RX 7800 XT</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --card: #ffffff;
+            --border: #e2e8f0;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1rem;
+        }
+        h1 { margin: 0; color: var(--primary); }
+        h2 { margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+        .card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+        }
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+        .warning {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1rem 0;
+            color: #991b1b;
+        }
+        .pro-tip {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1rem 0;
+            color: #166534;
+        }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: var(--primary); text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Back to Build Quote</a>
+        <header>
+            <h1>AI Burn-in & Instrumentation</h1>
+            <p>Verification steps to ensure your Dual RX 7800 XT rig is stable under sustained AI workloads and properly monitored.</p>
+        </header>
+
+        <div class="card">
+            <h2>1. The "AI Loop" Burn-In</h2>
+            <p>Run a continuous inference loop to stress the VRAM and GPUs with real-world tensor calculations.</p>
+            <pre><code># Run this in your terminal to force a continuous long generation
+while true; do 
+  curl http://localhost:11434/api/generate -d '{
+    "model": "qwen2.5-coder:32b",
+    "prompt": "Write a 5000 word detailed technical history of the development of the silicon chip starting from the 1940s to the present day.",
+    "stream": false
+  }'
+  sleep 2
+done</code></pre>
+            <div class="pro-tip">
+                Run this for at least 2 hours. If the system doesn't reboot and the generation speed (Tokens/Sec) remains consistent, your thermal solution is working.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>2. Hardware Stress (gpu-burn)</h2>
+            <p>For absolute mathematical verification of the GPUs, use <code>gpu-burn</code> compiled for ROCm.</p>
+            <pre><code>git clone https://github.com/ROCm/gpu-burn.git
+cd gpu-burn
+make
+./gpu_burn 3600  # 1 hour stress test</code></pre>
+            <div class="warning">
+                <strong>Monitor Power:</strong> This will pull the maximum rated wattage (~520W for GPUs alone). Watch for thermal throttling.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>3. Live Instrumentation Dashboard</h2>
+            <p>Keep this running in a side terminal while testing to monitor the health of your 7800 XTs.</p>
+            <pre><code>watch -n 1 "rocm-smi --showpower --showtemp --showuse --showmemuse"</code></pre>
+            
+            <h3>What to Watch For:</h3>
+            <ul>
+                <li><strong>Junction Temp:</strong> Target < 95&deg;C. Throttling starts at 100&deg;C.</li>
+                <li><strong>Power:</strong> Each card should hit ~260W under full load.</li>
+                <li><strong>Memory Usage:</strong> Ensure both cards are being utilized (Ollama should split the 32B model across both).</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>4. Log Monitoring</h2>
+            <p>If the system crashes, check the kernel logs for PCIe or driver errors after rebooting:</p>
+            <pre><code>sudo dmesg | grep -iE "amdgpu|rocm|pcie"</code></pre>
+        </div>
+
+    </div>
+</body>
+</html>

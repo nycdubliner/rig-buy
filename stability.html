@@ -101,7 +101,7 @@ watch -n 1 rocm-smi</code></pre>
             <h2>Thermal Throttle Verification</h2>
             <p>With a **3-slot gap**, the top GPU (XFX QICK) will be breathing the hot exhaust of the bottom GPU (Gigabyte Gaming OC).</p>
             <ul>
-                <li><strong>The Test:</strong> Run an AI inference loop (e.g., <a href="https://github.com/ggerganov/llama.cpp" target="_blank"><code>llama.cpp</code></a> with <code>--n-gpu-layers 100</code>) for 1 hour.</li>
+                <li><strong>The Test:</strong> Run an AI inference loop (see the <a href="burnin.html"><strong>AI Burn-in Guide</strong></a> for the specific command) for 1 hour.</li>
                 <li><strong>Target Temps:</strong> 
                     <ul>
                         <li>Bottom GPU: < 70°C (Fresh air access).</li>
