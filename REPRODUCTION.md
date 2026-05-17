@@ -29,6 +29,18 @@ cmake .. -DGGML_HIP=ON -DGPU_TARGETS=gfx1101 -DCMAKE_BUILD_TYPE=Release
 cmake --build . --config Release -j $(nproc)
 ```
 
+### Atomic Llama (TurboQuant)
+For massive context windows, build the Atomic fork:
+```bash
+git clone https://github.com/AtomicBot-ai/atomic-llama-cpp-turboquant
+cd atomic-llama-cpp-turboquant
+mkdir build && cd build
+cmake .. -DGGML_HIP=ON -DGPU_TARGETS=gfx1101 -DCMAKE_BUILD_TYPE=Release
+cmake --build . --config Release -j $(nproc)
+# Usage for 4.3x KV Compression
+./bin/llama-cli -m model.gguf -ctk turbo3 -ctv turbo3 ...
+```
+
 ## 4. Running the Benchmark Suite
 ### Ollama
 Ensure the Ollama service is running, then execute:

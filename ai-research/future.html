@@ -70,6 +70,13 @@
                     <p class="status-tested">Status: Recommended</p>
                     <p><strong>Result:</strong> Can double decode speeds for logic-heavy tasks, but accuracy depends on draft/target alignment.</p>
                 </div>
+
+                <div class="feature-card">
+                    <h3>5. Atomic Llama TurboQuant</h3>
+                    <p>A specialized fork implementing Walsh-Hadamard Transform (WHT) for high-compression KV cache.</p>
+                    <p class="status-tested">Status: Verified on RDNA3</p>
+                    <p><strong>Result:</strong> Enabling <code>-ctk turbo3 -ctv turbo3</code> reduces KV cache memory usage by 4.3x with only a ~12% speed penalty. <strong>Essential for 100k+ context windows on 32GB VRAM.</strong></p>
+                </div>
             </div>
         </div>
 

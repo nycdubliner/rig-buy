@@ -93,6 +93,7 @@
             <ul>
                 <li><strong>The 70B Trap:</strong> Quantization below 4-bit for 70B models leads to unacceptable latency and cognitive degradation. 32B is the "Goldilocks" zone.</li>
                 <li><strong>Backend Divergence:</strong> Native ROCm/HIP is superior for prompt ingestion (prefill), but Vulkan dominates token generation (decode).</li>
+                <li><strong>Atomic Llama:</strong> Verified 4.3x KV cache compression via Walsh-Hadamard Transform (WHT), enabling 100k+ context windows on consumer VRAM.</li>
                 <li><strong>Agentic Utility:</strong> Local inference at ~24 t/s allows for sub-minute refactoring loops in agentic IDEs.</li>
             </ul>
         </div>
