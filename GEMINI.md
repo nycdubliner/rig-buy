@@ -6,13 +6,16 @@ Design and source a highly optimized, "bang for buck" dual RX 7800 XT AI worksta
 ## Current State
 - **Phase 2 Dual-GPU Build Assembled & Verified:** The rig is fully built and functional. (Total: €2,400.84).
 - **Dual-GPU Verification Complete:** Successfully verified both RX 7800 XT GPUs using Ollama with the Qwen 2.5 Coder 32B model. Tensor splitting across both cards is working with ~12GB/12GB VRAM distribution.
+- **AI Software Plan Expanded:** The documentation now includes a comparison of inference engines (Ollama, vLLM, llama.cpp), a "Bi-Weekly Maintenance Loop," and an interactive **Performance Visualizer**.
+- **Benchmarking Tools Integrated:** A Python script (`scripts/benchmark_ollama.py`) is available for measuring Prefill and Decode TPS, establishing a baseline of ~393 t/s (Prefill) and ~10.4 t/s (Decode) for 32B models.
 - **Upgraded Specs:** The build features a significant RAM upgrade to 128GB (Kingston Fury Renegade 3600MT/s) and a high-end FSP VITA GM 1000W ATX 3.1 PSU from GG Machines Dublin.
-- **Documentation Complete:** The GitHub Pages site contains the quote, vendor intelligence, physical assembly guide, and the AI Software Setup Guide.
+- **Documentation Complete:** The GitHub Pages site contains the quote, vendor intelligence, physical assembly guide, and the expanded AI Software Guide.
 - **Agent Capabilities:** The `logged-in-scraper` skill is globally installed and the "Jem's Browser" desktop app is available for bypassing bot protection.
 - Reusable skills live in `skills/`
 
 ## Next Steps
-- Wait for physical component delivery and begin the actual machine assembly.
+- Maintain the software stack using the [Bi-Weekly Maintenance Loop](ai-guide.html#monitoring).
+- Periodically run `scripts/benchmark_ollama.py` to monitor for performance regressions after ROCm or engine updates.
 - Utilize the [AI Software Setup Guide](ai-guide.html) and [RSS Feeds](ai-feeds.opml) to configure the OS and agentic workflows once built.
 
 ## Working Rule
