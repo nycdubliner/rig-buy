@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Research: Executive Summary | Dual GPU Workstation</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Assuming a shared style exists, if not I will create it -->
+    <style>
+        :root {
+            --primary: #1e293b;
+            --secondary: #334155;
+            --accent: #2563eb;
+            --success: #10b981;
+            --text: #334155;
+            --bg: #f8fafc;
+            --border: #e2e8f0;
+        }
+        body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; padding: 0; }
+        header { background: var(--primary); color: white; padding: 2rem 1rem; text-align: center; }
+        nav { background: white; border-bottom: 1px solid var(--border); padding: 1rem; position: sticky; top: 0; z-index: 100; text-align: center; }
+        nav a { margin: 0 1rem; text-decoration: none; color: var(--secondary); font-weight: 600; }
+        nav a:hover { color: var(--accent); }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        .edd-box { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: var(--primary); }
+        .status-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600; background: var(--success); color: white; }
+        .matrix-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .matrix-table th, .matrix-table td { border: 1px solid var(--border); padding: 0.75rem; text-align: left; }
+        .matrix-table th { background: #f1f5f9; }
+        footer { text-align: center; padding: 2rem; color: #64748b; font-size: 0.875rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI Research & Engineering Decisions</h1>
+        <p>Project: Dual RX 7800 XT Optimized Workstation</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Executive Summary</a>
+        <a href="stack.html">Software Stack</a>
+        <a href="performance.html">Performance Data</a>
+        <a href="operations.html">Ops & Maintenance</a>
+        <a href="knowledge.html">Knowledge Base</a>
+    </nav>
+
+    <div class="container">
+        <div class="edd-box">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2>Engineering Decision Log</h2>
+                <span class="status-badge">Phase: Verified</span>
+            </div>
+            <p>This repository documents the architectural decisions, software evaluation, and performance baselines for a high-efficiency AI workstation delivered in May 2026.</p>
+            
+            <h3>1. The Problem Statement</h3>
+            <p>Design a local inference system capable of running 30B+ parameter models at >10 t/s within a €2,500 budget, optimized for agentic coding workloads (Aider, Cline) while avoiding the "EU Tech Tax."</p>
+
+            <h3>2. Key Decisions Matrix</h3>
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th>Decision</th>
+                        <th>Outcome</th>
+                        <th>Rationale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Hardware Platform</strong></td>
+                        <td>AM4 (Ryzen 9 5900X)</td>
+                        <td>Best "bang for buck" for multi-GPU PCIe lanes.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>GPU Selection</strong></td>
+                        <td>Dual RX 7800 XT (32GB Total)</td>
+                        <td>Best price-per-GB of VRAM in the RDNA3 lineup.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Backend Engine</strong></td>
+                        <td>llama.cpp (Vulkan)</td>
+                        <td>Vulkan out-performed native HIP by 47% in decode tasks.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OS</strong></td>
+                        <td>Ubuntu 26.04 LTS</td>
+                        <td>Kernel support for latest ROCm 7.1 drivers.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3. Research Findings Overview</h3>
+            <ul>
+                <li><strong>The 70B Trap:</strong> Quantization below 4-bit for 70B models leads to unacceptable latency and cognitive degradation. 32B is the "Goldilocks" zone.</li>
+                <li><strong>Backend Divergence:</strong> Native ROCm/HIP is superior for prompt ingestion (prefill), but Vulkan dominates token generation (decode).</li>
+                <li><strong>Agentic Utility:</strong> Local inference at ~24 t/s allows for sub-minute refactoring loops in agentic IDEs.</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <p>Explore the full technical breakdown:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <a href="stack.html" class="edd-box" style="text-decoration: none; padding: 1rem;">
+                    <h4>🚀 Stack Setup</h4>
+                    <p>Drivers, ROCm, and Engines.</p>
+                </a>
+                <a href="performance.html" class="edd-box" style="text-decoration: none; padding: 1rem;">
+                    <h4>📊 Benchmarks</h4>
+                    <p>HIP vs Vulkan comparisons.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Machine Build Quote Research Repository
+    </footer>
+</body>
+</html>

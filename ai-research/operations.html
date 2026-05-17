@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Research: Ops & Maintenance | Dual GPU Workstation</title>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --secondary: #334155;
+            --accent: #2563eb;
+            --text: #334155;
+            --bg: #f8fafc;
+            --border: #e2e8f0;
+            --warning: #f59e0b;
+        }
+        body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; padding: 0; }
+        header { background: var(--primary); color: white; padding: 1rem; text-align: center; }
+        nav { background: white; border-bottom: 1px solid var(--border); padding: 1rem; position: sticky; top: 0; z-index: 100; text-align: center; }
+        nav a { margin: 0 1rem; text-decoration: none; color: var(--secondary); font-weight: 600; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; }
+        .loop-box { border-left: 4px solid var(--accent); padding-left: 1.5rem; margin: 2rem 0; }
+        h1, h2, h3 { color: var(--primary); }
+    </style>
+</head>
+<body>
+    <header><h1>Operational Excellence</h1></header>
+    <nav>
+        <a href="index.html">Executive Summary</a>
+        <a href="stack.html">Software Stack</a>
+        <a href="performance.html">Performance Data</a>
+        <a href="operations.html">Ops & Maintenance</a>
+        <a href="knowledge.html">Knowledge Base</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>The Bi-Weekly Maintenance Loop</h2>
+            <p>To prevent performance regressions (bit-rot) and ensure model freshness, follow this engineering loop every 14 days.</p>
+            
+            <div class="loop-box">
+                <h3>Step 1: Driver Sync</h3>
+                <p>Update ROCm and the <code>amdgpu</code> kernel module. Check for new Vulkan/RADV optimizations in the Mesa drivers.</p>
+                
+                <h3>Step 2: Model Pruning</h3>
+                <p>Delete experimental models that failed the "Aider Benchmark" to free up NVMe space for high-rank GGUF quants.</p>
+                
+                <h3>Step 3: Performance Re-Baseline</h3>
+                <p>Run <code>scripts/benchmark_ollama.py</code> and compare results against the <a href="performance.html#visualizer">Visualizer baseline</a>. If decode speeds drop >10%, rollback the recent driver update.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Agentic Guardrails</h2>
+            <p>When running agents (Cline/Aider) locally, the primary failure mode is <strong>Context Overflow</strong>.</p>
+            <ul>
+                <li><strong>Ignore Strategy:</strong> Use <code>.aiderignore</code> to keep large binary files out of the LLM's context window.</li>
+                <li><strong>VRAM Monitoring:</strong> Use <code>rocm-smi</code> to ensure your context hasn't spilled into system RAM.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

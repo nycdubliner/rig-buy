@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Research: Software Stack | Dual GPU Workstation</title>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --secondary: #334155;
+            --accent: #2563eb;
+            --text: #334155;
+            --bg: #f8fafc;
+            --border: #e2e8f0;
+            --code-bg: #f1f5f9;
+        }
+        body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; padding: 0; }
+        header { background: var(--primary); color: white; padding: 1rem; text-align: center; }
+        nav { background: white; border-bottom: 1px solid var(--border); padding: 1rem; position: sticky; top: 0; z-index: 100; text-align: center; }
+        nav a { margin: 0 1rem; text-decoration: none; color: var(--secondary); font-weight: 600; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; }
+        pre { background: var(--code-bg); padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 0.9rem; }
+        code { font-family: 'JetBrains Mono', monospace; }
+        h1, h2, h3 { color: var(--primary); }
+    </style>
+</head>
+<body>
+    <header><h1>AI Software Stack</h1></header>
+    <nav>
+        <a href="index.html">Executive Summary</a>
+        <a href="stack.html">Software Stack</a>
+        <a href="performance.html">Performance Data</a>
+        <a href="operations.html">Ops & Maintenance</a>
+        <a href="knowledge.html">Knowledge Base</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>1. Operating System & Drivers</h2>
+            <p>For AMD RDNA3 architectures, high-bandwidth communication requires the latest ROCm stack. We recommend Ubuntu 26.04 for its native kernel support of RX 7000 series features.</p>
+            <pre><code># Install ROCm 7.1 stack
+sudo apt update
+sudo apt install -y rocm-dev rocm-smi
+# Verify installation
+rocm-smi</code></pre>
+        </div>
+
+        <div class="card">
+            <h2>2. Inference Engines</h2>
+            <h3>Ollama (The Desktop Standard)</h3>
+            <p>Ollama provides the best UX for rapid model testing and shared API access. It handles tensor splitting across both 7800 XT cards automatically.</p>
+            <pre><code># Installation
+curl -fsSL https://ollama.com/install.sh | sh
+# Run current benchmark model
+ollama run qwen2.5-coder:32b</code></pre>
+
+            <h3>llama.cpp (The Performance Choice)</h3>
+            <p>To maximize throughput, manual compilation with HIP (ROCm) or Vulkan backends is required.</p>
+            <pre><code># Build for RDNA3 (HIP)
+cmake .. -DGGML_HIP=ON -DGPU_TARGETS=gfx1101
+# Build for Vulkan (Maximum Decode)
+cmake .. -DGGML_VULKAN=ON</code></pre>
+        </div>
+
+        <div class="card">
+            <h2>3. Integration with Agentic Workflows</h2>
+            <p>Tools like <strong>Aider</strong> and <strong>Cline</strong> interact with this stack via the OpenAI-compatible API provided by Ollama (Port 11434).</p>
+            <pre><code># Environment override for Aider
+export OPENAI_API_BASE=http://localhost:11434/v1
+export OPENAI_API_KEY=unused
+aider --model openai/qwen2.5-coder:32b</code></pre>
+        </div>
+    </div>
+</body>
+</html>
