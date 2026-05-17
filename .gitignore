@@ -1,5 +1,12 @@
-node_modules/
+node_modules
 .DS_Store
+llama.cpp/
+models/
+*.json
+*.log
+!benchmark_results.json
+!llamacpp_*.json
+
 .gemini/
 tool-outputs/
 skills/*/user-data/

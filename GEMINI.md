@@ -5,11 +5,10 @@ Design and source a highly optimized, "bang for buck" dual RX 7800 XT AI worksta
 
 ## Current State
 - **Phase 2 Dual-GPU Build Assembled & Verified:** The rig is fully built and functional. (Total: €2,400.84).
-- **Dual-GPU Verification Complete:** Successfully verified both RX 7800 XT GPUs using Ollama with the Qwen 2.5 Coder 32B model. Tensor splitting across both cards is working with ~12GB/12GB VRAM distribution.
-- **AI Software Plan Expanded:** The documentation now includes a comparison of inference engines (Ollama, vLLM, llama.cpp), a "Bi-Weekly Maintenance Loop," and an interactive **Performance Visualizer**.
-- **Benchmarking Tools Integrated:** A Python script (`scripts/benchmark_ollama.py`) is available for measuring Prefill and Decode TPS, establishing a baseline of ~393 t/s (Prefill) and ~10.4 t/s (Decode) for 32B models.
-- **Upgraded Specs:** The build features a significant RAM upgrade to 128GB (Kingston Fury Renegade 3600MT/s) and a high-end FSP VITA GM 1000W ATX 3.1 PSU from GG Machines Dublin.
-- **Documentation Complete:** The GitHub Pages site contains the quote, vendor intelligence, physical assembly guide, and the expanded AI Software Guide.
+- **Full Engine Benchmarking Complete:** Benchmarked Ollama and llama.cpp (ROCm 7.1) with Qwen 2.5 Coder 32B and Gemma 2 27B.
+- **Performance Insights:** llama.cpp achieved **16.3 t/s** decode on Qwen 32B (56% faster than Ollama), while Ollama excelled on Gemma 2 27B at **30.4 t/s**.
+- **Automated Benchmarking Suite:** Added `scripts/benchmark_llamacpp.py` and `scripts/generate_graphs.py` to complement the Ollama suite.
+- **Documentation Updated:** The AI Software Guide now features comparative performance graphs and engine recommendations.
 - **Agent Capabilities:** The `logged-in-scraper` skill is globally installed and the "Jem's Browser" desktop app is available for bypassing bot protection.
 - Reusable skills live in `skills/`
 

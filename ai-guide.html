@@ -242,17 +242,33 @@ sudo usermod -a -G render $USER
         </div>
 
         <div class="card" id="benchmarks">
-            <h2>4. Benchmarks & Local Evaluation</h2>
-            <p>Do not rely on Twitter hype. Use specific, empirical benchmarks to evaluate new models.</p>
+            <h2>5. Benchmarks & Local Evaluation (May 2026 Update)</h2>
+            <p>We ran comprehensive benchmarks on the Dual RX 7800 XT system using <strong>Ollama</strong> and <strong>llama.cpp</strong> (compiled with ROCm 7.1 support). The models tested were the "current" heavyweights: <strong>Qwen 2.5 Coder 32B</strong> and <strong>Gemma 2 27B</strong>.</p>
             
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="benchmark_prefill.png" alt="Prefill Performance Graph" style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+                    <p style="text-align: center; font-size: 0.9rem; color: #64748b;">Prefill: Determining "Time to First Token"</p>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="benchmark_decode.png" alt="Decode Performance Graph" style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+                    <p style="text-align: center; font-size: 0.9rem; color: #64748b;">Decode: Generation speed (Tokens/Sec)</p>
+                </div>
+            </div>
+
+            <h3>Key Findings</h3>
             <ul>
-                <li><strong>The Aider LLM Leaderboard:</strong> Tests how well a model can read an existing, complex codebase, understand it, and surgically edit specific lines without breaking the file. The most important metric for agentic coding.</li>
-                <li><strong>SWE-bench:</strong> Tests a model's ability to autonomously navigate a massive repository, find a bug based on a GitHub issue, and generate a patch.</li>
-                <li><strong>LMSYS Chatbot Arena:</strong> A blind A/B testing leaderboard based on Elo ratings. Good for assessing "vibes" and instruction-following.</li>
+                <li><strong>llama.cpp wins on Qwen 32B:</strong> For the primary coding model, llama.cpp achieved <strong>16.3 t/s</strong> decode speed, a 56% improvement over Ollama's 10.4 t/s.</li>
+                <li><strong>Ollama excels at Gemma:</strong> For Gemma 2 27B, Ollama reached <strong>30.4 t/s</strong>, slightly outperforming llama.cpp. This suggests Ollama's built-in optimizations are well-tuned for Google's architecture.</li>
+                <li><strong>Prefill Speeds:</strong> llama.cpp showed superior raw prefill performance for large models, hitting over <strong>600 t/s</strong> on Qwen with a 1k context.</li>
             </ul>
 
-            <h3>Local Verification</h3>
-            <p>When you download a new model, test its <strong>Context Degradation</strong> (the "Needle in a Haystack" test). Dump 10 massive Golang files into the prompt and ask a specific question about a buried variable. If it hallucinates, the model's context window cannot handle agentic workloads.</p>
+            <div class="pro-tip">
+                <strong>Recommendation:</strong> Use <strong>Ollama</strong> for general chat and Gemma 2. Switch to <strong>llama.cpp</strong> when using Qwen 2.5 Coder for large codebase refactoring to maximize throughput.
+            </div>
+
+            <h3>vLLM Status</h3>
+            <p>vLLM installation on this Ubuntu 26.04 (Resolute) / ROCm 7.1 stack currently requires a manual build of <code>xformers</code> and <code>vllm-rocm</code> to align with the new Python 3.14 runtime. This is recommended only for production throughput needs.</p>
         </div>
 
         <div class="card" id="agentic">
