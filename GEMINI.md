@@ -13,9 +13,9 @@ Design and source a highly optimized, "bang for buck" dual RX 7800 XT AI worksta
 - Reusable skills live in `skills/`
 
 ## Next Steps
-- Maintain the software stack using the [Bi-Weekly Maintenance Loop](ai-research/operations.html).
+- Maintain the software stack using the [Bi-Weekly Maintenance Loop](archive/2026-05-22/operations.html).
 - Periodically run `scripts/benchmark_ollama.py` to monitor for performance regressions after ROCm or engine updates.
-- Utilize the [AI Software Setup Guide](ai-research/stack.html) and [RSS Feeds](ai-research/knowledge.html#feeds) to configure the OS and agentic workflows once built.
+- Utilize the [AI Software Setup Guide](archive/2026-05-22/stack.html) and [RSS Feeds](archive/2026-05-22/knowledge.html#feeds) to configure the OS and agentic workflows once built.
 
 ## Working Rule
 - **Definition of Done:** A task is only considered complete once the changes have been pushed to the GitHub repository and are live on the GitHub Pages site. Local commits are not sufficient; "Nothing is real until it's public."
