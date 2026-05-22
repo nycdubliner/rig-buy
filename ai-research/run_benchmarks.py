@@ -585,11 +585,13 @@ def generate_charts(current_results, history):
         height=650,
         showlegend=True,
         template="plotly_dark",
-        margin=dict(l=50, r=50, t=80, b=80),
+        margin=dict(l=50, r=50, t=80, b=140),
         legend=dict(
             orientation="h",
-            yanchor="top",
-            y=-0.12,
+            xref="container",
+            yref="container",
+            y=0.02,
+            yanchor="bottom",
             xanchor="center",
             x=0.5
         )
@@ -630,7 +632,7 @@ def generate_charts(current_results, history):
         df_sub = df_trends[df_trends["test_id"] == t_id].sort_values("date")
         
         color = "#1f77b4" if t_id == "Llama3_8B_FP8_vLLM" else "#ff7f0e"
-        name = "Llama3_8B_FP8_vLLM (vLLM Throughput - Batch 8)" if t_id == "Llama3_8B_FP8_vLLM" else "Llama3_8B_Q4_LlamaCpp (llama.cpp Latency - Batch 1)"
+        name = "Llama 3 8B FP8 (vLLM)" if t_id == "Llama3_8B_FP8_vLLM" else "Llama 3 8B Q4 (llama.cpp)"
         
         fig_trends.add_trace(
             go.Scatter(
@@ -652,11 +654,13 @@ def generate_charts(current_results, history):
         height=480,
         template="plotly_dark",
         showlegend=True,
-        margin=dict(l=50, r=50, t=80, b=100),
+        margin=dict(l=50, r=50, t=80, b=130),
         legend=dict(
             orientation="h",
-            yanchor="top",
-            y=-0.18,
+            xref="container",
+            yref="container",
+            y=0.02,
+            yanchor="bottom",
             xanchor="center",
             x=0.5
         )

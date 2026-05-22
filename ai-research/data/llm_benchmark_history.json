@@ -2392,5 +2392,209 @@
         "status": "SUCCESS"
       }
     ]
+  },
+  {
+    "metadata": {
+      "date": "2026-05-22T18:18:04Z",
+      "os_version": "Ubuntu 26.04 LTS",
+      "rocm_version": "7.2.3",
+      "python_version": "3.14.4",
+      "gpus": [
+        {
+          "id": 0,
+          "chipset": "Navi 32 [Radeon RX 7800 XT]",
+          "vram_gb": 16.0
+        },
+        {
+          "id": 1,
+          "chipset": "Navi 32 [Radeon RX 7800 XT]",
+          "vram_gb": 16.0
+        }
+      ],
+      "pcie_topology": "PCIe Gen 4 x8 (Max Speed: 16.0 GT/s PCIe)",
+      "host_cpu": "AMD Ryzen 9 5900X 12-Core Processor"
+    },
+    "commits": {
+      "vllm": {
+        "hash": "8437157",
+        "date": "2026-05-22T17:06:31Z"
+      },
+      "llama_cpp": {
+        "hash": "1acee6b",
+        "date": "2026-05-22T15:58:15Z"
+      },
+      "mlc_llm": {
+        "hash": "2008fe8",
+        "date": "2026-05-11T22:52:17Z"
+      },
+      "exllamav2": {
+        "hash": "7dc12af",
+        "date": "2026-03-04T13:12:19Z"
+      }
+    },
+    "results": [
+      {
+        "test_id": "Llama3_8B_FP8_vLLM",
+        "engine": "vLLM (Source/8437157)",
+        "backend": "ROCm",
+        "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+        "quantization": "FP8",
+        "parallelism": "PP=2 (Layer Split)",
+        "optimizations": "FlashAttention-v2, FP8 KV Cache",
+        "workload": "Batch=8",
+        "ttft_med": 36.76,
+        "ttft_p95": 36.88,
+        "tpot_med": 7.11,
+        "tpot_p95": 7.28,
+        "tokens_sec": 2531.6,
+        "vram_gpu0_gb": 9.2,
+        "vram_gpu1_gb": 9.2,
+        "status": "SUCCESS"
+      },
+      {
+        "test_id": "Llama3_8B_Q4_LlamaCpp",
+        "engine": "llama.cpp (Source)",
+        "backend": "hipBLAS (ROCm)",
+        "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+        "quantization": "GGUF (Q4_K_M)",
+        "parallelism": "PP=2 (Layer Split)",
+        "optimizations": "FlashAttention, Layer Offload",
+        "workload": "Batch=1",
+        "ttft_med": 27.28,
+        "ttft_p95": 28.44,
+        "tpot_med": 12.85,
+        "tpot_p95": 13.08,
+        "tokens_sec": 77.8,
+        "vram_gpu0_gb": 5.8,
+        "vram_gpu1_gb": 5.8,
+        "status": "SUCCESS"
+      },
+      {
+        "test_id": "Gemma4_26B_FP8_vLLM",
+        "engine": "vLLM (Source/8437157)",
+        "backend": "ROCm",
+        "model": "google/gemma-4-26b-a4b-it",
+        "quantization": "FP8",
+        "parallelism": "PP=2 (Layer Split)",
+        "optimizations": "FlashAttention-v2 (AITER Kernels)",
+        "workload": "Batch=1",
+        "ttft_med": 52.27,
+        "ttft_p95": 54.43,
+        "tpot_med": 10.84,
+        "tpot_p95": 11.45,
+        "tokens_sec": 92.3,
+        "vram_gpu0_gb": 13.8,
+        "vram_gpu1_gb": 13.8,
+        "status": "SUCCESS"
+      },
+      {
+        "test_id": "Gemma4_26B_FP8_vLLM_TP",
+        "engine": "vLLM (Source/8437157)",
+        "backend": "ROCm",
+        "model": "google/gemma-4-26b-a4b-it",
+        "quantization": "FP8",
+        "parallelism": "TP=2 (Tensor Parallel)",
+        "optimizations": "FlashAttention-v2 (AITER Kernels)",
+        "workload": "Batch=1",
+        "ttft_med": 114.92,
+        "ttft_p95": 120.35,
+        "tpot_med": 34.3,
+        "tpot_p95": 35.44,
+        "tokens_sec": 29.2,
+        "vram_gpu0_gb": 13.6,
+        "vram_gpu1_gb": 13.6,
+        "status": "SUCCESS"
+      },
+      {
+        "test_id": "Qwen35B_EXL2_ExLlama",
+        "engine": "ExLlamaV2 (Source/7dc12af)",
+        "backend": "ROCm",
+        "model": "Qwen/Qwen3.6-35B-A3B-Instruct",
+        "quantization": "EXL2 (4.0 bpw)",
+        "parallelism": "PP=2 (Layer Split)",
+        "optimizations": "FlashAttention, FP16 KV",
+        "workload": "Batch=1",
+        "ttft_med": 40.03,
+        "ttft_p95": 40.71,
+        "tpot_med": 9.46,
+        "tpot_p95": 9.74,
+        "tokens_sec": 105.7,
+        "vram_gpu0_gb": 9.8,
+        "vram_gpu1_gb": 9.8,
+        "status": "SUCCESS"
+      },
+      {
+        "test_id": "Gemma31B_AWQ_MLC",
+        "engine": "MLC LLM (Source/2008fe8)",
+        "backend": "Vulkan",
+        "model": "google/gemma-4-31b-it",
+        "quantization": "AWQ (4-bit)",
+        "parallelism": "PP=2 (Layer Split)",
+        "optimizations": "Speculative Decoding (Draft: Gemma 4 E2B)",
+        "workload": "Batch=1",
+        "ttft_med": 75.89,
+        "ttft_p95": 76.81,
+        "tpot_med": 8.11,
+        "tpot_p95": 8.17,
+        "tokens_sec": 123.3,
+        "vram_gpu0_gb": 10.5,
+        "vram_gpu1_gb": 10.5,
+        "status": "SUCCESS"
+      },
+      {
+        "test_id": "Llama4Scout_EXL2_ExLlama",
+        "engine": "ExLlamaV2 (Source/7dc12af)",
+        "backend": "ROCm",
+        "model": "meta-llama/Llama-4-Scout-it",
+        "quantization": "EXL2 (2.2 bpw)",
+        "parallelism": "PP=2 (Layer Split)",
+        "optimizations": "FlashAttention, FP8 KV Cache",
+        "workload": "Batch=1",
+        "ttft_med": 145.82,
+        "ttft_p95": 149.54,
+        "tpot_med": 22.8,
+        "tpot_p95": 23.35,
+        "tokens_sec": 43.9,
+        "vram_gpu0_gb": 15.1,
+        "vram_gpu1_gb": 15.1,
+        "status": "SUCCESS"
+      },
+      {
+        "test_id": "Qwen27B_FP8_vLLM",
+        "engine": "vLLM (Source/8437157)",
+        "backend": "ROCm",
+        "model": "Qwen/Qwen3.6-27B-Instruct",
+        "quantization": "FP8",
+        "parallelism": "PP=2 (Layer Split)",
+        "optimizations": "FlashAttention-v2, FP8 KV Cache",
+        "workload": "Batch=16",
+        "ttft_med": 92.84,
+        "ttft_p95": 95.7,
+        "tpot_med": 19.97,
+        "tpot_p95": 20.47,
+        "tokens_sec": 1226.8,
+        "vram_gpu0_gb": 14.8,
+        "vram_gpu1_gb": 14.8,
+        "status": "SUCCESS"
+      },
+      {
+        "test_id": "DeepSeek32B_Q4_LlamaCpp",
+        "engine": "llama.cpp (Source)",
+        "backend": "Vulkan",
+        "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "quantization": "GGUF (Q4_K_M)",
+        "parallelism": "PP=2 (Layer Split)",
+        "optimizations": "FlashAttention, Vulkan Shader compile",
+        "workload": "Batch=1",
+        "ttft_med": 42.65,
+        "ttft_p95": 44.29,
+        "tpot_med": 29.86,
+        "tpot_p95": 30.49,
+        "tokens_sec": 33.5,
+        "vram_gpu0_gb": 10.2,
+        "vram_gpu1_gb": 10.2,
+        "status": "SUCCESS"
+      }
+    ]
   }
 ]
