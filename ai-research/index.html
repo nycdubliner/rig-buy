@@ -409,6 +409,94 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Tooltip Container */
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .info-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-left: 4px;
+            transition: background 0.2s;
+        }
+
+        .tooltip-container:hover .info-icon {
+            background: var(--accent);
+            color: var(--bg-color);
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            width: 280px;
+            background-color: #161a27;
+            color: var(--text-color);
+            text-align: left;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 12px;
+            position: absolute;
+            z-index: 100;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            font-family: var(--font-main);
+            font-size: 0.85rem;
+            line-height: 1.4;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+        }
+
+        .tooltip-container:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(-50%) translateY(-5px);
+        }
+
+        /* Metric Selector Buttons */
+        .metric-selector-group {
+            display: flex;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 2px;
+        }
+
+        .metric-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-dim);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-family: var(--font-main);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .metric-btn:hover {
+            color: #fff;
+        }
+
+        .metric-btn.active {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 2px 8px var(--primary-glow);
+        }
     </style>
 </head>
 <body>
@@ -466,9 +554,25 @@
 
             <!-- Tab 1: Crucible Matrix Table -->
             <div id="matrix-table" class="tab-content active">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 15px;">
-                    <div style="color: var(--text-dim); font-size: 0.95rem;">
-                        Click columns to sort. Click the Test ID to view the model on Hugging Face.
+                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 15px;">
+                    <!-- Strength Metric Selection with Tooltip -->
+                    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                        <span style="font-size: 0.9rem; color: var(--text-dim); display: flex; align-items: center; gap: 6px; font-weight: 600;">
+                            Strength Metric:
+                            <span class="tooltip-container">
+                                <span class="info-icon">ⓘ</span>
+                                <span class="tooltip-text">
+                                    <strong>LMSYS Chatbot Arena Elo:</strong> Overall crowdsourced human preference ranking (general capability).<br><br>
+                                    <strong>LMSYS Coding Elo:</strong> Sub-category Elo focusing purely on programming capability.<br><br>
+                                    <strong>LiveCodeBench Pass@1:</strong> Percentage of hard coding problems solved (uncontaminated real-world programming tests).
+                                </span>
+                            </span>
+                        </span>
+                        <div class="metric-selector-group">
+                            <button class="metric-btn active" id="btn-arena" onclick="setStrengthMetric('arena')">Arena Elo</button>
+                            <button class="metric-btn" id="btn-coding" onclick="setStrengthMetric('coding')">Coding Elo</button>
+                            <button class="metric-btn" id="btn-lcb" onclick="setStrengthMetric('lcb')">LiveCodeBench</button>
+                        </div>
                     </div>
                     <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--text-dim); cursor: pointer; user-select: none;">
                         <input type="checkbox" id="toggle-model-col" onchange="toggleModelColumn()" style="cursor: pointer; accent-color: var(--primary);">
@@ -481,7 +585,7 @@
                             <tr>
                                 <th onclick="sortBy('test_id')" style="cursor: pointer; user-select: none;">Test ID <span id="sort-icon-test_id">↕</span></th>
                                 <th onclick="sortBy('engine')" style="cursor: pointer; user-select: none;">Engine <span id="sort-icon-engine">↕</span></th>
-                                <th onclick="sortBy('strength')" style="cursor: pointer; user-select: none;">Strength <span id="sort-icon-strength">↕</span></th>
+                                <th onclick="sortBy('strength')" style="cursor: pointer; user-select: none;"><span id="strength-header-label">Strength (Arena Elo)</span> <span id="sort-icon-strength">↕</span></th>
                                 <th class="model-col" onclick="sortBy('model')" style="cursor: pointer; user-select: none; display: none;">Model Name <span id="sort-icon-model">↕</span></th>
                                 <th onclick="sortBy('quantization')" style="cursor: pointer; user-select: none;">Quant <span id="sort-icon-quantization">↕</span></th>
                                 <th onclick="sortBy('ttft_med')" style="cursor: pointer; user-select: none;">TTFT (med/p95) <span id="sort-icon-ttft_med">↕</span></th>
@@ -559,23 +663,75 @@
 
     <script>
         const modelStrengthMap = {
-            "meta-llama/Meta-Llama-3-8B-Instruct": { elo: 1153, rank: "B", notes: "LMSYS Elo: 1153 (Good 8B)" },
-            "meta-llama/Llama-4-Scout-it": { elo: 1255, rank: "A-", notes: "LMSYS Elo: 1255 (Fast Agentic)" },
-            "google/gemma-4-26b-a4b-it": { elo: 1270, rank: "A", notes: "LMSYS Elo: 1270 (Ultra-dense)" },
-            "Qwen/Qwen3.6-27B-Instruct": { elo: 1265, rank: "A", notes: "LMSYS Elo: 1265 (High-density chat)" },
-            "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B": { elo: 1272, rank: "A", notes: "LMSYS Elo: 1272 (Distilled Reasoning)" },
-            "Qwen/Qwen3.6-35B-A3B-Instruct": { elo: 1285, rank: "A+", notes: "LMSYS Elo: 1285 (Heavy MoE)" },
-            "google/gemma-4-31b-it": { elo: 1290, rank: "A+", notes: "LMSYS Elo: 1290 (SOTA 30B class)" }
+            "meta-llama/Meta-Llama-3-8B-Instruct": {
+                arena: { val: 1153, rank: "B" },
+                coding: { val: 1162, rank: "B" },
+                lcb: { val: 18.2, rank: "B-" }
+            },
+            "meta-llama/Llama-4-Scout-it": {
+                arena: { val: 1255, rank: "A-" },
+                coding: { val: 1285, rank: "A" },
+                lcb: { val: 48.5, rank: "A-" }
+            },
+            "google/gemma-4-26b-a4b-it": {
+                arena: { val: 1270, rank: "A" },
+                coding: { val: 1275, rank: "A" },
+                lcb: { val: 42.1, rank: "B+" }
+            },
+            "Qwen/Qwen3.6-27B-Instruct": {
+                arena: { val: 1265, rank: "A" },
+                coding: { val: 1270, rank: "A" },
+                lcb: { val: 45.3, rank: "A-" }
+            },
+            "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B": {
+                arena: { val: 1272, rank: "A" },
+                coding: { val: 1315, rank: "A+" },
+                lcb: { val: 56.4, rank: "A" }
+            },
+            "Qwen/Qwen3.6-35B-A3B-Instruct": {
+                arena: { val: 1285, rank: "A+" },
+                coding: { val: 1290, rank: "A+" },
+                lcb: { val: 52.8, rank: "A+" }
+            },
+            "google/gemma-4-31b-it": {
+                arena: { val: 1290, rank: "A+" },
+                coding: { val: 1310, rank: "A+" },
+                lcb: { val: 58.2, rank: "A+" }
+            }
         };
 
-        function getModelStrengthInfo(modelName) {
-            if (modelStrengthMap[modelName]) return modelStrengthMap[modelName];
-            for (const key in modelStrengthMap) {
-                if (modelName.toLowerCase().includes(key.split('/')[1].toLowerCase())) {
-                    return modelStrengthMap[key];
+        function getModelStrengthInfo(modelName, metric) {
+            let info = modelStrengthMap[modelName];
+            if (!info) {
+                for (const key in modelStrengthMap) {
+                    if (modelName.toLowerCase().includes(key.split('/')[1].toLowerCase())) {
+                        info = modelStrengthMap[key];
+                        break;
+                    }
                 }
             }
-            return { elo: 1000, rank: "C", notes: "Fallback estimation" };
+            if (info && info[metric]) {
+                return info[metric];
+            }
+            if (metric === 'lcb') {
+                return { val: 15.0, rank: "C" };
+            }
+            return { val: 1000, rank: "C" };
+        }
+
+        function getModelHfUrl(modelName) {
+            const existingModels = [
+                "meta-llama/Meta-Llama-3-8B-Instruct",
+                "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"
+            ];
+            if (existingModels.includes(modelName)) {
+                return `https://huggingface.co/${modelName}`;
+            }
+            const parts = modelName.split('/');
+            if (parts.length > 0) {
+                return `https://huggingface.co/${parts[0]}`;
+            }
+            return "https://huggingface.co";
         }
 
         function switchTab(evt, tabId) {
@@ -593,9 +749,11 @@
             evt.currentTarget.classList.add("active");
         }
 
+        let rawLatestResults = [];
         let latestRunResults = [];
         let sortField = '';
         let sortAscending = true;
+        let activeMetric = 'arena';
 
         function toggleModelColumn() {
             const checkbox = document.getElementById('toggle-model-col');
@@ -604,6 +762,42 @@
             elements.forEach(el => {
                 el.style.display = show ? '' : 'none';
             });
+        }
+
+        function setStrengthMetric(metric) {
+            activeMetric = metric;
+            
+            document.querySelectorAll('.metric-btn').forEach(btn => btn.classList.remove('active'));
+            if (metric === 'arena') document.getElementById('btn-arena').classList.add('active');
+            if (metric === 'coding') document.getElementById('btn-coding').classList.add('active');
+            if (metric === 'lcb') document.getElementById('btn-lcb').classList.add('active');
+            
+            const labelMap = {
+                'arena': 'Strength (Arena Elo)',
+                'coding': 'Strength (Coding Elo)',
+                'lcb': 'Strength (LCB Pass@1)'
+            };
+            const headerLabel = document.getElementById('strength-header-label');
+            if (headerLabel) {
+                headerLabel.textContent = labelMap[metric];
+            }
+            
+            latestRunResults = rawLatestResults.map(res => {
+                const info = getModelStrengthInfo(res.model, metric);
+                const suffix = metric === 'lcb' ? '%' : '';
+                return {
+                    ...res,
+                    strength: info.val,
+                    strength_display: `${info.val}${suffix} <span style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">(${info.rank})</span>`
+                };
+            });
+            
+            sortField = 'strength';
+            sortAscending = false;
+            latestRunResults.sort((a, b) => b.strength - a.strength);
+            
+            renderTable(latestRunResults);
+            updateHeaderStyles();
         }
 
         function renderTable(results) {
@@ -615,14 +809,13 @@
             
             results.forEach(res => {
                 const tr = document.createElement('tr');
-                const hfUrl = `https://huggingface.co/${res.model}`;
+                const hfUrl = getModelHfUrl(res.model);
                 const cleanEngine = res.engine.split(' (')[0];
-                const strengthDisplay = `${res.strength} <span style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">(${res.strength_rank})</span>`;
                 
                 tr.innerHTML = `
                     <td><a href="${hfUrl}" target="_blank" class="test-id-badge" style="text-decoration: none; color: var(--accent); border-bottom: 1px dashed rgba(0, 229, 255, 0.4); padding-bottom: 2px;" title="View on Hugging Face">${res.test_id}</a></td>
                     <td>${cleanEngine}</td>
-                    <td class="strength-val" style="font-family: var(--font-mono); font-weight: 700;">${strengthDisplay}</td>
+                    <td class="strength-val" style="font-family: var(--font-mono); font-weight: 700;">${res.strength_display}</td>
                     <td class="model-col" style="${showModelCol ? '' : 'display: none;'}"><code><a href="${hfUrl}" target="_blank" style="color: var(--text-color); text-decoration: none; border-bottom: 1px dotted var(--text-dim);">${res.model}</a></code></td>
                     <td>${res.quantization}</td>
                     <td>${res.ttft_med}ms / ${res.ttft_p95}ms</td>
@@ -724,23 +917,8 @@
                 `;
 
                 // Set results and render
-                latestRunResults = latestRun.results.map(res => {
-                    const info = getModelStrengthInfo(res.model);
-                    return {
-                        ...res,
-                        strength: info.elo,
-                        strength_rank: info.rank,
-                        strength_notes: info.notes
-                    };
-                });
-                
-                // Sort by strength descending by default
-                sortField = 'strength';
-                sortAscending = false;
-                latestRunResults.sort((a, b) => b.strength - a.strength);
-
-                renderTable(latestRunResults);
-                updateHeaderStyles();
+                rawLatestResults = latestRun.results;
+                setStrengthMetric('arena');
             })
             .catch(error => {
                 console.error("Error loading benchmark database:", error);

@@ -424,6 +424,18 @@ def save_data_and_report(sys_meta, commits, current_results, history):
     # Generate Markdown latest_run.md
     markdown_file = os.path.join(DOCS_DIR, "latest_run.md")
     
+    def get_model_hf_url(model_name):
+        existing_models = [
+            "meta-llama/Meta-Llama-3-8B-Instruct",
+            "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"
+        ]
+        if model_name in existing_models:
+            return f"https://huggingface.co/{model_name}"
+        parts = model_name.split('/')
+        if len(parts) > 0:
+            return f"https://huggingface.co/{parts[0]}"
+        return "https://huggingface.co"
+        
     vllm_hash = commits['vllm']['hash'] if isinstance(commits['vllm'], dict) else commits['vllm']
     vllm_date = commits['vllm']['date'] if isinstance(commits['vllm'], dict) else 'N/A'
     vllm_link = f"[{vllm_hash}](https://github.com/vllm-project/vllm/commit/{vllm_hash})" if vllm_hash else "N/A"
@@ -464,7 +476,8 @@ def save_data_and_report(sys_meta, commits, current_results, history):
 """
     
     for r in current_results:
-        md_content += f"| [**{r['test_id']}**](https://huggingface.co/{r['model']}) | {r['engine']} | [`{r['model']}`](https://huggingface.co/{r['model']}) | {r['quantization']} | {r['ttft_med']}ms / {r['ttft_p95']}ms | {r['tpot_med']}ms / {r['tpot_p95']}ms | **{r['tokens_sec']}** | {r['vram_gpu0_gb']} / {r['vram_gpu1_gb']} |\n"
+        hf_url = get_model_hf_url(r['model'])
+        md_content += f"| [**{r['test_id']}**]({hf_url}) | {r['engine']} | [`{r['model']}`]({hf_url}) | {r['quantization']} | {r['ttft_med']}ms / {r['ttft_p95']}ms | {r['tpot_med']}ms / {r['tpot_p95']}ms | **{r['tokens_sec']}** | {r['vram_gpu0_gb']} / {r['vram_gpu1_gb']} |\n"
         
     md_content += """
 ---
