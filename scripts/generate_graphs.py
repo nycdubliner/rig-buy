@@ -9,14 +9,14 @@ def generate_graphs():
     # Prefill TPS (Prompt Evaluation)
     prefill_data = {
         'Ollama (HIP)': [327, 493],
-        'llama.cpp (HIP)': [494, 425],
+        'llama.cpp (HIP)': [496, 651],
         'llama.cpp (Vulkan)': [433, 539]
     }
     
     # Decode TPS (Token Generation)
     decode_data = {
         'Ollama (HIP)': [10.4, 30.4],
-        'llama.cpp (HIP)': [16.3, 29.5],
+        'llama.cpp (HIP)': [17.0, 28.9],
         'llama.cpp (Vulkan)': [24.0, 26.5]
     }
     

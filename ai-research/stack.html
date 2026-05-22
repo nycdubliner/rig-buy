@@ -72,6 +72,20 @@ export OPENAI_API_BASE=http://localhost:11434/v1
 export OPENAI_API_KEY=unused
 aider --model openai/qwen2.5-coder:32b</code></pre>
         </div>
+
+        <div class="card">
+            <h2>4. Troubleshooting & Known Issues</h2>
+            <h3>ROCm 7.2+ Linker Issue (Ubuntu 26.04)</h3>
+            <p>During compilation, the ROCm LLM linker (<code>ld.lld</code>) may fail with a missing dependency error on <code>libxml2.so.2</code>. Ubuntu 26.04 installs <code>libxml2.so.16</code> instead.</p>
+            <pre><code># Fix by symlinking the compatible system library:
+sudo ln -sf libxml2.so.16 /usr/lib/x86_64-linux-gnu/libxml2.so.2
+sudo ldconfig</code></pre>
+
+            <h3>Ollama Blob Directory Permissions</h3>
+            <p>When running custom benchmark scripts or accessing model blobs directly, the default restrictive permissions (<code>700</code>) on Ollama's storage directory can cause "Model not found" errors.</p>
+            <pre><code># Grant read/execute permissions to paths containing the blobs:
+sudo chmod 755 /usr/share/ollama /usr/share/ollama/.ollama /usr/share/ollama/.ollama/models /usr/share/ollama/.ollama/models/blobs</code></pre>
+        </div>
     </div>
 </body>
 </html>
