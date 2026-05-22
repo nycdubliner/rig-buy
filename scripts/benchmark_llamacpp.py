@@ -2,7 +2,7 @@ import subprocess
 import json
 import os
 
-LLAMA_BENCH_PATH = "/home/tdeburca/rig-buy/llama.cpp/build/bin/llama-bench"
+LLAMA_BENCH_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../llama.cpp/build/bin/llama-bench"))
 MODELS = {
     "qwen": "models/qwen2.5-coder-32b.gguf",
     "gemma": "models/gemma2-27b.gguf"
@@ -17,7 +17,10 @@ def run_bench(name, path):
         "-n", "128",
         "-o", "json"
     ]
-    result = subprocess.run(cmd, capture_output=True, text=True)
+    env = os.environ.copy()
+    bench_dir = os.path.dirname(LLAMA_BENCH_PATH)
+    env["LD_LIBRARY_PATH"] = f"{bench_dir}:{env.get('LD_LIBRARY_PATH', '')}"
+    result = subprocess.run(cmd, capture_output=True, text=True, env=env)
     if result.returncode == 0:
         with open(f"llamacpp_{name}.json", "w") as f:
             f.write(result.stdout)

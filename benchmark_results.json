@@ -48,5 +48,55 @@
                 }
             }
         }
+    },
+    {
+        "engine": "ollama",
+        "timestamp": "2026-05-22 15:15:11",
+        "results": {
+            "qwen2.5-coder:32b": {
+                "short": {
+                    "total_time": 36.75585143066667,
+                    "load_time": 0.898630169,
+                    "prefill_tokens": 44,
+                    "prefill_time": 0.18039790266666667,
+                    "prefill_tps": 334.7028036757384,
+                    "decode_tokens": 414,
+                    "decode_time": 35.461773085333334,
+                    "decode_tps": 10.302605636649073
+                },
+                "long": {
+                    "total_time": 3.992521327,
+                    "load_time": 0.10282465966666667,
+                    "prefill_tokens": 836,
+                    "prefill_time": 0.7908563823333333,
+                    "prefill_tps": 5615.198102810963,
+                    "decode_tokens": 32,
+                    "decode_time": 3.073112726666667,
+                    "decode_tps": 10.412927877138266
+                }
+            },
+            "gemma2:27b": {
+                "short": {
+                    "total_time": 8.477906372,
+                    "load_time": 1.0131488076666668,
+                    "prefill_tokens": 23,
+                    "prefill_time": 0.07861333266666666,
+                    "prefill_tps": 476.34937295396236,
+                    "decode_tokens": 207,
+                    "decode_time": 7.171795267666667,
+                    "decode_tps": 30.256262671827464
+                },
+                "long": {
+                    "total_time": 1.88452647,
+                    "load_time": 0.12185736166666666,
+                    "prefill_tokens": 916,
+                    "prefill_time": 0.404281149,
+                    "prefill_tps": 17663.99142448979,
+                    "decode_tokens": 40,
+                    "decode_time": 1.316474243,
+                    "decode_tps": 30.384210529678267
+                }
+            }
+        }
     }
 ]
