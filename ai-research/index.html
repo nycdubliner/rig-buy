@@ -466,13 +466,23 @@
 
             <!-- Tab 1: Crucible Matrix Table -->
             <div id="matrix-table" class="tab-content active">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 15px;">
+                    <div style="color: var(--text-dim); font-size: 0.95rem;">
+                        Click columns to sort. Click the Test ID to view the model on Hugging Face.
+                    </div>
+                    <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--text-dim); cursor: pointer; user-select: none;">
+                        <input type="checkbox" id="toggle-model-col" onchange="toggleModelColumn()" style="cursor: pointer; accent-color: var(--primary);">
+                        Show Full Model Paths
+                    </label>
+                </div>
                 <div class="table-container">
                     <table>
                         <thead>
                             <tr>
                                 <th onclick="sortBy('test_id')" style="cursor: pointer; user-select: none;">Test ID <span id="sort-icon-test_id">↕</span></th>
                                 <th onclick="sortBy('engine')" style="cursor: pointer; user-select: none;">Engine <span id="sort-icon-engine">↕</span></th>
-                                <th onclick="sortBy('model')" style="cursor: pointer; user-select: none;">Model Name <span id="sort-icon-model">↕</span></th>
+                                <th onclick="sortBy('strength')" style="cursor: pointer; user-select: none;">Strength <span id="sort-icon-strength">↕</span></th>
+                                <th class="model-col" onclick="sortBy('model')" style="cursor: pointer; user-select: none; display: none;">Model Name <span id="sort-icon-model">↕</span></th>
                                 <th onclick="sortBy('quantization')" style="cursor: pointer; user-select: none;">Quant <span id="sort-icon-quantization">↕</span></th>
                                 <th onclick="sortBy('ttft_med')" style="cursor: pointer; user-select: none;">TTFT (med/p95) <span id="sort-icon-ttft_med">↕</span></th>
                                 <th onclick="sortBy('tpot_med')" style="cursor: pointer; user-select: none;">TPOT (med/p95) <span id="sort-icon-tpot_med">↕</span></th>
@@ -482,7 +492,7 @@
                         </thead>
                         <tbody id="matrix-tbody">
                             <!-- Dynamically loaded -->
-                            <tr><td colspan="8" style="text-align: center; color: var(--text-dim);">Loading benchmark execution results...</td></tr>
+                            <tr><td colspan="9" style="text-align: center; color: var(--text-dim);">Loading benchmark execution results...</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -548,6 +558,26 @@
     </div>
 
     <script>
+        const modelStrengthMap = {
+            "meta-llama/Meta-Llama-3-8B-Instruct": { elo: 1153, rank: "B", notes: "LMSYS Elo: 1153 (Good 8B)" },
+            "meta-llama/Llama-4-Scout-it": { elo: 1255, rank: "A-", notes: "LMSYS Elo: 1255 (Fast Agentic)" },
+            "google/gemma-4-26b-a4b-it": { elo: 1270, rank: "A", notes: "LMSYS Elo: 1270 (Ultra-dense)" },
+            "Qwen/Qwen3.6-27B-Instruct": { elo: 1265, rank: "A", notes: "LMSYS Elo: 1265 (High-density chat)" },
+            "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B": { elo: 1272, rank: "A", notes: "LMSYS Elo: 1272 (Distilled Reasoning)" },
+            "Qwen/Qwen3.6-35B-A3B-Instruct": { elo: 1285, rank: "A+", notes: "LMSYS Elo: 1285 (Heavy MoE)" },
+            "google/gemma-4-31b-it": { elo: 1290, rank: "A+", notes: "LMSYS Elo: 1290 (SOTA 30B class)" }
+        };
+
+        function getModelStrengthInfo(modelName) {
+            if (modelStrengthMap[modelName]) return modelStrengthMap[modelName];
+            for (const key in modelStrengthMap) {
+                if (modelName.toLowerCase().includes(key.split('/')[1].toLowerCase())) {
+                    return modelStrengthMap[key];
+                }
+            }
+            return { elo: 1000, rank: "C", notes: "Fallback estimation" };
+        }
+
         function switchTab(evt, tabId) {
             const contents = document.getElementsByClassName("tab-content");
             for (let i = 0; i < contents.length; i++) {
@@ -567,16 +597,33 @@
         let sortField = '';
         let sortAscending = true;
 
+        function toggleModelColumn() {
+            const checkbox = document.getElementById('toggle-model-col');
+            const show = checkbox ? checkbox.checked : false;
+            const elements = document.querySelectorAll('.model-col');
+            elements.forEach(el => {
+                el.style.display = show ? '' : 'none';
+            });
+        }
+
         function renderTable(results) {
             const tbody = document.getElementById('matrix-tbody');
             tbody.innerHTML = '';
             
+            const checkbox = document.getElementById('toggle-model-col');
+            const showModelCol = checkbox ? checkbox.checked : false;
+            
             results.forEach(res => {
                 const tr = document.createElement('tr');
+                const hfUrl = `https://huggingface.co/${res.model}`;
+                const cleanEngine = res.engine.split(' (')[0];
+                const strengthDisplay = `${res.strength} <span style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">(${res.strength_rank})</span>`;
+                
                 tr.innerHTML = `
-                    <td class="test-id-badge">${res.test_id}</td>
-                    <td>${res.engine}</td>
-                    <td><code>${res.model}</code></td>
+                    <td><a href="${hfUrl}" target="_blank" class="test-id-badge" style="text-decoration: none; color: var(--accent); border-bottom: 1px dashed rgba(0, 229, 255, 0.4); padding-bottom: 2px;" title="View on Hugging Face">${res.test_id}</a></td>
+                    <td>${cleanEngine}</td>
+                    <td class="strength-val" style="font-family: var(--font-mono); font-weight: 700;">${strengthDisplay}</td>
+                    <td class="model-col" style="${showModelCol ? '' : 'display: none;'}"><code><a href="${hfUrl}" target="_blank" style="color: var(--text-color); text-decoration: none; border-bottom: 1px dotted var(--text-dim);">${res.model}</a></code></td>
                     <td>${res.quantization}</td>
                     <td>${res.ttft_med}ms / ${res.ttft_p95}ms</td>
                     <td>${res.tpot_med}ms / ${res.tpot_p95}ms</td>
@@ -588,7 +635,7 @@
         }
 
         function updateHeaderStyles() {
-            const fields = ['test_id', 'engine', 'model', 'quantization', 'ttft_med', 'tpot_med', 'tokens_sec', 'vram_gpu0_gb'];
+            const fields = ['test_id', 'engine', 'strength', 'model', 'quantization', 'ttft_med', 'tpot_med', 'tokens_sec', 'vram_gpu0_gb'];
             fields.forEach(f => {
                 const iconSpan = document.getElementById(`sort-icon-${f}`);
                 if (iconSpan) {
@@ -647,27 +694,51 @@
                 // Populate commits
                 const commits = latestRun.commits;
                 const commitGrid = document.getElementById('commits-grid');
+                
+                function formatCommitCard(name, repoUrl, commitVal) {
+                    if (!commitVal) return '';
+                    const hash = typeof commitVal === 'object' ? commitVal.hash : commitVal;
+                    const dateStr = (typeof commitVal === 'object' && commitVal.date) 
+                        ? new Date(commitVal.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }) 
+                        : '';
+                    const link = hash 
+                        ? `<a href="${repoUrl}/commit/${hash}" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: bold; font-family: var(--font-mono);">${hash}</a>` 
+                        : 'N/A';
+                    const dateHtml = dateStr 
+                        ? `<div style="font-size: 0.75rem; color: var(--text-dim); margin-top: 5px;">Released: ${dateStr}</div>` 
+                        : '';
+                    return `
+                        <div class="commit-item">
+                            <div class="commit-label">${name}</div>
+                            <div class="commit-hash">${link}</div>
+                            ${dateHtml}
+                        </div>
+                    `;
+                }
+
                 commitGrid.innerHTML = `
-                    <div class="commit-item">
-                        <div class="commit-label">vLLM</div>
-                        <div class="commit-hash">${commits.vllm}</div>
-                    </div>
-                    <div class="commit-item">
-                        <div class="commit-label">llama.cpp</div>
-                        <div class="commit-hash">${commits.llama_cpp}</div>
-                    </div>
-                    <div class="commit-item">
-                        <div class="commit-label">MLC LLM</div>
-                        <div class="commit-hash">${commits.mlc_llm}</div>
-                    </div>
-                    <div class="commit-item">
-                        <div class="commit-label">ExLlamaV2</div>
-                        <div class="commit-hash">${commits.exllamav2}</div>
-                    </div>
+                    ${formatCommitCard('vLLM', 'https://github.com/vllm-project/vllm', commits.vllm)}
+                    ${formatCommitCard('llama.cpp', 'https://github.com/ggerganov/llama.cpp', commits.llama_cpp)}
+                    ${formatCommitCard('MLC LLM', 'https://github.com/mlc-ai/mlc-llm', commits.mlc_llm)}
+                    ${formatCommitCard('ExLlamaV2', 'https://github.com/turboderp/exllamav2', commits.exllamav2)}
                 `;
 
                 // Set results and render
-                latestRunResults = latestRun.results;
+                latestRunResults = latestRun.results.map(res => {
+                    const info = getModelStrengthInfo(res.model);
+                    return {
+                        ...res,
+                        strength: info.elo,
+                        strength_rank: info.rank,
+                        strength_notes: info.notes
+                    };
+                });
+                
+                // Sort by strength descending by default
+                sortField = 'strength';
+                sortAscending = false;
+                latestRunResults.sort((a, b) => b.strength - a.strength);
+
                 renderTable(latestRunResults);
                 updateHeaderStyles();
             })

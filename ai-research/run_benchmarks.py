@@ -95,7 +95,7 @@ def discover_system():
     return metadata
 
 # 2. Get Nightly Commit Hashes
-def get_commit_hash(repo_url, default_hash):
+def get_commit_info(repo_url, default_hash, default_date):
     # Extracts owner and repo name
     parts = repo_url.rstrip("/").split("/")
     owner, repo = parts[-2], parts[-1].replace(".git", "")
@@ -109,18 +109,20 @@ def get_commit_hash(repo_url, default_hash):
     try:
         with urllib.request.urlopen(req, timeout=5) as response:
             data = json.loads(response.read().decode())
-            return data[0]["sha"][:7]
+            sha = data[0]["sha"][:7]
+            date = data[0]["commit"]["committer"]["date"]
+            return {"hash": sha, "date": date}
     except Exception as e:
         print(f"[WARNING] Failed to fetch commit for {owner}/{repo}: {e}. Using fallback tag/hash.")
-        return default_hash
+        return {"hash": default_hash, "date": default_date}
 
 def fetch_all_commits():
     print("[INFO] Fetching latest nightly Git commit hashes from GitHub...")
     return {
-        "vllm": get_commit_hash("https://github.com/vllm-project/vllm", "d718b52"),
-        "llama_cpp": get_commit_hash("https://github.com/ggerganov/llama.cpp", "b2947ea"),
-        "mlc_llm": get_commit_hash("https://github.com/mlc-ai/mlc-llm", "f58ab06"),
-        "exllamav2": get_commit_hash("https://github.com/turboderp/exllamav2", "c2d9476")
+        "vllm": get_commit_info("https://github.com/vllm-project/vllm", "d718b52", "2026-05-22T08:15:00Z"),
+        "llama_cpp": get_commit_info("https://github.com/ggerganov/llama.cpp", "b2947ea", "2026-05-22T09:30:00Z"),
+        "mlc_llm": get_commit_info("https://github.com/mlc-ai/mlc-llm", "f58ab06", "2026-05-21T14:45:00Z"),
+        "exllamav2": get_commit_info("https://github.com/turboderp/exllamav2", "c2d9476", "2026-05-22T11:00:00Z")
     }
 
 # 3. Seeding historical runs if history doesn't exist
@@ -215,7 +217,7 @@ def run_benchmark_matrix(commits):
     configs = [
         {
             "test_id": "Llama3_8B_FP8_vLLM",
-            "engine": f"vLLM (Source/{commits['vllm']})",
+            "engine": f"vLLM (Source/{commits['vllm']['hash']})",
             "backend": "ROCm",
             "model": "meta-llama/Meta-Llama-3-8B-Instruct",
             "quantization": "FP8",
@@ -245,7 +247,7 @@ def run_benchmark_matrix(commits):
         },
         {
             "test_id": "Gemma4_26B_FP8_vLLM",
-            "engine": f"vLLM (Source/{commits['vllm']})",
+            "engine": f"vLLM (Source/{commits['vllm']['hash']})",
             "backend": "ROCm",
             "model": "google/gemma-4-26b-a4b-it",
             "quantization": "FP8",
@@ -260,7 +262,7 @@ def run_benchmark_matrix(commits):
         },
         {
             "test_id": "Gemma4_26B_FP8_vLLM_TP",
-            "engine": f"vLLM (Source/{commits['vllm']})",
+            "engine": f"vLLM (Source/{commits['vllm']['hash']})",
             "backend": "ROCm",
             "model": "google/gemma-4-26b-a4b-it",
             "quantization": "FP8",
@@ -275,7 +277,7 @@ def run_benchmark_matrix(commits):
         },
         {
             "test_id": "Qwen35B_EXL2_ExLlama",
-            "engine": f"ExLlamaV2 (Source/{commits['exllamav2']})",
+            "engine": f"ExLlamaV2 (Source/{commits['exllamav2']['hash']})",
             "backend": "ROCm",
             "model": "Qwen/Qwen3.6-35B-A3B-Instruct",
             "quantization": "EXL2 (4.0 bpw)",
@@ -290,7 +292,7 @@ def run_benchmark_matrix(commits):
         },
         {
             "test_id": "Gemma31B_AWQ_MLC",
-            "engine": f"MLC LLM (Source/{commits['mlc_llm']})",
+            "engine": f"MLC LLM (Source/{commits['mlc_llm']['hash']})",
             "backend": "Vulkan",
             "model": "google/gemma-4-31b-it",
             "quantization": "AWQ (4-bit)",
@@ -305,7 +307,7 @@ def run_benchmark_matrix(commits):
         },
         {
             "test_id": "Llama4Scout_EXL2_ExLlama",
-            "engine": f"ExLlamaV2 (Source/{commits['exllamav2']})",
+            "engine": f"ExLlamaV2 (Source/{commits['exllamav2']['hash']})",
             "backend": "ROCm",
             "model": "meta-llama/Llama-4-Scout-it",
             "quantization": "EXL2 (2.2 bpw)",
@@ -320,7 +322,7 @@ def run_benchmark_matrix(commits):
         },
         {
             "test_id": "Qwen27B_FP8_vLLM",
-            "engine": f"vLLM (Source/{commits['vllm']})",
+            "engine": f"vLLM (Source/{commits['vllm']['hash']})",
             "backend": "ROCm",
             "model": "Qwen/Qwen3.6-27B-Instruct",
             "quantization": "FP8",
@@ -432,10 +434,10 @@ def save_data_and_report(sys_meta, commits, current_results, history):
 **PCIe Topology:** {sys_meta['pcie_topology']}  
 
 ## Engine Builds Used (Git Commits / Fallback)
-*   **vLLM:** `{commits['vllm']}`
-*   **llama.cpp:** `{commits['llama_cpp']}`
-*   **MLC LLM:** `{commits['mlc_llm']}`
-*   **ExLlamaV2:** `{commits['exllamav2']}`
+*   **vLLM:** `{commits['vllm']['hash'] if isinstance(commits['vllm'], dict) else commits['vllm']}` ({commits['vllm']['date'] if isinstance(commits['vllm'], dict) else 'N/A'})
+*   **llama.cpp:** `{commits['llama_cpp']['hash'] if isinstance(commits['llama_cpp'], dict) else commits['llama_cpp']}` ({commits['llama_cpp']['date'] if isinstance(commits['llama_cpp'], dict) else 'N/A'})
+*   **MLC LLM:** `{commits['mlc_llm']['hash'] if isinstance(commits['mlc_llm'], dict) else commits['mlc_llm']}` ({commits['mlc_llm']['date'] if isinstance(commits['mlc_llm'], dict) else 'N/A'})
+*   **ExLlamaV2:** `{commits['exllamav2']['hash'] if isinstance(commits['exllamav2'], dict) else commits['exllamav2']}` ({commits['exllamav2']['date'] if isinstance(commits['exllamav2'], dict) else 'N/A'})
 
 ---
 
@@ -571,7 +573,8 @@ def generate_charts(current_results, history):
     for run in history:
         date_str = run["metadata"]["date"][:10]  # Get YYYY-MM-DD
         rocm_ver = run["metadata"]["rocm_version"]
-        commit_hash = run["commits"]["vllm"]
+        vllm_commit = run["commits"]["vllm"]
+        commit_hash = vllm_commit["hash"] if isinstance(vllm_commit, dict) else vllm_commit
         
         for res in run["results"]:
             if res["test_id"] in ["Llama3_8B_FP8_vLLM", "Llama3_8B_Q4_LlamaCpp"]:

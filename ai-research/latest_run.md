@@ -1,6 +1,6 @@
 # Latest Benchmark Run Report
 
-**Date:** 2026-05-22T17:26:45Z  
+**Date:** 2026-05-22T17:44:04Z  
 **OS Version:** Ubuntu 26.04 LTS  
 **ROCm SDK Version:** 7.2.3  
 **Python Environment:** Python 3.14.4  
@@ -8,10 +8,10 @@
 **PCIe Topology:** PCIe Gen 4 x8 (Max Speed: 16.0 GT/s PCIe)  
 
 ## Engine Builds Used (Git Commits / Fallback)
-*   **vLLM:** `8437157`
-*   **llama.cpp:** `1acee6b`
-*   **MLC LLM:** `2008fe8`
-*   **ExLlamaV2:** `7dc12af`
+*   **vLLM:** `8437157` (2026-05-22T17:06:31Z)
+*   **llama.cpp:** `1acee6b` (2026-05-22T15:58:15Z)
+*   **MLC LLM:** `2008fe8` (2026-05-11T22:52:17Z)
+*   **ExLlamaV2:** `7dc12af` (2026-03-04T13:12:19Z)
 
 ---
 
@@ -19,15 +19,15 @@
 
 | Test ID | Engine | Model | Quant | TTFT (med/p95) | TPOT (med/p95) | Throughput (tok/sec) | VRAM (GPU0/1 GB) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Llama3_8B_FP8_vLLM** | vLLM (Source/8437157) | `meta-llama/Meta-Llama-3-8B-Instruct` | FP8 | 36.37ms / 37.57ms | 7.22ms / 7.29ms | **2493.1** | 9.2 / 9.2 |
-| **Llama3_8B_Q4_LlamaCpp** | llama.cpp (Source) | `meta-llama/Meta-Llama-3-8B-Instruct` | GGUF (Q4_K_M) | 26.93ms / 28.11ms | 13.07ms / 13.28ms | **76.5** | 5.8 / 5.8 |
-| **Gemma4_26B_FP8_vLLM** | vLLM (Source/8437157) | `google/gemma-4-26b-a4b-it` | FP8 | 50.77ms / 52.97ms | 10.9ms / 11.39ms | **91.7** | 13.8 / 13.8 |
-| **Gemma4_26B_FP8_vLLM_TP** | vLLM (Source/8437157) | `google/gemma-4-26b-a4b-it` | FP8 | 117.83ms / 120.6ms | 33.6ms / 34.46ms | **29.8** | 13.6 / 13.6 |
-| **Qwen35B_EXL2_ExLlama** | ExLlamaV2 (Source/7dc12af) | `Qwen/Qwen3.6-35B-A3B-Instruct` | EXL2 (4.0 bpw) | 39.14ms / 40.35ms | 9.33ms / 9.57ms | **107.2** | 9.8 / 9.8 |
-| **Gemma31B_AWQ_MLC** | MLC LLM (Source/2008fe8) | `google/gemma-4-31b-it` | AWQ (4-bit) | 76.37ms / 78.37ms | 8.3ms / 8.38ms | **120.5** | 10.5 / 10.5 |
-| **Llama4Scout_EXL2_ExLlama** | ExLlamaV2 (Source/7dc12af) | `meta-llama/Llama-4-Scout-it` | EXL2 (2.2 bpw) | 148.62ms / 151.82ms | 22.6ms / 23.36ms | **44.2** | 15.1 / 15.1 |
-| **Qwen27B_FP8_vLLM** | vLLM (Source/8437157) | `Qwen/Qwen3.6-27B-Instruct` | FP8 | 93.58ms / 96.76ms | 19.63ms / 20.49ms | **1248.1** | 14.8 / 14.8 |
-| **DeepSeek32B_Q4_LlamaCpp** | llama.cpp (Source) | `deepseek-ai/DeepSeek-R1-Distill-Qwen-32B` | GGUF (Q4_K_M) | 42.69ms / 44.16ms | 29.97ms / 30.23ms | **33.4** | 10.2 / 10.2 |
+| **Llama3_8B_FP8_vLLM** | vLLM (Source/8437157) | `meta-llama/Meta-Llama-3-8B-Instruct` | FP8 | 37.55ms / 38.11ms | 7.11ms / 7.27ms | **2531.6** | 9.2 / 9.2 |
+| **Llama3_8B_Q4_LlamaCpp** | llama.cpp (Source) | `meta-llama/Meta-Llama-3-8B-Instruct` | GGUF (Q4_K_M) | 27.41ms / 27.87ms | 12.92ms / 13.2ms | **77.4** | 5.8 / 5.8 |
+| **Gemma4_26B_FP8_vLLM** | vLLM (Source/8437157) | `google/gemma-4-26b-a4b-it` | FP8 | 53.25ms / 54.21ms | 11.04ms / 11.38ms | **90.6** | 13.8 / 13.8 |
+| **Gemma4_26B_FP8_vLLM_TP** | vLLM (Source/8437157) | `google/gemma-4-26b-a4b-it` | FP8 | 115.79ms / 118.4ms | 34.44ms / 35.65ms | **29.0** | 13.6 / 13.6 |
+| **Qwen35B_EXL2_ExLlama** | ExLlamaV2 (Source/7dc12af) | `Qwen/Qwen3.6-35B-A3B-Instruct` | EXL2 (4.0 bpw) | 37.84ms / 40.79ms | 9.38ms / 9.43ms | **106.6** | 9.8 / 9.8 |
+| **Gemma31B_AWQ_MLC** | MLC LLM (Source/2008fe8) | `google/gemma-4-31b-it` | AWQ (4-bit) | 73.76ms / 77.47ms | 8.0ms / 8.29ms | **125.0** | 10.5 / 10.5 |
+| **Llama4Scout_EXL2_ExLlama** | ExLlamaV2 (Source/7dc12af) | `meta-llama/Llama-4-Scout-it` | EXL2 (2.2 bpw) | 146.01ms / 152.29ms | 22.21ms / 23.17ms | **45.0** | 15.1 / 15.1 |
+| **Qwen27B_FP8_vLLM** | vLLM (Source/8437157) | `Qwen/Qwen3.6-27B-Instruct` | FP8 | 89.15ms / 94.86ms | 20.27ms / 20.38ms | **1208.7** | 14.8 / 14.8 |
+| **DeepSeek32B_Q4_LlamaCpp** | llama.cpp (Source) | `deepseek-ai/DeepSeek-R1-Distill-Qwen-32B` | GGUF (Q4_K_M) | 41.33ms / 43.73ms | 28.76ms / 29.34ms | **34.8** | 10.2 / 10.2 |
 
 ---
 
