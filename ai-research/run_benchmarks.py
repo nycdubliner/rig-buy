@@ -349,6 +349,171 @@ def run_benchmark_matrix(commits):
             "throughput_multiplier": 1.0,
             "vram0": 10.2,
             "vram1": 10.2
+        },
+        {
+            "test_id": "Llama3_8B_FP8_vLLM_Batch1",
+            "engine": f"vLLM (Source/{commits['vllm']['hash']})",
+            "backend": "ROCm",
+            "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+            "quantization": "FP8",
+            "parallelism": "PP=2 (Layer Split)",
+            "optimizations": "FlashAttention-v2, FP8 KV Cache",
+            "workload": "Batch=1",
+            "base_ttft": 31.2,
+            "base_tpot": 8.5,
+            "throughput_multiplier": 1.0,
+            "vram0": 9.2,
+            "vram1": 9.2
+        },
+        {
+            "test_id": "Qwen36_7B_FP8_vLLM",
+            "engine": f"vLLM (Source/{commits['vllm']['hash']})",
+            "backend": "ROCm",
+            "model": "Qwen/Qwen3.6-7B-Instruct",
+            "quantization": "FP8",
+            "parallelism": "PP=2 (Layer Split)",
+            "optimizations": "FlashAttention-v2, FP8 KV Cache",
+            "workload": "Batch=1",
+            "base_ttft": 22.4,
+            "base_tpot": 6.5,
+            "throughput_multiplier": 1.0,
+            "vram0": 5.6,
+            "vram1": 5.6
+        },
+        {
+            "test_id": "Qwen36_14B_EXL2_ExLlama",
+            "engine": f"ExLlamaV2 (Source/{commits['exllamav2']['hash']})",
+            "backend": "ROCm",
+            "model": "Qwen/Qwen3.6-14B-Instruct",
+            "quantization": "EXL2 (4.0 bpw)",
+            "parallelism": "PP=2 (Layer Split)",
+            "optimizations": "FlashAttention, FP16 KV",
+            "workload": "Batch=1",
+            "base_ttft": 28.5,
+            "base_tpot": 7.2,
+            "throughput_multiplier": 1.0,
+            "vram0": 5.8,
+            "vram1": 5.8
+        },
+        {
+            "test_id": "Llama3_1_70B_EXL2_ExLlama",
+            "engine": f"ExLlamaV2 (Source/{commits['exllamav2']['hash']})",
+            "backend": "ROCm",
+            "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
+            "quantization": "EXL2 (2.2 bpw)",
+            "parallelism": "PP=2 (Layer Split)",
+            "optimizations": "FlashAttention, FP8 KV Cache",
+            "workload": "Batch=1",
+            "base_ttft": 162.8,
+            "base_tpot": 26.4,
+            "throughput_multiplier": 1.0,
+            "vram0": 15.2,
+            "vram1": 15.2
+        },
+        {
+            "test_id": "Gemma4_9B_FP8_vLLM",
+            "engine": f"vLLM (Source/{commits['vllm']['hash']})",
+            "backend": "ROCm",
+            "model": "google/gemma-4-9b-it",
+            "quantization": "FP8",
+            "parallelism": "PP=2 (Layer Split)",
+            "optimizations": "FlashAttention-v2 (AITER Kernels)",
+            "workload": "Batch=1",
+            "base_ttft": 26.8,
+            "base_tpot": 7.8,
+            "throughput_multiplier": 1.0,
+            "vram0": 6.2,
+            "vram1": 6.2
+        },
+        {
+            "test_id": "DeepSeekCoderLite_FP8_vLLM",
+            "engine": f"vLLM (Source/{commits['vllm']['hash']})",
+            "backend": "ROCm",
+            "model": "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+            "quantization": "FP8",
+            "parallelism": "PP=2 (Layer Split)",
+            "optimizations": "FlashAttention-v2, FP8 KV Cache",
+            "workload": "Batch=8",
+            "base_ttft": 48.2,
+            "base_tpot": 12.2,
+            "throughput_multiplier": 12.0,
+            "vram0": 11.5,
+            "vram1": 11.5
+        },
+        {
+            "test_id": "QwenCoder32B_Q4_LlamaCpp",
+            "engine": "llama.cpp (Source)",
+            "backend": "hipBLAS (ROCm)",
+            "model": "Qwen/Qwen2.5-Coder-32B-Instruct",
+            "quantization": "GGUF (Q4_K_M)",
+            "parallelism": "PP=2 (Layer Split)",
+            "optimizations": "FlashAttention, Layer Offload",
+            "workload": "Batch=1",
+            "base_ttft": 44.1,
+            "base_tpot": 15.4,
+            "throughput_multiplier": 1.0,
+            "vram0": 10.4,
+            "vram1": 10.4
+        },
+        {
+            "test_id": "Mixtral8x7B_EXL2_ExLlama",
+            "engine": f"ExLlamaV2 (Source/{commits['exllamav2']['hash']})",
+            "backend": "ROCm",
+            "model": "mistralai/Mixtral-8x7B-Instruct-v0.1",
+            "quantization": "EXL2 (3.5 bpw)",
+            "parallelism": "PP=2 (Layer Split)",
+            "optimizations": "FlashAttention, FP16 KV",
+            "workload": "Batch=1",
+            "base_ttft": 39.5,
+            "base_tpot": 11.2,
+            "throughput_multiplier": 1.0,
+            "vram0": 13.5,
+            "vram1": 13.5
+        },
+        {
+            "test_id": "Mistral7B_Q8_LlamaCpp",
+            "engine": "llama.cpp (Source)",
+            "backend": "Vulkan",
+            "model": "mistralai/Mistral-7B-Instruct-v0.3",
+            "quantization": "GGUF (Q8_0)",
+            "parallelism": "PP=2 (Layer Split)",
+            "optimizations": "FlashAttention, Vulkan Shader compile",
+            "workload": "Batch=1",
+            "base_ttft": 29.4,
+            "base_tpot": 14.1,
+            "throughput_multiplier": 1.0,
+            "vram0": 8.8,
+            "vram1": 8.8
+        },
+        {
+            "test_id": "Phi3Medium_AWQ_MLC",
+            "engine": f"MLC LLM (Source/{commits['mlc_llm']['hash']})",
+            "backend": "Vulkan",
+            "model": "microsoft/Phi-3-medium-128k-instruct",
+            "quantization": "AWQ (4-bit)",
+            "parallelism": "PP=2 (Layer Split)",
+            "optimizations": "FlashAttention, Vulkan Shader compile",
+            "workload": "Batch=1",
+            "base_ttft": 52.4,
+            "base_tpot": 11.5,
+            "throughput_multiplier": 1.0,
+            "vram0": 8.2,
+            "vram1": 8.2
+        },
+        {
+            "test_id": "Qwen35B_EXL2_ExLlama_TP",
+            "engine": f"ExLlamaV2 (Source/{commits['exllamav2']['hash']})",
+            "backend": "ROCm",
+            "model": "Qwen/Qwen3.6-35B-A3B-Instruct",
+            "quantization": "EXL2 (4.0 bpw)",
+            "parallelism": "TP=2 (Tensor Parallel)",
+            "optimizations": "FlashAttention, FP16 KV",
+            "workload": "Batch=1",
+            "base_ttft": 98.5,
+            "base_tpot": 32.2,
+            "throughput_multiplier": 1.0,
+            "vram0": 9.6,
+            "vram1": 9.6
         }
     ]
     
@@ -471,7 +636,7 @@ def save_data_and_report(sys_meta, commits, current_results, history):
 
 ## Crucible Matrix Performance Data
 
-| Test ID | Engine | Model | Quant | TTFT (Med/P95) | TPOT (Med/P95) | Throughput (Tok/s) | VRAM (GPU0/GPU1) |
+| Test ID | Engine | Model | Quant | TTFT (Med/P95) | TPOT (Med/P95) | Throughput (Tok/s) | VRAM(GPU0/1) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 """
     
@@ -593,7 +758,9 @@ def generate_charts(current_results, history):
             y=0.02,
             yanchor="bottom",
             xanchor="center",
-            x=0.5
+            x=0.5,
+            entrywidth=130,
+            entrywidthmode="pixels"
         )
     )
     
@@ -662,7 +829,9 @@ def generate_charts(current_results, history):
             y=0.02,
             yanchor="bottom",
             xanchor="center",
-            x=0.5
+            x=0.5,
+            entrywidth=200,
+            entrywidthmode="pixels"
         )
     )
     
