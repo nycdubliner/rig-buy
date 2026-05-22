@@ -6,6 +6,7 @@ models/
 *.log
 !benchmark_results.json
 !llamacpp_*.json
+!ai-research/data/*.json
 
 .gemini/
 tool-outputs/
