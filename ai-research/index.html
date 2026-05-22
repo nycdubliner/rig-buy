@@ -521,7 +521,7 @@
                         <p>For standard single-user interactive generation, compiling models to MLC LLM Vulkan shaders combined with target-draft speculative decoding is the fastest approach on Navi 32.</p>
                         <div class="rec-metric">
                             <div class="rec-metric-title">Optimal Config</div>
-                            <div class="rec-metric-value">Gemma 4 31B (AWQ) + Speculative</div>
+                            <div class="rec-metric-value"><a href="https://huggingface.co/google/gemma-4-31b-it" target="_blank" style="color: inherit; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(255,255,255,0.3);">Gemma 4 31B</a> (AWQ) + Speculative</div>
                             <div class="rec-metric-title" style="margin-top: 10px;">Performance</div>
                             <div class="rec-metric-value" style="color: var(--accent);">123.6 Tokens / Second</div>
                         </div>
@@ -532,7 +532,7 @@
                         <p>For processing bulk document queues, running models in vLLM with PagedAttention and native FP8 quantizations yields optimal GPU compute density and memory throughput scaling.</p>
                         <div class="rec-metric">
                             <div class="rec-metric-title">Optimal Config</div>
-                            <div class="rec-metric-value">Qwen 3.6 27B (FP8) @ Batch=16</div>
+                            <div class="rec-metric-value"><a href="https://huggingface.co/Qwen/Qwen3.6-27B-Instruct" target="_blank" style="color: inherit; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(255,255,255,0.3);">Qwen 3.6 27B</a> (FP8) @ Batch=16</div>
                             <div class="rec-metric-title" style="margin-top: 10px;">Performance</div>
                             <div class="rec-metric-value" style="color: var(--accent);">1217.1 Tokens / Second</div>
                         </div>

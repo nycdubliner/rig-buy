@@ -424,6 +424,22 @@ def save_data_and_report(sys_meta, commits, current_results, history):
     # Generate Markdown latest_run.md
     markdown_file = os.path.join(DOCS_DIR, "latest_run.md")
     
+    vllm_hash = commits['vllm']['hash'] if isinstance(commits['vllm'], dict) else commits['vllm']
+    vllm_date = commits['vllm']['date'] if isinstance(commits['vllm'], dict) else 'N/A'
+    vllm_link = f"[{vllm_hash}](https://github.com/vllm-project/vllm/commit/{vllm_hash})" if vllm_hash else "N/A"
+
+    llama_cpp_hash = commits['llama_cpp']['hash'] if isinstance(commits['llama_cpp'], dict) else commits['llama_cpp']
+    llama_cpp_date = commits['llama_cpp']['date'] if isinstance(commits['llama_cpp'], dict) else 'N/A'
+    llama_cpp_link = f"[{llama_cpp_hash}](https://github.com/ggerganov/llama.cpp/commit/{llama_cpp_hash})" if llama_cpp_hash else "N/A"
+
+    mlc_llm_hash = commits['mlc_llm']['hash'] if isinstance(commits['mlc_llm'], dict) else commits['mlc_llm']
+    mlc_llm_date = commits['mlc_llm']['date'] if isinstance(commits['mlc_llm'], dict) else 'N/A'
+    mlc_llm_link = f"[{mlc_llm_hash}](https://github.com/mlc-ai/mlc-llm/commit/{mlc_llm_hash})" if mlc_llm_hash else "N/A"
+
+    exllamav2_hash = commits['exllamav2']['hash'] if isinstance(commits['exllamav2'], dict) else commits['exllamav2']
+    exllamav2_date = commits['exllamav2']['date'] if isinstance(commits['exllamav2'], dict) else 'N/A'
+    exllamav2_link = f"[{exllamav2_hash}](https://github.com/turboderp/exllamav2/commit/{exllamav2_hash})" if exllamav2_hash else "N/A"
+
     md_content = f"""# Latest Benchmark Run Report
 
 **Date:** {sys_meta['date']}  
@@ -434,10 +450,10 @@ def save_data_and_report(sys_meta, commits, current_results, history):
 **PCIe Topology:** {sys_meta['pcie_topology']}  
 
 ## Engine Builds Used (Git Commits / Fallback)
-*   **vLLM:** `{commits['vllm']['hash'] if isinstance(commits['vllm'], dict) else commits['vllm']}` ({commits['vllm']['date'] if isinstance(commits['vllm'], dict) else 'N/A'})
-*   **llama.cpp:** `{commits['llama_cpp']['hash'] if isinstance(commits['llama_cpp'], dict) else commits['llama_cpp']}` ({commits['llama_cpp']['date'] if isinstance(commits['llama_cpp'], dict) else 'N/A'})
-*   **MLC LLM:** `{commits['mlc_llm']['hash'] if isinstance(commits['mlc_llm'], dict) else commits['mlc_llm']}` ({commits['mlc_llm']['date'] if isinstance(commits['mlc_llm'], dict) else 'N/A'})
-*   **ExLlamaV2:** `{commits['exllamav2']['hash'] if isinstance(commits['exllamav2'], dict) else commits['exllamav2']}` ({commits['exllamav2']['date'] if isinstance(commits['exllamav2'], dict) else 'N/A'})
+*   **vLLM:** {vllm_link} ({vllm_date})
+*   **llama.cpp:** {llama_cpp_link} ({llama_cpp_date})
+*   **MLC LLM:** {mlc_llm_link} ({mlc_llm_date})
+*   **ExLlamaV2:** {exllamav2_link} ({exllamav2_date})
 
 ---
 
@@ -448,7 +464,7 @@ def save_data_and_report(sys_meta, commits, current_results, history):
 """
     
     for r in current_results:
-        md_content += f"| **{r['test_id']}** | {r['engine']} | `{r['model']}` | {r['quantization']} | {r['ttft_med']}ms / {r['ttft_p95']}ms | {r['tpot_med']}ms / {r['tpot_p95']}ms | **{r['tokens_sec']}** | {r['vram_gpu0_gb']} / {r['vram_gpu1_gb']} |\n"
+        md_content += f"| [**{r['test_id']}**](https://huggingface.co/{r['model']}) | {r['engine']} | [`{r['model']}`](https://huggingface.co/{r['model']}) | {r['quantization']} | {r['ttft_med']}ms / {r['ttft_p95']}ms | {r['tpot_med']}ms / {r['tpot_p95']}ms | **{r['tokens_sec']}** | {r['vram_gpu0_gb']} / {r['vram_gpu1_gb']} |\n"
         
     md_content += """
 ---
