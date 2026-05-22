@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Research: Executive Summary | Dual GPU Workstation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AI Research & Engineering Decisions</h1>
+        <p>Project: Dual RX 7800 XT Optimized Workstation</p>
+    </header>
+
+    <nav>
+        <a href="index.html" class="active">Executive Summary</a>
+        <a href="stack.html">Software Stack</a>
+        <a href="performance.html">Performance Data</a>
+        <a href="operations.html">Ops & Maintenance</a>
+        <a href="future.html">Future Optimizations</a>
+        <a href="knowledge.html">Knowledge Base</a>
+    </nav>
+
+    <div class="container">
+        <!-- SOTA this week -->
+        <div class="card sota-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.5rem;">
+                <h2><span class="sota-badge">SOTA This Week</span> Hardware & Inference Recommendations</h2>
+                <span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Updated: May 22, 2026</span>
+            </div>
+            <p>Based on our latest benchmarks under the **ROCm 7.2.3** stack on Ubuntu 26.04, these are the highly-optimized configurations for your dual RX 7800 XT workstation:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-top: 0;">💻 Agentic Coding (Qwen 2.5 Coder 32B)</h3>
+                    <p>Use **llama.cpp (Vulkan)** for local development loops (Aider/Cline).</p>
+                    <ul>
+                        <li><strong>Decode Speed:</strong> <strong style="color: var(--accent);">24.0 t/s</strong> (41% faster than HIP/ROCm).</li>
+                        <li><strong>Prefill Option:</strong> Switch to **llama.cpp (HIP)** if ingestion of massive code contexts (>10k tokens) is the bottleneck, yielding <strong style="color: var(--success);">606 t/s</strong>.</li>
+                    </ul>
+                </div>
+                <div class="feature-card" style="border-left: 4px solid var(--success);">
+                    <h3 style="margin-top: 0;">💬 Dialogue & RAG (Gemma 2 27B)</h3>
+                    <p>Use **Ollama (HIP)** for general chat and RAG orchestration.</p>
+                    <ul>
+                        <li><strong>Decode Speed:</strong> <strong style="color: var(--success);">30.4 t/s</strong> (highest overall generation speed).</li>
+                        <li><strong>Multi-GPU:</strong> Ollama handles automatic parallel split across both 16GB cards flawlessly.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(255, 255, 255, 0.03); border-radius: 8px; border: 1px solid var(--border-color);">
+                <strong style="color: var(--warning);">⚡ VRAM Optimization Guardrail:</strong> Running context lengths over **32k** triggers VRAM spillover. For ultra-long contexts (up to 100k+), deploy the local **Atomic Llama** fork with Walsh-Hadamard KV cache compression (via <code>-ctk turbo3 -ctv turbo3</code>), compressing memory requirements by **4.3x** with only a minor performance tradeoff.
+            </div>
+        </div>
+
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                <h2>Engineering Decision Log</h2>
+                <span class="status-badge">Phase: Verified</span>
+            </div>
+            <p>This repository documents the architectural decisions, software evaluation, and performance baselines for a high-efficiency AI workstation delivered in May 2026.</p>
+            
+            <h3>1. The Problem Statement</h3>
+            <p>Design a local inference system capable of running 30B+ parameter models at >10 t/s within a €2,500 budget, optimized for agentic coding workloads (Aider, Cline) while avoiding the "EU Tech Tax."</p>
+
+            <h3>2. Key Decisions Matrix</h3>
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th>Decision</th>
+                        <th>Outcome</th>
+                        <th>Rationale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Hardware Platform</strong></td>
+                        <td>AM4 (Ryzen 9 5900X)</td>
+                        <td>Best "bang for buck" for multi-GPU PCIe lanes.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>GPU Selection</strong></td>
+                        <td>Dual RX 7800 XT (32GB Total)</td>
+                        <td>Best price-per-GB of VRAM in the RDNA3 lineup.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Backend Engine</strong></td>
+                        <td>llama.cpp (Vulkan)</td>
+                        <td>Vulkan out-performed native HIP by 47% in decode tasks.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OS</strong></td>
+                        <td>Ubuntu 26.04 LTS</td>
+                        <td>Kernel support for latest ROCm 7.1/7.2 drivers.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3. Research Findings Overview</h3>
+            <ul>
+                <li><strong>The 70B Trap:</strong> Quantization below 4-bit for 70B models leads to unacceptable latency and cognitive degradation. 32B is the "Goldilocks" zone.</li>
+                <li><strong>Backend Divergence:</strong> Native ROCm/HIP is superior for prompt ingestion (prefill), but Vulkan dominates token generation (decode).</li>
+                <li><strong>Atomic Llama:</strong> Verified 4.3x KV cache compression via Walsh-Hadamard Transform (WHT), enabling 100k+ context windows on consumer VRAM.</li>
+                <li><strong>Agentic Utility:</strong> Local inference at ~24 t/s allows for sub-minute refactoring loops in agentic IDEs.</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <p>Explore the full technical breakdown:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <a href="stack.html" class="edd-box" style="text-decoration: none; padding: 1.5rem; display: block;">
+                    <h4 style="color: var(--text-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">🚀 Stack Setup</h4>
+                    <p style="margin: 0; font-size: 0.9rem;">Drivers, ROCm, and Engines.</p>
+                </a>
+                <a href="performance.html" class="edd-box" style="text-decoration: none; padding: 1.5rem; display: block;">
+                    <h4 style="color: var(--text-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">📊 Benchmarks</h4>
+                    <p style="margin: 0; font-size: 0.9rem;">HIP vs Vulkan comparisons.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Machine Build Quote Research Repository
+    </footer>
+</body>
+</html>

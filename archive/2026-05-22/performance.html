@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Research: Performance Data | Dual GPU Workstation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Performance Analysis</h1></header>
+    <nav>
+        <a href="index.html">Executive Summary</a>
+        <a href="stack.html">Software Stack</a>
+        <a href="performance.html" class="active">Performance Data</a>
+        <a href="operations.html">Ops & Maintenance</a>
+        <a href="future.html">Future Optimizations</a>
+        <a href="knowledge.html">Knowledge Base</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>Comparative Benchmarks (May 2026)</h2>
+            <p>Testing methodology involved 3-run averages using 1k context windows on the Dual RX 7800 XT rig.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div>
+                    <h3>Prefill (Ingestion)</h3>
+                    <img src="benchmark_prefill.png" alt="Prefill Benchmarks" class="zoomable">
+                </div>
+                <div>
+                    <h3>Decode (Generation)</h3>
+                    <img src="benchmark_decode.png" alt="Decode Benchmarks" class="zoomable">
+                </div>
+            </div>
+
+            <h3>Backend Efficiency Results</h3>
+            <ul>
+                <li><strong>HIP/ROCm:</strong> Best for high-prefill tasks (batch processing).</li>
+                <li><strong>Vulkan (RADV):</strong> 47% faster than HIP for token generation on Qwen models.</li>
+                <li><strong>Ollama:</strong> Most balanced for general usage and Gemma-optimized models.</li>
+            </ul>
+        </div>
+
+        <div class="card" id="visualizer">
+            <h2>Interactive Performance Visualizer</h2>
+            <div class="visualizer-box">
+                <label for="benchmarkData" style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Input Benchmark JSON:</label>
+                <textarea id="benchmarkData" style="width: 100%; height: 80px; padding: 0.5rem; border: 1px solid var(--border); border-radius: 4px; font-family: monospace;" placeholder='{"model": "Qwen 2.5 Coder 32B", "prefill": 494, "decode": 24.0}'></textarea>
+                <button onclick="updateChart()" style="margin-top: 0.5rem; padding: 0.5rem 1rem; background: var(--accent); color: white; border: none; border-radius: 4px; cursor: pointer;">Update Baseline</button>
+            </div>
+            <canvas id="performanceChart" width="400" height="200" style="margin-top: 2rem;" class="zoomable"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+        let chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Ollama (Baseline)', 'llama.cpp (HIP)', 'llama.cpp (Vulkan)'],
+                datasets: [
+                    { label: 'Prefill (t/s)', data: [327, 496, 433], backgroundColor: 'rgba(37, 99, 235, 0.7)' },
+                    { label: 'Decode (t/s)', data: [10.4, 17.0, 24.0], backgroundColor: 'rgba(34, 197, 94, 0.7)' }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: { title: { display: true, text: 'Model: Qwen 2.5 Coder 32B', font: { size: 16 } } },
+                scales: { y: { beginAtZero: true } }
+            }
+        });
+
+        function updateChart() {
+            try {
+                const data = JSON.parse(document.getElementById('benchmarkData').value);
+                if (data.prefill && data.decode) {
+                    chart.data.datasets[0].data[2] = data.prefill;
+                    chart.data.datasets[1].data[2] = data.decode;
+                    if (data.model) chart.options.plugins.title.text = "Model: " + data.model;
+                    chart.update();
+                }
+            } catch (e) { alert("Invalid JSON format."); }
+        }
+
+        // Zoom functionality
+        document.querySelectorAll('.zoomable').forEach(item => {
+            item.addEventListener('click', function() {
+                const modal = document.getElementById('zoomModal');
+                const targetContainer = document.getElementById('zoomModalTarget');
+                targetContainer.innerHTML = '';
+                
+                let zoomedElement;
+                if (this.tagName.toLowerCase() === 'canvas') {
+                    zoomedElement = document.createElement('img');
+                    zoomedElement.src = this.toDataURL();
+                    zoomedElement.alt = "Zoomed Chart";
+                } else {
+                    zoomedElement = document.createElement('img');
+                    zoomedElement.src = this.src;
+                    zoomedElement.alt = this.alt;
+                }
+                
+                targetContainer.appendChild(zoomedElement);
+                modal.style.display = 'flex';
+                // Trigger transition in the next paint cycle
+                requestAnimationFrame(() => {
+                    modal.classList.add('active');
+                });
+            });
+        });
+
+        // Close modal
+        const modal = document.getElementById('zoomModal');
+        const closeBtn = document.querySelector('.zoom-close');
+        
+        function closeModal() {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+        
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
+
+    <!-- Zoom Modal -->
+    <div id="zoomModal" class="zoom-modal">
+        <span class="zoom-close">&times;</span>
+        <div class="zoom-modal-content">
+            <div id="zoomModalTarget"></div>
+        </div>
+    </div>
+</body>
+</html>
