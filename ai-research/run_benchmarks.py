@@ -471,7 +471,7 @@ def save_data_and_report(sys_meta, commits, current_results, history):
 
 ## Crucible Matrix Performance Data
 
-| Test ID | Engine | Model | Quant | TTFT (med/p95) | TPOT (med/p95) | Throughput (tok/sec) | VRAM (GPU0/1 GB) |
+| Test ID | Engine | Model | Quantization | TTFT (Med/P95) | TPOT (Med/P95) | Throughput (Tok/s) | VRAM (GPU0/GPU1) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 """
     
