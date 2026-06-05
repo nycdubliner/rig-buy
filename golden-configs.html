@@ -155,7 +155,7 @@
     <tr><th>Model</th><td><code>mattbucci/gemma-4-31B-AWQ</code> (AWQ 4-bit, ~17 GB weights)</td></tr>
     <tr><th>Draft Model</th><td><code>google/gemma-4-31B-it-assistant</code> (BF16, ~2B params, unquantized)</td></tr>
     <tr><th>Quantization</th><td>AWQ 4-bit (per-channel, activation-aware)</td></tr>
-    <tr><th>KV Cache</th><td>FP16 (default; FP8 not supported on RDNA3)</td></tr>
+    <tr><th>KV Cache</th><td><code>fp8_e4m3</code> (ROCm-native, 2.2× capacity vs FP16 — <span style="color: #10b981;">verified working</span>)</td></tr>
     <tr><th>Speculative Decoding</th><td>MTP (Multi-Token Prediction) — 4 tokens <span class="badge working">2.2× speedup</span></td></tr>
     <tr><th>Tensor Parallelism</th><td>TP=2 (both GPUs)</td></tr>
     <tr><th>VRAM per GPU</th><td>~22.3 GiB (93%) — model weights 10.4 GiB + KV cache</td></tr>
@@ -171,6 +171,7 @@ LD_LIBRARY_PATH=/home/tdeburca/vllm/lib:${LD_LIBRARY_PATH:-} \
   --host 0.0.0.0 --port 8084 --served-model-name gemma4 \
   --tensor-parallel-size <span class="val">2</span> \
   --dtype <span class="val">float16</span> \
+  --kv-cache-dtype <span class="val">fp8_e4m3</span> \
   --quantization <span class="val">awq</span> \
   --enforce-eager \
   --no-async-scheduling \

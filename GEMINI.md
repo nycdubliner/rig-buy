@@ -4,8 +4,9 @@
 Design and source a highly optimized, "bang for buck" dual RX 7800 XT AI workstation (AM4 platform) for delivery to Ireland, avoiding EU Tech Tax.
 
 ## Current State
-- **Phase 2 Dual-GPU Build Assembled & Verified:** The rig is fully built and functional. (Total: €2,400.84).
-- **Full Engine Benchmarking Complete:** Benchmarked Ollama and llama.cpp (ROCm 7.1) with Qwen 2.5 Coder 32B and Gemma 2 27B.
+- **Phase 3 Dual 7900 XTX Upgrade In Progress:** Upgrading to Dual RX 7900 XTX cards (48GB VRAM total) and a 1500W PSU (parts ordered, arriving next week; physical slot clearance verified).
+- **Phase 2 Dual-GPU Build Assembled & Verified:** The initial dual 7800 XT rig was fully built and functional (Total: €2,400.84).
+- **Full Engine Benchmarking Complete:** Benchmarked Ollama and llama.cpp (ROCm 7.1) with Qwen 2.5 Coder 32B and Gemma 2 27B on the dual 7800 XT baseline.
 - **Performance Insights:** llama.cpp achieved **16.3 t/s** decode on Qwen 32B (56% faster than Ollama), while Ollama excelled on Gemma 2 27B at **30.4 t/s**.
 - **Automated Benchmarking Suite:** Added `scripts/benchmark_llamacpp.py` and `scripts/generate_graphs.py` to complement the Ollama suite.
 - **Documentation Updated:** The AI Software Guide now features comparative performance graphs and engine recommendations.
