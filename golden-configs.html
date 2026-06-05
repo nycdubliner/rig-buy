@@ -207,57 +207,60 @@ LD_LIBRARY_PATH=/home/tdeburca/vllm/lib:${LD_LIBRARY_PATH:-} \
 
 <!-- ============================================================ -->
 <!-- ============================================================ -->
+<!-- ============================================================ -->
 <!-- GOLD: llama.cpp ROCm -- Gemma 4 31B -->
 <!-- ============================================================ -->
 <section id="llamacpp-roc" class="card">
 <h2>🥈 llama.cpp ROCm — Gemma 4 31B Q4_K_M <span class="badge working">VERIFIED</span></h2>
 
 <div class="metric-grid">
-    <div class="metric"><div class="value">854</div><div class="label">tok/s pp512 (layer)</div></div>
-    <div class="metric"><div class="value">489</div><div class="label">tok/s pp512 (row)</div></div>
-    <div class="metric"><div class="value">31.3</div><div class="label">tok/s tg128 (row)</div></div>
+    <div class="metric"><div class="value">1096</div><div class="label">tok/s pp512 (best)</div></div>
+    <div class="metric"><div class="value">38.6</div><div class="label">tok/s tg128 (best)</div></div>
+    <div class="metric"><div class="value">104%</div><div class="label">of vLLM gen speed</div></div>
     <div class="metric"><div class="value">18.2</div><div class="label">GB model size</div></div>
 </div>
 
 <table>
-    <tr><th>Software</th><td>llama.cpp <code>308f61c31</code> (build 9536, ROCm/HIP backend)</td></tr>
-    <tr><th>Model</th><td><code>google_gemma-4-31B-it-Q4_K_M.gguf</code> (18.2 GB)</td></tr>
-    <tr><th>Backend</th><td>ROCm (HIP) — both GPUs detected (2× 24560 MiB VRAM)</td></tr>
-    <tr><th>GPU Layers</th><td>ngl=99 (all layers on GPU)</td></tr>
-    <tr><th>KV Cache</th><td>FP16 (default; no fp8 support in GGUF path)</td></tr>
-    <tr><th>Flash Attention</th><td>Yes (<code>-fa 1</code>)</td></tr>
-    <tr><th>Split Mode</th><td>row (best generation) / layer (best prefill)</td></tr>
+    <tr><th>Software</th><td>llama.cpp <code>308f61c31</code> (build 9536, ROCm/HIP), TurboQuant fork <code>0a635dcd9</code> (build 9019)</td></tr>
+    <tr><th>Model</th><td><code>google_gemma-4-31B-it-Q4_K_M.gguf</code> (18.2 GB, HuggingFace)</td></tr>
+    <tr><th>Backend</th><td>ROCm (HIP) — both GPUs detected (2× 24560 MiB VRAM, PCIe Gen4 x8)</td></tr>
 </table>
 
-<h3>Benchmark: Row Split (Best Generation)</h3>
+<h3>Phase 1 — Upstream Head (llama.cpp 9536)</h3>
 <table>
-    <thead><tr><th>Prompt</th><th>Generation</th><th class="num">Tokens/sec</th><th>Config</th></tr></thead>
+    <thead><tr><th>Split Mode</th><th>KV Cache</th><th>Flash Attn</th><th class="num">pp512</th><th class="num">tg128</th><th>% vLLM gen</th></tr></thead>
     <tbody>
-        <tr><td>512</td><td>0</td><td class="num highlight">488.7</td><td>batch=512, fa=1, sm=row</td></tr>
-        <tr><td>0</td><td>128</td><td class="num highlight">31.3</td><td>batch=512, fa=1, sm=row</td></tr>
+        <tr><td><strong>tensor</strong></td><td>FP16</td><td>✅</td><td class="num highlight"><strong>1096</strong></td><td class="num highlight"><strong>38.6</strong></td><td><strong>104% 🏆</strong></td></tr>
+        <tr><td>tensor</td><td>q8_0</td><td>✅</td><td class="num">1090</td><td class="num">34.3</td><td>93%</td></tr>
+        <tr><td>tensor</td><td>q4_0</td><td>✅</td><td class="num">1090</td><td class="num">33.0</td><td>89%</td></tr>
+        <tr><td>row</td><td>FP16</td><td>✅</td><td class="num">489</td><td class="num">31.3</td><td>85%</td></tr>
+        <tr><td>layer</td><td>FP16</td><td>✅</td><td class="num">854</td><td class="num">25.5</td><td>69%</td></tr>
     </tbody>
 </table>
 
-<h3>Benchmark: Layer Split (Best Prefill)</h3>
+<h3>Phase 2 — TurboQuant Fork (AtomicBot-ai, build 9019)</h3>
+<p><code>sm=tensor</code> is incompatible with turboquant on this fork (based on old llama.cpp 0.9.11). A merge or TheTom upstream fork would be needed for the tensor+turbo combo.</p>
 <table>
-    <thead><tr><th>Prompt</th><th>Generation</th><th class="num">Tokens/sec</th><th>Config</th></tr></thead>
+    <thead><tr><th>Split Mode</th><th>KV Cache</th><th>Flash Attn</th><th class="num">pp512</th><th class="num">tg128</th><th>% vLLM gen</th></tr></thead>
     <tbody>
-        <tr><td>512</td><td>0</td><td class="num highlight">854.4</td><td>batch=2048, fa=1, sm=layer</td></tr>
-        <tr><td>0</td><td>128</td><td class="num">25.5</td><td>batch=2048, fa=1, sm=layer</td></tr>
+        <tr><td>layer</td><td><strong>turbo3</strong></td><td>✅</td><td class="num">655</td><td class="num">22.9</td><td>62%</td></tr>
+        <tr><td>row</td><td><strong>turbo3</strong></td><td>✅</td><td class="num">406</td><td class="num">27.8</td><td>75%</td></tr>
+        <tr><td>tensor</td><td>turbo3</td><td>—</td><td colspan="3" style="color:#ef4444;">❌ Incompatible on current fork</td></tr>
     </tbody>
 </table>
 
 <div class="note">
-    <strong>vLLM comparison:</strong> llama.cpp GGUF achieves 31 tok/s generation vs vLLM AWQ at 190 tok/s (single request, MTP=4). The vLLM path is ~6× faster for generation. However, llama.cpp prompt processing (854 tok/s layer split) is much higher than vLLM (~50 tok/s prefill measured), making it better for bulk prefill workloads.
+    <strong>Per-token generation speed is effectively identical between vLLM and llama.cpp.</strong> The vLLM "190 tok/s" headline number includes prefill throughput; actual output generation is 37 tok/s. llama.cpp with <code>sm=tensor</code> beats it slightly at 38.6 tok/s. vLLM wins for multi-agent workloads (703 tok/s at 8 concurrent via continuous batching). llama.cpp wins for raw single-request speed and KV-quantized context scaling (turbo3 gives ~4.3× KV compression).
 </div>
 
 <div class="warn-note">
-    <strong>Draft model not supported:</strong> The <code>gemma4_assistant</code> GGUF architecture is not yet recognized by llama.cpp. MTP speculative decoding via GGUF is blocked upstream.
+    <strong>NextN/MTP draft not tested:</strong> The <code>gemma4_assistant</code> GGUF architecture is not recognized by llama.cpp. The TurboQuant fork supports NextN spec decoding, but only for Qwen 3.6 models. Gemma 4 MTP via GGUF remains blocked upstream.
 </div>
 </section>
 
 <!-- ============================================================ -->
 <!-- llama.cpp Vulkan -->
+<!-- ============================================================ -->
 <!-- ============================================================ -->
 <!-- ============================================================ -->
 <section id="llamacpp-vulkan" class="card">
