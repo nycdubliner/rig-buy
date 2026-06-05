@@ -206,46 +206,59 @@ LD_LIBRARY_PATH=/home/tdeburca/vllm/lib:${LD_LIBRARY_PATH:-} \
 </section>
 
 <!-- ============================================================ -->
-<!-- GOLD: llama.cpp ROCm -->
+<!-- ============================================================ -->
+<!-- GOLD: llama.cpp ROCm -- Gemma 4 31B -->
 <!-- ============================================================ -->
 <section id="llamacpp-roc" class="card">
-<h2>🥈 llama.cpp ROCm — Gemma 2 27B Q4_0 <span class="badge working">PROVEN</span></h2>
+<h2>🥈 llama.cpp ROCm — Gemma 4 31B Q4_K_M <span class="badge working">VERIFIED</span></h2>
 
 <div class="metric-grid">
-    <div class="metric"><div class="value">651</div><div class="label">tok/s (pp512)</div></div>
-    <div class="metric"><div class="value">793</div><div class="label">tok/s (pp1024)</div></div>
-    <div class="metric"><div class="value">28.9</div><div class="label">tok/s (gen128)</div></div>
-    <div class="metric"><div class="value">15.6</div><div class="label">GB model size</div></div>
+    <div class="metric"><div class="value">854</div><div class="label">tok/s pp512 (layer)</div></div>
+    <div class="metric"><div class="value">489</div><div class="label">tok/s pp512 (row)</div></div>
+    <div class="metric"><div class="value">31.3</div><div class="label">tok/s tg128 (row)</div></div>
+    <div class="metric"><div class="value">18.2</div><div class="label">GB model size</div></div>
 </div>
 
 <table>
-    <tr><th>Software</th><td>llama.cpp <code>87589042c</code> (build 9203, ROCm/HIP backend)</td></tr>
-    <tr><th>Model</th><td><code>models/gemma2-27b.gguf</code> (Q4_0, 15.6 GB)</td></tr>
-    <tr><th>Backend</th><td>ROCm (HIP) — both GPUs detected via ROCm</td></tr>
+    <tr><th>Software</th><td>llama.cpp <code>308f61c31</code> (build 9536, ROCm/HIP backend)</td></tr>
+    <tr><th>Model</th><td><code>google_gemma-4-31B-it-Q4_K_M.gguf</code> (18.2 GB)</td></tr>
+    <tr><th>Backend</th><td>ROCm (HIP) — both GPUs detected (2× 24560 MiB VRAM)</td></tr>
     <tr><th>GPU Layers</th><td>ngl=99 (all layers on GPU)</td></tr>
-    <tr><th>KV Cache</th><td>FP16 (type_k=f16, type_v=f16)</td></tr>
-    <tr><th>Split Mode</th><td>layer (sequential layer split across GPUs)</td></tr>
-    <tr><th>Batch Size</th><td>2048</td></tr>
-    <tr><th>Threads</th><td>12</td></tr>
+    <tr><th>KV Cache</th><td>FP16 (default; no fp8 support in GGUF path)</td></tr>
+    <tr><th>Flash Attention</th><td>Yes (<code>-fa 1</code>)</td></tr>
+    <tr><th>Split Mode</th><td>row (best generation) / layer (best prefill)</td></tr>
 </table>
 
-<h3>Benchmark Data</h3>
+<h3>Benchmark: Row Split (Best Generation)</h3>
 <table>
-    <thead><tr><th>Prompt</th><th>Generation</th><th class="num">Tokens/sec</th><th>Backend</th></tr></thead>
+    <thead><tr><th>Prompt</th><th>Generation</th><th class="num">Tokens/sec</th><th>Config</th></tr></thead>
     <tbody>
-        <tr><td>512</td><td>0</td><td class="num highlight">651.2</td><td>ROCm</td></tr>
-        <tr><td>1024</td><td>0</td><td class="num highlight">792.7</td><td>ROCm</td></tr>
-        <tr><td>0</td><td>128</td><td class="num">28.9</td><td>ROCm</td></tr>
+        <tr><td>512</td><td>0</td><td class="num highlight">488.7</td><td>batch=512, fa=1, sm=row</td></tr>
+        <tr><td>0</td><td>128</td><td class="num highlight">31.3</td><td>batch=512, fa=1, sm=row</td></tr>
+    </tbody>
+</table>
+
+<h3>Benchmark: Layer Split (Best Prefill)</h3>
+<table>
+    <thead><tr><th>Prompt</th><th>Generation</th><th class="num">Tokens/sec</th><th>Config</th></tr></thead>
+    <tbody>
+        <tr><td>512</td><td>0</td><td class="num highlight">854.4</td><td>batch=2048, fa=1, sm=layer</td></tr>
+        <tr><td>0</td><td>128</td><td class="num">25.5</td><td>batch=2048, fa=1, sm=layer</td></tr>
     </tbody>
 </table>
 
 <div class="note">
-    <strong>Why not Gemma 4 31B?</strong> The Gemma 4 31B Q4_K_M GGUF is 18.2 GB — too large for a single 7800 XT (16 GB) and requires both GPUs working together. The ROCm benchmark suite was run on the original dual 7800 XT setup (32 GB total). On the upgraded 7900 XTX (48 GB), this model would fit easily on a single card. The <code>gemma2-27b</code> was the largest model that fit the dual 7800 XT comfortably.
+    <strong>vLLM comparison:</strong> llama.cpp GGUF achieves 31 tok/s generation vs vLLM AWQ at 190 tok/s (single request, MTP=4). The vLLM path is ~6× faster for generation. However, llama.cpp prompt processing (854 tok/s layer split) is much higher than vLLM (~50 tok/s prefill measured), making it better for bulk prefill workloads.
+</div>
+
+<div class="warn-note">
+    <strong>Draft model not supported:</strong> The <code>gemma4_assistant</code> GGUF architecture is not yet recognized by llama.cpp. MTP speculative decoding via GGUF is blocked upstream.
 </div>
 </section>
 
 <!-- ============================================================ -->
 <!-- llama.cpp Vulkan -->
+<!-- ============================================================ -->
 <!-- ============================================================ -->
 <section id="llamacpp-vulkan" class="card">
 <h2>llama.cpp Vulkan — Gemma 2 27B Q4_0 <span class="badge broken">GPU OFFLOAD BROKEN</span></h2>
