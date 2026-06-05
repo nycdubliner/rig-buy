@@ -88,29 +88,31 @@
 <body>
     <div class="container">
         <header>
-            <h1>Dual RX 7800 XT AI Workstation (AM4 Value Pivot) <span class="tag am4" style="background: #059669; vertical-align: middle;">Verified & Functional</span></h1>
+            <h1>Dual RX 7900 XTX AI Workstation (AM4 Upgrade Pivot) <span class="tag am4" style="background: #3b82f6; vertical-align: middle;">48GB Upgrade In Progress</span></h1>
             <p>Because local AI inference is almost entirely GPU-bound (VRAM and compute), spending heavily on a 16-core CPU is wasteful. The strategy has shifted to finding the cheapest platform that supports <strong>dual x8/x8 PCIe lane splitting</strong> and 4-slot physical spacing.</p>
-            <div class="validation" style="background: #ecfdf5; border-left: 4px solid #059669;">
-                <strong>Dual-GPU Validation Status: PASSED</strong><br>
-                Both RX 7800 XT GPUs (32GB VRAM total) are active and functional. Verified using <strong>Ollama</strong> with <strong>Qwen 2.5 Coder 32B</strong> (quantized). Model weights are successfully split across both cards (~12GB/12GB distribution) with smooth token generation.
+            <div class="validation" style="background: #eff6ff; border-left: 4px solid #3b82f6;">
+                <strong>Dual-GPU Validation Status: UPGRADE IN PROGRESS</strong><br>
+                Upgrading to **Dual RX 7900 XTX GPUs (48GB VRAM total)** and a **1500W ATX 3.1 PSU** (parts ordered, arriving next week). Physical slot clearances have been checked and verified to fit. The previous dual RX 7800 XT (32GB VRAM) setup passed all baseline benchmarks.
             </div>
-            <p>Below is the finalized AM4 build using high-end used parts to escape current DDR5 price inflation, offering the best possible "Bang for Buck". The previous AM5 option has been archived.</p>
+            <p>Below is the finalized AM4 build reflecting the upcoming 48GB VRAM upgrade. The previous dual 7800 XT configuration has been upgraded.</p>
             <div style="margin-top: 1rem; font-weight: 600; display: flex; gap: 1.5rem; flex-wrap: wrap;">
                 <a href="us-comparison.html">US Cost Comparison &rarr;</a>
                 <a href="assembly-guide.html" style="color: #059669; font-weight: bold;">Physical Assembly Guide &rarr;</a>
                 <a href="vendors.html">Vendor Sourcing Guide &rarr;</a>
                 <a href="ai-research/index.html" style="font-weight: bold;">AI Research Mini-Site (Benchmarks & Decisions) &rarr;</a>
+                <a href="golden-configs.html" style="color: #f59e0b; font-weight: bold;">&#9733; Gold Configs (Verified LLM Deployments) &rarr;</a>
                 <a href="7900-xtx-comparison.html">7900 XTX Slot Widths &rarr;</a>
                 <a href="virtualization.html">Gaming Virtualization Guide &rarr;</a>
                 <a href="stability.html">Stability & Stress Testing &rarr;</a>
                 <a href="burnin.html">AI Burn-in & Instrumentation &rarr;</a>
                 <a href="phase3-expansion.html" style="color: #dc2626;">Phase 3: eGPU Expansion &rarr;</a>
+                <a href="alternative-platforms.html" style="color: #a855f7; font-weight: bold;">Multi-GPU Platforms (3+ Cards) &rarr;</a>
             </div>
         </header>
 
         <div class="grid">
             <section class="card">
-                <h2>AM4 Final Build <span class="tag am4">USED VALUE</span></h2>
+                <h2>AM4 Final Build <span class="tag am4" style="background: #3b82f6;">48GB VRAM SPEC</span></h2>
                 <p>AI has destroyed the value of high-end DDR5. By dropping to AM4, we can buy flagship used motherboards and cheap DDR4, saving ~€250 on the foundation.</p>
                 <table>
                     <thead>
@@ -130,15 +132,15 @@
                         </tr>
                         <tr>
                             <td><strong>GPU 1</strong></td>
-                            <td><a href="https://www.gigabyte.com/Graphics-Card/GV-R78XTGAMING-OC-16GD" target="_blank">Gigabyte RX 7800 XT Gaming OC 16GB</a> (Used)</td>
-                            <td class="price">€445.00</td>
-                            <td>Purchased (eBay)</td>
+                            <td>Radeon RX 7900 XTX 24GB</td>
+                            <td class="price">Ordered</td>
+                            <td>Arriving next week (eBay/Classifieds)</td>
                         </tr>
                         <tr>
                             <td><strong>GPU 2</strong></td>
-                            <td><a href="https://www.xfxforce.com/shop/xfx-speedster-qick-319-amd-radeon-tm-rx-7800-xt-core-edition" target="_blank">XFX Speedster QICK 319 RX 7800 XT</a> (Used)</td>
-                            <td class="price">€465.00</td>
-                            <td>Purchased (eBay)</td>
+                            <td>Radeon RX 7900 XTX 24GB</td>
+                            <td class="price">Ordered</td>
+                            <td>Arriving next week (eBay/Classifieds)</td>
                         </tr>
                         <tr>
                             <td><strong>Mobo</strong></td>
@@ -148,9 +150,9 @@
                         </tr>
                         <tr>
                             <td><strong>PSU</strong></td>
-                            <td><a href="https://www.fsplifestyle.com/en/product/VITAGM1000W.html" target="_blank">FSP VITA GM 1000W</a> (ATX 3.1)</td>
-                            <td class="price">€175.00</td>
-                            <td><a href="https://ggmachines.ie" target="_blank">GG Machines Dublin</a> (Purchased)</td>
+                            <td>1500W ATX 3.1 PSU</td>
+                            <td class="price">Ordered</td>
+                            <td>Arriving next week</td>
                         </tr>
                         <tr>
                             <td><strong>RAM</strong></td>
