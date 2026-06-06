@@ -154,15 +154,15 @@
                 <tr>
                     <td><strong>Gemma 4 31B</strong></td>
                     <td>vLLM</td>
-                    <td>AWQ 4-bit</td>
+                    <td>AWQ 4-bit + fp8 KV</td>
                     <td>N</td>
                     <td>Y</td>
                     <td>Y</td>
                     <td>N</td>
-                    <td>N</td>
-                    <td class="num highlight">37.00</td>
-                    <td>served 160000 / arch 262144</td>
-                    <td><code>results/vllm-gemma4/20260605-134914-baseline-current/{command.txt,interactive-c1.json,server.log}</code></td>
+                    <td>Y</td>
+                    <td class="num highlight">32.20 <span class="small">(97.23 @ c4)</span></td>
+                    <td>served 160000 / arch 262144 <span class="small">KV 376,058 tokens</span></td>
+                    <td><code>results/vllm-gemma4/20260606-161705-dense-fp8-mtp4/{command.txt,interactive-c1.json,interactive-c4.json,mm-smoke-response.json,server.log}</code> <span class="badge pending">partial</span></td>
                 </tr>
                 <tr>
                     <td><strong>Gemma 4 31B</strong></td>
@@ -230,6 +230,19 @@
                     <td><code>results/llamacpp/gemma4-26b-a4b-udq4kxl-20260606-130349/{command.txt,bench_results.json}</code></td>
                 </tr>
                 <tr>
+                    <td><strong>Gemma 4 26B-A4B</strong></td>
+                    <td>vLLM</td>
+                    <td>compressed-tensors W4A16 + fp8 KV</td>
+                    <td>Y</td>
+                    <td>N</td>
+                    <td>Y</td>
+                    <td>N</td>
+                    <td>Y</td>
+                    <td class="num highlight">23.02 <span class="small">(89.19 @ decode c4; 87.75 @ interactive c4)</span></td>
+                    <td>served 160000 / arch 262144 <span class="small">KV 2,003,262 tokens</span></td>
+                    <td><code>results/vllm-gemma4/20260606-163412-moe-fp8/{command.txt,interactive-c1.json,interactive-c4.json,decode_throughput-c1.json,decode_throughput-c4.json,mm-smoke-response.json,server.log}</code> <span class="badge verified">verified</span></td>
+                </tr>
+                <tr>
                     <td><strong>Qwen 3.6 35B-A3B</strong></td>
                     <td>llama.cpp</td>
                     <td>UD-Q4_K_XL</td>
@@ -274,6 +287,12 @@
     </section>
 
     <section id="verified-runs" class="card">
+        <h3>vLLM fp8 KV updates (2026-06-06)</h3>
+        <ul>
+            <li><strong>Gemma 4 31B AWQ + fp8 KV + MTP4:</strong> partial but artifact-backed. <code>kv_cache_dtype=fp8_e4m3</code>, GPU KV cache size <code>376,058 tokens</code>, multimodal smoke passed ("Red"). Thermal guard stopped the full profile at 109°C after interactive c1/c4 completed.</li>
+            <li><strong>Gemma 4 26B-A4B + fp8 KV + EP:</strong> verified. Uses <code>RDNA3W4A16LinearKernel</code> with <code>CompressedTensorsWNA16MoEMethod</code>, expert parallel enabled (64/128 experts per device), GPU KV cache size <code>2,003,262 tokens</code>, multimodal smoke passed ("Red").</li>
+            <li><strong>Correction:</strong> the separate dense no-MTP multimodal control is not currently evidenced as a distinct run; the mm-check manifest points at the MTP artifact directory. The page therefore makes no separate no-MTP claim.</li>
+        </ul>
         <h2>Verified run details</h2>
         <table>
             <thead>
@@ -307,13 +326,40 @@
                     <td>55 completed, 9 failed.</td>
                 </tr>
                 <tr>
-                    <td>vLLM Gemma 4 31B no-MTP, c=1</td>
-                    <td><code>results/vllm-gemma4/20260605-124544-no-mtp/interactive-c1.json</code></td>
-                    <td class="num">85.18</td>
-                    <td class="num">16.69</td>
-                    <td class="num">365.41</td>
-                    <td class="num">57.52</td>
-                    <td>MTP comparison point.</td>
+                    <td>vLLM Gemma 4 31B fp8 KV, c=1</td>
+                    <td><code>results/vllm-gemma4/20260606-161705-dense-fp8-mtp4/interactive-c1.json</code></td>
+                    <td class="num">164.39</td>
+                    <td class="num">32.20</td>
+                    <td class="num">415.03</td>
+                    <td class="num">28.03</td>
+                    <td>Partial fp8-KV run. <code>kv_cache_dtype=fp8_e4m3</code>, GPU KV cache <code>376,058</code> tokens, multimodal smoke passed. Thermal guard stopped the full profile.</td>
+                </tr>
+                <tr>
+                    <td>vLLM Gemma 4 31B fp8 KV, c=4</td>
+                    <td><code>results/vllm-gemma4/20260606-161705-dense-fp8-mtp4/interactive-c4.json</code></td>
+                    <td class="num">496.34</td>
+                    <td class="num">97.23</td>
+                    <td class="num">501.81</td>
+                    <td class="num">36.61</td>
+                    <td>Same partial fp8-KV run as above; MTP draft falls back to text-only on multimodal while the target model still answers image requests correctly.</td>
+                </tr>
+                <tr>
+                    <td>vLLM Gemma 4 26B-A4B fp8 KV, c=1</td>
+                    <td><code>results/vllm-gemma4/20260606-163412-moe-fp8/interactive-c1.json</code></td>
+                    <td class="num">89.89</td>
+                    <td class="num">17.61</td>
+                    <td class="num">119.60</td>
+                    <td class="num">56.29</td>
+                    <td>Verified MoE fp8-KV + EP run using <code>RDNA3W4A16LinearKernel</code> / <code>CompressedTensorsWNA16MoEMethod</code>.</td>
+                </tr>
+                <tr>
+                    <td>vLLM Gemma 4 26B-A4B fp8 KV decode, c=4</td>
+                    <td><code>results/vllm-gemma4/20260606-163412-moe-fp8/decode_throughput-c4.json</code></td>
+                    <td class="num">269.89</td>
+                    <td class="num">89.19</td>
+                    <td class="num">263.79</td>
+                    <td class="num">44.42</td>
+                    <td>Expert parallel enabled (64/128 experts per device). Multimodal smoke passed.</td>
                 </tr>
                 <tr>
                     <td>llama.cpp Gemma 4 12B pp512</td>
@@ -346,7 +392,7 @@
             <li>Missing evidence is shown as <span class="pending">pending</span> rather than inferred.</li>
         </ul>
         <div class="warn-note">
-            Earlier versions of this page included unsupported figures such as fp8 KV for the verified vLLM run and large context estimates like <code>376K</code>. Those values remain intentionally absent until backed by present artifacts.
+            This page only publishes values backed by artifacts in the current workspace. The dense vLLM fp8 KV (376,058-token cache) and MoE fp8 KV (2,003,262-token cache) figures are now included because corresponding raw artifacts and manifests exist.
         </div>
     </section>
 </div>
