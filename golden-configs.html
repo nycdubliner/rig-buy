@@ -299,59 +299,150 @@ LD_LIBRARY_PATH=/home/tdeburca/vllm/lib:${LD_LIBRARY_PATH:-} \
 </section>
 
 <!-- ============================================================ -->
+<!-- ============================================================ -->
 <!-- Cross-Engine Comparison -->
 <!-- ============================================================ -->
 <section id="comparison" class="card">
-<h2>Cross-Engine Comparison</h2>
+<h2>Cross-Engine Comparison — Sortable</h2>
+<p>Sorted by generation throughput (tg128 tokens/sec). Context capacity estimates based on 48 GB total VRAM with default settings. fp8_e4m3 and q8_0 KV cache double the vLLM and llama.cpp FP16 estimates respectively.</p>
 
-<table>
-    <thead><tr><th>Engine</th><th>Model</th><th>Quant</th><th class="num">Tok/s</th><th class="num">TPOT</th><th>Notes</th></tr></thead>
+<div style="overflow-x: auto;">
+<table id="ranked-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable(0)">Engine+Config</th>
+            <th onclick="sortTable(1)" class="num">gen tg128</th>
+            <th onclick="sortTable(2)" class="num">pp512</th>
+            <th onclick="sortTable(3)" class="num">TPOT ms</th>
+            <th onclick="sortTable(4)" class="num">Context est.</th>
+            <th onclick="sortTable(5)" class="num">Serving (c=8)</th>
+            <th>Split / Spec</th>
+            <th>KV Cache</th>
+        </tr>
+    </thead>
     <tbody>
         <tr style="background: rgba(245,158,11,0.05);">
-            <td><strong>vLLM</strong></td>
-            <td>Gemma 4 31B</td><td>AWQ 4-bit</td>
-            <td class="num highlight">190</td><td class="num">24 ms</td>
-            <td>MTP=4, TP=2, OpenAI + Anthropic API</td>
+            <td><strong>vLLM AWQ</strong> (g0lden)</td>
+            <td class="num highlight">190*</td>
+            <td class="num">~50</td>
+            <td class="num">24</td>
+            <td class="num">376K</td>
+            <td class="num highlight">703</td>
+            <td>TP=2, MTP=4</td>
+            <td>fp8_e4m3</td>
         </tr>
         <tr>
-            <td>llama.cpp ROCm</td>
-            <td>Gemma 2 27B</td><td>Q4_0</td>
-            <td class="num">651</td><td class="num">—</td>
-            <td>Prompt processing only; gen=28.9 tok/s</td>
+            <td><strong>llama.cpp tensor FP16</strong></td>
+            <td class="num highlight">38.6</td>
+            <td class="num">1096</td>
+            <td class="num">26</td>
+            <td class="num">~170K</td>
+            <td class="num">—</td>
+            <td>sm=tensor, fa=1</td>
+            <td>FP16</td>
         </tr>
         <tr>
-            <td>llama.cpp ROCm</td>
-            <td>Qwen 2.5 Coder 32B</td><td>Q4_K_M</td>
-            <td class="num">496</td><td class="num">—</td>
-            <td>Prompt processing; gen=17.0 tok/s</td>
+            <td><strong>llama.cpp tensor q8_0</strong></td>
+            <td class="num">34.3</td>
+            <td class="num">1090</td>
+            <td class="num">29</td>
+            <td class="num">~340K</td>
+            <td class="num">—</td>
+            <td>sm=tensor, fa=1</td>
+            <td>q8_0</td>
         </tr>
         <tr>
-            <td>llama.cpp Vulkan</td>
-            <td>Gemma 2 27B</td><td>Q4_0</td>
-            <td class="num">544</td><td class="num">—</td>
-            <td>Vulkan GPU offload; gen=26.5 tok/s</td>
+            <td><strong>llama.cpp tensor q4_0</strong></td>
+            <td class="num">33.0</td>
+            <td class="num">1090</td>
+            <td class="num">30</td>
+            <td class="num highlight">~680K</td>
+            <td class="num">—</td>
+            <td>sm=tensor, fa=1</td>
+            <td>q4_0</td>
         </tr>
         <tr>
-            <td>llama.cpp Vulkan</td>
-            <td>Qwen 2.5 Coder 32B</td><td>Q4_K_M</td>
-            <td class="num">439</td><td class="num">—</td>
-            <td>Vulkan GPU offload; gen=24.0 tok/s</td>
+            <td><strong>llama.cpp row FP16</strong></td>
+            <td class="num">31.3</td>
+            <td class="num">489</td>
+            <td class="num">32</td>
+            <td class="num">~170K</td>
+            <td class="num">—</td>
+            <td>sm=row, fa=1</td>
+            <td>FP16</td>
         </tr>
-        <tr style="opacity: 0.5;">
-            <td>llama.cpp Vulkan</td>
-            <td>Gemma 4 31B</td><td>Q4_K_M</td>
-            <td class="num">—</td><td class="num">—</td>
-            <td>CRASH: RADV DeviceLost</td>
+        <tr>
+            <td><strong>llama-tq row turbo3</strong></td>
+            <td class="num">27.8</td>
+            <td class="num">406</td>
+            <td class="num">36</td>
+            <td class="num highlight">~660K</td>
+            <td class="num">—</td>
+            <td>sm=row, fa=1 (fork)</td>
+            <td>turbo3</td>
+        </tr>
+        <tr>
+            <td><strong>llama.cpp layer FP16</strong></td>
+            <td class="num">25.5</td>
+            <td class="num">854</td>
+            <td class="num">39</td>
+            <td class="num">~170K</td>
+            <td class="num">—</td>
+            <td>sm=layer, fa=1</td>
+            <td>FP16</td>
+        </tr>
+        <tr>
+            <td><strong>llama-tq layer turbo3</strong></td>
+            <td class="num">22.9</td>
+            <td class="num">655</td>
+            <td class="num">44</td>
+            <td class="num highlight">~660K</td>
+            <td class="num">—</td>
+            <td>sm=layer, fa=1 (fork)</td>
+            <td>turbo3</td>
         </tr>
     </tbody>
 </table>
+</div>
+
+<p style="font-size: 0.85rem; color: var(--text-dim);"><strong>*</strong> vLLM 190 tok/s includes prefill throughput; pure generation is ~37 tok/s output. Context estimates assume ~22 GB free after weights on 2× 7900 XTX (48 GB).</p>
+
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("ranked-table");
+  switching = true;
+  dir = "desc";
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      var xVal = parseFloat(x.innerHTML.replace(/[^0-9\.]/g, "")) || 0;
+      var yVal = parseFloat(y.innerHTML.replace(/[^0-9\.]/g, "")) || 0;
+      if (dir == "desc") {
+        if (xVal < yVal) { shouldSwitch = true; break; }
+      } else {
+        if (xVal > yVal) { shouldSwitch = true; break; }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount++;
+    } else {
+      if (switchcount == 0 && dir == "desc") { dir = "asc"; switching = true; }
+    }
+  }
+}
+</script>
 </section>
 
 <!-- ============================================================ -->
-<!-- MTP Scaling -->
+<!-- MTP Speculative Decoding Scaling -->
 <!-- ============================================================ -->
-<section id="mtp" class="card">
-<h2>MTP Speculative Decoding Scaling</h2>
 <p>Multi-Token Prediction (MTP) is Gemma 4's native speculative decoding. A small draft model (~2B params) predicts multiple future tokens; the target model verifies them in parallel. Each accepted token saves one full forward pass.</p>
 
 <table>
