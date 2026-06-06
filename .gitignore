@@ -11,3 +11,4 @@ models/
 .gemini/
 tool-outputs/
 skills/*/user-data/
+lib/
