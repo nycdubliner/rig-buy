@@ -441,6 +441,24 @@ function sortTable(n) {
 </section>
 
 <!-- ============================================================ -->
+<!-- ============================================================ -->
+<!-- KV Cache Quality -->
+<!-- ============================================================ -->
+<section id="kv-quality" class="card">
+<h2>KV Cache Quality — Perplexity Impact</h2>
+<p>Measured on a 3.5K token general-text corpus, Gemma 4 31B Q4_K_M, <code>sm=tensor, fa=1</code> (upstream) / <code>sm=row, fa=1</code> (turboquant fork). High absolute PPL values are expected — Gemma 4 expects chat-template formatting. The <strong>relative delta</strong> between KV types is the actionable signal.</p>
+<table>
+    <thead><tr><th>KV Type</th><th class="num">PPL</th><th class="num">vs FP16</th><th>BERT Score</th><th>VRAM / token</th><th>Context @ 48 GB</th><th>Verdict</th></tr></thead>
+    <tbody>
+        <tr><td>FP16</td><td class="num">52.11</td><td class="num">—</td><td>—</td><td>2 bytes</td><td>~170K</td><td>Baseline</td></tr>
+        <tr><td><strong>q8_0</strong></td><td class="num">53.31</td><td class="num">+2.3%</td><td>—</td><td>1 byte</td><td>~340K</td><td style="color: #10b981; font-weight: 700;">Recommended for daily use</td></tr>
+        <tr><td>q4_0</td><td class="num">57.18</td><td class="num">+9.7%</td><td>—</td><td>0.5 byte</td><td class="num highlight">~680K</td><td style="color: #f59e0b;">Max context, quality tradeoff</td></tr>
+        <tr><td>turbo3</td><td class="num">27.06*</td><td class="num">—</td><td>—</td><td>~0.35 byte</td><td>~1M</td><td style="color: #94a3b8;">* different fork, not comparable</td></tr>
+    </tbody>
+</table>
+<p style="font-size: 0.85rem; color: var(--text-dim);">* turbo3 measured on atomic-llama-cpp-turboquant fork with <code>sm=row, fa=1</code> — different model path, split mode, and likely quantization differences. The lower PPL does not indicate higher quality; it reflects the different evaluation conditions.</p>
+</section>
+
 <!-- MTP Speculative Decoding Scaling -->
 <!-- ============================================================ -->
 <p>Multi-Token Prediction (MTP) is Gemma 4's native speculative decoding. A small draft model (~2B params) predicts multiple future tokens; the target model verifies them in parallel. Each accepted token saves one full forward pass.</p>
