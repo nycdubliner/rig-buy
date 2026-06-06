@@ -530,3 +530,214 @@ function sortTable(n) {
 </div>
 </body>
 </html>
+
+<!-- ============================================================ -->
+<!-- ============================================================ -->
+<!-- Config Grid -->
+<!-- ============================================================ -->
+<section id="config-grid" class="card">
+<h2>Complete Config Grid</h2>
+<p>All verified configurations for Gemma 4 31B, Gemma 4 26B MoE, and Qwen 3.6 35B MoE on 2× 7900 XTX.</p>
+
+<div style="overflow-x: auto;">
+<table>
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>Backend</th>
+            <th>Quant</th>
+            <th>MoE</th>
+            <th>MTP</th>
+            <th>MM</th>
+            <th>TQ</th>
+            <th>KV Quant</th>
+            <th class="num">Gen T/S</th>
+            <th class="num">Context (hw)</th>
+            <th class="num">Context (arch)</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="background: rgba(245,158,11,0.05);">
+            <td><strong>Gemma 4 31B</strong></td>
+            <td>vLLM</td>
+            <td>AWQ 4-bit</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>🟡</td>
+            <td>N</td>
+            <td>fp8_e4m3</td>
+            <td class="num highlight">37</td>
+            <td class="num highlight">376K</td>
+            <td class="num">262K</td>
+            <td>Golden. Multi-agent, tool use, Anthropic API. Vision crashes on RDNA3.</td>
+        </tr>
+        <tr>
+            <td><strong>Gemma 4 31B</strong></td>
+            <td>llama.cpp</td>
+            <td>Q4_K_M GGUF</td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>FP16</td>
+            <td class="num">31.3</td>
+            <td class="num">~170K</td>
+            <td class="num">262K</td>
+            <td>sm=row. No MTP draft model support upstream.</td>
+        </tr>
+        <tr>
+            <td><strong>Gemma 4 31B</strong></td>
+            <td>llama.cpp</td>
+            <td>Q4_K_M GGUF</td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>q8_0</td>
+            <td class="num">34.3</td>
+            <td class="num">~340K</td>
+            <td class="num">262K</td>
+            <td>sm=tensor. Near-lossless (+2.3% PPL). Recommended llama.cpp config.</td>
+        </tr>
+        <tr>
+            <td><strong>Gemma 4 31B</strong></td>
+            <td>llama.cpp</td>
+            <td>Q4_K_M GGUF</td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>q4_0</td>
+            <td class="num">33.0</td>
+            <td class="num highlight">~680K</td>
+            <td class="num">262K</td>
+            <td>sm=tensor. Max context. +9.7% PPL.</td>
+        </tr>
+        <tr>
+            <td><strong>Gemma 4 31B</strong></td>
+            <td>tq fork</td>
+            <td>Q4_K_M GGUF</td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>turbo3</td>
+            <td class="num">27.8</td>
+            <td class="num">~660K</td>
+            <td class="num">262K</td>
+            <td>sm=row (fork too old for tensor+turbo).</td>
+        </tr>
+        <tr>
+            <td><strong>Gemma 4 26B-A4B</strong></td>
+            <td>llama.cpp</td>
+            <td>UD-Q4_K_XL</td>
+            <td>Y</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>N</td>
+            <td>FP16</td>
+            <td class="num highlight">78.4</td>
+            <td class="num">~350K</td>
+            <td class="num">262K</td>
+            <td>Fits 1 GPU. Vision capable (has mmproj). Fastest GGUF on this hardware.</td>
+        </tr>
+        <tr>
+            <td><strong>Qwen 3.6 35B-A3B</strong></td>
+            <td>llama.cpp</td>
+            <td>UD-Q4_K_XL</td>
+            <td>Y</td>
+            <td>🟡</td>
+            <td>N</td>
+            <td>🟡</td>
+            <td>FP16</td>
+            <td class="num highlight">96.9</td>
+            <td class="num">~300K</td>
+            <td class="num">128K</td>
+            <td>Baked-in NextN head. tq fork can do NextN spec. Est. ~130 tok/s with it.</td>
+        </tr>
+        <tr>
+            <td><strong>Gemma 4 E2B</strong></td>
+            <td>llama.cpp</td>
+            <td>Q4_K_M GGUF</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>N</td>
+            <td>N</td>
+            <td>FP16</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">262K</td>
+            <td>Draft-only assistant model. Not standalone.</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<p style="font-size: 0.85rem; color: var(--text-dim);">MoE = Sparse activation (only some params used per token). MTP = Multi-Token Prediction spec decoding. MM = Multimodal (image input). 🟡 = supported by fork but not tested. TQ = TurboQuant KV compression available. Context (hw) = estimated max on 2× 7900 XTX (48 GB) with listed KV type. Context (arch) = model&#39;s defined max_seq_len.</p>
+</section>
+
+<!-- MoE Models Comparison -->
+<!-- ============================================================ -->
+<section id="moe-comparison" class="card">
+<h2>MoE Model Comparison — Gemma 4 26B + Qwen 3.6 35B</h2>
+<p>All benchmarks via llama.cpp ROCm, <code>sm=tensor, fa=1</code> unless noted. Both MoE models have baked-in MTP/NextN draft heads (not tested here).</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>Size</th>
+            <th>Active params</th>
+            <th class="num">gen tg128</th>
+            <th class="num">pp512</th>
+            <th class="num">% vLLM 31B golden</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="background: rgba(245,158,11,0.05);">
+            <td><strong>vLLM Gemma 4 31B</strong></td>
+            <td>17 GB AWQ</td>
+            <td>31B</td>
+            <td class="num highlight">37</td>
+            <td class="num">~50</td>
+            <td><strong>100% (reference)</strong></td>
+            <td>MTP=4, serving 703 c=8, 376K context</td>
+        </tr>
+        <tr>
+            <td><strong>Gemma 4 26B-A4B</strong></td>
+            <td>16 GB Q4_K_XL</td>
+            <td>~4.5B</td>
+            <td class="num highlight">78.4</td>
+            <td class="num">3100</td>
+            <td><strong>212%</strong></td>
+            <td>Fits 1 GPU. Has mmproj for vision.</td>
+        </tr>
+        <tr>
+            <td><strong>Qwen 3.6 35B-A3B</strong></td>
+            <td>22 GB Q4_K_XL</td>
+            <td>~3B</td>
+            <td class="num highlight">96.9</td>
+            <td class="num">2584</td>
+            <td><strong>262%</strong></td>
+            <td>Baked-in NextN MTP. TurboQuant fork supports spec decoding.</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="note">
+    <strong>MoE models demolish dense models on speed.</strong> Both the 26B and 35B MoE variants generate 2-2.6× faster than the 31B dense model because they only activate 3-4B parameters per token. With speculative decoding (NextN), Qwen 3.6 is estimated to reach ~130 tok/s. The tradeoff: they require the GGUF/RoCm path (no vLLM MTP support for these Quants) and have smaller effective context at FP16 KV.
+</div>
+
+<div class="warn-note">
+    <strong>Future Work — not yet benchmarked:</strong>
+    <ol>
+        <li><strong>Qwen + NextN spec decoding</strong> via <code>--model-draft --spec-type nextn</code> on turboquant fork — estimated +24-36% to ~130 tok/s</li>
+        <li><strong>Eagle</strong> speculative decoding — upstream llama.cpp, orthogonal to TurboQuant</li>
+        <li><strong>DFlash</strong> (Dynamic Flash Attention) — better batched decode, untested on ROCm</li>
+        <li><strong>Merge turboquant HIP kernels</strong> into upstream head for <code>sm=tensor + turbo3</code></li>
+        <li><strong>vLLM Qwen 3.6 AWQ</strong> quant — would need HuggingFace upload of compatible format</li>
+    </ol>
+</div>
+</section>
